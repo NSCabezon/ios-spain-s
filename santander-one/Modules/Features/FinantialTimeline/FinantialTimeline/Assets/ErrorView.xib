@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ErrorView" customModule="FinantialTimeline" customModuleProvider="target">
+            <connections>
+                <outlet property="container" destination="iN0-l3-epB" id="yh3-Hx-vtS"/>
+                <outlet property="errorImage" destination="HOe-Ar-KNF" id="6eb-YN-tMA"/>
+                <outlet property="errorLabel" destination="dED-IQ-qE2" id="a3c-hZ-95S"/>
+                <outlet property="errorView" destination="6Zt-ht-GJB" id="QQi-6Z-CXY"/>
+                <outlet property="titleErrorLabel" destination="GLN-XS-kBN" id="yOE-iM-bLD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rm8-c0-VsS">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Olq-3K-nT3">
+                            <rect key="frame" x="30" y="30" width="354" height="836"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="6Zt-ht-GJB">
+                                    <rect key="frame" x="52" y="0.0" width="250.5" height="40"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HOe-Ar-KNF">
+                                            <rect key="frame" x="105" y="0.0" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="fUm-El-ec0"/>
+                                                <constraint firstAttribute="height" constant="40" id="xGE-NE-sjS"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HOe-Ar-KNF" secondAttribute="trailing" id="0jW-Jk-FV5"/>
+                                        <constraint firstItem="HOe-Ar-KNF" firstAttribute="centerX" secondItem="6Zt-ht-GJB" secondAttribute="centerX" id="QG9-h0-Wu5"/>
+                                        <constraint firstItem="HOe-Ar-KNF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Zt-ht-GJB" secondAttribute="leading" id="WIB-R1-zMm"/>
+                                        <constraint firstAttribute="bottom" secondItem="HOe-Ar-KNF" secondAttribute="bottom" id="bab-Nk-PUh"/>
+                                        <constraint firstItem="HOe-Ar-KNF" firstAttribute="top" secondItem="6Zt-ht-GJB" secondAttribute="top" id="krK-G6-Bt5"/>
+                                        <constraint firstItem="HOe-Ar-KNF" firstAttribute="centerY" secondItem="6Zt-ht-GJB" secondAttribute="centerY" id="ptC-QX-zNT"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLN-XS-kBN" customClass="GlobileLabel" customModule="SantanderUIKitLib">
+                                    <rect key="frame" x="159" y="50" width="36.5" height="755.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dED-IQ-qE2" customClass="GlobileLabel" customModule="SantanderUIKitLib">
+                                    <rect key="frame" x="159" y="815.5" width="36.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Olq-3K-nT3" secondAttribute="trailing" constant="30" id="Az5-OQ-yOP"/>
+                        <constraint firstAttribute="bottom" secondItem="Olq-3K-nT3" secondAttribute="bottom" constant="30" id="Baf-K2-Y7G"/>
+                        <constraint firstItem="Olq-3K-nT3" firstAttribute="centerX" secondItem="rm8-c0-VsS" secondAttribute="centerX" id="EM4-ec-HUA"/>
+                        <constraint firstItem="Olq-3K-nT3" firstAttribute="leading" secondItem="rm8-c0-VsS" secondAttribute="leading" constant="30" id="OyJ-lH-I8w"/>
+                        <constraint firstItem="Olq-3K-nT3" firstAttribute="top" secondItem="rm8-c0-VsS" secondAttribute="top" constant="30" id="k0I-J4-Iz1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="rm8-c0-VsS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2VG-V6-uuQ"/>
+                <constraint firstItem="rm8-c0-VsS" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="4vL-eP-F9v"/>
+                <constraint firstAttribute="trailing" secondItem="rm8-c0-VsS" secondAttribute="trailing" id="fw9-B6-7i5"/>
+                <constraint firstAttribute="bottom" secondItem="rm8-c0-VsS" secondAttribute="bottom" id="h66-jc-7Mb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>

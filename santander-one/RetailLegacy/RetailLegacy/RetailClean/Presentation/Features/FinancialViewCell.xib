@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="265" id="KGk-i7-Jjw" customClass="FinancialViewCell" customModule="DEBUG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="348" height="95"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="348" height="94.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DzX-Zd-GLJ" userLabel="Labels Container">
+                        <rect key="frame" x="18" y="13" width="296" height="68.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="TU DINERO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dD5-bJ-Wb4" userLabel="inversion_label">
+                                <rect key="frame" x="0.0" y="0.0" width="77.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="27" id="rbm-Ly-0pZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" red="0.32941176470588235" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="751" text="267831,21€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bgY-0E-KTC" userLabel="inversion_amount">
+                                <rect key="frame" x="0.0" y="36" width="154.5" height="32.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="TU FINANCIACIÓN" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9d7-0w-684" userLabel="financing_label">
+                                <rect key="frame" x="168.5" y="0.0" width="127.5" height="31"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" red="0.32941176470588235" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="267831,21€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="iA2-ae-Szm" userLabel="financing_amount" customClass="CoachmarkUILabel" customModule="DEBUG" customModuleProvider="target">
+                                <rect key="frame" x="164" y="38.5" width="132" height="27.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9d7-0w-684" secondAttribute="trailing" id="6g8-Xs-u4u"/>
+                            <constraint firstItem="dD5-bJ-Wb4" firstAttribute="height" secondItem="9d7-0w-684" secondAttribute="height" id="Faw-Ph-AuL"/>
+                            <constraint firstItem="dD5-bJ-Wb4" firstAttribute="top" secondItem="DzX-Zd-GLJ" secondAttribute="top" id="KNi-cf-NHo"/>
+                            <constraint firstItem="9d7-0w-684" firstAttribute="top" secondItem="DzX-Zd-GLJ" secondAttribute="top" id="OcD-Ft-76D"/>
+                            <constraint firstItem="dD5-bJ-Wb4" firstAttribute="leading" secondItem="DzX-Zd-GLJ" secondAttribute="leading" id="T5s-td-ONY"/>
+                            <constraint firstItem="iA2-ae-Szm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bgY-0E-KTC" secondAttribute="trailing" constant="5" id="WlQ-bU-LpB"/>
+                            <constraint firstAttribute="bottom" secondItem="bgY-0E-KTC" secondAttribute="bottom" id="hBc-HD-Gox"/>
+                            <constraint firstItem="bgY-0E-KTC" firstAttribute="centerY" secondItem="iA2-ae-Szm" secondAttribute="centerY" id="jwg-fh-eb9"/>
+                            <constraint firstItem="bgY-0E-KTC" firstAttribute="leading" secondItem="dD5-bJ-Wb4" secondAttribute="leading" id="mjg-s3-BXw"/>
+                            <constraint firstAttribute="trailing" secondItem="iA2-ae-Szm" secondAttribute="trailing" id="mrj-uN-ooS"/>
+                            <constraint firstItem="bgY-0E-KTC" firstAttribute="top" secondItem="dD5-bJ-Wb4" secondAttribute="bottom" constant="5" id="rVW-3i-GD3"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omz-Jz-Cmk" userLabel="Bottom Separator">
+                        <rect key="frame" x="0.0" y="93.5" width="348" height="1"/>
+                        <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="bhu-li-ggu"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="omz-Jz-Cmk" secondAttribute="trailing" id="4gn-xs-ohq"/>
+                    <constraint firstItem="DzX-Zd-GLJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="CDQ-Ma-P05"/>
+                    <constraint firstItem="DzX-Zd-GLJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="Ggh-Sa-Uvk"/>
+                    <constraint firstAttribute="bottom" secondItem="DzX-Zd-GLJ" secondAttribute="bottom" constant="13" id="Mqu-bO-fch"/>
+                    <constraint firstItem="omz-Jz-Cmk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="a05-sX-CnN"/>
+                    <constraint firstItem="DzX-Zd-GLJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="muw-JJ-MoF"/>
+                    <constraint firstAttribute="trailing" secondItem="DzX-Zd-GLJ" secondAttribute="trailing" constant="34" id="pD2-KB-6gc"/>
+                    <constraint firstAttribute="bottom" secondItem="omz-Jz-Cmk" secondAttribute="bottom" id="sHc-Py-WVb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bottomSeparator" destination="omz-Jz-Cmk" id="zif-uH-MiA"/>
+                <outlet property="containerRightMargin" destination="pD2-KB-6gc" id="fYW-aJ-iAp"/>
+                <outlet property="content" destination="H2p-sc-9uM" id="FXV-yd-VYz"/>
+                <outlet property="financingLabel" destination="9d7-0w-684" id="a8Y-GN-cvx"/>
+                <outlet property="financingValue" destination="iA2-ae-Szm" id="Pa6-kV-JDg"/>
+                <outlet property="moneyLabel" destination="dD5-bJ-Wb4" id="QMJ-Bb-pbe"/>
+                <outlet property="moneyValue" destination="bgY-0E-KTC" id="4VI-cO-gzb"/>
+            </connections>
+            <point key="canvasLocation" x="71" y="-209.5"/>
+        </tableViewCell>
+    </objects>
+</document>

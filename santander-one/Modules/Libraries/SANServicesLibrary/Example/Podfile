@@ -1,0 +1,28 @@
+platform :ios, '10.3'
+
+def legacy_libraries
+  pod 'Locker', :path => '../../../../Modules/Libraries/Locker'
+  pod 'Logger', :path => '../../../../Modules/Libraries/Logger'
+end
+
+def libraries
+  pod 'SQLite.swift/SQLCipher', :path => '../../../../Modules/Libraries/SQLite.swift'
+  pod 'SANLegacyLibrary', :path => '../../../../Modules/Libraries/SANLegacyLibrary'
+  pod 'SQLCipher', '4.4.2'
+  pod 'CoreTestData', :path => '../../../../Modules/Libraries/CoreTestData'
+  pod 'CoreFoundationLib', :path => '../../../../Modules/Libraries/CoreFoundationLib'
+  pod 'RxCombine', :path => '../../Modules/Libraries/RxCombine'
+end
+
+target 'SANServicesLibrary' do
+  use_frameworks!
+
+  pod 'CoreDomain', :path => '../../../../Modules/Libraries/CoreDomain'
+  pod 'UI', :path => '../../../../UI'
+  legacy_libraries
+  libraries
+
+  target 'SANServicesLibraryTests' do
+    inherit! :search_paths
+  end
+end

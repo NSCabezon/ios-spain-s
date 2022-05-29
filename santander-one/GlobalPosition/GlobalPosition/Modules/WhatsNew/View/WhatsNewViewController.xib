@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WhatsNewViewController" customModule="GlobalPosition" customModuleProvider="target">
+            <connections>
+                <outlet property="agentMessageOffer" destination="2Sr-mi-hAW" id="3EC-ep-h0V"/>
+                <outlet property="agentMessageOfferHeightConstraint" destination="JA5-o4-fqa" id="oFa-u9-E3Q"/>
+                <outlet property="emptyView" destination="Nth-Kf-mdk" id="Lmn-Ve-tLc"/>
+                <outlet property="emptyViewContainer" destination="slW-IB-7WE" id="7aR-4C-9ef"/>
+                <outlet property="emptyViewHeightConstraint" destination="o2g-n5-HNv" id="6Vb-ti-N5J"/>
+                <outlet property="fractionedPaymentsView" destination="WE2-rG-tIR" id="sY2-lh-l80"/>
+                <outlet property="futureBillView" destination="uNo-oT-fJZ" id="K7b-ih-0Wz"/>
+                <outlet property="lastMovementsView" destination="Tqb-qo-AUN" id="8Iq-V4-JEA"/>
+                <outlet property="lastMovementsViewHeightConstraint" destination="p4Y-nS-Stj" id="gdP-4W-qE9"/>
+                <outlet property="operationInfoOffer" destination="phf-7g-gL1" id="zzx-9O-lli"/>
+                <outlet property="operationInfoOfferHeightConstraint" destination="pEP-Tk-VR5" id="AhP-rp-dgo"/>
+                <outlet property="pendingRequestView" destination="gsk-3p-IHw" id="bY4-I0-fRO"/>
+                <outlet property="preconceivedBanner" destination="Xeo-C1-P73" id="dkz-Xg-Iy8"/>
+                <outlet property="preconceivedOffer" destination="xWa-bS-avN" id="NYU-I9-dlV"/>
+                <outlet property="preconceivedOfferHeightConstraint" destination="thN-X0-ZRk" id="lif-Lj-BH8"/>
+                <outlet property="recobroOffer" destination="dZJ-Y5-5nB" id="AtA-XN-o0R"/>
+                <outlet property="recobroOfferHeightConstraint" destination="Tmi-mn-292" id="MIS-Ma-z8g"/>
+                <outlet property="scrollView" destination="3J7-7S-MRL" id="qLk-Wx-Zzc"/>
+                <outlet property="shadowView" destination="OfO-jA-wAm" id="VRi-0A-sm7"/>
+                <outlet property="spaceView" destination="Ctu-mc-Sjp" id="DuV-8B-mNp"/>
+                <outlet property="stackView" destination="xP2-5o-7WQ" id="iFn-or-SOD"/>
+                <outlet property="updateAppView" destination="37l-lD-HNW" id="MwA-2C-kbb"/>
+                <outlet property="view" destination="iN0-l3-epB" id="H5A-aC-yGn"/>
+                <outlet property="welcomeView" destination="IUR-4Y-zK1" id="1cd-Nj-c2P"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3J7-7S-MRL">
+                    <rect key="frame" x="0.0" y="44" width="414" height="860"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xP2-5o-7WQ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1277"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUR-4Y-zK1" customClass="WhatsNewWelcomeView" customModule="GlobalPosition" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37l-lD-HNW" customClass="UpdateAppView" customModule="GlobalPosition" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="50" width="414" height="80"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="80" id="lCQ-EE-57S"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phf-7g-gL1" customClass="OfferBannerView" customModule="UI">
+                                    <rect key="frame" x="0.0" y="130" width="414" height="0.0"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" id="pEP-Tk-VR5"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZJ-Y5-5nB" customClass="OfferBannerView" customModule="UI">
+                                    <rect key="frame" x="0.0" y="130" width="414" height="0.0"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" id="Tmi-mn-292"/>
+                                    </constraints>
+                                </view>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsk-3p-IHw" customClass="PendingRequestView" customModule="GlobalPosition" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="130" width="414" height="0.0"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="999" constant="120" id="ADf-dP-Fu5"/>
+                                    </constraints>
+                                </view>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ctu-mc-Sjp">
+                                    <rect key="frame" x="0.0" y="130" width="414" height="15"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="15" id="wEX-4H-MXR"/>
+                                    </constraints>
+                                </view>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slW-IB-7WE" userLabel="emptyViewContainer">
+                                    <rect key="frame" x="0.0" y="130" width="414" height="30"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nth-Kf-mdk" customClass="WhatsNewEmptyView" customModule="GlobalPosition" customModuleProvider="target">
+                                            <rect key="frame" x="15" y="15" width="384" height="0.0"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" id="O84-Xs-f0f"/>
+                                        <constraint firstAttribute="bottom" secondItem="Nth-Kf-mdk" secondAttribute="bottom" constant="15" id="RbU-Zt-ak2"/>
+                                        <constraint firstItem="Nth-Kf-mdk" firstAttribute="top" secondItem="slW-IB-7WE" secondAttribute="top" constant="15" id="cGt-Ka-UKY"/>
+                                        <constraint firstAttribute="height" priority="750" id="o2g-n5-HNv"/>
+                                        <constraint firstAttribute="trailing" secondItem="Nth-Kf-mdk" secondAttribute="trailing" constant="15" id="pbH-ul-0LJ"/>
+                                        <constraint firstItem="Nth-Kf-mdk" firstAttribute="leading" secondItem="slW-IB-7WE" secondAttribute="leading" constant="15" id="ygf-7q-KLB"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2UG-iP-5p7" userLabel="Last Movements List View">
+                                    <rect key="frame" x="0.0" y="130" width="414" height="531"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tqb-qo-AUN" customClass="LastMovementsListView" customModule="GlobalPosition" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="0.0" width="382" height="531"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="Tqb-qo-AUN" firstAttribute="leading" secondItem="2UG-iP-5p7" secondAttribute="leading" constant="16" id="TlV-zo-Vb0"/>
+                                        <constraint firstItem="Tqb-qo-AUN" firstAttribute="top" secondItem="2UG-iP-5p7" secondAttribute="top" id="YB8-Pd-Ehq"/>
+                                        <constraint firstAttribute="bottom" secondItem="Tqb-qo-AUN" secondAttribute="bottom" id="nCl-Yx-fka"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="999" constant="531" id="p4Y-nS-Stj"/>
+                                        <constraint firstAttribute="trailing" secondItem="Tqb-qo-AUN" secondAttribute="trailing" constant="16" id="s9v-Gb-F7g"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WE2-rG-tIR" customClass="FractionedPaymentSectionView" customModule="GlobalPosition" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="661" width="414" height="202"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="202" id="lBw-a6-NlW"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xWa-bS-avN" userLabel="No preconceived offer" customClass="OfferBannerView" customModule="UI">
+                                    <rect key="frame" x="0.0" y="863" width="414" height="100"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xeo-C1-P73" userLabel="Whats New Preconceived" customClass="WhatsNewPreconceivedBanner" customModule="GlobalPosition" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="963" width="414" height="100"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="thN-X0-ZRk" userLabel="preconceived height = 100"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Sr-mi-hAW" userLabel="Offer Banner" customClass="OfferBannerView" customModule="UI">
+                                    <rect key="frame" x="0.0" y="1063" width="414" height="0.0"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" id="JA5-o4-fqa"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2R-Tl-eHg">
+                                    <rect key="frame" x="0.0" y="1063" width="414" height="24"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="24" id="rvZ-NW-iZa"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uNo-oT-fJZ" customClass="FutureBillContainer" customModule="GlobalPosition" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="1087" width="414" height="190"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="190" id="7SS-M2-4k5"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="250" constant="1" id="SSw-7f-1xo"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="xP2-5o-7WQ" firstAttribute="top" secondItem="3J7-7S-MRL" secondAttribute="top" id="6Mx-Qj-p3f"/>
+                        <constraint firstAttribute="trailing" secondItem="xP2-5o-7WQ" secondAttribute="trailing" id="K2L-39-etU"/>
+                        <constraint firstAttribute="bottom" secondItem="xP2-5o-7WQ" secondAttribute="bottom" id="MGJ-3Z-kpz"/>
+                        <constraint firstItem="xP2-5o-7WQ" firstAttribute="width" secondItem="3J7-7S-MRL" secondAttribute="width" id="hEf-6c-Y8z"/>
+                        <constraint firstItem="xP2-5o-7WQ" firstAttribute="leading" secondItem="3J7-7S-MRL" secondAttribute="leading" id="wwM-Ui-eC6"/>
+                    </constraints>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OfO-jA-wAm">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="OfO-jA-wAm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7nu-VC-Ls1"/>
+                <constraint firstItem="3J7-7S-MRL" firstAttribute="bottomMargin" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="NYg-Z2-Ymx"/>
+                <constraint firstItem="3J7-7S-MRL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="SXR-rI-dU1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OfO-jA-wAm" secondAttribute="trailing" id="bXd-v3-huS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3J7-7S-MRL" secondAttribute="trailing" id="g04-QG-mIv"/>
+                <constraint firstItem="3J7-7S-MRL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="iZa-f0-Xxr"/>
+                <constraint firstItem="OfO-jA-wAm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mK8-QH-LaZ"/>
+                <constraint firstItem="3J7-7S-MRL" firstAttribute="top" secondItem="OfO-jA-wAm" secondAttribute="bottom" id="oC5-Dy-kHQ"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="152.67857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

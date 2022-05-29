@@ -1,0 +1,3 @@
+import CoreDomain
+
+public typealias PartialAmortizationType = CoreDomain.PartialAmortizationTypeRepresentable

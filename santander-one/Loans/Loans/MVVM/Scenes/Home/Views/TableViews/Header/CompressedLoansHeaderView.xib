@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderText-Bold.otf">
+            <string>SantanderText-Bold</string>
+        </array>
+        <array key="SantanderText-Regular.ttf">
+            <string>SantanderText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CompressedLoansHeaderView">
+            <connections>
+                <outlet property="filterButton" destination="qtz-6C-JPB" id="9dk-e8-h0Y"/>
+                <outlet property="filterLabel" destination="JcT-k3-7m2" id="ieN-7g-lxq"/>
+                <outlet property="loanAliasLabel" destination="jVo-pz-zBl" id="gSy-Eh-HPD"/>
+                <outlet property="loanAmountLabel" destination="ed6-wm-gyg" id="liw-pK-9TN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="426" height="56"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sie-X2-MCQ">
+                    <rect key="frame" x="16" y="0.0" width="350" height="45"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="** Hip.Variab.-Emplead.San" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVo-pz-zBl">
+                            <rect key="frame" x="0.0" y="0.0" width="350" height="21.5"/>
+                            <fontDescription key="fontDescription" name="SantanderText-Bold" family="Santander Text" pointSize="16"/>
+                            <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="**9.999€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ed6-wm-gyg">
+                            <rect key="frame" x="0.0" y="26.5" width="350" height="18.5"/>
+                            <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="14"/>
+                            <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="WJC-cz-QsD">
+                    <rect key="frame" x="368.5" y="-1.5" width="41.5" height="48"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtz-6C-JPB">
+                            <rect key="frame" x="9" y="0.0" width="24" height="24.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="fq6-Tf-1fF"/>
+                                <constraint firstAttribute="width" secondItem="qtz-6C-JPB" secondAttribute="height" multiplier="1:1" id="pa5-cj-v0B"/>
+                            </constraints>
+                            <connections>
+                                <action selector="filterAction" destination="-1" eventType="touchUpInside" id="kY3-BH-deR"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcT-k3-7m2">
+                            <rect key="frame" x="0.0" y="27.5" width="41.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyJ-Qa-dyx" userLabel="Separator">
+                    <rect key="frame" x="0.0" y="55" width="426" height="1"/>
+                    <color key="backgroundColor" red="0.80784313730000001" green="0.87058823529999996" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="rbR-V1-vh2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.97647058823529409" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="TyJ-Qa-dyx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5ix-JF-ifN"/>
+                <constraint firstAttribute="trailing" secondItem="WJC-cz-QsD" secondAttribute="trailing" constant="16" id="Cvb-dm-n8H"/>
+                <constraint firstItem="WJC-cz-QsD" firstAttribute="centerY" secondItem="sie-X2-MCQ" secondAttribute="centerY" id="Oza-KA-lUE"/>
+                <constraint firstItem="sie-X2-MCQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="P4C-b2-bN4"/>
+                <constraint firstAttribute="bottom" secondItem="sie-X2-MCQ" secondAttribute="bottom" constant="11" id="e8k-vh-Dhm"/>
+                <constraint firstAttribute="trailing" secondItem="TyJ-Qa-dyx" secondAttribute="trailing" id="otn-0a-wKx"/>
+                <constraint firstAttribute="trailing" secondItem="sie-X2-MCQ" secondAttribute="trailing" constant="60" id="tm9-wA-oxo"/>
+                <constraint firstAttribute="bottom" secondItem="TyJ-Qa-dyx" secondAttribute="bottom" id="yXb-M4-fOE"/>
+                <constraint firstItem="sie-X2-MCQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="zTJ-vO-4FC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="140.57971014492756" y="-133.25892857142856"/>
+        </view>
+    </objects>
+</document>

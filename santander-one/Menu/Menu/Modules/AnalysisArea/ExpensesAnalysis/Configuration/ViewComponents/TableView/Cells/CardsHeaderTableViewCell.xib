@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CardsHeaderTableViewCell" customModule="Menu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1C-5y-ag4">
+                        <rect key="frame" x="15" y="0.0" width="290" height="44"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgG-25-Dtl">
+                                <rect key="frame" x="16" y="11.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mm-wR-N14">
+                                <rect key="frame" x="246" y="4" width="36" height="36"/>
+                                <connections>
+                                    <action selector="didPressCheckBox:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Jeg-lh-mmO"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f5F-Us-I8F">
+                                <rect key="frame" x="252" y="10" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="OLB-Sg-eEv"/>
+                                    <constraint firstAttribute="width" constant="24" id="yvJ-gd-rZc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Mm-wR-N14" firstAttribute="centerY" secondItem="f5F-Us-I8F" secondAttribute="centerY" id="CfB-Rs-rku"/>
+                            <constraint firstItem="6Mm-wR-N14" firstAttribute="width" secondItem="f5F-Us-I8F" secondAttribute="width" multiplier="1.5" id="G7X-9e-t51"/>
+                            <constraint firstItem="HgG-25-Dtl" firstAttribute="centerY" secondItem="K1C-5y-ag4" secondAttribute="centerY" id="Kgh-Tp-tvi"/>
+                            <constraint firstItem="6Mm-wR-N14" firstAttribute="height" secondItem="f5F-Us-I8F" secondAttribute="height" multiplier="1.5" id="Lis-uR-BlX"/>
+                            <constraint firstItem="f5F-Us-I8F" firstAttribute="centerY" secondItem="K1C-5y-ag4" secondAttribute="centerY" id="awF-Rc-U6Y"/>
+                            <constraint firstItem="6Mm-wR-N14" firstAttribute="centerX" secondItem="f5F-Us-I8F" secondAttribute="centerX" id="roh-wy-26v"/>
+                            <constraint firstAttribute="trailing" secondItem="f5F-Us-I8F" secondAttribute="trailing" constant="14" id="sN0-d0-9fy"/>
+                            <constraint firstItem="HgG-25-Dtl" firstAttribute="leading" secondItem="K1C-5y-ag4" secondAttribute="leading" constant="16" id="zkH-Th-0gO"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="K1C-5y-ag4" secondAttribute="trailing" constant="15" id="XwJ-tO-Lik"/>
+                    <constraint firstItem="K1C-5y-ag4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="gyH-au-bIz"/>
+                    <constraint firstAttribute="bottom" secondItem="K1C-5y-ag4" secondAttribute="bottom" id="jz2-vi-ZtQ"/>
+                    <constraint firstItem="K1C-5y-ag4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="rxQ-YF-uJy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="checkBoxButton" destination="6Mm-wR-N14" id="SZx-qt-nVl"/>
+                <outlet property="checkBoxImage" destination="f5F-Us-I8F" id="7Zr-Ll-cxN"/>
+                <outlet property="containerView" destination="K1C-5y-ag4" id="FRd-Q5-UVA"/>
+                <outlet property="title" destination="HgG-25-Dtl" id="YZV-0O-PNr"/>
+            </connections>
+            <point key="canvasLocation" x="-112" y="107"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoThemeSelectorViewController" customModule="PersonalArea" customModuleProvider="target">
+            <connections>
+                <outlet property="generalViewCollectionView" destination="khJ-Aj-CPH" id="MDA-Cc-oPE"/>
+                <outlet property="saveChangesButton" destination="CvT-bD-sdr" id="d0u-fc-UPB"/>
+                <outlet property="separatorView" destination="H0L-7X-MKM" id="UEp-Sw-xjV"/>
+                <outlet property="view" destination="iN0-l3-epB" id="eCG-Za-Udb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khJ-Aj-CPH" customClass="GeneralViewCollectionView" customModule="PersonalArea" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="663"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H0L-7X-MKM">
+                    <rect key="frame" x="0.0" y="663" width="414" height="1"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="rWL-1f-GAe"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6r6-Ng-1jR">
+                    <rect key="frame" x="0.0" y="664" width="414" height="72"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvT-bD-sdr" customClass="WhiteLisboaButton" customModule="UI">
+                            <rect key="frame" x="24" y="16" width="366" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="L4Q-Rr-Wk9"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="CvT-bD-sdr" firstAttribute="top" secondItem="6r6-Ng-1jR" secondAttribute="top" constant="16" id="BKO-U2-YyZ"/>
+                        <constraint firstAttribute="trailing" secondItem="CvT-bD-sdr" secondAttribute="trailing" constant="24" id="BiB-Uw-2SK"/>
+                        <constraint firstItem="CvT-bD-sdr" firstAttribute="leading" secondItem="6r6-Ng-1jR" secondAttribute="leading" constant="24" id="c4m-Dd-yHu"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="H0L-7X-MKM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7RO-Pu-Oy7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="khJ-Aj-CPH" secondAttribute="trailing" id="CQN-W5-W1q"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="H0L-7X-MKM" secondAttribute="trailing" id="Mln-OV-3S6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="CvT-bD-sdr" secondAttribute="bottom" constant="16" id="PWo-5H-OSd"/>
+                <constraint firstItem="6r6-Ng-1jR" firstAttribute="top" secondItem="H0L-7X-MKM" secondAttribute="bottom" id="Spl-bf-fQt"/>
+                <constraint firstItem="khJ-Aj-CPH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="XLG-q1-UmP"/>
+                <constraint firstItem="6r6-Ng-1jR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ZIs-Zu-pbX"/>
+                <constraint firstAttribute="bottom" secondItem="6r6-Ng-1jR" secondAttribute="bottom" id="bmM-As-5Ns"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6r6-Ng-1jR" secondAttribute="trailing" id="tM2-zW-T2I"/>
+                <constraint firstItem="khJ-Aj-CPH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="v30-Ri-80t"/>
+                <constraint firstItem="H0L-7X-MKM" firstAttribute="top" secondItem="khJ-Aj-CPH" secondAttribute="bottom" id="wYK-wH-oTb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="126" y="112"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,40 @@
+custom_rules:
+  init_usage:
+    message: "Constructors should be called without init, just Foo(baz: parameter)."
+    name: "Init as constructor"
+    regex: (?<!super)(?<!self)(\.init\()
+disabled_rules:
+  - trailing_whitespace
+  - nesting
+  - line_length
+excluded:
+  - "**/R.generated.swift"
+  - "**/Pods/**"
+  
+included:
+  - ExampleApp
+  - ../Onboarding
+  
+cyclomatic_complexity:
+  warning: 10
+  error: 25
+
+file_length:
+    warning: 760
+    error: 800
+    ignore_comment_only_lines: true
+
+type_name:
+    min_length: 3
+    max_length: 52
+
+identifier_name:
+    min_length: 3
+    max_lenght: 47
+
+function_body_length:
+    warning: 100
+    error: 130
+
+warning_threshold: 165
+# violation_threshold: 20

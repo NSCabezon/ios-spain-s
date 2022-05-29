@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fractionate_pay_cell" id="cL5-aR-MBo" customClass="OldFractionatePaymentCell" customModule="Cards" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aDY-YO-zrN">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="66"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqY-XM-9dD">
+                        <rect key="frame" x="7" y="8" width="105" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSO-Ft-Uih">
+                        <rect key="frame" x="39" y="29" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUl-KB-gR1">
+                        <rect key="frame" x="41" y="49" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dqY-XM-9dD" firstAttribute="top" secondItem="aDY-YO-zrN" secondAttribute="top" constant="8" id="I1v-4w-j5y"/>
+                    <constraint firstItem="AUl-KB-gR1" firstAttribute="top" secondItem="VSO-Ft-Uih" secondAttribute="bottom" constant="-1" id="JVk-db-gWN"/>
+                    <constraint firstItem="VSO-Ft-Uih" firstAttribute="centerX" secondItem="aDY-YO-zrN" secondAttribute="centerX" id="ZyY-EN-8Yg"/>
+                    <constraint firstItem="AUl-KB-gR1" firstAttribute="centerX" secondItem="aDY-YO-zrN" secondAttribute="centerX" constant="2" id="k89-gv-Uv7"/>
+                    <constraint firstItem="VSO-Ft-Uih" firstAttribute="top" secondItem="dqY-XM-9dD" secondAttribute="bottom" id="lgb-mA-abM"/>
+                    <constraint firstItem="dqY-XM-9dD" firstAttribute="leading" secondItem="aDY-YO-zrN" secondAttribute="leading" constant="7" id="raA-n1-C0y"/>
+                    <constraint firstAttribute="trailing" secondItem="dqY-XM-9dD" secondAttribute="trailing" constant="8" id="u2D-0p-soi"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="noInterestLabel" destination="AUl-KB-gR1" id="pPX-8e-luD"/>
+                <outlet property="subtitleLabel" destination="VSO-Ft-Uih" id="qJf-zy-eBr"/>
+                <outlet property="titleLabel" destination="dqY-XM-9dD" id="I5Z-jj-9IW"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
+        </collectionViewCell>
+    </objects>
+</document>

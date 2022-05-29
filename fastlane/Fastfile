@@ -1,0 +1,600 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+fastlane_require './scripts/update_shared_schemes.rb'
+
+default_platform(:ios)
+
+CONFIGURATIONS = {
+  "intern" => { name: "Intern", configuration: "Intern-Release", appcenter: "iOS-Retail-v.5.10-INTERN", collaborators: "*" },
+  "pre" => { name: "Pre", configuration: "Pre-Release", appcenter: "iOS-Retail-v.5.10-PRE", collaborators: "Collaborators,Experis Testers/QA,Experis Movilidad iOS,External Testers" }
+}
+
+EXTENSIONS = [
+  "widget",
+  "siri.intents",
+  "siri.intents.ui",
+  "pushNotificationService"
+]
+
+TEST_EXAMPLE_APPS_CONFIGURATION = {
+  "Bills" => { scheme: "Bills-Example", local: "santander-one", path: "Bills/Example", workspace: "Bills.xcworkspace" },
+  "Inbox" => { scheme: "Inbox-Example", local: "santander-one", path: "Inbox/Example", workspace: "Inbox.xcworkspace" },
+  "Menu" => { scheme: "Menu-Example", local: "santander-one", path: "Menu/Example", workspace: "Menu.xcworkspace" },
+  "Transfer" => { scheme: "Transfer-Example", local: "santander-one", path: "Transfer/Example", workspace: "Transfer.xcworkspace" }
+}
+
+def calculateVersionCode(versionName)
+  version = versionName.split('.')
+  major = version[0].to_i
+  minor = version[1].to_i
+  build = version[2].to_i
+  (major * 100 + minor) * 1000 + build
+end
+
+platform :ios do
+
+  desc "Create app id"
+  lane :create_app_id do |options|
+    CONFIGURATIONS.each do |k, v|
+      produce(
+        app_name: "Spain #{k.upcase} #{options[:version].gsub '.',' '}",
+        skip_itc: true,
+        app_identifier: "es.bancosantander.apps.ios.#{k}.#{options[:version]}",
+        enable_services: {
+            app_group: "on",
+            associated_domains: "on",
+            in_app_purchase: "on",
+            push_notification: "on"
+        }
+      )
+      EXTENSIONS.each do |extension|
+        produce(
+          app_name: "Spain #{k.upcase} #{extension} #{options[:version].gsub '.',' '}",
+          skip_itc: true,
+          app_identifier: "es.bancosantander.apps.ios.#{k}.#{options[:version]}.#{extension}"
+        )
+      end
+    end
+  end
+
+  desc 'Fetch certificates and provisioning profiles (passphrase: Santander2021)'
+  lane :certificates do |options|
+    match(
+      git_url: "git@github.com:santander-group-europe/ios-certificates-development.git",
+      app_identifier: app_identifiers(options),
+      type: 'development',
+      readonly: true
+    )
+  end
+
+  desc 'Fetch Distribution certificates and provisioning profiles'
+  lane :certificates_release do |options|
+    match(
+      git_url: "ssh://git@gitlab.ciber-es.com:7346/mobility/Ciber/Common/iOS/certificates-release.git",
+      app_identifier: app_identifiers(options),
+      type: 'enterprise',
+      readonly: true
+    )
+  end
+
+  desc 'Updating pods and Provisions'
+  lane :check_certs do
+    versionName = get_version_number(xcodeproj: "Santander.xcodeproj", target: "Santander")
+    major, minor, patch = versionName.match(/(\d*)\.(\d*)\.(\d*)/).captures
+    certificates_release({version: "#{major}.#{minor}"})
+  end
+
+  desc 'Pass swiftlint'
+  lane :swift_lint do
+    swiftlint(
+      mode: :lint,
+      executable: "./Pods/SwiftLint/swiftlint",
+      config_file: ".swiftlint.yml",
+      quiet: true
+  )
+  end
+
+  lane :clean_repo do
+    sh "git clean -qfdx"
+    sh "git reset --hard HEAD"
+  end
+
+  lane :release do |options|
+    UI.message "Start lane release"
+    ensure_strings_update(options)
+    do_release(options)
+    generate_changelog()
+    upload_to_appcenter(options)
+    if(options[:deploy_env] == 'pre')
+      dynatrace_dsymbols_upload(appId: "4048732a-3917-4088-880d-0415af7e3114", bundleId: "es.bancosantander.apps.ios.pre.5.10")
+    end
+  end
+
+  desc "Build for all test"
+  lane :build_for_test do
+    UI.message "Start lane to build"
+  end
+
+  desc "Test all example apps"
+  lane :test do |options|
+    UI.message "Passing tests"
+    run_tests(
+      device: "iPhone 12",
+      workspace: "Santander.xcworkspace",
+      scheme: "Intern",
+      output_style: "basic",
+      suppress_xcode_output: options[:suppress_xcode_output]
+    )
+  end
+
+  lane :generate_changelog do
+    version = get_version_number(target: "Santander")
+    major, minor, patch = version.match(/(\d*)\.(\d*)\.(\d*)/).captures
+    if  patch.to_i > 0
+      changelog_from_git_commits(
+          between: ["dev/#{major}.#{minor}/#{major}.#{minor}.#{patch.to_i - 1}", "HEAD"],
+          pretty: "-  %s by %aN",
+          date_format: "short",
+          merge_commit_filtering: "exclude_merges"
+      )
+      UI.success Actions.lane_context[SharedValues::FL_CHANGELOG]
+    end
+  end
+
+  lane :build_appium do
+    UI.message "Start lane to appium"
+    build_ios_app(
+      workspace: "Santander.xcworkspace",
+      configuration: "Intern",
+      skip_package_ipa: true,
+      skip_archive: true,
+      clean: true,
+      scheme: "Intern",
+      derived_data_path: "./",
+      sdk: "iphonesimulator"
+      )
+	end
+
+  # Lane to update i18n
+  private_lane :ensure_strings_update do |options|
+    UI.message "Start lane ensure_strings_update"
+    UI.message "Branch #{options[:branch]}"
+    Dir.chdir("..") do
+      sh "cd i18n && git checkout master && git pull && cd .."
+      status = sh "git status -s"
+      if status.include? "i18n"
+        sh "git add i18n"
+        sh "git commit -m \"Updating i18n\""
+        sh "git push --set-upstream origin #{options[:branch]}"
+      end
+    end
+  end
+
+  private_lane :do_release do |options|
+    UI.message "Start lane doRelease"
+    outpudir = File.expand_path("~/CI/")
+    clear_derived_data
+    configuration = CONFIGURATIONS[options[:deploy_env]]
+    UI.message configuration
+    gym(
+        configuration: configuration[:configuration],
+        scheme: configuration[:name],
+        output_directory: outpudir,
+        output_name: "NR-#{configuration[:name]}-#{get_version_number(target: "Santander")}.ipa",
+        export_method: "enterprise",
+        include_bitcode: "false",
+        include_symbols: "true",
+        clean: "true",
+        export_options: {
+            compileBitcode: false
+        }
+    )
+  end
+
+  # Returns an array of app ids (es.test.app, es.test.app.widget, es.test.app.siri ...)
+  private_lane :app_identifiers do |options|
+    app_identifiers = Array.new
+    extensions_app_id_suffix = [
+      "widget",
+      "siri.intents",
+      "siri.intents.ui",
+      "pushNotificationService"
+    ]
+    CONFIGURATIONS.each do |version, configuration|
+      app_identifiers.push("es.bancosantander.apps.ios.#{version}.#{options[:version]}")
+      extensions_app_id_suffix.each do |extension|
+        app_identifiers.push("es.bancosantander.apps.ios.#{version}.#{options[:version]}.#{extension}")
+      end
+    end
+    app_identifiers
+  end
+
+  private_lane :upload_to_appcenter do |options|
+    UI.success "IPA: #{Actions.lane_context[SharedValues::IPA_OUTPUT_PATH]}"
+    UI.success "DSYM: #{Actions.lane_context[SharedValues::DSYM_OUTPUT_PATH]}"
+    appcenter_upload(
+        api_token: ENV["APPCENTER_API_TOKEN"],
+        owner_name: ENV["APPCENTER_OWNER_NAME"],
+        owner_type: "organization",
+        app_name: CONFIGURATIONS[options[:deploy_env]][:appcenter],
+        destinations: CONFIGURATIONS[options[:deploy_env]][:collaborators],
+        file: Actions.lane_context[SharedValues::IPA_OUTPUT_PATH],
+        dsym: Actions.lane_context[SharedValues::DSYM_OUTPUT_PATH],
+        notify_testers: options[:notify_testers],
+        release_notes: Actions.lane_context[SharedValues::FL_CHANGELOG]
+    )
+  end
+
+  private_lane :dynatrace_dsymbols_upload do |options|
+    UI.success "IPA: #{Actions.lane_context[SharedValues::IPA_OUTPUT_PATH]}"
+    UI.success "DSYM: #{Actions.lane_context[SharedValues::DSYM_OUTPUT_PATH]}"
+    dynatrace_process_symbols(
+        appId: options[:appId],
+        apitoken: ENV["DYNATRACE_API_TOKEN"],
+        os: "ios",
+        bundleId: options[:bundleId],
+        versionStr: get_version_number(xcodeproj: "Santander.xcodeproj", target: "Santander"),
+        version: "#{calculateVersionCode(get_version_number(xcodeproj: "Santander.xcodeproj", target: "Santander"))}",
+        server: "https://dynatrace.bancosantander.es:443/e/a9b631ff-5285-454a-9b3e-4355527a91fd",
+        symbolsfile: Actions.lane_context[SharedValues::DSYM_OUTPUT_PATH]
+    )
+  end
+
+  # Lanes about incrementing version
+
+  desc 'Incrementing Version'
+  lane :increment_version do |options|
+    version = get_version_number(xcodeproj: "Santander.xcodeproj", target: "Santander")
+    push_tag()
+    increment_version_number(xcodeproj: "Santander.xcodeproj", bump_type: "patch")
+    increment_build_number(build_number: calculateVersionCode(get_version_number(xcodeproj: "Santander.xcodeproj", target: "Santander")))
+    upload_build_settings_versions()
+    update_version_in_plist_extensions()
+    update_xcschemes()
+    push_version(options)
+  end
+
+  lane :push_tag do
+    versionName = get_version_number(xcodeproj: "Santander.xcodeproj", target: "Santander")
+    UI.message("Current version " + versionName)
+    major, minor, patch = versionName.match(/(\d*)\.(\d*)\.(\d*)/).captures
+    branch = git_branch == "master" ? "release" : "dev"
+    tag = "#{branch}/#{major}.#{minor}/#{versionName}"
+    if !git_tag_exists(tag: tag)
+      UI.message("NOT Found it 🚀 tag " + tag)
+      add_git_tag(tag: tag, message: "Version #{versionName}")
+      push_git_tags
+    else
+      UI.message("Found it 🚀 tag " + tag)
+    end
+  end
+
+  private_lane :upload_build_settings_versions do
+    project_version = get_version_number(xcodeproj: "Santander.xcodeproj", target: "Santander")
+    build_version = get_build_number(xcodeproj: "Santander.xcodeproj")
+    UI.message("Project version #{project_version} --- Build version #{build_version}")
+    project = Xcodeproj::Project.open('../Santander.xcodeproj')
+    target = project.targets.first
+    target.build_configurations.each do |configuration|
+      configuration.build_settings["MARKETING_VERSION"] = project_version
+      configuration.build_settings["CURRENT_PROJECT_VERSION"] = build_version
+    end
+    project.save
+  end
+
+  lane :update_version_in_plist_extensions do
+    project_version = get_version_number(xcodeproj: "Santander.xcodeproj", target: "Santander")
+    build_version = get_build_number(xcodeproj: "Santander.xcodeproj")
+    set_info_plist_value(path: "./Widget/Plist/Widget-Info.plist", key: "CFBundleShortVersionString", value: project_version)
+    set_info_plist_value(path: "./Siri/Config/Info.plist", key: "CFBundleShortVersionString", value: project_version)
+    set_info_plist_value(path: "./SiriUI/Config/Info.plist", key: "CFBundleShortVersionString", value: project_version)
+    set_info_plist_value(path: "./PushNotificationService/Info.plist", key: "CFBundleShortVersionString", value: project_version)	    
+    set_info_plist_value(path: "./Widget/Plist/Widget-Info.plist", key: "CFBundleVersion", value: build_version)
+    set_info_plist_value(path: "./Siri/Config/Info.plist", key: "CFBundleVersion", value: build_version)
+    set_info_plist_value(path: "./SiriUI/Config/Info.plist", key: "CFBundleVersion", value: build_version)
+    set_info_plist_value(path: "./PushNotificationService/Info.plist", key: "CFBundleVersion", value: build_version)
+  end
+
+  private_lane :push_version do |options|
+    branch = "#{options[:branch]}"
+    UI.message("🚀  Git branch #{branch}")
+    git_add(path: "./Santander.xcodeproj/project.pbxproj")
+    git_add(path: "./Santander/Info.plist")
+    git_add(path: "./Widget/Plist/Widget-Info.plist")
+    git_add(path: "./Siri/Config/Info.plist")
+    git_add(path: "./SiriUI/Config/Info.plist")
+    git_add(path: "./PushNotificationService/Info.plist")
+    git_add(path: "./Santander.xcodeproj/xcshareddata/xcschemes/*.xcscheme")
+    git_commit(
+      path: 
+      [
+        "./Santander.xcodeproj/project.pbxproj",
+        "./Santander/Info.plist",
+        "./Widget/Plist/Widget-Info.plist",
+        "./Siri/Config/Info.plist",
+        "./SiriUI/Config/Info.plist",
+        "./PushNotificationService/Info.plist",
+        "./Santander.xcodeproj/xcshareddata/xcschemes/*.xcscheme"
+      ],
+      message: "Updating Version #{Actions.lane_context[SharedValues::VERSION_NUMBER]}"
+      )
+    reset_git_repo(force: true)
+    sh "git pull origin #{branch}"
+    push_to_git_remote(remote_branch: branch)
+  end
+
+  # Lanes about beta version
+
+  lane :beta do |options|
+    UI.message("Start lane beta")
+    update_last_i18n()
+    build_version = get_build_number(xcodeproj: "Santander.xcodeproj")
+    print("DIR #{Dir.pwd}")
+    major = options[:major]
+    minor = options[:minor]
+    patch = options[:patch]
+    cleanRepo
+    sh "git pull"
+    sh "pod deintegrate"
+    sh "pod install"
+    versionProd = "#{major}.#{minor}.#{patch}"
+    set_info_plist_value(path: "./Santander/Info.plist", key: "CFBundleShortVersionString", value: versionProd)
+    set_info_plist_value(path: "./Widget/Plist/Widget-Info.plist", key: "CFBundleShortVersionString", value: versionProd)
+    set_info_plist_value(path: "./Siri/Config/Info.plist", key: "CFBundleShortVersionString", value: versionProd)
+    set_info_plist_value(path: "./SiriUI/Config/Info.plist", key: "CFBundleShortVersionString", value: versionProd)
+    set_info_plist_value(path: "./PushNotificationService/Info.plist", key: "CFBundleShortVersionString", value: versionProd)	    
+    set_info_plist_value(path: "./Santander/Info.plist", key: "CFBundleVersion", value: build_version)
+    set_info_plist_value(path: "./Widget/Plist/Widget-Info.plist", key: "CFBundleVersion", value: build_version)
+    set_info_plist_value(path: "./Siri/Config/Info.plist", key: "CFBundleVersion", value: build_version)
+    set_info_plist_value(path: "./SiriUI/Config/Info.plist", key: "CFBundleVersion", value: build_version)
+    set_info_plist_value(path: "./PushNotificationService/Info.plist", key: "CFBundleVersion", value: build_version)	 
+    build_app(scheme: "Pro", export_method: "app-store", workspace: "./Santander.xcworkspace",
+    export_options: {
+      method: "app-store",
+      provisioningProfiles: {
+        "com.isban.bancosantander.es.public" => "Santander Retail - Store",
+        "com.isban.bancosantander.es.public.widget" => "Santander Retail Widget - Store",
+        "com.isban.bancosantander.es.public.siriintents" => "Santander Retail Siri Intents - Store",
+        "com.isban.bancosantander.es.public.siriintentsui" => "Santander Retail Siri Intents UI - Store",
+        "com.isban.bancosantander.es.public.pushNotificationService" => "Santander Retail Push Notification Service - Store"
+      }
+    })
+    upload_to_testflight(skip_submission: true, skip_waiting_for_build_processing: true, username: "mobility.spain@ciberexperis.es", team_name: "Banco Santander SA")
+    dynatrace_dsymbols_upload(appId: "ef4cd12e-3612-44f4-a472-dd8919eaec6a", bundleId: "com.isban.bancosantander.es.public")
+    cleanRepo
+  end
+
+  private_lane :cleanRepo do
+    UI.message("Clean repo")
+    sh "git clean -qfdx"
+    sh "git reset --hard HEAD"
+  end
+
+  private_lane :update_last_i18n do
+    UI.message "Start lane update_last_i18n"
+    sh "cd ../i18n"
+		sh "git checkout master"
+		sh "git pull"
+	end
+
+  private_lane :update_xcschemes do
+    UI.message "Start lane update xcshemes"
+    project_path = "../Santander.xcodeproj"
+    version = get_version_number(xcodeproj: "Santander.xcodeproj", target: "Santander")
+    update_schemes(project_path, version)
+  end
+
+  lane :branch_equilibrium do |options|
+    UI.message "Start lane branch_equilibrium"
+    UI.message "Branch #{options[:branch]}"
+    sh "git branch --set-upstream-to=origin/#{options[:branch]} #{options[:branch]}"
+    sh "git fetch --all"
+    sh "git pull origin #{options[:branch]}"
+    UI.message "Updating #{options[:branch]} from santander-one"
+    sh "cd santander-one && git checkout #{options[:branch]}"
+		sh "cd santander-one && git pull"
+    UI.message "Pod install"
+    sh "cd .."
+    sh "pod install"
+    #UI.message "Compiling #{options[:branch]}"
+    # build_ios_app(
+    #   workspace: "Santander.xcworkspace",
+    #   configuration: "Intern",
+    #   skip_package_ipa: true,
+    #   skip_archive: true,
+    #   silent: true,
+    #   scheme: "Intern",
+    #   sdk: "iphonesimulator"
+    #   )
+    status = sh "git status -s"
+    if status.include? "santander-one"
+      UI.message "Include santander-one changes"
+      sh "git add santander-one"
+			sh "git commit -m \"UPDATE: santander-one #{options[:branch]}\""
+			sh "git push --set-upstream origin #{options[:branch]}"
+    end
+  end
+
+# Lanes about vostok
+	
+  lane :certificates_vostok do |options|
+    sh('pwd')
+	
+    create_keychain(
+      name: "CI.keychain",
+      password: options[:keychainPassword],
+      default_keychain: true,
+      unlock: true,
+      timeout: 1500,
+      lock_when_sleeps: false,
+      require_create: true
+    )
+    
+    sh "security list-keychains -s CI.keychain"
+    sh "security default-keychain -s CI.keychain"
+    sh "security unlock-keychain -p #{options[:keychainPassword]} CI.keychain"
+    sh "security set-keychain-settings"
+      
+    sh "security import #{options[:certificatePath]} -k CI.keychain -P '' -A"
+    sh "security set-key-partition-list -S apple-tool:,apple: -s -k #{options[:keychainPassword]} CI.keychain"
+	  
+    install_provisioning_profile(path: options[:pushNotificationService])
+    install_provisioning_profile(path: options[:iosProvision])
+    install_provisioning_profile(path: options[:siriProvision])
+    install_provisioning_profile(path: options[:siriUIProvision])
+    install_provisioning_profile(path: options[:widgetProvision])
+
+    update_project_provisioning(
+      xcodeproj: "./Santander.xcodeproj",
+      profile: options[:pushNotificationService], # optional if you use sigh
+      target_filter: "PushNotificationService", # matches name or type of a target
+      build_configuration: "#{options[:configuration]}"
+    )
+      
+    update_project_provisioning(
+      xcodeproj: "./Santander.xcodeproj",
+      profile: options[:iosProvision], # optional if you use sigh
+      target_filter: "Santander", # matches name or type of a target
+      build_configuration: "#{options[:configuration]}"
+    )
+        
+    update_project_provisioning(
+      xcodeproj: "./Santander.xcodeproj",
+      profile: options[:siriProvision], # optional if you use sigh
+      target_filter: "Siri", # matches name or type of a target
+      build_configuration: "#{options[:configuration]}"
+    )
+        
+    update_project_provisioning(
+      xcodeproj: "./Santander.xcodeproj",
+      profile: options[:siriUIProvision], # optional if you use sigh
+      target_filter: "SiriUI", # matches name or type of a target
+      build_configuration: "#{options[:configuration]}"
+    )
+        
+    update_project_provisioning(
+      xcodeproj: "./Santander.xcodeproj",
+      profile: options[:widgetProvision], # optional if you use sigh
+      target_filter: "Widget", # matches name or type of a target
+      build_configuration: "#{options[:configuration]}"
+    )
+    
+    update_project_team(
+      path: "./Santander.xcodeproj",
+      teamid: options[:team_id]
+    )
+      
+    update_code_signing_settings(
+      use_automatic_signing: false,
+            path: "./Santander.xcodeproj",
+      team_id: options[:team_id],
+      targets: ["Siri", "SiriUI"],
+      code_sign_identity: "#{options[:certificateName]}"
+    )
+          
+    import_certificate(
+        keychain_name: "CI.keychain",
+        certificate_path: options[:certificatePath],
+        certificate_password: options[:certificatePassword],
+        keychain_password: options[:keychainPassword]
+    )
+  end
+	
+  lane :build_vostok do |options|
+    print("DIR #{Dir.pwd}")
+    sh("ls -l /Users/runner/Library/MobileDevice/Provisioning\\ Profiles")
+    pathFiles = "/Users/runner/Library/MobileDevice/Provisioning Profiles"
+    #mobileProvisionFiles = Dir[File.dirname("#{pathFiles.shellescape}") + '/*.mobileprovision']
+    mobileProvisionFiles = Dir['/Users/runner/Library/MobileDevice/Provisioning\\ Profiles/*.mobileprovision']
+          #mobileProvisionFiles.each do |mobileProvision|
+          #  UI.message("found file at: #{mobileProvision}")
+          #  update_project_provisioning(
+    #    xcodeproj: "./Santander.xcodeproj",
+    #    profile: "#{mobileProvision}", # optional if you use sigh
+    #    target_filter: "Siri", # matches name or type of a target
+    #    build_configuration: "Pro-Release"
+    #  )
+          #end
+    disable_automatic_code_signing(path: "./Santander.xcodeproj")
+    build_app(
+      scheme: "Pro", 
+      configuration: 'Pro-Release',
+      output_directory: "build",
+      export_method: "#{options[:exportMethod]}",
+      output_name: "spain.ipa",
+      skip_archive: true,
+      workspace: "./Santander.xcworkspace",
+      export_xcargs: "OTHER_CODE_SIGN_FLAGS=--keychain=\"CI.keychain-db\"",
+      codesigning_identity: "#{options[:certificateName]}"
+    )
+  end
+	
+  lane :build_vostok_distribution do |options|
+    print("DIR #{Dir.pwd}")
+    sh("ls -l /Users/runner/Library/MobileDevice/Provisioning\\ Profiles")
+    pathFiles = "/Users/runner/Library/MobileDevice/Provisioning Profiles"
+    #mobileProvisionFiles = Dir[File.dirname("#{pathFiles.shellescape}") + '/*.mobileprovision']
+    mobileProvisionFiles = Dir['/Users/runner/Library/MobileDevice/Provisioning\\ Profiles/*.mobileprovision']
+          #mobileProvisionFiles.each do |mobileProvision|
+          #  UI.message("found file at: #{mobileProvision}")
+          #  update_project_provisioning(
+    #    xcodeproj: "./Santander.xcodeproj",
+    #    profile: "#{mobileProvision}", # optional if you use sigh
+    #    target_filter: "Siri", # matches name or type of a target
+    #    build_configuration: "Pro-Release"
+    #  )
+          #end
+    disable_automatic_code_signing(path: "./Santander.xcodeproj")
+    build_app(
+      scheme: "#{options[:scheme]}", 
+      configuration: "#{options[:configuration]}",
+      output_directory: "build",
+      export_method: "#{options[:exportMethod]}",
+      output_name: "spain.ipa",
+      skip_archive: false,
+      archive_path: "build/spain.xcarchive",
+      workspace: "./Santander.xcworkspace",
+      export_xcargs: "OTHER_CODE_SIGN_FLAGS=--keychain=\"CI.keychain-db\"",
+      codesigning_identity: "#{options[:certificateName]}"
+    )
+  end
+	
+  desc "SonarQ Vostok"
+  lane :sonarQ_vostok do |options|
+    scan(
+      scheme: "#{options[:scheme]}",
+      output_directory: "./sonar-reports",
+      clean: true,
+      code_coverage: true
+    )
+    slather(
+      scheme: "#{options[:scheme]}",
+      proj: "Santander.xcodeproj",
+      workspace: "Santander.xcworkspace",
+      sonarqube_xml: true,
+      output_directory: "./sonar-reports"
+    )
+    swiftlint(
+      output_file: "./sonar-reports/swiftlint.txt",
+      ignore_exit_status: true
+    )
+  end
+  
+  desc "Get project version VOSTOK"
+  lane :getProjectVersion_vostok do
+      version = get_version_number(xcodeproj: "Santander.xcodeproj", target: "Santander")
+      sh("echo VERSION=#{version} >> $GITHUB_ENV")
+  end
+end

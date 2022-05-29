@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ImageViewCell" id="iN0-l3-epB" customClass="ImageViewCell" customModule="DEBUG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="479" height="219"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AE0-XY-pnQ">
+                    <rect key="frame" x="0.0" y="0.0" width="479" height="219"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jm9-aD-fGp">
+                            <rect key="frame" x="0.0" y="0.0" width="479" height="219"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctf-gf-yLl">
+                            <rect key="frame" x="455" y="0.0" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="5aY-bs-ug4"/>
+                                <constraint firstAttribute="height" constant="24" id="Ah4-Eu-6U4"/>
+                            </constraints>
+                            <state key="normal" image="icnXPullofferCopy"/>
+                            <connections>
+                                <action selector="touchUpInsideCloseButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="Xcp-HB-2WP"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ctf-gf-yLl" firstAttribute="top" secondItem="Jm9-aD-fGp" secondAttribute="top" id="0gS-82-FnX"/>
+                        <constraint firstItem="Jm9-aD-fGp" firstAttribute="centerX" secondItem="AE0-XY-pnQ" secondAttribute="centerX" id="EgV-vq-bc3"/>
+                        <constraint firstAttribute="trailing" secondItem="Jm9-aD-fGp" secondAttribute="trailing" id="QtR-3H-phd"/>
+                        <constraint firstAttribute="bottom" secondItem="Jm9-aD-fGp" secondAttribute="bottom" id="bvD-Bd-ehM"/>
+                        <constraint firstItem="Jm9-aD-fGp" firstAttribute="leading" secondItem="AE0-XY-pnQ" secondAttribute="leading" id="gFV-w4-2kd"/>
+                        <constraint firstItem="Jm9-aD-fGp" firstAttribute="top" secondItem="AE0-XY-pnQ" secondAttribute="top" id="k2s-TW-9nT"/>
+                        <constraint firstItem="ctf-gf-yLl" firstAttribute="trailing" secondItem="Jm9-aD-fGp" secondAttribute="trailing" id="oFI-c1-fbx"/>
+                        <constraint firstItem="Jm9-aD-fGp" firstAttribute="centerY" secondItem="AE0-XY-pnQ" secondAttribute="centerY" id="t5S-by-WuI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="AE0-XY-pnQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3h8-u2-yqx"/>
+                <constraint firstAttribute="bottom" secondItem="AE0-XY-pnQ" secondAttribute="bottom" id="9Tb-WL-fn6"/>
+                <constraint firstAttribute="trailing" secondItem="AE0-XY-pnQ" secondAttribute="trailing" id="G3n-DW-m45"/>
+                <constraint firstItem="AE0-XY-pnQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="SI1-Qo-zc7"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bottomConstraint" destination="9Tb-WL-fn6" id="3x9-rj-bAo"/>
+                <outlet property="closeButton" destination="ctf-gf-yLl" id="yx3-Qr-tDf"/>
+                <outlet property="containerView" destination="AE0-XY-pnQ" id="i5s-u9-Hnk"/>
+                <outlet property="imageURLView" destination="Jm9-aD-fGp" id="Ms4-ff-w7I"/>
+                <outlet property="leadingConstraint" destination="3h8-u2-yqx" id="XWL-Iq-Oo3"/>
+                <outlet property="topConstraint" destination="SI1-Qo-zc7" id="l6S-hg-jqY"/>
+                <outlet property="trailingConstraint" destination="G3n-DW-m45" id="xgt-Eg-eoT"/>
+            </connections>
+            <point key="canvasLocation" x="-214" y="45"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icnXPullofferCopy" width="24" height="24"/>
+    </resources>
+</document>

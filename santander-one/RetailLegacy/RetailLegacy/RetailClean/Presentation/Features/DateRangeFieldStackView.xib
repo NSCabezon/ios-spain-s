@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DateRangeFieldStackView" customModule="DEBUG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ngg-rF-snH">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="R9c-4N-mtC">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBR-CM-jyu">
+                                    <rect key="frame" x="0.0" y="0.0" width="203" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMp-7o-dKo">
+                                    <rect key="frame" x="211" y="0.0" width="203" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Ks-0K-6S9">
+                            <rect key="frame" x="0.0" y="28.5" width="414" height="47.5"/>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Ngg-rF-snH" secondAttribute="trailing" id="4fD-NV-cMd"/>
+                <constraint firstItem="Ngg-rF-snH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4s8-z2-vc1"/>
+                <constraint firstAttribute="bottom" secondItem="Ngg-rF-snH" secondAttribute="bottom" id="ett-6k-e9C"/>
+                <constraint firstItem="Ngg-rF-snH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gWt-DQ-Vcw"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bottom" destination="ett-6k-e9C" id="op9-bR-dSZ"/>
+                <outlet property="left" destination="4s8-z2-vc1" id="LFU-rD-ayU"/>
+                <outlet property="leftLabel" destination="jBR-CM-jyu" id="B9d-Oo-fIe"/>
+                <outlet property="right" destination="4fD-NV-cMd" id="fbn-C7-TeK"/>
+                <outlet property="rightLabel" destination="CMp-7o-dKo" id="h7r-pG-7b0"/>
+                <outlet property="stackView" destination="9Ks-0K-6S9" id="BV0-hx-u9h"/>
+                <outlet property="top" destination="gWt-DQ-Vcw" id="ugb-6H-FYg"/>
+            </connections>
+            <point key="canvasLocation" x="126.08695652173914" y="-486.83035714285711"/>
+        </view>
+    </objects>
+</document>

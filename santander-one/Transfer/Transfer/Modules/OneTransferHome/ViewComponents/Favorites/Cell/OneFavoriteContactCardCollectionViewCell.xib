@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="OneFavoriteContactCardCollectionViewCell" customModule="Transfer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="136" height="148"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="136" height="148"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DbG-vi-4Fd" customClass="OneFavoriteContactCardView" customModule="UIOneComponents">
+                        <rect key="frame" x="0.0" y="0.0" width="136" height="148"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="DbG-vi-4Fd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6dH-id-DnU"/>
+                <constraint firstAttribute="bottom" secondItem="DbG-vi-4Fd" secondAttribute="bottom" id="BPc-Fi-l4P"/>
+                <constraint firstItem="DbG-vi-4Fd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Jcp-XO-BFs"/>
+                <constraint firstAttribute="trailing" secondItem="DbG-vi-4Fd" secondAttribute="trailing" id="hyb-NE-6un"/>
+            </constraints>
+            <connections>
+                <outlet property="oneFavoriteContactCardView" destination="DbG-vi-4Fd" id="4g8-he-ZsL"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="151"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

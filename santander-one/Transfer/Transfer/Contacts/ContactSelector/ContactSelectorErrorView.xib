@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactSelectorErrorView" customModule="Transfer" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="Clt-JM-qMA" id="Ue3-I5-oIJ"/>
+                <outlet property="subtitleLabel" destination="PGi-by-aMp" id="GpL-1Z-QdN"/>
+                <outlet property="titleLabel" destination="nmA-4D-0Bo" id="SHU-lM-P6b"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Clt-JM-qMA">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="211"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="211" id="GEg-pj-775"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmA-4D-0Bo">
+                    <rect key="frame" x="186" y="95.5" width="42" height="20.5"/>
+                    <accessibility key="accessibilityConfiguration" identifier="onePay_title_emptyFavorites"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGi-by-aMp">
+                    <rect key="frame" x="186" y="116" width="42" height="20.5"/>
+                    <accessibility key="accessibilityConfiguration" identifier="onePay_label_emptyFavorites"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PGi-by-aMp" secondAttribute="trailing" constant="45" id="4ZR-pj-zO9"/>
+                <constraint firstItem="Clt-JM-qMA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7Ch-3J-VQh"/>
+                <constraint firstItem="PGi-by-aMp" firstAttribute="top" secondItem="nmA-4D-0Bo" secondAttribute="bottom" id="7tn-6A-tbc"/>
+                <constraint firstItem="Clt-JM-qMA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BeA-mz-qRJ"/>
+                <constraint firstItem="PGi-by-aMp" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="C17-Ns-iHJ"/>
+                <constraint firstAttribute="trailing" secondItem="Clt-JM-qMA" secondAttribute="trailing" id="JDB-0N-nce"/>
+                <constraint firstItem="PGi-by-aMp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="45" id="Wvz-Cl-E4n"/>
+                <constraint firstItem="nmA-4D-0Bo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ftp-7N-Qh4"/>
+                <constraint firstItem="nmA-4D-0Bo" firstAttribute="centerY" secondItem="Clt-JM-qMA" secondAttribute="centerY" id="ye8-uH-Xah"/>
+            </constraints>
+            <point key="canvasLocation" x="76.811594202898561" y="132.58928571428572"/>
+        </view>
+    </objects>
+</document>

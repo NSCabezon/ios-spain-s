@@ -1,0 +1,58 @@
+name: iOS CI 
+
+on:
+  pull_request:
+    branches: [ develop, master, release/** ]
+
+jobs:
+  swift-lint:
+    runs-on: macos-11
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          submodules: recursive
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+          bundler-cache: true
+          
+      - name: Static Analysis
+        run: bundle exec fastlane run swiftlint 
+
+  tests:
+    # The type of runner that the job will run on
+    runs-on: macos-11
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          submodules: recursive
+      # Setup Xcode version we need for our build
+      - name: Setup - Xcode
+        run: sudo xcode-select -s /Applications/Xcode_13.2.1.app
+      
+      - name: Gems packages
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gem-
+
+      # Setup ruby
+      - name: Setup - Ruby and bundler dependencies
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7.2
+          bundler-cache: true
+
+      # Runs test lane created earlier
+      - name: Run tests
+        run: bundle exec fastlane ios test
+      

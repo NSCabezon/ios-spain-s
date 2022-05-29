@@ -1,0 +1,20 @@
+disabled_rules: # rule identifiers to exclude from running
+- trailing_whitespace
+- line_length
+- function_body_length
+- nesting
+- type_name
+- identifier_name
+- function_parameter_count
+- type_body_length
+- file_length
+- cyclomatic_complexity
+- todo
+- force_cast
+- force_try
+- weak_delegate
+custom_rules:
+  init_usage:
+    name: "Init as constructor"
+    regex: '(?<!super)(?<!self)(\.init\()' # matching pattern
+    message: "Constructors should be called without init, just Foo(baz: parameter)." # violation message. optional.

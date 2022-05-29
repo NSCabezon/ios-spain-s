@@ -1,0 +1,50 @@
+//
+//  PRE.xcconfig
+//  Santander
+//
+//  Created by José Carlos Estela Anguita on 2/3/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+PRODUCT_NAME = SP-PRE-$(MARKETING_VERSION)
+PRODUCT_BUNDLE_IDENTIFIER = es.bancosantander.apps.ios.pre.5.10
+WIDGET_BUNDLE_IDENTIFIER = es.bancosantander.apps.ios.pre.5.10.widget
+SIRI_BUNDLE_IDENTIFIER = es.bancosantander.apps.ios.pre.5.10.siri.intents
+SIRI_UI_BUNDLE_IDENTIFIER = es.bancosantander.apps.ios.pre.5.10.siri.intents.ui
+PUSH_NOTIFICATION_BUNDLE_IDENTIFIER = es.bancosantander.apps.ios.pre.5.10.pushNotificationService
+APP_NAME = Santander Pre
+EXCLUDED_ARCHS[sdk=iphonesimulator*] = arm64
+EMMA_API_KEY = santanderpreHdgTYANJ0
+LOAD_PFM_ENABLED = YES
+LOG_ENABLED = YES
+MANAGER_WALL_PRODUCTION_ENVIRONMENT = NO
+SALES_FORCE_ACCESS_TOKEN = lai8fY3Zrc1jfp2rh9uTEk6R/DbUHhqhAFVMhr09ZKs=
+SALES_FORCE_APP_ID = zILqaKp4WcyGrhyMwDBymsClDGn+KPFBZgVzst1GrEbZHkoAuxtUPq5iyaScsyvj
+SALES_FORCE_MID = NVMX4RCNDARAJZmuOAcccw==
+SALES_FORCE_END_POINT = OkhGaTtWwRfE4280nvK+iPCLjXTeg6TEI6+CgJvF9cAzGgnInWNO+B3PeDLM8tcmzCRydmnHOfWIABK99hDyr2DCHVn5kjQjn8zzfgPd0MA=
+TEALIUM_TARGET = qa
+TWIN_PUSH_API_KEY = tOGY8mIN5LykD576cpmFrYI4q05Gh6xXzE+qXlNcvySjl9Pu9vAfzThZEkfVzVlR
+TWIN_PUSH_APP_ID = 3OG/BQ5/TLkK9vP1o5BCat8i66vfAR53XDeFG3mn4zE=
+TWIN_PUSH_SUBDOMAIN = santander
+APP_CENTER_IDENTIFIER = ffcc0fdd-0d89-4ed9-9bed-e1c7d7c966b8
+TRUST_INVALID_CERTIFICATE = YES
+ENVIRONMENTS_AVAILABLE = YES
+KEYCHAIN_SERVICE = PRE_Santander
+ENVIRONMENTS_FOLDER = $(SRCROOT)/Santander/Configuration/Legacy
+ENVIRONMENTS_TO_EXCLUDE = $(ENVIRONMENTS_FOLDER)/INTERN/* $(ENVIRONMENTS_FOLDER)/PRO/* $(ENVIRONMENTS_FOLDER)/DEV/*
+TRUSTEER_FILES_TO_EXCLUDE = $(SRCROOT)/Santander/Trusteer/Wrapper/PRE/SdkHandler.mm
+EXCLUDED_SOURCE_FILE_NAMES = $(ENVIRONMENTS_TO_EXCLUDE) $(TRUSTEER_FILES_TO_EXCLUDE)
+HEADER_SEARCH_PATHS = $(inherited) $(SRCROOT)/Santander/Trusteer/tas/include
+TAS_ROOT = "$(SRCROOT)/Santander/Trusteer/tas"
+APP_GROUPS_IDENTIFIER = group.es.bancosantander.mobility.ios.retail
+SHARED_KEYCHAIN_IDENTIFIER = JFX6PVNK48.es.santander.sso
+CODE_SIGN_ENTITLEMENTS = $(SRCROOT)/Santander/Entitlement/Debug.entitlements
+WIDGET_CODE_SIGN_ENTITLEMENTS = $(SRCROOT)/Widget/WidgetDevelopment.entitlements
+SIRI_CODE_SIGN_ENTITLEMENTS = $(SRCROOT)/Siri/Config/SiriDevelopment.entitlements
+SIRI_UI_CODE_SIGN_ENTITLEMENTS = $(SRCROOT)/SiriUI/Config/SiriUIDevelopment.entitlements
+PUSH_CODE_SIGN_ENTITLEMENTS = $(SRCROOT)/PushNotificationService/NotificationsDevelopment.entitlements
+DYNATRACE_APP_ID = 4048732a-3917-4088-880d-0415af7e3114
+DYNATRACE_BEACON_URL = https:/$()/dynatrace.bancosantander.es:443/mbeacon/a9b631ff-5285-454a-9b3e-4355527a91fd
+DYNATRACE_AUTO_ACTION_TIMEOUT = 5000

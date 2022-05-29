@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UnlockView" customModule="PersonalArea" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="PQn-Fu-vhd"/>
+                <outlet property="iconImageView" destination="N9P-ZC-TWc" id="7uV-2H-blL"/>
+                <outlet property="titleLabel" destination="lcr-ND-51a" id="J7R-ua-S6Z"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N9P-ZC-TWc">
+                    <rect key="frame" x="11" y="19" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="54B-Bx-fJv"/>
+                        <constraint firstAttribute="width" secondItem="N9P-ZC-TWc" secondAttribute="height" multiplier="1:1" id="Bgm-ju-5UL"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lcr-ND-51a">
+                    <rect key="frame" x="55" y="5" width="133" height="90"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lcr-ND-51a" firstAttribute="leading" secondItem="N9P-ZC-TWc" secondAttribute="trailing" id="Iv4-jo-D34"/>
+                <constraint firstItem="N9P-ZC-TWc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" priority="990" constant="11" id="K0R-YI-iW7"/>
+                <constraint firstItem="lcr-ND-51a" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="Zda-Bf-kaE"/>
+                <constraint firstAttribute="trailing" secondItem="lcr-ND-51a" secondAttribute="trailing" constant="12" id="bDB-DX-JuD"/>
+                <constraint firstItem="lcr-ND-51a" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="cUf-mv-vji"/>
+                <constraint firstItem="N9P-ZC-TWc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="19" id="eX2-qF-7dX"/>
+                <constraint firstItem="N9P-ZC-TWc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="zV7-4c-gNg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="83"/>
+        </view>
+    </objects>
+</document>

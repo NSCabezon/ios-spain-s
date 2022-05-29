@@ -1,0 +1,38 @@
+platform :ios, '10.3'
+
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+def libraries
+  pod 'CoreFoundationLib', :path => '../../../../santander-one/Modules/Libraries/CoreFoundationLib'
+  pod 'SANLibraryV3', :path => '../../../../santander-one/Modules/Libraries/SANLibraryV3'
+  pod 'CoreFoundationLib', :path => '../../../../santander-one/Modules/Libraries/CoreFoundationLib'
+  pod 'DataRepository', :path => '../../../../santander-one/Modules/Libraries/DataRepository'
+  pod 'SQLite.swift/SQLCipher', :path => '../../../../santander-one/Modules/Libraries/SQLite.swift'
+  pod 'SQLCipher', '4.4.2'
+  pod 'SANLegacyLibrary', :path => '../../../../santander-one/Modules/Libraries/SANLegacyLibrary'
+  pod 'SANServicesLibrary', :path => '../../../../santander-one/Modules/Libraries/SANServicesLibrary'
+  pod 'Localization', :path => '../../../../santander-one/Localization'
+  pod 'SAMKeychain', '1.5.3'
+  pod 'SwiftLint', '0.39.2'
+end
+
+def pods
+  pod 'Ecommerce', :path => '../'
+  pod 'QuickSetup', :path => '../../../../santander-one/QuickSetup'
+  pod 'CoreTestData', :path => '../../../../santander-one/Modules/Libraries/CoreTestData'
+  pod 'CoreDomain', :path => '../../../../santander-one/Modules/Libraries/CoreDomain'
+  pod 'UI', :path => '../../../../santander-one/UI'
+  pod 'ESCommons', :path => '../../../Libraries/ESCommons'
+  pod 'Locker', :path => '../../../../santander-one/Modules/Libraries/Locker'
+  libraries
+end
+
+target 'Ecommerce_Example' do
+  pods
+end
+
+target 'Ecommerce_ExampleTests' do
+  pods
+end

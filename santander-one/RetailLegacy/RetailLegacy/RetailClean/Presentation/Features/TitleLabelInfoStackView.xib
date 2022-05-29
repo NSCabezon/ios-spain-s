@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TitleLabelInfoStackView" customModule="DEBUG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMG-hN-mTn">
+                    <rect key="frame" x="10" y="323.5" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxL-bL-KZZ">
+                    <rect key="frame" x="62" y="10" width="27" height="647"/>
+                    <state key="normal" image="icnInfoGrayBig"/>
+                    <connections>
+                        <action selector="showToolTip" destination="iN0-l3-epB" eventType="touchUpInside" id="Qfc-P8-xlW"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ZMG-hN-mTn" firstAttribute="centerY" secondItem="wxL-bL-KZZ" secondAttribute="centerY" id="9DZ-n0-9R6"/>
+                <constraint firstItem="wxL-bL-KZZ" firstAttribute="leading" secondItem="ZMG-hN-mTn" secondAttribute="trailing" constant="10" id="Mlr-wh-Bqm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wxL-bL-KZZ" secondAttribute="trailing" constant="10" id="TaV-TS-vBP"/>
+                <constraint firstItem="ZMG-hN-mTn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="top" id="VOl-Yb-bXi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ZMG-hN-mTn" secondAttribute="bottom" id="YBd-Dt-cNh"/>
+                <constraint firstItem="ZMG-hN-mTn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="aVq-QO-8Yl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="wxL-bL-KZZ" secondAttribute="bottom" constant="10" id="h5Z-E4-R2P"/>
+                <constraint firstItem="wxL-bL-KZZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="jsZ-wc-O08"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bottom" destination="h5Z-E4-R2P" id="IkP-bE-ETe"/>
+                <outlet property="left" destination="aVq-QO-8Yl" id="2fH-eP-nvt"/>
+                <outlet property="right" destination="TaV-TS-vBP" id="ydB-14-X2p"/>
+                <outlet property="titleLabel" destination="ZMG-hN-mTn" id="ZZp-Aw-wIZ"/>
+                <outlet property="tooltipButton" destination="wxL-bL-KZZ" id="GBz-LK-job"/>
+                <outlet property="top" destination="jsZ-wc-O08" id="c8K-5j-noF"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="153"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icnInfoGrayBig" width="27" height="27"/>
+    </resources>
+</document>

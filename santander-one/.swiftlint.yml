@@ -1,0 +1,78 @@
+custom_rules:
+  init_usage:
+    message: "Constructors should be called without init, just Foo(baz: parameter)."
+    name: "Init as constructor"
+    regex: (?<!super)(?<!self)(\.init\()
+disabled_rules:
+  - trailing_whitespace
+  - nesting
+  - line_length
+  - inclusive_language
+excluded:
+  - Accounts/Example
+  - Accounts/Accounts/Tests
+  - Accounts/Accounts/CountryExampleAppSupportFiles
+  - Bills/Example
+  - Bills/Bills/CountryExampleAppSupportFiles
+  - Cards/Example
+  - Cards/Cards/CountryExampleAppSupportFiles
+  - Cards/Cards/Tests
+  - Commons/Commons/Extension/DeviceModel.swift 
+  - GlobalPosition/ExampleApp
+  - GlobalSearch/Example
+  - Inbox/Example
+  - Loans/ExampleApp
+  - Login/Example
+  - Menu/Example
+  - Menu/Menu/CountryExampleAppSupportFiles
+  - Operative/Example
+  - PersonalArea/Example
+  - PersonalManager/Example
+  - Repository/Example
+  - Transfer/Example
+  - Transfer/Transfer/CountryExampleAppSupportFiles
+  - Pods
+  - vendor
+  - UI/Example
+  - Commons/Example
+included:
+  - Accounts
+  - Bills
+  - Cards
+  - GlobalPosition
+  - GlobalSearch
+  - Inbox
+  - Loans
+  - Login
+  - Menu
+  - Models
+  - Operative
+  - PersonalArea
+  - PersonalManager
+  - Repository
+  - UI
+  - Transfer
+  - RetailClean
+
+cyclomatic_complexity:
+  warning: 10
+  error: 25
+
+file_length:
+    warning: 760
+    error: 800
+    ignore_comment_only_lines: true
+
+type_name:
+    min_length: 3
+    max_length: 52
+
+identifier_name:
+    min_length: 3
+    max_lenght: 47
+
+function_body_length:
+    warning: 100
+    error: 130
+
+warning_threshold: 285

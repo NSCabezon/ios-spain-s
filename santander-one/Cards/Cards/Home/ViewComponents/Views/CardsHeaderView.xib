@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardsHeaderView" customModule="Cards" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButtonStackView" destination="AI8-ZE-hSN" id="MhS-ij-8F5"/>
+                <outlet property="actionsHeaderView" destination="2vk-Ra-8Es" id="gh6-u9-Rne"/>
+                <outlet property="collectionView" destination="QYV-ep-KOn" id="P0d-eU-XE6"/>
+                <outlet property="informationButtonsView" destination="FpN-eg-ePp" id="i1n-I2-gsC"/>
+                <outlet property="informationContainerView" destination="2Uh-35-Eee" id="Phq-BM-Xzq"/>
+                <outlet property="pageControl" destination="LKf-CR-6FN" id="VFs-EN-wMc"/>
+                <outlet property="pageControlContainerView" destination="13b-Nq-ac1" id="wg3-pN-a50"/>
+                <outlet property="pageControlHeightConstraint" destination="7VB-dt-fpz" id="KJ3-Ie-ku9"/>
+                <outlet property="stackView" destination="Nq8-cK-yhn" id="7PX-6a-i0U"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="389" height="426"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Nq8-cK-yhn">
+                    <rect key="frame" x="0.0" y="16" width="389" height="410"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="QYV-ep-KOn" customClass="CardsCollectionView" customModule="Cards" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="389" height="205"/>
+                            <color key="backgroundColor" red="0.96078431369999995" green="0.97647058819999999" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="205" id="4hQ-HQ-Hcl"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wgc-gC-bVp">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="13b-Nq-ac1">
+                            <rect key="frame" x="0.0" y="205" width="389" height="12"/>
+                            <subviews>
+                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="LKf-CR-6FN">
+                                    <rect key="frame" x="20" y="0.0" width="349" height="7"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="7" id="7VB-dt-fpz"/>
+                                    </constraints>
+                                    <color key="pageIndicatorTintColor" red="0.76078431372549016" green="0.81960784313725488" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <action selector="pageControlValueChanged:" destination="-1" eventType="valueChanged" id="L2a-8E-hbL"/>
+                                    </connections>
+                                </pageControl>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="LKf-CR-6FN" firstAttribute="top" secondItem="13b-Nq-ac1" secondAttribute="top" id="93i-np-Oix"/>
+                                <constraint firstAttribute="bottom" secondItem="LKf-CR-6FN" secondAttribute="bottom" constant="5" id="MlA-eb-HfT"/>
+                                <constraint firstItem="LKf-CR-6FN" firstAttribute="leading" secondItem="13b-Nq-ac1" secondAttribute="leading" constant="20" symbolic="YES" id="eh5-G2-Tjk"/>
+                                <constraint firstAttribute="trailing" secondItem="LKf-CR-6FN" secondAttribute="trailing" constant="20" symbolic="YES" id="s5X-tL-Yma"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Uh-35-Eee">
+                            <rect key="frame" x="0.0" y="217" width="389" height="92"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FpN-eg-ePp" customClass="InformationButtonView" customModule="Cards" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="10" width="389" height="72"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="72" id="Tpa-Cj-9Jm"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="FpN-eg-ePp" secondAttribute="bottom" constant="10" id="5DR-PQ-sGf"/>
+                                <constraint firstAttribute="trailing" secondItem="FpN-eg-ePp" secondAttribute="trailing" id="At1-8D-gHJ"/>
+                                <constraint firstItem="FpN-eg-ePp" firstAttribute="leading" secondItem="2Uh-35-Eee" secondAttribute="leading" id="Gb8-Kw-fUZ"/>
+                                <constraint firstItem="FpN-eg-ePp" firstAttribute="top" secondItem="2Uh-35-Eee" secondAttribute="top" constant="10" id="fTE-Va-brm"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEW-R3-NvH">
+                            <rect key="frame" x="0.0" y="309" width="389" height="37"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AI8-ZE-hSN">
+                                    <rect key="frame" x="16" y="5" width="357" height="16"/>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="AI8-ZE-hSN" firstAttribute="leading" secondItem="cEW-R3-NvH" secondAttribute="leading" constant="16" id="0eE-yI-XRX"/>
+                                <constraint firstAttribute="trailing" secondItem="AI8-ZE-hSN" secondAttribute="trailing" constant="16" id="TFi-Bv-Ikr"/>
+                                <constraint firstItem="AI8-ZE-hSN" firstAttribute="top" secondItem="cEW-R3-NvH" secondAttribute="top" constant="5" id="ZA9-iq-jQ3"/>
+                                <constraint firstAttribute="bottom" secondItem="AI8-ZE-hSN" secondAttribute="bottom" constant="16" id="yOg-F8-XFE"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vk-Ra-8Es" customClass="CardHeaderActionsView" customModule="Cards" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="346" width="389" height="64"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="FLb-e9-7QQ"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="Nq8-cK-yhn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="I8a-zJ-8F5"/>
+                <constraint firstItem="Nq8-cK-yhn" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Qxl-dL-6UJ"/>
+                <constraint firstItem="Nq8-cK-yhn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Rxw-jz-Or9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Nq8-cK-yhn" secondAttribute="bottom" id="wgB-Mg-iMI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="113.768115942029" y="323.4375"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

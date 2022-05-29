@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="73" id="7KY-yz-QbN" customClass="PaymentMethodSubtypeCell" customModule="DEBUG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7KY-yz-QbN" id="Hrf-AA-bBh">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="72.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRa-cz-Br2">
+                        <rect key="frame" x="10" y="5.5" width="355" height="65"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShG-yJ-qUt">
+                                <rect key="frame" x="18" y="22" width="337" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="65" id="2h6-zi-1iz"/>
+                            <constraint firstAttribute="trailing" secondItem="ShG-yJ-qUt" secondAttribute="trailing" id="w43-Cu-osh"/>
+                            <constraint firstItem="ShG-yJ-qUt" firstAttribute="leading" secondItem="eRa-cz-Br2" secondAttribute="leading" constant="18" id="yy4-mT-sLL"/>
+                            <constraint firstItem="ShG-yJ-qUt" firstAttribute="centerY" secondItem="eRa-cz-Br2" secondAttribute="centerY" id="zRo-ZV-Rsh"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="eRa-cz-Br2" secondAttribute="trailing" constant="10" id="3vQ-7P-DEN"/>
+                    <constraint firstItem="eRa-cz-Br2" firstAttribute="top" secondItem="Hrf-AA-bBh" secondAttribute="top" constant="5" id="73R-ng-dQ5"/>
+                    <constraint firstItem="eRa-cz-Br2" firstAttribute="leading" secondItem="Hrf-AA-bBh" secondAttribute="leading" constant="10" id="Gve-Nl-6W1"/>
+                    <constraint firstAttribute="bottom" secondItem="eRa-cz-Br2" secondAttribute="bottom" constant="5" id="yPz-5Z-r0o"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="borderView" destination="eRa-cz-Br2" id="aag-Sg-TDr"/>
+                <outlet property="titleLabel" destination="ShG-yJ-qUt" id="N08-iI-9af"/>
+            </connections>
+            <point key="canvasLocation" x="-82.400000000000006" y="101.19940029985008"/>
+        </tableViewCell>
+    </objects>
+</document>

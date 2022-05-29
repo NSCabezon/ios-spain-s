@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18122"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProgressBar" customModule="UI" customModuleProvider="target">
+            <connections>
+                <outlet property="progressView" destination="fM3-ud-nVb" id="NAA-Ji-1dn"/>
+                <outlet property="progressWidth" destination="T4c-85-dAI" id="aRL-7b-WgB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="435" height="3"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fM3-ud-nVb" userLabel="Progress View">
+                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="3"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="3" id="7mX-xf-mk1"/>
+                        <constraint firstAttribute="width" id="T4c-85-dAI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fM3-ud-nVb" secondAttribute="bottom" id="5JL-cc-1TO"/>
+                <constraint firstItem="fM3-ud-nVb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7lL-NZ-gbp"/>
+                <constraint firstItem="fM3-ud-nVb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VyP-v8-nkx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="147.10144927536234" y="-164.39732142857142"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProgrammedInfoView" customModule="FinantialTimeline" customModuleProvider="target">
+            <connections>
+                <outlet property="arrangmentDateInfoLabel" destination="RDP-ZL-JEK" id="Sqo-yw-tgW"/>
+                <outlet property="arrangmentDateTitleLabel" destination="CWF-b9-vHp" id="IQM-4a-MAh"/>
+                <outlet property="container" destination="iN0-l3-epB" id="evq-Uy-hUV"/>
+                <outlet property="frecuencyInfoLabel" destination="gB9-BK-k5R" id="mvw-Tv-jK7"/>
+                <outlet property="frecuencyTitleLabel" destination="97p-Q5-641" id="bvq-j9-Omu"/>
+                <outlet property="issueDateInfoLabel" destination="CDr-k4-Ep3" id="XRe-gk-SOh"/>
+                <outlet property="issueDateTitleLabel" destination="Wdj-ey-Jme" id="uXH-al-wKo"/>
+                <outlet property="toTitleLabel" destination="NN0-Ca-ZV9" id="7qc-E8-gL9"/>
+                <outlet property="toView" destination="vpC-ws-lCx" id="Yoe-Tz-7pN"/>
+                <outlet property="toinfoLabel" destination="jaC-ap-k0z" id="PuZ-ey-SNQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="132"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="X08-r6-u92">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="132"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="X1Y-i1-8PG">
+                            <rect key="frame" x="0.0" y="0.0" width="207" height="132"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1k-xH-eG1" userLabel="issue">
+                                    <rect key="frame" x="0.0" y="0.0" width="207" height="66"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDr-k4-Ep3" customClass="GlobileLabel" customModule="SantanderUIKitLib">
+                                            <rect key="frame" x="0.0" y="28.5" width="203" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wdj-ey-Jme" customClass="GlobileLabel" customModule="SantanderUIKitLib">
+                                            <rect key="frame" x="0.0" y="8" width="199" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Wdj-ey-Jme" firstAttribute="leading" secondItem="f1k-xH-eG1" secondAttribute="leading" id="3DC-n5-hsz"/>
+                                        <constraint firstAttribute="trailing" secondItem="CDr-k4-Ep3" secondAttribute="trailing" constant="4" id="ASb-jL-cdD"/>
+                                        <constraint firstAttribute="trailing" secondItem="Wdj-ey-Jme" secondAttribute="trailing" constant="8" id="IQW-1y-oKe"/>
+                                        <constraint firstItem="CDr-k4-Ep3" firstAttribute="top" secondItem="Wdj-ey-Jme" secondAttribute="bottom" id="Nmf-aK-BcD"/>
+                                        <constraint firstItem="Wdj-ey-Jme" firstAttribute="top" secondItem="f1k-xH-eG1" secondAttribute="top" constant="8" id="VOR-eV-5e0"/>
+                                        <constraint firstItem="CDr-k4-Ep3" firstAttribute="leading" secondItem="f1k-xH-eG1" secondAttribute="leading" id="W4m-hK-iTV"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="CDr-k4-Ep3" secondAttribute="bottom" constant="4" id="YZe-lQ-aVx"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ykv-0u-VH6" userLabel="arragment">
+                                    <rect key="frame" x="0.0" y="66" width="207" height="66"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDP-ZL-JEK" customClass="GlobileLabel" customModule="SantanderUIKitLib">
+                                            <rect key="frame" x="0.0" y="28.5" width="203" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWF-b9-vHp" customClass="GlobileLabel" customModule="SantanderUIKitLib">
+                                            <rect key="frame" x="0.0" y="8" width="199" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="RDP-ZL-JEK" firstAttribute="leading" secondItem="Ykv-0u-VH6" secondAttribute="leading" id="5dm-J5-Bgf"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="RDP-ZL-JEK" secondAttribute="bottom" constant="4" id="RdS-qX-M2S"/>
+                                        <constraint firstItem="RDP-ZL-JEK" firstAttribute="top" secondItem="CWF-b9-vHp" secondAttribute="bottom" id="ZBU-cj-5Zu"/>
+                                        <constraint firstAttribute="trailing" secondItem="RDP-ZL-JEK" secondAttribute="trailing" constant="4" id="aoF-Zq-YMF"/>
+                                        <constraint firstItem="CWF-b9-vHp" firstAttribute="leading" secondItem="Ykv-0u-VH6" secondAttribute="leading" id="n3M-Gs-T9S"/>
+                                        <constraint firstAttribute="trailing" secondItem="CWF-b9-vHp" secondAttribute="trailing" constant="8" id="sjg-wr-b0o"/>
+                                        <constraint firstItem="CWF-b9-vHp" firstAttribute="top" secondItem="Ykv-0u-VH6" secondAttribute="top" constant="8" id="wBD-z0-bzn"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ZIm-Ot-2t8">
+                            <rect key="frame" x="207" y="0.0" width="207" height="132"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vpC-ws-lCx" userLabel="toInfo">
+                                    <rect key="frame" x="0.0" y="0.0" width="207" height="66"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaC-ap-k0z" customClass="GlobileLabel" customModule="SantanderUIKitLib">
+                                            <rect key="frame" x="0.0" y="28.5" width="203" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NN0-Ca-ZV9" customClass="GlobileLabel" customModule="SantanderUIKitLib">
+                                            <rect key="frame" x="0.0" y="8" width="199" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="jaC-ap-k0z" firstAttribute="top" secondItem="NN0-Ca-ZV9" secondAttribute="bottom" id="0qr-xO-aq8"/>
+                                        <constraint firstItem="NN0-Ca-ZV9" firstAttribute="top" secondItem="vpC-ws-lCx" secondAttribute="top" constant="8" id="C7Y-Or-e9k"/>
+                                        <constraint firstAttribute="trailing" secondItem="jaC-ap-k0z" secondAttribute="trailing" constant="4" id="Lrv-gd-mdN"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="jaC-ap-k0z" secondAttribute="bottom" constant="4" id="O5Z-9U-ip1"/>
+                                        <constraint firstAttribute="trailing" secondItem="NN0-Ca-ZV9" secondAttribute="trailing" constant="8" id="ZQS-XZ-ZZQ"/>
+                                        <constraint firstItem="jaC-ap-k0z" firstAttribute="leading" secondItem="vpC-ws-lCx" secondAttribute="leading" id="cm4-a7-CDZ"/>
+                                        <constraint firstItem="NN0-Ca-ZV9" firstAttribute="leading" secondItem="vpC-ws-lCx" secondAttribute="leading" id="fZ9-IC-8Yb"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQ5-DO-cqx" userLabel="frecuency">
+                                    <rect key="frame" x="0.0" y="66" width="207" height="66"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gB9-BK-k5R" customClass="GlobileLabel" customModule="SantanderUIKitLib">
+                                            <rect key="frame" x="0.0" y="28.5" width="203" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97p-Q5-641" customClass="GlobileLabel" customModule="SantanderUIKitLib">
+                                            <rect key="frame" x="0.0" y="8" width="199" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="97p-Q5-641" secondAttribute="trailing" constant="8" id="1MW-6a-e9S"/>
+                                        <constraint firstItem="97p-Q5-641" firstAttribute="leading" secondItem="RQ5-DO-cqx" secondAttribute="leading" id="CGc-9d-GoF"/>
+                                        <constraint firstItem="97p-Q5-641" firstAttribute="top" secondItem="RQ5-DO-cqx" secondAttribute="top" constant="8" id="Qzl-fw-7nZ"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gB9-BK-k5R" secondAttribute="bottom" constant="4" id="Yy5-SX-Z4h"/>
+                                        <constraint firstItem="gB9-BK-k5R" firstAttribute="leading" secondItem="RQ5-DO-cqx" secondAttribute="leading" id="ezd-dm-p65"/>
+                                        <constraint firstAttribute="trailing" secondItem="gB9-BK-k5R" secondAttribute="trailing" constant="4" id="yj4-3a-6F9"/>
+                                        <constraint firstItem="gB9-BK-k5R" firstAttribute="top" secondItem="97p-Q5-641" secondAttribute="bottom" id="z34-Xb-0yE"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="Xon-K4-0GH"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="X08-r6-u92" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8YH-bO-ljs"/>
+                <constraint firstAttribute="trailing" secondItem="X08-r6-u92" secondAttribute="trailing" id="Y09-CK-qwh"/>
+                <constraint firstItem="X08-r6-u92" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="aYe-T6-XuP"/>
+                <constraint firstAttribute="bottom" secondItem="X08-r6-u92" secondAttribute="bottom" id="xWY-dt-FOr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="34.782608695652179" y="-220.98214285714286"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GenericSearchHeaderView" customModule="DEBUG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="37"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="bc0-zu-Eyd">
+                    <rect key="frame" x="15" y="8" width="70" height="22"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juD-f6-BWa">
+                            <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
+                            <state key="normal" image="icnCloseGrey"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20E-Qu-eNU">
+                            <rect key="frame" x="28" y="0.0" width="42" height="22"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ne-Hi-ga2" customClass="CoachmarkUIButton" customModule="DEBUG" customModuleProvider="target">
+                    <rect key="frame" x="330" y="3" width="32" height="30"/>
+                    <state key="normal" image="incSearch"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ek-DM-Vpc">
+                    <rect key="frame" x="14" y="36" width="350" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="BgS-i9-9Hm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6ne-Hi-ga2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bc0-zu-Eyd" secondAttribute="trailing" constant="8" id="3sr-vT-TDa"/>
+                <constraint firstItem="4ek-DM-Vpc" firstAttribute="top" secondItem="6ne-Hi-ga2" secondAttribute="bottom" constant="3" id="Emm-RB-i6J"/>
+                <constraint firstItem="4ek-DM-Vpc" firstAttribute="top" secondItem="bc0-zu-Eyd" secondAttribute="bottom" constant="6" id="IZy-qy-YPM"/>
+                <constraint firstItem="4ek-DM-Vpc" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="NTY-zH-lX7"/>
+                <constraint firstItem="bc0-zu-Eyd" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="Y9N-OF-gHZ"/>
+                <constraint firstAttribute="trailing" secondItem="4ek-DM-Vpc" secondAttribute="trailing" constant="11" id="YwL-Aq-OIL"/>
+                <constraint firstItem="bc0-zu-Eyd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="bQp-Vf-B1o"/>
+                <constraint firstItem="4ek-DM-Vpc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="14" id="hBG-P0-gbJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6ne-Hi-ga2" secondAttribute="trailing" constant="13" id="qBi-pg-afw"/>
+                <constraint firstItem="6ne-Hi-ga2" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="3" id="uka-QU-NQD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="clearButton" destination="juD-f6-BWa" id="JqB-jq-fjb"/>
+                <outlet property="searchButton" destination="6ne-Hi-ga2" id="Jj9-4P-WX5"/>
+                <outlet property="separatorView" destination="4ek-DM-Vpc" id="fKc-Nq-Vup"/>
+                <outlet property="titleLabel" destination="20E-Qu-eNU" id="HZQ-vH-j1a"/>
+            </connections>
+            <point key="canvasLocation" x="138.40000000000001" y="109.29535232383809"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icnCloseGrey" width="22" height="22"/>
+        <image name="incSearch" width="32" height="30"/>
+    </resources>
+</document>

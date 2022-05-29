@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SKCustomerDetailsViewController" customModule="SantanderKey" customModuleProvider="target">
+            <connections>
+                <outlet property="detailsBodyView" destination="Tdb-Xn-vHC" id="2BV-QH-DK7"/>
+                <outlet property="detailsHeaderView" destination="Ifu-QX-DVn" id="bDJ-5o-X8r"/>
+                <outlet property="oneFooterHelpView" destination="4uW-Yx-SO2" id="0no-DJ-CqX"/>
+                <outlet property="view" destination="1ox-U1-VJ3" id="Abd-Y1-aLE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="1ox-U1-VJ3">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fwd-q6-dsj">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="500" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QUC-fj-5eG">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="628"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="Ifu-QX-DVn" customClass="SKCustomerDetailsHeaderView" customModule="SantanderKey" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Tdb-Xn-vHC" customClass="SKCustomerDetailsBodyView" customModule="SantanderKey" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="50" width="414" height="128"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4uW-Yx-SO2" customClass="OneFooterHelpView" customModule="UIOneComponents">
+                                    <rect key="frame" x="0.0" y="178" width="414" height="450"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="QUC-fj-5eG" secondAttribute="trailing" id="Boc-EI-0xN"/>
+                        <constraint firstItem="QUC-fj-5eG" firstAttribute="width" secondItem="Fwd-q6-dsj" secondAttribute="width" id="DS1-zE-UEC"/>
+                        <constraint firstItem="QUC-fj-5eG" firstAttribute="leading" secondItem="Fwd-q6-dsj" secondAttribute="leading" id="MBY-sI-ZTb"/>
+                        <constraint firstItem="QUC-fj-5eG" firstAttribute="top" secondItem="Fwd-q6-dsj" secondAttribute="top" id="lhP-Rw-zCd"/>
+                        <constraint firstAttribute="bottom" secondItem="QUC-fj-5eG" secondAttribute="bottom" id="mRr-la-2qW"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="S0u-NU-NJP"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Fwd-q6-dsj" firstAttribute="leading" secondItem="S0u-NU-NJP" secondAttribute="leading" id="3Vw-Fs-4Cw"/>
+                <constraint firstAttribute="bottom" secondItem="Fwd-q6-dsj" secondAttribute="bottom" id="IZQ-nc-Jsu"/>
+                <constraint firstItem="S0u-NU-NJP" firstAttribute="trailing" secondItem="Fwd-q6-dsj" secondAttribute="trailing" id="oii-Hs-1xx"/>
+                <constraint firstItem="Fwd-q6-dsj" firstAttribute="top" secondItem="S0u-NU-NJP" secondAttribute="top" id="tO6-ZM-H5f"/>
+            </constraints>
+            <point key="canvasLocation" x="-5" y="23"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

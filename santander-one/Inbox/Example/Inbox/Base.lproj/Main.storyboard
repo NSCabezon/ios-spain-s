@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="vXZ-lx-hvc" customClass="ViewController" customModule="Inbox_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uv8-1D-9CH">
+                                <rect key="frame" x="149.5" y="318.5" width="76" height="30"/>
+                                <state key="normal" title="Buzón Link"/>
+                                <connections>
+                                    <action selector="buzonLinkButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="s9Y-0t-xF9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmI-gu-3SE">
+                                <rect key="frame" x="122.5" y="396.5" width="130" height="30"/>
+                                <state key="normal" title="Notificaciones Link"/>
+                                <connections>
+                                    <action selector="notificacionesLinkButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eZV-Wo-nqQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uv8-1D-9CH" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="LeC-Rs-bom"/>
+                            <constraint firstItem="fmI-gu-3SE" firstAttribute="top" secondItem="uv8-1D-9CH" secondAttribute="bottom" constant="48" id="ZEs-OI-0xS"/>
+                            <constraint firstItem="uv8-1D-9CH" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="aFP-BR-w4Y"/>
+                            <constraint firstItem="fmI-gu-3SE" firstAttribute="centerX" secondItem="uv8-1D-9CH" secondAttribute="centerX" id="hFE-VT-8DW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9gR-g5-FoZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>

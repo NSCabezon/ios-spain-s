@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SmartExpensesCrossLinearGraphCollectionViewCell" id="4go-lM-nMa" customClass="SmartExpensesCrossLinearGraphCollectionViewCell" customModule="GlobalPosition" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5ky-6f-pJ1">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXq-Sv-4qK" customClass="FinantialStatusView" customModule="GlobalPosition" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="wMc-8n-E67"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgGraphicFinancitionPgSmart" translatesAutoresizingMaskIntoConstraints="NO" id="Ltb-5a-Hru">
+                        <rect key="frame" x="0.0" y="45" width="414" height="144.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Ltb-5a-Hru" secondAttribute="height" multiplier="1125:393" id="pYh-Ze-w8v"/>
+                        </constraints>
+                    </imageView>
+                    <view autoresizesSubviews="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="xcj-ik-Mf1" customClass="ClassicComingView" customModule="GlobalPosition" customModuleProvider="target">
+                        <rect key="frame" x="132" y="40" width="150" height="16"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="2xh-ZF-BT7"/>
+                            <constraint firstAttribute="height" constant="16" id="yaB-UP-0sv"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NXq-Sv-4qK" firstAttribute="leading" secondItem="5ky-6f-pJ1" secondAttribute="leading" id="6JR-E9-17E"/>
+                    <constraint firstItem="xcj-ik-Mf1" firstAttribute="centerX" secondItem="5ky-6f-pJ1" secondAttribute="centerX" id="8Le-fd-EQ1"/>
+                    <constraint firstAttribute="trailing" secondItem="NXq-Sv-4qK" secondAttribute="trailing" id="SFG-xD-g1p"/>
+                    <constraint firstItem="NXq-Sv-4qK" firstAttribute="top" secondItem="5ky-6f-pJ1" secondAttribute="top" id="W3J-so-hLN"/>
+                    <constraint firstItem="Ltb-5a-Hru" firstAttribute="leading" secondItem="5ky-6f-pJ1" secondAttribute="leading" id="YKo-Rz-fL1"/>
+                    <constraint firstAttribute="trailing" secondItem="Ltb-5a-Hru" secondAttribute="trailing" id="fM5-OG-7aG"/>
+                    <constraint firstItem="Ltb-5a-Hru" firstAttribute="top" secondItem="NXq-Sv-4qK" secondAttribute="bottom" id="nmN-oe-8QS"/>
+                    <constraint firstItem="xcj-ik-Mf1" firstAttribute="top" secondItem="Ltb-5a-Hru" secondAttribute="top" constant="-5" id="oql-eM-5g4"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="crossLinearImageView" destination="Ltb-5a-Hru" id="iPf-6f-OO3"/>
+                <outlet property="financialStatusView" destination="NXq-Sv-4qK" id="fsI-5C-mLY"/>
+            </connections>
+            <point key="canvasLocation" x="-38" y="99"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="imgGraphicFinancitionPgSmart" width="375" height="131"/>
+    </resources>
+</document>

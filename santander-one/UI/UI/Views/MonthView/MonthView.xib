@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MonthView" customModule="UI" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="cVM-Es-1PL"/>
+                <outlet property="headerView" destination="me4-2i-Szq" id="tuP-wD-beL"/>
+                <outlet property="leftArrowImage" destination="wZZ-Os-H1l" id="Lx2-jL-J3N"/>
+                <outlet property="monthStackView" destination="CCZ-C9-40b" id="UtZ-KX-ezX"/>
+                <outlet property="rightArrowImage" destination="7Oe-rd-zJS" id="6EH-v4-kFK"/>
+                <outlet property="yearLabel" destination="ga9-PZ-ZVj" id="tLi-7Y-7YC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="me4-2i-Szq">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wZZ-Os-H1l">
+                            <rect key="frame" x="141.5" y="10" width="28" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="28" id="4iP-He-EjX"/>
+                                <constraint firstAttribute="height" constant="28" id="faf-Sg-aRf"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ga9-PZ-ZVj">
+                            <rect key="frame" x="169.5" y="24" width="75" height="0.0"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="75" id="4Dx-Kl-SZ6"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Oe-rd-zJS">
+                            <rect key="frame" x="244.5" y="10" width="28" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="28" id="Jtc-ld-6Jd"/>
+                                <constraint firstAttribute="height" constant="28" id="QeX-rr-78j"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="7Oe-rd-zJS" firstAttribute="leading" secondItem="ga9-PZ-ZVj" secondAttribute="trailing" id="M8T-sA-W04"/>
+                        <constraint firstItem="ga9-PZ-ZVj" firstAttribute="leading" secondItem="wZZ-Os-H1l" secondAttribute="trailing" id="a2v-or-xv7"/>
+                        <constraint firstItem="ga9-PZ-ZVj" firstAttribute="centerY" secondItem="me4-2i-Szq" secondAttribute="centerY" id="efi-rg-eRJ"/>
+                        <constraint firstAttribute="height" constant="48" id="wGP-8s-3gq"/>
+                        <constraint firstItem="7Oe-rd-zJS" firstAttribute="centerY" secondItem="ga9-PZ-ZVj" secondAttribute="centerY" id="xXj-Ws-7uU"/>
+                        <constraint firstItem="ga9-PZ-ZVj" firstAttribute="centerY" secondItem="wZZ-Os-H1l" secondAttribute="centerY" id="z5n-vZ-i3A"/>
+                        <constraint firstItem="ga9-PZ-ZVj" firstAttribute="centerX" secondItem="me4-2i-Szq" secondAttribute="centerX" id="zEf-fN-fIU"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CCZ-C9-40b" customClass="MultiselectionStackView" customModule="UI" customModuleProvider="target">
+                    <rect key="frame" x="8" y="57" width="398" height="183"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="183" id="gPM-ec-hFj"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="me4-2i-Szq" secondAttribute="trailing" id="Aeb-WK-wpO"/>
+                <constraint firstItem="CCZ-C9-40b" firstAttribute="top" secondItem="me4-2i-Szq" secondAttribute="bottom" constant="9" id="J00-gg-0WV"/>
+                <constraint firstAttribute="bottom" secondItem="CCZ-C9-40b" secondAttribute="bottom" constant="10" id="KgH-6e-cYc"/>
+                <constraint firstAttribute="trailing" secondItem="CCZ-C9-40b" secondAttribute="trailing" constant="8" id="Koo-Dx-T7P"/>
+                <constraint firstItem="me4-2i-Szq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VEz-Fz-Efe"/>
+                <constraint firstItem="CCZ-C9-40b" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="r6x-pS-Nai"/>
+                <constraint firstItem="me4-2i-Szq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ush-sw-rJq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="141" y="148"/>
+        </view>
+    </objects>
+</document>

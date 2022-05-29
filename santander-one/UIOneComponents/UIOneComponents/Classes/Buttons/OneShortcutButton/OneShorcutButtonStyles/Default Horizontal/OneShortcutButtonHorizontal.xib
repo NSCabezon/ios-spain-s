@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderText-Regular.ttf">
+            <string>SantanderText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OneShortcutButtonHorizontal" customModule="UIOneComponents" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundImage" destination="Q6t-0X-aw4" id="W7d-i7-YVY"/>
+                <outlet property="contentView" destination="4XO-K7-vAC" id="JZw-Dl-oMd"/>
+                <outlet property="dragIcon" destination="5uu-Ml-GZ8" id="m96-zS-4Qd"/>
+                <outlet property="imageIcon" destination="IVe-hD-h8a" id="xu0-Fa-Xn9"/>
+                <outlet property="titleLabel" destination="snK-Pm-XUY" id="T8P-5a-NaI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XO-K7-vAC">
+            <rect key="frame" x="0.0" y="0.0" width="255" height="47"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q6t-0X-aw4">
+                    <rect key="frame" x="0.0" y="0.0" width="255" height="47"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" button="YES" image="YES"/>
+                        <bool key="isElement" value="NO"/>
+                    </accessibility>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5uu-Ml-GZ8" userLabel="Drag Icon">
+                    <rect key="frame" x="235" y="4" width="16" height="16"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" button="YES" image="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="bqo-pD-gPg"/>
+                        <constraint firstAttribute="width" constant="16" id="os6-fm-toX"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IVe-hD-h8a">
+                    <rect key="frame" x="110" y="11.5" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="G1f-do-rJ0"/>
+                        <constraint firstAttribute="height" constant="24" id="XwZ-3t-9nJ"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snK-Pm-XUY">
+                    <rect key="frame" x="137.5" y="15.5" width="0.0" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="8RP-jh-D7r"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="13"/>
+                    <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="IVe-hD-h8a" firstAttribute="trailing" secondItem="snK-Pm-XUY" secondAttribute="leading" constant="-3.5" id="2q6-sY-hgR"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="snK-Pm-XUY" secondAttribute="trailing" constant="16" id="Odu-ip-ybC"/>
+                <constraint firstItem="snK-Pm-XUY" firstAttribute="centerX" secondItem="4XO-K7-vAC" secondAttribute="centerX" constant="10" id="Tyh-bj-bYM"/>
+                <constraint firstItem="Q6t-0X-aw4" firstAttribute="top" secondItem="4XO-K7-vAC" secondAttribute="top" id="azK-s2-Xth"/>
+                <constraint firstItem="5uu-Ml-GZ8" firstAttribute="top" secondItem="4XO-K7-vAC" secondAttribute="top" constant="4" id="dB7-41-1MX"/>
+                <constraint firstAttribute="trailing" secondItem="5uu-Ml-GZ8" secondAttribute="trailing" constant="4" id="fSA-ep-FvA"/>
+                <constraint firstAttribute="trailing" secondItem="Q6t-0X-aw4" secondAttribute="trailing" id="nZr-yn-fLX"/>
+                <constraint firstItem="IVe-hD-h8a" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4XO-K7-vAC" secondAttribute="leading" constant="16" id="nwQ-Hi-NG6"/>
+                <constraint firstItem="IVe-hD-h8a" firstAttribute="centerY" secondItem="4XO-K7-vAC" secondAttribute="centerY" id="oW2-Iq-17d"/>
+                <constraint firstItem="snK-Pm-XUY" firstAttribute="centerY" secondItem="4XO-K7-vAC" secondAttribute="centerY" id="qZx-pJ-QvH"/>
+                <constraint firstItem="Q6t-0X-aw4" firstAttribute="leading" secondItem="4XO-K7-vAC" secondAttribute="leading" id="sJv-rN-JMR"/>
+                <constraint firstAttribute="bottom" secondItem="Q6t-0X-aw4" secondAttribute="bottom" id="zMi-am-6FX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-76.08695652173914" y="-57.924107142857139"/>
+        </view>
+    </objects>
+</document>

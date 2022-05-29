@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SendMoneyAmountAndDescriptionView" customModule="TransferOperatives" customModuleProvider="target">
+            <connections>
+                <outlet property="amountView" destination="Nxv-vd-fk5" id="jnp-yJ-S9a"/>
+                <outlet property="currencyStackView" destination="GLe-kj-MbB" id="Y3v-X4-maI"/>
+                <outlet property="oneInputSelectView" destination="BCR-AZ-msd" id="LSc-MR-8zL"/>
+                <outlet property="oneLabelAmountView" destination="m1p-g8-rAP" id="2KS-qA-URb"/>
+                <outlet property="oneLabelCurrencyView" destination="hkM-C6-hHF" id="vgI-cn-9lG"/>
+                <outlet property="oneLabelDescriptionView" destination="Cri-xa-Ik6" id="cLb-Ag-9iT"/>
+                <outlet property="oneTextFieldView" destination="IeG-1E-AkA" id="a3l-yp-88Y"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="228"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="XkA-XA-RfE">
+                    <rect key="frame" x="16" y="44" width="382" height="184"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="1sB-et-ZEb">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="80"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qg1-NB-sGf">
+                                    <rect key="frame" x="0.0" y="0.0" width="324" height="80"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m1p-g8-rAP" customClass="OneLabelView" customModule="UIOneComponents">
+                                            <rect key="frame" x="0.0" y="0.0" width="324" height="24"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="3bk-1c-iDg"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nxv-vd-fk5" customClass="OneInputAmountView" customModule="UIOneComponents">
+                                            <rect key="frame" x="0.0" y="32" width="324" height="48"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="dVd-bs-xQj"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="80" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GLe-kj-MbB">
+                                    <rect key="frame" x="342" y="0.0" width="40" height="80"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkM-C6-hHF" customClass="OneLabelView" customModule="UIOneComponents">
+                                            <rect key="frame" x="0.0" y="0.0" width="40" height="24"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="nnj-bh-ekr"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BCR-AZ-msd" customClass="OneInputSelectView" customModule="UIOneComponents">
+                                            <rect key="frame" x="0.0" y="32" width="40" height="48"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="vDe-fj-dVB"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eGv-wH-InO">
+                            <rect key="frame" x="0.0" y="104" width="382" height="80"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cri-xa-Ik6" customClass="OneLabelView" customModule="UIOneComponents">
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="24"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="24" id="eu2-8l-XTz"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeG-1E-AkA" customClass="OneInputRegularView" customModule="UIOneComponents">
+                                    <rect key="frame" x="0.0" y="32" width="382" height="48"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="scZ-Bu-144"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="XkA-XA-RfE" secondAttribute="bottom" id="MsA-0j-wk0"/>
+                <constraint firstItem="XkA-XA-RfE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Y3D-57-llQ"/>
+                <constraint firstItem="XkA-XA-RfE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Z1G-x5-eFP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XkA-XA-RfE" secondAttribute="trailing" constant="16" id="hP9-AN-hvt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="127.53623188405798" y="-139.95535714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

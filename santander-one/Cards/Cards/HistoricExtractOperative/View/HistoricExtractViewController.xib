@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoricExtractViewController" customModule="Cards" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="VRt-05-KDv" id="O6v-AD-xm0"/>
+                <outlet property="emptyView" destination="tGX-6O-SOC" id="Bg6-HH-YKv"/>
+                <outlet property="headerView" destination="t9P-mV-nYV" id="sWo-cL-OUd"/>
+                <outlet property="historicTableView" destination="auU-ey-0s5" id="HeK-MP-bri"/>
+                <outlet property="scrollView" destination="UUh-wd-HWK" id="t3b-3f-fB6"/>
+                <outlet property="selectorView" destination="Fd2-m9-yAK" id="QgY-wT-xwN"/>
+                <outlet property="separatorView" destination="GLM-Y1-9a8" id="2P6-n8-V00"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fd2-m9-yAK" customClass="MonthSelectorView" customModule="Cards" customModuleProvider="target">
+                    <rect key="frame" x="16" y="44" width="382" height="20"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="Y4d-aS-xNK"/>
+                        <constraint firstAttribute="height" priority="999" constant="20" id="bDK-oT-Tlr"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUh-wd-HWK">
+                    <rect key="frame" x="0.0" y="80" width="414" height="816"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLM-Y1-9a8">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="grZ-69-oVV"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t9P-mV-nYV" customClass="HistoricExtractHeaderView" customModule="Cards" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="1" width="414" height="0.0"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="250" id="OEj-Ab-rnw"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VRt-05-KDv">
+                            <rect key="frame" x="0.0" y="1" width="414" height="817"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" bouncesZoom="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="auU-ey-0s5" customClass="HistoricExtractTableView" customModule="Cards" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="817"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </tableView>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tGX-6O-SOC" customClass="SingleEmptyView" customModule="UI">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="817"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="tGX-6O-SOC" firstAttribute="leading" secondItem="VRt-05-KDv" secondAttribute="leading" id="0vn-qo-hBX"/>
+                                <constraint firstItem="tGX-6O-SOC" firstAttribute="top" secondItem="VRt-05-KDv" secondAttribute="top" id="58D-K3-TVf"/>
+                                <constraint firstAttribute="trailing" secondItem="tGX-6O-SOC" secondAttribute="trailing" id="Qtl-KW-ps4"/>
+                                <constraint firstItem="auU-ey-0s5" firstAttribute="top" secondItem="VRt-05-KDv" secondAttribute="top" id="Veu-2m-D1b"/>
+                                <constraint firstAttribute="bottom" secondItem="tGX-6O-SOC" secondAttribute="bottom" id="c1b-RM-6En"/>
+                                <constraint firstAttribute="trailing" secondItem="auU-ey-0s5" secondAttribute="trailing" id="oeX-oH-0Tt"/>
+                                <constraint firstAttribute="bottom" secondItem="auU-ey-0s5" secondAttribute="bottom" id="q0r-Gk-mW2"/>
+                                <constraint firstItem="auU-ey-0s5" firstAttribute="leading" secondItem="VRt-05-KDv" secondAttribute="leading" id="qep-Sl-lUf"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="VRt-05-KDv" firstAttribute="leading" secondItem="UUh-wd-HWK" secondAttribute="leading" id="1kM-Vo-A34"/>
+                        <constraint firstItem="VRt-05-KDv" firstAttribute="width" secondItem="UUh-wd-HWK" secondAttribute="width" id="4gv-aj-7tO"/>
+                        <constraint firstItem="VRt-05-KDv" firstAttribute="top" secondItem="t9P-mV-nYV" secondAttribute="bottom" id="Fo9-Nl-D5k"/>
+                        <constraint firstAttribute="trailing" secondItem="GLM-Y1-9a8" secondAttribute="trailing" id="GiR-32-Hz1"/>
+                        <constraint firstAttribute="trailing" secondItem="VRt-05-KDv" secondAttribute="trailing" id="Xi0-w1-z7P"/>
+                        <constraint firstItem="t9P-mV-nYV" firstAttribute="leading" secondItem="UUh-wd-HWK" secondAttribute="leading" id="YFE-Ex-Lki"/>
+                        <constraint firstAttribute="trailing" secondItem="t9P-mV-nYV" secondAttribute="trailing" id="aQV-l2-rKd"/>
+                        <constraint firstItem="t9P-mV-nYV" firstAttribute="top" secondItem="GLM-Y1-9a8" secondAttribute="bottom" id="f9o-DR-7gc"/>
+                        <constraint firstItem="GLM-Y1-9a8" firstAttribute="top" secondItem="UUh-wd-HWK" secondAttribute="top" id="kFA-Ee-znS"/>
+                        <constraint firstItem="GLM-Y1-9a8" firstAttribute="leading" secondItem="UUh-wd-HWK" secondAttribute="leading" id="nzG-zv-q8g"/>
+                        <constraint firstAttribute="bottom" secondItem="VRt-05-KDv" secondAttribute="bottom" id="sj3-4p-3Be"/>
+                        <constraint firstItem="VRt-05-KDv" firstAttribute="height" secondItem="UUh-wd-HWK" secondAttribute="height" priority="250" constant="1" id="zAw-KR-Lbp"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Fd2-m9-yAK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="1aa-eW-DxJ"/>
+                <constraint firstAttribute="bottom" secondItem="UUh-wd-HWK" secondAttribute="bottom" id="474-9v-oRw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fd2-m9-yAK" secondAttribute="trailing" constant="16" id="It8-dA-VgN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UUh-wd-HWK" secondAttribute="trailing" id="UJE-Uy-MIO"/>
+                <constraint firstItem="UUh-wd-HWK" firstAttribute="top" secondItem="Fd2-m9-yAK" secondAttribute="bottom" constant="16" id="YF6-Vh-Las"/>
+                <constraint firstItem="UUh-wd-HWK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="w8B-hU-ght"/>
+                <constraint firstItem="Fd2-m9-yAK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="yw7-8J-GbG"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="141.96428571428569"/>
+        </view>
+    </objects>
+</document>

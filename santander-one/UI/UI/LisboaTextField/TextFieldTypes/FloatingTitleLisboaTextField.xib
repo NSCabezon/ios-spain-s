@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FloatingTitleLisboaTextField" customModule="UI" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomBorderView" destination="Uii-zO-ZWX" id="Bfg-Bh-Hjk"/>
+                <outlet property="containerView" destination="xjG-1D-CPj" id="IHd-qv-qBT"/>
+                <outlet property="mainStackView" destination="gVa-SO-Z2F" id="ICv-7T-0VZ"/>
+                <outlet property="overTextFieldButton" destination="fAH-ey-HkQ" id="Ig3-4I-A4l"/>
+                <outlet property="placeholderLabel" destination="4b2-dr-55i" id="QTR-kO-g2u"/>
+                <outlet property="placeholderLabelBottomConstraint" destination="QcE-09-3Cw" id="Zql-zQ-SY8"/>
+                <outlet property="placeholderLabelCenterConstraint" destination="MsW-Tx-xN0" id="nto-Zf-BqI"/>
+                <outlet property="textField" destination="zAr-Wo-D67" id="DF1-cf-fVR"/>
+                <outlet property="textFieldHeight" destination="c4d-hO-nun" id="DxW-6o-PHA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xjG-1D-CPj">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVa-SO-Z2F">
+                            <rect key="frame" x="16" y="0.0" width="398" height="90"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axC-GJ-ckI">
+                                    <rect key="frame" x="0.0" y="0.0" width="398" height="90"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="4b2-dr-55i">
+                                            <rect key="frame" x="0.0" y="28" width="398" height="34"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="zAr-Wo-D67" customClass="ConfigurableActionsTextField" customModule="UI" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="60" width="398" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="c4d-hO-nun"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="4b2-dr-55i" firstAttribute="leading" secondItem="axC-GJ-ckI" secondAttribute="leading" id="H3j-Jf-lSv"/>
+                                        <constraint firstAttribute="trailing" secondItem="zAr-Wo-D67" secondAttribute="trailing" id="J8s-Zg-g1m"/>
+                                        <constraint firstItem="zAr-Wo-D67" firstAttribute="leading" secondItem="axC-GJ-ckI" secondAttribute="leading" id="JdQ-P2-C7M"/>
+                                        <constraint firstItem="4b2-dr-55i" firstAttribute="centerY" secondItem="axC-GJ-ckI" secondAttribute="centerY" id="MsW-Tx-xN0"/>
+                                        <constraint firstItem="zAr-Wo-D67" firstAttribute="top" secondItem="4b2-dr-55i" secondAttribute="bottom" constant="-2" id="QcE-09-3Cw"/>
+                                        <constraint firstAttribute="bottom" secondItem="zAr-Wo-D67" secondAttribute="bottom" constant="6" id="dTm-rZ-OJr"/>
+                                        <constraint firstAttribute="trailing" secondItem="4b2-dr-55i" secondAttribute="trailing" id="mR3-71-bfp"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <viewLayoutGuide key="safeArea" id="QG8-hJ-hXz"/>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAH-ey-HkQ">
+                            <rect key="frame" x="16" y="0.0" width="398" height="90"/>
+                            <state key="normal" title="Button"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="fAH-ey-HkQ" firstAttribute="top" secondItem="axC-GJ-ckI" secondAttribute="top" id="0TR-Fi-PNW"/>
+                        <constraint firstItem="gVa-SO-Z2F" firstAttribute="top" secondItem="xjG-1D-CPj" secondAttribute="top" id="A3A-pp-w9E"/>
+                        <constraint firstItem="fAH-ey-HkQ" firstAttribute="bottom" secondItem="axC-GJ-ckI" secondAttribute="bottom" id="WEP-ws-1uB"/>
+                        <constraint firstAttribute="bottom" secondItem="gVa-SO-Z2F" secondAttribute="bottom" id="bDz-nw-cuq"/>
+                        <constraint firstItem="gVa-SO-Z2F" firstAttribute="leading" secondItem="xjG-1D-CPj" secondAttribute="leading" constant="16" id="kIa-aL-7C9"/>
+                        <constraint firstItem="fAH-ey-HkQ" firstAttribute="leading" secondItem="axC-GJ-ckI" secondAttribute="leading" id="o9a-O7-U1A"/>
+                        <constraint firstItem="fAH-ey-HkQ" firstAttribute="trailing" secondItem="axC-GJ-ckI" secondAttribute="trailing" id="qzT-gZ-FH1"/>
+                        <constraint firstAttribute="trailing" secondItem="gVa-SO-Z2F" secondAttribute="trailing" id="vDq-rO-SrG"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uii-zO-ZWX">
+                    <rect key="frame" x="0.0" y="90" width="414" height="1"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Vth-V5-C32"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xjG-1D-CPj" secondAttribute="trailing" id="LEu-mm-q24"/>
+                <constraint firstItem="Uii-zO-ZWX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QAZ-yR-U1D"/>
+                <constraint firstAttribute="trailing" secondItem="Uii-zO-ZWX" secondAttribute="trailing" id="Rg6-4S-z0B"/>
+                <constraint firstItem="Uii-zO-ZWX" firstAttribute="top" secondItem="xjG-1D-CPj" secondAttribute="bottom" id="gzt-Ka-EiW"/>
+                <constraint firstItem="xjG-1D-CPj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ov9-h4-zMZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Uii-zO-ZWX" secondAttribute="bottom" id="sn5-7p-nXS"/>
+                <constraint firstItem="xjG-1D-CPj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uo1-NX-Jt9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-30.434782608695656" y="204.57589285714286"/>
+        </view>
+    </objects>
+</document>

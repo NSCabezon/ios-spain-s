@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Share View Controller-->
+        <scene sceneID="rZz-02-DlX">
+            <objects>
+                <viewController storyboardIdentifier="ShareViewController" id="Xdh-bF-hJG" customClass="ShareViewController" customModule="RetailLegacy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IQu-Ni-qMJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0AC-XO-7BR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRt-K9-T8x" userLabel="smsView">
+                                        <rect key="frame" x="0.0" y="0.0" width="118.5" height="70"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rdv-nr-mxY">
+                                                <rect key="frame" x="12" y="4" width="94.5" height="57"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icnSmss" translatesAutoresizingMaskIntoConstraints="NO" id="O9w-6T-3eN">
+                                                        <rect key="frame" x="29.5" y="0.0" width="35" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="O9w-6T-3eN" secondAttribute="height" multiplier="1:1" id="qg5-Uh-Iik"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fhs-AD-Yf7">
+                                                        <rect key="frame" x="26.5" y="35" width="41.5" height="22"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="rdv-nr-mxY" firstAttribute="top" secondItem="kRt-K9-T8x" secondAttribute="top" constant="4" id="3qR-MC-h4C"/>
+                                            <constraint firstAttribute="bottom" secondItem="rdv-nr-mxY" secondAttribute="bottom" constant="9" id="GGO-ag-hCD"/>
+                                            <constraint firstAttribute="trailing" secondItem="rdv-nr-mxY" secondAttribute="trailing" constant="12" id="IMj-HF-EZq"/>
+                                            <constraint firstItem="rdv-nr-mxY" firstAttribute="leading" secondItem="kRt-K9-T8x" secondAttribute="leading" constant="12" id="e3o-h3-C2Q"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Yt1-5u-0SE" appends="YES" id="flr-fN-xPq"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ri-4A-zBZ" userLabel="mailView">
+                                        <rect key="frame" x="128.5" y="0.0" width="118" height="70"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PFK-io-fxJ">
+                                                <rect key="frame" x="12" y="4" width="94" height="57"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icnMailMadrid" translatesAutoresizingMaskIntoConstraints="NO" id="Rzg-nE-FVo">
+                                                        <rect key="frame" x="29.5" y="0.0" width="35" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Rzg-nE-FVo" secondAttribute="height" multiplier="1:1" id="zK3-ci-YGE"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VY8-wy-GlG">
+                                                        <rect key="frame" x="26.5" y="35" width="41.5" height="22"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="PFK-io-fxJ" firstAttribute="leading" secondItem="5ri-4A-zBZ" secondAttribute="leading" constant="12" id="RZL-S5-WGK"/>
+                                            <constraint firstAttribute="trailing" secondItem="PFK-io-fxJ" secondAttribute="trailing" constant="12" id="WGE-wg-pEs"/>
+                                            <constraint firstAttribute="bottom" secondItem="PFK-io-fxJ" secondAttribute="bottom" constant="9" id="Zph-AM-POV"/>
+                                            <constraint firstItem="PFK-io-fxJ" firstAttribute="top" secondItem="5ri-4A-zBZ" secondAttribute="top" constant="4" id="j8K-WH-kl4"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="lUD-OJ-od6" appends="YES" id="MBE-8B-Uyg"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jv9-L1-7t5" userLabel="otherView">
+                                        <rect key="frame" x="256.5" y="0.0" width="118.5" height="70"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="31I-iG-4eq">
+                                                <rect key="frame" x="12" y="4" width="94.5" height="57"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icnShareMadrid" translatesAutoresizingMaskIntoConstraints="NO" id="cXd-KI-ixi">
+                                                        <rect key="frame" x="30" y="0.0" width="35" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="cXd-KI-ixi" secondAttribute="height" multiplier="1:1" id="fdo-FG-g2m"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6LS-BZ-RA8">
+                                                        <rect key="frame" x="26.5" y="35" width="41.5" height="22"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="31I-iG-4eq" secondAttribute="trailing" constant="12" id="EnB-KS-PMf"/>
+                                            <constraint firstItem="31I-iG-4eq" firstAttribute="leading" secondItem="jv9-L1-7t5" secondAttribute="leading" constant="12" id="g95-uA-TLM"/>
+                                            <constraint firstItem="31I-iG-4eq" firstAttribute="top" secondItem="jv9-L1-7t5" secondAttribute="top" constant="4" id="hfQ-1L-aRa"/>
+                                            <constraint firstAttribute="bottom" secondItem="31I-iG-4eq" secondAttribute="bottom" constant="9" id="jNH-kS-y6H"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="ZY8-iF-9f1" appends="YES" id="ale-xN-HBO"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Yc8-m4-uym"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Yc8-m4-uym" firstAttribute="trailing" secondItem="0AC-XO-7BR" secondAttribute="trailing" id="2CU-sJ-PBE"/>
+                            <constraint firstAttribute="bottom" secondItem="0AC-XO-7BR" secondAttribute="bottom" id="91x-u4-7Rx"/>
+                            <constraint firstItem="0AC-XO-7BR" firstAttribute="leading" secondItem="Yc8-m4-uym" secondAttribute="leading" id="JBT-Zs-fTH"/>
+                            <constraint firstItem="0AC-XO-7BR" firstAttribute="top" secondItem="Yc8-m4-uym" secondAttribute="top" id="fpH-Qs-YLA"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="70"/>
+                    <connections>
+                        <outlet property="mailContainer" destination="5ri-4A-zBZ" id="cqm-f8-PCm"/>
+                        <outlet property="mailImageView" destination="Rzg-nE-FVo" id="t5H-rn-4Dt"/>
+                        <outlet property="mailLabel" destination="VY8-wy-GlG" id="Kt3-ne-wjV"/>
+                        <outlet property="shareContainer" destination="jv9-L1-7t5" id="WXt-KY-f2c"/>
+                        <outlet property="shareImageView" destination="cXd-KI-ixi" id="2P5-SX-zKq"/>
+                        <outlet property="shareLabel" destination="6LS-BZ-RA8" id="NbP-j5-1aZ"/>
+                        <outlet property="shareView" destination="0AC-XO-7BR" id="2ui-gS-r6m"/>
+                        <outlet property="smsContainer" destination="kRt-K9-T8x" id="rpY-OX-Mar"/>
+                        <outlet property="smsImageView" destination="O9w-6T-3eN" id="ogj-Aa-UJr"/>
+                        <outlet property="smsLabel" destination="Fhs-AD-Yf7" id="U0s-qU-8YI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bPL-G4-69R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="lUD-OJ-od6">
+                    <connections>
+                        <action selector="shareByMail:" destination="Xdh-bF-hJG" id="WUL-4x-JnC"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Yt1-5u-0SE">
+                    <connections>
+                        <action selector="shareBySms:" destination="Xdh-bF-hJG" id="tp7-gd-Vll"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ZY8-iF-9f1">
+                    <connections>
+                        <action selector="share:" destination="Xdh-bF-hJG" id="Jyu-pI-SWz"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="98.950524737631198"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icnMailMadrid" width="35" height="35"/>
+        <image name="icnShareMadrid" width="35" height="35"/>
+        <image name="icnSmss" width="35" height="35"/>
+    </resources>
+</document>

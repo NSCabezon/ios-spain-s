@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InboxNotificationViewController" customModule="ESInboxNotification" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonHeightConstraint" destination="rAc-Qq-r9f" id="Fmw-z6-GQN"/>
+                <outlet property="confirmButton" destination="L0X-X9-dwh" id="Yzc-K8-L5L"/>
+                <outlet property="tableView" destination="yPK-kA-upO" id="v6l-zU-io3"/>
+                <outlet property="view" destination="iN0-l3-epB" id="j8R-bv-r8s"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yPK-kA-upO">
+                    <rect key="frame" x="0.0" y="44" width="414" height="772"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6RG-Zc-wf6" userLabel="buttonContainer">
+                    <rect key="frame" x="0.0" y="816" width="414" height="80"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ygt-jq-Xgz">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                            <color key="backgroundColor" red="0.95686274509803915" green="0.96470588235294119" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="rv0-bz-8RV"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0X-X9-dwh" userLabel="confirmButton" customClass="RedLisboaButton" customModule="UI">
+                            <rect key="frame" x="55" y="20" width="304" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="HDM-7a-C3W"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Ygt-jq-Xgz" secondAttribute="trailing" id="0I9-aT-geq"/>
+                        <constraint firstAttribute="bottom" secondItem="L0X-X9-dwh" secondAttribute="bottom" constant="20" id="8DQ-uh-3aZ"/>
+                        <constraint firstItem="L0X-X9-dwh" firstAttribute="top" secondItem="6RG-Zc-wf6" secondAttribute="top" constant="20" id="I01-el-EoJ"/>
+                        <constraint firstItem="Ygt-jq-Xgz" firstAttribute="leading" secondItem="6RG-Zc-wf6" secondAttribute="leading" id="NGO-cy-Pjo"/>
+                        <constraint firstItem="L0X-X9-dwh" firstAttribute="centerY" secondItem="6RG-Zc-wf6" secondAttribute="centerY" id="dGR-vw-PQe"/>
+                        <constraint firstItem="L0X-X9-dwh" firstAttribute="leading" secondItem="6RG-Zc-wf6" secondAttribute="leading" constant="55" id="ljL-TP-FKk"/>
+                        <constraint firstAttribute="trailing" secondItem="L0X-X9-dwh" secondAttribute="trailing" constant="55" id="oh4-nT-vGq"/>
+                        <constraint firstAttribute="height" constant="80" id="rAc-Qq-r9f"/>
+                        <constraint firstItem="Ygt-jq-Xgz" firstAttribute="top" secondItem="6RG-Zc-wf6" secondAttribute="top" id="xK2-Jd-Ufw"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="6RG-Zc-wf6" firstAttribute="top" secondItem="yPK-kA-upO" secondAttribute="bottom" id="63s-p5-1CW"/>
+                <constraint firstItem="yPK-kA-upO" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Ror-Bm-VPh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yPK-kA-upO" secondAttribute="trailing" id="UYH-m6-Olx"/>
+                <constraint firstAttribute="bottom" secondItem="6RG-Zc-wf6" secondAttribute="bottom" id="dBU-nh-0ka"/>
+                <constraint firstItem="6RG-Zc-wf6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hMt-8e-dFl"/>
+                <constraint firstItem="yPK-kA-upO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="toH-5a-MdX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6RG-Zc-wf6" secondAttribute="trailing" id="y2F-jv-EbR"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="154"/>
+        </view>
+    </objects>
+</document>

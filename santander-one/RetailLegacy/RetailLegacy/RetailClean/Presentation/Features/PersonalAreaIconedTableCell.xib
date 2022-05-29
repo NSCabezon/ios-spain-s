@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PersonalAreaIconedTableCell" customModule="DEBUG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="67.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D5o-iN-YoS" userLabel="containerView">
+                        <rect key="frame" x="10" y="0.0" width="298" height="68"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" ambiguous="YES" image="icnAccoundsMenu" translatesAutoresizingMaskIntoConstraints="NO" id="yeZ-Hk-3zt" userLabel="iconView">
+                                <rect key="frame" x="21" y="12.5" width="42" height="42"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I32-ai-Gqb" userLabel="titleLabel">
+                                <rect key="frame" x="75" y="24" width="210" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="68" id="46a-EI-ttK"/>
+                            <constraint firstItem="I32-ai-Gqb" firstAttribute="leading" secondItem="yeZ-Hk-3zt" secondAttribute="trailing" constant="12" id="5jt-17-e1s"/>
+                            <constraint firstItem="I32-ai-Gqb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="D5o-iN-YoS" secondAttribute="top" constant="11" id="81v-Z9-tyZ"/>
+                            <constraint firstItem="I32-ai-Gqb" firstAttribute="centerY" secondItem="D5o-iN-YoS" secondAttribute="centerY" id="BJ6-qQ-dfX"/>
+                            <constraint firstItem="yeZ-Hk-3zt" firstAttribute="centerY" secondItem="D5o-iN-YoS" secondAttribute="centerY" id="adj-w7-ujs"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="I32-ai-Gqb" secondAttribute="bottom" constant="11" id="ffN-Eu-I5w"/>
+                            <constraint firstAttribute="trailing" secondItem="I32-ai-Gqb" secondAttribute="trailing" constant="13" id="tV5-8Y-sbI"/>
+                            <constraint firstItem="yeZ-Hk-3zt" firstAttribute="leading" secondItem="D5o-iN-YoS" secondAttribute="leading" constant="21" id="wyc-Gh-H4N"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="D5o-iN-YoS" secondAttribute="trailing" constant="12" id="5Ag-Fy-kz3"/>
+                    <constraint firstItem="D5o-iN-YoS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="JVo-wc-ruv"/>
+                    <constraint firstItem="D5o-iN-YoS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="QFg-Jb-8t7"/>
+                    <constraint firstAttribute="bottom" secondItem="D5o-iN-YoS" secondAttribute="bottom" id="tS5-ag-gOY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bottomSpaceConstraint" destination="tS5-ag-gOY" id="dgm-KJ-8bp"/>
+                <outlet property="containerView" destination="D5o-iN-YoS" id="YX0-m3-CMr"/>
+                <outlet property="iconView" destination="yeZ-Hk-3zt" id="9UD-OM-pCB"/>
+                <outlet property="titleLabel" destination="I32-ai-Gqb" id="N9M-Pd-053"/>
+                <outlet property="topSpaceConstraint" destination="QFg-Jb-8t7" id="e3j-kK-0bc"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icnAccoundsMenu" width="42" height="42"/>
+    </resources>
+</document>

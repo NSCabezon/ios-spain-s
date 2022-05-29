@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ToolTipViewController" customModule="FinantialTimeline" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionLabel" destination="Upw-z7-dXE" id="XhJ-lI-gVr"/>
+                <outlet property="separator" destination="MYG-ES-5WW" id="F1A-bf-aJp"/>
+                <outlet property="stackView" destination="Q0q-Z5-2v9" id="CVz-Hv-aQP"/>
+                <outlet property="titleLabel" destination="nqq-lg-iT6" id="n6c-BX-tBK"/>
+                <outlet property="view" destination="iN0-l3-epB" id="ZBy-YZ-YNJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="231"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q0q-Z5-2v9">
+                    <rect key="frame" x="10" y="15" width="394" height="206"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqq-lg-iT6" customClass="GlobileLabel" customModule="SantanderUIKitLib">
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MYG-ES-5WW">
+                            <rect key="frame" x="0.0" y="30.5" width="394" height="1"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="3N5-js-l8b"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upw-z7-dXE" customClass="GlobileLabel" customModule="SantanderUIKitLib">
+                            <rect key="frame" x="0.0" y="41.5" width="394" height="164.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Q0q-Z5-2v9" secondAttribute="bottom" constant="10" id="UQP-Cm-2aF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Q0q-Z5-2v9" secondAttribute="trailing" constant="10" id="bkc-ri-kOr"/>
+                <constraint firstItem="Q0q-Z5-2v9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="mqa-la-81p"/>
+                <constraint firstItem="Q0q-Z5-2v9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="yPz-DB-WqH"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="43.191964285714285"/>
+        </view>
+    </objects>
+</document>

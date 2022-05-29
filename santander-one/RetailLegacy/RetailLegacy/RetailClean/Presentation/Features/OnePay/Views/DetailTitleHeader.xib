@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DetailTitleHeader" customModule="DEBUG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="42"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26c-dX-vYQ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="42"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOC-sM-urL">
+                            <rect key="frame" x="15" y="18" width="42" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="bOC-sM-urL" firstAttribute="leading" secondItem="26c-dX-vYQ" secondAttribute="leading" constant="15" id="GFK-eP-Qxu"/>
+                        <constraint firstAttribute="bottom" secondItem="bOC-sM-urL" secondAttribute="bottom" constant="4" id="Hn3-sN-L3y"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bOC-sM-urL" secondAttribute="trailing" constant="15" id="ac2-0b-1X6"/>
+                        <constraint firstItem="bOC-sM-urL" firstAttribute="top" secondItem="26c-dX-vYQ" secondAttribute="top" constant="18" id="jS5-Mf-Org"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="26c-dX-vYQ" secondAttribute="bottom" id="G4h-Ue-8cn"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="26c-dX-vYQ" secondAttribute="trailing" id="fs2-7W-skf"/>
+                <constraint firstItem="26c-dX-vYQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qwP-uS-r4M"/>
+                <constraint firstItem="26c-dX-vYQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ypz-GH-UeS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="backView" destination="26c-dX-vYQ" id="dpz-zo-AUb"/>
+                <outlet property="titleLabel" destination="bOC-sM-urL" id="ie5-Ek-dpD"/>
+            </connections>
+            <point key="canvasLocation" x="138.40000000000001" y="-142.57871064467767"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,43 @@
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '10.3'
+
+def legacy_libraries
+  pod 'Locker', :path => '../../Modules/Libraries/Locker'
+  pod 'Logger', :path => '../../Modules/Libraries/Logger'
+end
+
+def libraries
+  pod 'CoreFoundationLib', :path => '../../Modules/Libraries/CoreFoundationLib'
+  pod 'RxCombine', :path => '../../Modules/Libraries/RxCombine'
+  pod 'CoreDomain', :path => '../../Modules/Libraries/CoreDomain'
+  pod 'CoreTestData', :path => '../../Modules/Libraries/CoreTestData'
+  pod 'SANLegacyLibrary', :path => '../../Modules/Libraries/SANLegacyLibrary'
+  pod 'CorePushNotificationsService', :path => '../../CorePushNotificationsService'
+  pod 'SQLite.swift/SQLCipher', :path => '../../Modules/Libraries/SQLite.swift'
+  pod 'SQLCipher', '4.4.2'
+  pod 'Kingfisher', '5.15.8'
+end
+
+def uIOneComponents_Example_pods
+  pod 'UIOneComponents', :path => '../'
+  pod 'QuickSetup', :path => '../../QuickSetup'
+  pod 'Operative', :path => '../../Operative'
+  pod 'Localization', :path => '../../Localization'
+  pod 'OfferCarousel', :path => '../../OfferCarousel'
+  pod 'UI', :path => '../../UI'
+  pod 'Localization', :path => '../../Localization'
+  pod 'OfferCarousel', :path => '../../OfferCarousel'
+  libraries
+  legacy_libraries
+end
+
+target 'UIOneComponents_Example' do
+  uIOneComponents_Example_pods
+
+  target 'UIOneComponents_Tests' do
+    inherit! :search_paths
+  end
+end

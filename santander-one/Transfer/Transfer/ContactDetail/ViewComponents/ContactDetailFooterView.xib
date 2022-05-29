@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactDetailFooterView" customModule="Transfer" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="9F1-kh-4FZ" id="Ksh-FJ-XLy"/>
+                <outlet property="deleteButton" destination="Cvu-qk-uYj" id="Fgz-UN-757"/>
+                <outlet property="editButton" destination="aup-X3-nz4" id="IGa-Wn-rM8"/>
+                <outlet property="separatorView" destination="5Ba-3X-prZ" id="v7i-Zd-cXg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9F1-kh-4FZ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ba-3X-prZ" userLabel="Separator">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="RHq-7b-rrX"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvu-qk-uYj">
+                            <rect key="frame" x="13" y="5" width="30" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <connections>
+                                <action selector="deleteButtonPressed:" destination="-1" eventType="touchUpInside" id="BWl-uQ-yiD"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aup-X3-nz4">
+                            <rect key="frame" x="371" y="5" width="30" height="50"/>
+                            <connections>
+                                <action selector="editButtonPressed:" destination="-1" eventType="touchUpInside" id="Ws2-fU-jIE"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Cvu-qk-uYj" firstAttribute="top" secondItem="9F1-kh-4FZ" secondAttribute="top" constant="5" id="G96-jL-L1f"/>
+                        <constraint firstAttribute="bottom" secondItem="Cvu-qk-uYj" secondAttribute="bottom" constant="5" id="S7z-ad-qza"/>
+                        <constraint firstAttribute="bottom" secondItem="aup-X3-nz4" secondAttribute="bottom" constant="5" id="V2R-gd-Ape"/>
+                        <constraint firstItem="5Ba-3X-prZ" firstAttribute="top" secondItem="9F1-kh-4FZ" secondAttribute="top" id="Wui-I9-0VC"/>
+                        <constraint firstAttribute="trailing" secondItem="aup-X3-nz4" secondAttribute="trailing" constant="13" id="Xko-PJ-LMR"/>
+                        <constraint firstItem="5Ba-3X-prZ" firstAttribute="leading" secondItem="9F1-kh-4FZ" secondAttribute="leading" id="ke3-bs-ejo"/>
+                        <constraint firstItem="aup-X3-nz4" firstAttribute="top" secondItem="9F1-kh-4FZ" secondAttribute="top" constant="5" id="qD1-0T-4hf"/>
+                        <constraint firstAttribute="trailing" secondItem="5Ba-3X-prZ" secondAttribute="trailing" id="yMb-QX-ecD"/>
+                        <constraint firstItem="Cvu-qk-uYj" firstAttribute="leading" secondItem="9F1-kh-4FZ" secondAttribute="leading" constant="13" id="yen-zj-Sru"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="9F1-kh-4FZ" secondAttribute="bottom" id="UBj-cI-c8f"/>
+                <constraint firstItem="9F1-kh-4FZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="frF-y3-YZI"/>
+                <constraint firstAttribute="trailing" secondItem="9F1-kh-4FZ" secondAttribute="trailing" id="g24-16-WUe"/>
+                <constraint firstItem="9F1-kh-4FZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hgy-bM-37A"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="28.985507246376812" y="-520.3125"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

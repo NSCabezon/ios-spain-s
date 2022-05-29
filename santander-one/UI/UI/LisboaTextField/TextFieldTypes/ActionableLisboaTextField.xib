@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActionableLisboaTextField" customModule="UI" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomBorderView" destination="onP-wp-FCi" id="2ii-hW-gr4"/>
+                <outlet property="button" destination="1um-SP-c4Y" id="Yg8-IO-eic"/>
+                <outlet property="containerView" destination="GNh-uk-QA5" id="Q7Z-hh-5Di"/>
+                <outlet property="label" destination="ujZ-A0-3e7" id="LAi-TJ-vqM"/>
+                <outlet property="mainStackView" destination="c9N-03-j8r" id="TwR-Kf-jbp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="168"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNh-uk-QA5">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="168"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c9N-03-j8r">
+                            <rect key="frame" x="16" y="0.0" width="398" height="168"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujZ-A0-3e7">
+                                    <rect key="frame" x="0.0" y="0.0" width="398" height="168"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1um-SP-c4Y" customClass="ResponsiveButton" customModule="UI" customModuleProvider="target">
+                            <rect key="frame" x="16" y="0.0" width="398" height="168"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="c9N-03-j8r" firstAttribute="top" secondItem="GNh-uk-QA5" secondAttribute="top" id="5h1-ZH-dHx"/>
+                        <constraint firstAttribute="trailing" secondItem="c9N-03-j8r" secondAttribute="trailing" id="ABZ-RA-rjV"/>
+                        <constraint firstItem="1um-SP-c4Y" firstAttribute="bottom" secondItem="ujZ-A0-3e7" secondAttribute="bottom" id="F6n-19-EnV"/>
+                        <constraint firstItem="1um-SP-c4Y" firstAttribute="leading" secondItem="ujZ-A0-3e7" secondAttribute="leading" id="JEC-uf-KY6"/>
+                        <constraint firstItem="c9N-03-j8r" firstAttribute="leading" secondItem="GNh-uk-QA5" secondAttribute="leading" constant="16" id="Oay-hx-k5F"/>
+                        <constraint firstItem="1um-SP-c4Y" firstAttribute="trailing" secondItem="ujZ-A0-3e7" secondAttribute="trailing" id="fd6-Cx-Cq6"/>
+                        <constraint firstItem="1um-SP-c4Y" firstAttribute="top" secondItem="ujZ-A0-3e7" secondAttribute="top" id="tUq-Ct-5yI"/>
+                        <constraint firstAttribute="bottom" secondItem="c9N-03-j8r" secondAttribute="bottom" id="xQm-d1-Hg5"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="onP-wp-FCi" userLabel="Bottom View">
+                    <rect key="frame" x="0.0" y="168" width="414" height="1"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="mnS-7a-IJV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="GNh-uk-QA5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7Yw-h0-hNc"/>
+                <constraint firstItem="onP-wp-FCi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Dho-Md-el7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GNh-uk-QA5" secondAttribute="trailing" id="VLc-Kv-Ijc"/>
+                <constraint firstItem="GNh-uk-QA5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Y3z-35-Eqv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="GNh-uk-QA5" secondAttribute="bottom" id="anJ-MA-eX4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="onP-wp-FCi" secondAttribute="trailing" id="s4f-u4-fXY"/>
+                <constraint firstItem="onP-wp-FCi" firstAttribute="top" secondItem="GNh-uk-QA5" secondAttribute="bottom" id="uvc-lO-2ly"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-91.071428571428569"/>
+        </view>
+    </objects>
+</document>

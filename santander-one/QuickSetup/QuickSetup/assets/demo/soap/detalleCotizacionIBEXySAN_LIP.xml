@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datos>
+    <id12345678z>
+        <respuesta0>
+            <soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                >
+                <soap-env:Header/>
+                <soap-env:Body>
+                    <prefixRigel0:detalleCotizacionIBEXySAN_LIPResponse
+                        xmlns:prefixRigel0="http://www.isban.es/webservices/BAMOBI/Valores/F_bamobi_valores_lip/internet/ACBAMOBIVAL/v1">
+                        <methodResult>
+                            <info>
+                                <errorCode>0</errorCode>
+                            </info>
+                            <cotizacionSAN>
+                                <NUMERO_IMPORTE_VALORES>+4.509000</NUMERO_IMPORTE_VALORES>
+                                <DIVISA>EUR</DIVISA>
+                            </cotizacionSAN>
+                            <cotizacionIBEX>
+                                <NUMERO_IMPORTE_VALORES>+6532.100000</NUMERO_IMPORTE_VALORES>
+                                <DIVISA>EUR</DIVISA>
+                            </cotizacionIBEX>
+                            <codigoEmisionSAN>
+                                <CODIGO_DE_VALOR>0000113900</CODIGO_DE_VALOR>
+                                <CODIGO_DE_EMISION>63</CODIGO_DE_EMISION>
+                            </codigoEmisionSAN>
+                        </methodResult>
+                    </prefixRigel0:detalleCotizacionIBEXySAN_LIPResponse>
+                </soap-env:Body>
+            </soap-env:Envelope>
+        </respuesta0>
+        <respuesta1>
+            <Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                >
+                <Header>
+                    <Infra Version="1.0" soap-env:actor="http://www.isban.es/soap/actor/coexistence"
+                        soap-env:mustUnderstand="0">
+                        <Control>
+                            <GroupID Type="1">AC1F85BFF6607B007651D97C</GroupID>
+                            <GroupID Type="2">AC1F85BFF66083007651D97E</GroupID>
+                            <Created>2014-12-23T12:12:42-175 CET</Created>
+                        </Control>
+                    </Infra>
+                    <Security xmlns:S12="http://www.w3.org/2003/05/soap-envelope"
+                        xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+                        S12:role="wsssecurity" soap-env:actor="http://www.isban.es/soap/actor/wssecurity"
+                        soap-env:mustUnderstand="1">
+                        <BinarySecurityToken
+                            xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                            EncodingType="wsse:Base64Binary" ValueType="esquema" wsu:Id="SSOToken">
+                            AC1F85BFE8C1B1007612D522#172.31.133.191#1419336762177#PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iSVNPLTg4NTktMSI/Pjx0b2tlbkRlZmluaXRpb24+PG5hbWU+RVNWUyBET0MwNzQ3MDEyOEcgRE9DMDc0NzAxMjhHPC9uYW1lPjxhbGlhcz5DT0IwMjd4djwvYWxpYXM+PHVzZXJJRD5DT0IwMjd4djwvdXNlcklEPjwvdG9rZW5EZWZpbml0aW9uPg==#DESede/CBC/PKCS5Padding#v1#OpenbankInternet#NOT
+                            USED#SHA1withRSA#XrYl3BhM4wBR/quoFnmH7jSe7ikf+oVdYyv3vY7I/BQSsuq5Q9qN9iKcJvuoshNipyHGMxOi9PCftrps46bYpD0nG7ZLWpgGbTBy5ZTRVvk+ASwa680YYs6QHLsBLN80cuVLAZR/iXj0tdo5BYcNrtWbTK0FEJn1kRAK/uSTr2M=
+                        </BinarySecurityToken>
+                    </Security>
+                </Header>
+                <Body>
+                    <Fault>
+                        <faultcode>soap-env:Server</faultcode>
+                        <faultstring>Exception Code: BAMOBI_00001. Executing Facade: ACBAMOBIVAL, Method:
+                            detalleCotizacionIBEXySAN_LIP
+                        </faultstring>
+                        <faultactor>http://www.isban.es/soap/banksphere</faultactor>
+                        <detail>
+                            <prefixRigel0:com.isb.bamobi.valores.lip.f.exc.EX_BAMOBI_Error_LIP
+                                xmlns:prefixRigel0="http://www.isban.es/webservices/BAMOBI/Valores/F_bamobi_valores_lip/openbank/internet/functionalFaults/v1">
+                                <error>
+                                    <errorDesc>Error tecnico. Contacte con su banco .</errorDesc>
+                                    <errorCode>1</errorCode>
+                                </error>
+                            </prefixRigel0:com.isb.bamobi.valores.lip.f.exc.EX_BAMOBI_Error_LIP>
+                        </detail>
+                    </Fault>
+                </Body>
+            </Envelope>
+        </respuesta1>
+    </id12345678z>
+</datos>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="CategoriesTableViewCell" customModule="Menu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="340" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nha-dd-hbq">
+                        <rect key="frame" x="16" y="4" width="308" height="82"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fX-cF-nwE" customClass="CategoryView" customModule="Menu" customModuleProvider="target">
+                                <rect key="frame" x="16" y="8" width="276" height="56"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9fX-cF-nwE" firstAttribute="top" secondItem="Nha-dd-hbq" secondAttribute="top" constant="8" id="Fx8-ja-ecL"/>
+                            <constraint firstAttribute="bottom" secondItem="9fX-cF-nwE" secondAttribute="bottom" constant="18" id="huS-GS-16g"/>
+                            <constraint firstAttribute="trailing" secondItem="9fX-cF-nwE" secondAttribute="trailing" constant="16" id="o2Y-hV-zYg"/>
+                            <constraint firstItem="9fX-cF-nwE" firstAttribute="leading" secondItem="Nha-dd-hbq" secondAttribute="leading" constant="16" id="xMn-Dq-hS6"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Nha-dd-hbq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Dc6-LF-3Dr"/>
+                    <constraint firstAttribute="trailing" secondItem="Nha-dd-hbq" secondAttribute="trailing" constant="16" id="Igf-sI-RNt"/>
+                    <constraint firstItem="Nha-dd-hbq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="XLk-vc-XSA"/>
+                    <constraint firstAttribute="bottom" secondItem="Nha-dd-hbq" secondAttribute="bottom" constant="4" id="ZEP-QB-mZe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="categoryView" destination="9fX-cF-nwE" id="Zh1-FO-u9q"/>
+                <outlet property="containerView" destination="Nha-dd-hbq" id="RYy-JQ-oze"/>
+            </connections>
+            <point key="canvasLocation" x="152.17391304347828" y="166.07142857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

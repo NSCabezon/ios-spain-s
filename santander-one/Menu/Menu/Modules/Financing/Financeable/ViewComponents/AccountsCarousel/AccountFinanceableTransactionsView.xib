@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountFinanceableTransactionsView" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="separatorView" destination="rsD-ag-ecr" id="1Dl-MA-FjR"/>
+                <outlet property="stackView" destination="eaY-94-NTg" id="tE4-4w-wzh"/>
+                <outlet property="transactionsCollectionView" destination="ewG-n5-GmD" id="acx-JL-fuf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X53-9p-aTn">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="144"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eaY-94-NTg">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="144"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ewG-n5-GmD" customClass="AccountFinanceableTransactionsCollectionView" customModule="Menu" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="144"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fwr-01-vqE">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsD-ag-ecr">
+                    <rect key="frame" x="0.0" y="143" width="414" height="1"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="iP1-lz-bCd"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="rsD-ag-ecr" secondAttribute="trailing" id="R1r-0R-QoQ"/>
+                <constraint firstItem="rsD-ag-ecr" firstAttribute="leading" secondItem="X53-9p-aTn" secondAttribute="leading" id="Z6w-Ak-K7B"/>
+                <constraint firstAttribute="bottom" secondItem="rsD-ag-ecr" secondAttribute="bottom" id="ba0-JJ-AUg"/>
+                <constraint firstItem="eaY-94-NTg" firstAttribute="top" secondItem="X53-9p-aTn" secondAttribute="top" id="ead-tf-KWZ"/>
+                <constraint firstItem="eaY-94-NTg" firstAttribute="leading" secondItem="X53-9p-aTn" secondAttribute="leading" id="mYl-QP-1rV"/>
+                <constraint firstAttribute="bottom" secondItem="eaY-94-NTg" secondAttribute="bottom" id="qBu-OZ-MLJ"/>
+                <constraint firstAttribute="trailing" secondItem="eaY-94-NTg" secondAttribute="trailing" id="zNA-h8-oDW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-117.1875"/>
+        </view>
+    </objects>
+</document>

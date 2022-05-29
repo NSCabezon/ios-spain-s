@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TravelView">
+            <connections>
+                <outlet property="button" destination="a62-Ni-BKe" id="qyQ-f4-Tuw"/>
+                <outlet property="iconImageView" destination="r6a-CF-4fp" id="WwN-Z0-EV8"/>
+                <outlet property="subtitleLabel" destination="Fr7-c3-MWu" id="VeR-Vh-p39"/>
+                <outlet property="titleLabel" destination="wqX-vj-COh" id="n0Q-DP-uoJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="RXR-XF-F1B">
+            <rect key="frame" x="0.0" y="0.0" width="344" height="96"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icnParachute" translatesAutoresizingMaskIntoConstraints="NO" id="r6a-CF-4fp">
+                    <rect key="frame" x="16" y="16" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="Gn3-78-2BH"/>
+                        <constraint firstAttribute="height" constant="48" id="dcf-Da-C5r"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqX-vj-COh">
+                    <rect key="frame" x="79" y="16" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Fr7-c3-MWu">
+                    <rect key="frame" x="80" y="18" width="234" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a62-Ni-BKe">
+                    <rect key="frame" x="0.0" y="0.0" width="344" height="96"/>
+                    <connections>
+                        <action selector="didTapOnTravel:" destination="-1" eventType="touchUpInside" id="ICk-3n-3pu"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="a62-Ni-BKe" firstAttribute="trailing" secondItem="YXf-ee-itD" secondAttribute="trailing" id="FEX-1O-ogk"/>
+                <constraint firstItem="r6a-CF-4fp" firstAttribute="leading" secondItem="YXf-ee-itD" secondAttribute="leading" constant="16" id="Go6-iF-xzV"/>
+                <constraint firstItem="a62-Ni-BKe" firstAttribute="bottom" secondItem="YXf-ee-itD" secondAttribute="bottom" id="IGf-em-qPU"/>
+                <constraint firstItem="wqX-vj-COh" firstAttribute="top" secondItem="RXR-XF-F1B" secondAttribute="top" constant="16" id="Ni5-t6-Okz"/>
+                <constraint firstItem="wqX-vj-COh" firstAttribute="leading" secondItem="r6a-CF-4fp" secondAttribute="trailing" constant="15" id="Sho-4d-P87"/>
+                <constraint firstAttribute="top" secondItem="r6a-CF-4fp" secondAttribute="top" constant="-16" id="SnI-aQ-Bp8"/>
+                <constraint firstItem="YXf-ee-itD" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Fr7-c3-MWu" secondAttribute="bottom" constant="5" id="cij-ki-ajG"/>
+                <constraint firstItem="Fr7-c3-MWu" firstAttribute="top" secondItem="wqX-vj-COh" secondAttribute="bottom" constant="2" id="g19-7B-u8J"/>
+                <constraint firstItem="a62-Ni-BKe" firstAttribute="leading" secondItem="YXf-ee-itD" secondAttribute="leading" id="k7x-Um-nB0"/>
+                <constraint firstItem="YXf-ee-itD" firstAttribute="trailing" secondItem="Fr7-c3-MWu" secondAttribute="trailing" constant="30" id="tV5-Wh-1wU"/>
+                <constraint firstItem="a62-Ni-BKe" firstAttribute="top" secondItem="RXR-XF-F1B" secondAttribute="top" id="zRb-qs-E4F"/>
+                <constraint firstItem="Fr7-c3-MWu" firstAttribute="leading" secondItem="r6a-CF-4fp" secondAttribute="trailing" constant="16" id="zgW-Dt-nOS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="YXf-ee-itD"/>
+            <point key="canvasLocation" x="131.8840579710145" y="5.3571428571428568"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icnParachute" width="48" height="48"/>
+    </resources>
+</document>

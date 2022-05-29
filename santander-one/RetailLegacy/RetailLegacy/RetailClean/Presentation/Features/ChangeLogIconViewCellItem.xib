@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChangeLogIconViewCellItem" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="115" id="eFk-mn-VVI" customClass="ChangeLogIconViewCellItem" customModule="DEBUG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="504" height="115"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eFk-mn-VVI" id="bHU-ca-jZG">
+                <rect key="frame" x="0.0" y="0.0" width="504" height="114.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cwz-yX-2rM">
+                        <rect key="frame" x="9" y="15" width="89.5" height="89.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="cwz-yX-2rM" secondAttribute="height" id="xAj-fg-FmG"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szw-fB-fSs">
+                        <rect key="frame" x="119.5" y="15" width="375.5" height="50.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="5Rb-Ai-SLv" customClass="ColorButton" customModule="DEBUG" customModuleProvider="target">
+                        <rect key="frame" x="119.5" y="69.5" width="68" height="30"/>
+                        <state key="normal" title="Actualizar"/>
+                        <connections>
+                            <action selector="onButtonClicked:" destination="eFk-mn-VVI" eventType="touchUpInside" id="uFV-sr-hC9"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5Rb-Ai-SLv" firstAttribute="bottom" secondItem="cwz-yX-2rM" secondAttribute="bottom" constant="-5" id="81t-eo-fyA"/>
+                    <constraint firstAttribute="bottom" secondItem="cwz-yX-2rM" secondAttribute="bottom" constant="10" id="9fO-K8-Hs7"/>
+                    <constraint firstItem="szw-fB-fSs" firstAttribute="top" secondItem="cwz-yX-2rM" secondAttribute="top" id="GZ9-lw-9Hk"/>
+                    <constraint firstAttribute="trailing" secondItem="szw-fB-fSs" secondAttribute="trailing" constant="9" id="GmX-KN-aWy"/>
+                    <constraint firstItem="szw-fB-fSs" firstAttribute="leading" secondItem="cwz-yX-2rM" secondAttribute="trailing" constant="21" id="JJa-Qo-fby"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5Rb-Ai-SLv" secondAttribute="trailing" constant="9" id="JNN-t9-FRu"/>
+                    <constraint firstItem="cwz-yX-2rM" firstAttribute="top" secondItem="bHU-ca-jZG" secondAttribute="top" constant="15" id="Qk5-oe-hiD"/>
+                    <constraint firstItem="5Rb-Ai-SLv" firstAttribute="leading" secondItem="szw-fB-fSs" secondAttribute="leading" id="jLg-Qp-FKR"/>
+                    <constraint firstItem="5Rb-Ai-SLv" firstAttribute="top" secondItem="szw-fB-fSs" secondAttribute="bottom" constant="4" id="sBe-Xv-Vdn"/>
+                    <constraint firstItem="cwz-yX-2rM" firstAttribute="leading" secondItem="bHU-ca-jZG" secondAttribute="leading" constant="9" id="z3h-Iz-WLo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iconImage" destination="cwz-yX-2rM" id="odd-xG-iGc"/>
+                <outlet property="titleLabel" destination="szw-fB-fSs" id="bKr-R2-wcc"/>
+                <outlet property="updateButton" destination="5Rb-Ai-SLv" id="tkF-se-9OD"/>
+            </connections>
+            <point key="canvasLocation" x="371" y="58.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BankerManagerActionsView" customModule="PersonalManager" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomStackView" destination="1Za-so-JXd" id="7PQ-Dl-dTw"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="ruP-rl-gjb"/>
+                <outlet property="topStackView" destination="eKf-24-NPL" id="qN0-s5-siH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xhn-Qj-E5u">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="eKf-24-NPL">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="1Za-so-JXd">
+                            <rect key="frame" x="0.0" y="104" width="414" height="96"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="1Za-so-JXd" firstAttribute="centerX" secondItem="xhn-Qj-E5u" secondAttribute="centerX" id="6EB-Cb-JfW"/>
+                        <constraint firstItem="eKf-24-NPL" firstAttribute="centerX" secondItem="xhn-Qj-E5u" secondAttribute="centerX" id="Fq2-Oc-81r"/>
+                        <constraint firstItem="eKf-24-NPL" firstAttribute="width" secondItem="xhn-Qj-E5u" secondAttribute="width" id="h5T-et-gNK"/>
+                        <constraint firstItem="1Za-so-JXd" firstAttribute="width" secondItem="xhn-Qj-E5u" secondAttribute="width" id="hnW-wW-rAY"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xhn-Qj-E5u" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Isl-jd-igG"/>
+                <constraint firstAttribute="bottom" secondItem="xhn-Qj-E5u" secondAttribute="bottom" id="Uem-25-Lx4"/>
+                <constraint firstItem="xhn-Qj-E5u" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aJl-wC-g1f"/>
+                <constraint firstAttribute="trailing" secondItem="xhn-Qj-E5u" secondAttribute="trailing" id="rBZ-tY-0K5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="153"/>
+        </view>
+    </objects>
+</document>

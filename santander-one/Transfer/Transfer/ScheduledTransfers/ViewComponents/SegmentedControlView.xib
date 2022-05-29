@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SegmentedControlView" customModule="Transfer" customModuleProvider="target">
+            <connections>
+                <outlet property="lisboaSegmentedControl" destination="sHJ-xS-NNn" id="OL6-rJ-JVg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sHJ-xS-NNn" customClass="LisboaSegmentedControl" customModule="UI">
+                    <rect key="frame" x="16" y="6" width="382" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Oq2-tR-Cp2"/>
+                    </constraints>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                    </segments>
+                    <connections>
+                        <action selector="segmentedControlIndexChanged:" destination="-1" eventType="valueChanged" id="zp8-9m-BNO"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="sHJ-xS-NNn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="5V1-oJ-egD"/>
+                <constraint firstItem="sHJ-xS-NNn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="Zu2-7X-862"/>
+                <constraint firstAttribute="trailing" secondItem="sHJ-xS-NNn" secondAttribute="trailing" constant="16" id="cKd-N2-3jB"/>
+                <constraint firstAttribute="bottom" secondItem="sHJ-xS-NNn" secondAttribute="bottom" constant="22" id="snZ-zK-wbq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-123.54910714285714"/>
+        </view>
+    </objects>
+</document>

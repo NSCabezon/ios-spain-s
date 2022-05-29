@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Setup View Controller-->
+        <scene sceneID="UkT-QG-RMe">
+            <objects>
+                <viewController storyboardIdentifier="SetupViewController" id="qoS-Ii-KFl" customClass="SetupViewController" customModule="FinantialTimeline" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2gc-Qc-wSS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MfZ-hA-DSM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="BeI-Uq-PnD">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="431"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QmR-tB-pcf">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="431"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="qsZ-gq-gss" userLabel="Content Stack View">
+                                                        <rect key="frame" x="17" y="15" width="380" height="376"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WlL-hl-hrZ" customClass="DateFilterView" customModule="FinantialTimeline" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="380" height="281"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="281" id="4bH-ca-kOX"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROB-f6-q62">
+                                                                <rect key="frame" x="0.0" y="288" width="380" height="30"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wu-ZO-O51" customClass="GlobileLabel" customModule="SantanderUIKitLib">
+                                                                        <rect key="frame" x="0.0" y="5" width="380" height="20.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="8Wu-ZO-O51" firstAttribute="centerY" secondItem="ROB-f6-q62" secondAttribute="centerY" id="OLC-yO-1Ka"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="bZG-rs-DQG"/>
+                                                                    <constraint firstItem="8Wu-ZO-O51" firstAttribute="leading" secondItem="ROB-f6-q62" secondAttribute="leading" id="eAZ-hx-Gxk"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="8Wu-ZO-O51" secondAttribute="trailing" id="ftc-qq-k7d"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4K5-1Q-ZoG" customClass="ProductFilterView" customModule="FinantialTimeline" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="321.5" width="380" height="0.0"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" id="gHH-If-dVZ"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wto-Ys-e4I" customClass="ProductFilterView" customModule="FinantialTimeline" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="321.5" width="380" height="0.0"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" id="oLX-Vv-Zp6"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wne-Yp-Vkz" customClass="MovementTypeFilterView" customModule="FinantialTimeline" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="325" width="380" height="0.0"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" id="Xtz-3a-O86"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uky-Ol-mxl">
+                                                                <rect key="frame" x="0.0" y="332" width="380" height="44"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZU-qc-Mme" customClass="GlobileEndingButton" customModule="SantanderUIKitLib">
+                                                                        <rect key="frame" x="10" y="7" width="360" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <connections>
+                                                                            <action selector="onConfirmTap:" destination="qoS-Ii-KFl" eventType="touchUpInside" id="jGW-e8-SSA"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="QZU-qc-Mme" firstAttribute="leading" secondItem="Uky-Ol-mxl" secondAttribute="leading" constant="10" id="0WH-RX-m3I"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="QZU-qc-Mme" secondAttribute="trailing" constant="10" id="GEy-Yt-z4W"/>
+                                                                    <constraint firstItem="QZU-qc-Mme" firstAttribute="centerX" secondItem="Uky-Ol-mxl" secondAttribute="centerX" id="SGo-2J-ckG"/>
+                                                                    <constraint firstItem="QZU-qc-Mme" firstAttribute="centerY" secondItem="Uky-Ol-mxl" secondAttribute="centerY" id="e3p-4n-H2e"/>
+                                                                    <constraint firstAttribute="height" constant="44" id="zfJ-Tt-rZv"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="qsZ-gq-gss" secondAttribute="trailing" constant="17" id="78i-zv-beh" userLabel="trailing = Content Stack View.trailing + 16"/>
+                                                    <constraint firstItem="qsZ-gq-gss" firstAttribute="top" secondItem="QmR-tB-pcf" secondAttribute="top" constant="15" id="7vW-cY-8yf"/>
+                                                    <constraint firstItem="qsZ-gq-gss" firstAttribute="leading" secondItem="QmR-tB-pcf" secondAttribute="leading" constant="17" id="cEh-9Q-gd4" userLabel="Content Stack View.leading = leading + 16"/>
+                                                    <constraint firstAttribute="bottom" secondItem="qsZ-gq-gss" secondAttribute="bottom" constant="40" id="rq1-V8-P5E"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BeI-Uq-PnD" firstAttribute="top" secondItem="MfZ-hA-DSM" secondAttribute="top" id="1dT-cj-hsv"/>
+                                    <constraint firstItem="BeI-Uq-PnD" firstAttribute="leading" secondItem="MfZ-hA-DSM" secondAttribute="leading" id="5xY-Ns-Cdh"/>
+                                    <constraint firstAttribute="bottom" secondItem="BeI-Uq-PnD" secondAttribute="bottom" id="sW4-VP-Ujf"/>
+                                    <constraint firstAttribute="trailing" secondItem="BeI-Uq-PnD" secondAttribute="trailing" id="t9X-Nb-s7A"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.96470588239999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="DIe-7c-xHU" firstAttribute="bottom" secondItem="MfZ-hA-DSM" secondAttribute="bottom" id="DQT-27-lmP"/>
+                            <constraint firstItem="DIe-7c-xHU" firstAttribute="trailing" secondItem="MfZ-hA-DSM" secondAttribute="trailing" id="PZA-lA-0pE"/>
+                            <constraint firstItem="MfZ-hA-DSM" firstAttribute="leading" secondItem="DIe-7c-xHU" secondAttribute="leading" id="Pqe-46-5F6"/>
+                            <constraint firstItem="BeI-Uq-PnD" firstAttribute="width" secondItem="2gc-Qc-wSS" secondAttribute="width" id="r2p-zR-K9C"/>
+                            <constraint firstItem="MfZ-hA-DSM" firstAttribute="top" secondItem="DIe-7c-xHU" secondAttribute="top" id="vGW-nE-Fnf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DIe-7c-xHU"/>
+                    </view>
+                    <connections>
+                        <outlet property="accountsFilterHeight" destination="gHH-If-dVZ" id="e8t-zE-Gmk"/>
+                        <outlet property="accountsFilterView" destination="4K5-1Q-ZoG" id="SoS-gU-va5"/>
+                        <outlet property="cardsFilterHeight" destination="oLX-Vv-Zp6" id="QbU-xM-PBL"/>
+                        <outlet property="cardsFilterView" destination="Wto-Ys-e4I" id="77Y-r1-Yot"/>
+                        <outlet property="confirmButton" destination="QZU-qc-Mme" id="Fpq-BH-LYT"/>
+                        <outlet property="dateFilterView" destination="WlL-hl-hrZ" id="CsU-mU-qca"/>
+                        <outlet property="movementsFilterView" destination="wne-Yp-Vkz" id="Cg6-LR-UOw"/>
+                        <outlet property="movementsFilterheight" destination="Xtz-3a-O86" id="seq-o9-tQf"/>
+                        <outlet property="selectProductsLabel" destination="8Wu-ZO-O51" id="cqF-aA-HOB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BD9-bI-nDG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-786" y="128"/>
+        </scene>
+    </scenes>
+</document>

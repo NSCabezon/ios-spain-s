@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentMethodView" customModule="Cards" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="I3I-yK-8Qf" id="YGw-kf-iGt"/>
+                <outlet property="descriptionLabel" destination="K81-0S-TBX" id="5ca-rd-Kh6"/>
+                <outlet property="selectionBtn" destination="ZOz-da-u3t" id="O5c-KP-Ekq"/>
+                <outlet property="titleLabel" destination="36x-gH-Z6D" id="Fvi-s5-0nQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I3I-yK-8Qf">
+                    <rect key="frame" x="16" y="0.0" width="382" height="96"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36x-gH-Z6D">
+                            <rect key="frame" x="20" y="12" width="342" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K81-0S-TBX">
+                            <rect key="frame" x="20" y="35" width="321" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOz-da-u3t">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="96"/>
+                            <connections>
+                                <action selector="paymentMethodPressed:" destination="-1" eventType="touchUpInside" id="CMi-gY-4Cd"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="36x-gH-Z6D" secondAttribute="trailing" constant="20" id="4hA-dc-RW3"/>
+                        <constraint firstItem="36x-gH-Z6D" firstAttribute="top" secondItem="I3I-yK-8Qf" secondAttribute="top" constant="12" id="GsY-tu-HR6"/>
+                        <constraint firstAttribute="bottom" secondItem="ZOz-da-u3t" secondAttribute="bottom" id="IND-oc-iG7"/>
+                        <constraint firstAttribute="trailing" secondItem="K81-0S-TBX" secondAttribute="trailing" constant="41" id="L2x-2m-T3y"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="K81-0S-TBX" secondAttribute="bottom" constant="16" id="LBB-qu-GOq"/>
+                        <constraint firstItem="ZOz-da-u3t" firstAttribute="leading" secondItem="I3I-yK-8Qf" secondAttribute="leading" id="XBc-H7-XBp"/>
+                        <constraint firstItem="36x-gH-Z6D" firstAttribute="leading" secondItem="I3I-yK-8Qf" secondAttribute="leading" constant="20" id="emx-il-MMs"/>
+                        <constraint firstItem="ZOz-da-u3t" firstAttribute="top" secondItem="I3I-yK-8Qf" secondAttribute="top" id="f4o-S7-MFK"/>
+                        <constraint firstItem="K81-0S-TBX" firstAttribute="top" secondItem="36x-gH-Z6D" secondAttribute="bottom" constant="2" id="pjP-MB-RWV"/>
+                        <constraint firstAttribute="trailing" secondItem="ZOz-da-u3t" secondAttribute="trailing" id="wuh-Y5-Hwd"/>
+                        <constraint firstItem="K81-0S-TBX" firstAttribute="leading" secondItem="36x-gH-Z6D" secondAttribute="leading" id="ycS-jC-imW"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="I3I-yK-8Qf" secondAttribute="bottom" id="3dp-mN-GbV"/>
+                <constraint firstAttribute="trailing" secondItem="I3I-yK-8Qf" secondAttribute="trailing" constant="16" id="O3l-UJ-2eO"/>
+                <constraint firstItem="I3I-yK-8Qf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="mse-cs-rVq"/>
+                <constraint firstItem="I3I-yK-8Qf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="x7Z-UM-ge8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-115.17857142857142"/>
+        </view>
+    </objects>
+</document>

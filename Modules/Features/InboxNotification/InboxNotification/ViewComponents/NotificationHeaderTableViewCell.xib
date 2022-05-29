@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="168" id="KGk-i7-Jjw" customClass="NotificationHeaderTableViewCell" customModule="Inbox" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eiE-4P-H0r">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOV-2e-r7m">
+                                <rect key="frame" x="16" y="21" width="288" height="72"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icnArrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="Bb1-Sb-UfC">
+                                        <rect key="frame" x="255" y="24" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="InR-dE-LKi"/>
+                                            <constraint firstAttribute="height" constant="24" id="wiC-TN-XNh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnY-sb-Szz">
+                                        <rect key="frame" x="61" y="25.5" width="184" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7dn-EC-hir">
+                                        <rect key="frame" x="11" y="16" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="gO5-qb-B1s"/>
+                                            <constraint firstAttribute="height" constant="40" id="yl3-qZ-vQN"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Bb1-Sb-UfC" secondAttribute="trailing" constant="9" id="06p-Qf-TGD"/>
+                                    <constraint firstItem="SnY-sb-Szz" firstAttribute="centerY" secondItem="7dn-EC-hir" secondAttribute="centerY" id="1dI-Dn-KVS"/>
+                                    <constraint firstItem="Bb1-Sb-UfC" firstAttribute="leading" secondItem="SnY-sb-Szz" secondAttribute="trailing" constant="10" id="ODu-ix-cbH"/>
+                                    <constraint firstItem="7dn-EC-hir" firstAttribute="centerY" secondItem="sOV-2e-r7m" secondAttribute="centerY" id="VMR-9k-42x"/>
+                                    <constraint firstItem="Bb1-Sb-UfC" firstAttribute="centerY" secondItem="sOV-2e-r7m" secondAttribute="centerY" id="oXv-r5-JQN"/>
+                                    <constraint firstItem="7dn-EC-hir" firstAttribute="leading" secondItem="sOV-2e-r7m" secondAttribute="leading" constant="11" id="qGS-oX-t5Z"/>
+                                    <constraint firstAttribute="height" constant="72" id="rmx-6O-fdy"/>
+                                    <constraint firstItem="SnY-sb-Szz" firstAttribute="leading" secondItem="7dn-EC-hir" secondAttribute="trailing" constant="10" id="zt9-4P-CRz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.96470588235294119" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sOV-2e-r7m" secondAttribute="trailing" constant="16" id="D61-7G-kKc"/>
+                            <constraint firstItem="sOV-2e-r7m" firstAttribute="top" secondItem="eiE-4P-H0r" secondAttribute="top" constant="21" id="GCk-2I-cl5"/>
+                            <constraint firstItem="sOV-2e-r7m" firstAttribute="leading" secondItem="eiE-4P-H0r" secondAttribute="leading" constant="16" id="JyN-FJ-0l6"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sOV-2e-r7m" secondAttribute="bottom" constant="21" id="OTR-6H-fPc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="eiE-4P-H0r" secondAttribute="bottom" id="2be-JI-kfc"/>
+                    <constraint firstItem="eiE-4P-H0r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5yB-Zk-ZDd"/>
+                    <constraint firstItem="eiE-4P-H0r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="MfI-7n-BkM"/>
+                    <constraint firstAttribute="trailing" secondItem="eiE-4P-H0r" secondAttribute="trailing" id="zXh-6C-H0x"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="arrowImageView" destination="Bb1-Sb-UfC" id="tG2-ec-JSZ"/>
+                <outlet property="contentViewHeader" destination="sOV-2e-r7m" id="AEs-sE-IF3"/>
+                <outlet property="notificationLabel" destination="SnY-sb-Szz" id="DaS-hk-lDP"/>
+                <outlet property="settingImageView" destination="7dn-EC-hir" id="gTz-53-vob"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="176.11607142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icnArrowRight" width="24" height="24"/>
+    </resources>
+</document>

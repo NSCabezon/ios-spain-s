@@ -1,0 +1,341 @@
+{
+  "12345678z": {
+    "0": {
+      "id": "all",
+      "title": "Todo",
+      "aggregations": [],
+      "productGroups": [
+        {
+          "id": "activo",
+          "title": "Activo",
+          "aggregations": [
+            {
+              "field": "drawnBalance",
+              "title": "Saldo Pdte. Amortizar",
+              "value": {
+                "amount": 140822.08,
+                "currency": "EUR"
+              }
+            }
+          ],
+          "productGroups": [
+            {
+              "id": "discounts",
+              "title": "Descuento",
+              "aggregations": [],
+              "links": [
+                {
+                  "rel": "product_groups",
+                  "ref": "discounts"
+                }
+              ]
+            },
+            {
+              "id": "factoring",
+              "title": "Factoring",
+              "aggregations": [],
+              "links": [
+                {
+                  "rel": "product_groups",
+                  "ref": "factoring"
+                }
+              ]
+            },
+            {
+              "id": "confirming",
+              "title": "Confirming",
+              "aggregations": [],
+              "links": [
+                {
+                  "rel": "product_groups",
+                  "ref": "confirming"
+                }
+              ]
+            },
+            {
+              "id": "allLoans",
+              "title": "Préstamos",
+              "aggregations": [
+                {
+                  "field": "drawnBalance",
+                  "title": "Saldo Pdte. Amortizar",
+                  "value": {
+                      "amount": 300.0,
+                    "currency": "EUR"
+                  }
+                }
+              ],
+              "links": [
+                {
+                  "rel": "product_groups",
+                  "ref": "loans"
+                }
+              ]
+            },
+            {
+              "id": "credits",
+              "title": "Créditos",
+              "aggregations": [
+                {
+                  "field": "drawnBalance",
+                  "title": "Saldo Dispuesto",
+                  "value": {
+                      "amount": 78.19,
+                    "currency": "EUR"
+                  }
+                }
+              ],
+              "links": [
+                {
+                  "rel": "product_groups",
+                  "ref": "credits"
+                }
+              ]
+            },
+            {
+              "id": "leasing",
+              "title": "Leasing",
+              "aggregations": [],
+              "links": [
+                {
+                  "rel": "product_groups",
+                  "ref": "leasings"
+                }
+              ]
+            },
+            {
+              "id": "renting",
+              "title": "Renting",
+              "aggregations": [
+                {
+                  "field": "drawnBalance",
+                  "title": "Saldo Pendiente",
+                  "value": {
+                    "amount": 0,
+                    "currency": "EUR"
+                  }
+                }
+              ],
+              "links": [
+                {
+                  "rel": "product_groups",
+                  "ref": "rentings"
+                }
+              ]
+            },
+            {
+              "id": "credit_cards",
+              "title": "Tarjetas de Crédito",
+              "aggregations": [
+                {
+                  "field": "drawnBalance",
+                  "title": "Saldo Dispuesto",
+                  "value": {
+                      "amount": 200.0,
+                    "currency": "EUR"
+                  }
+                }
+              ],
+              "links": [
+                {
+                  "rel": "product_groups",
+                  "ref": "credit_cards"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pasivo",
+          "title": "Pasivo",
+          "aggregations": [
+            {
+              "field": "balance",
+              "title": "Saldo",
+              "value": {
+                "amount": 10354178548.696985,
+                "currency": "EUR"
+              }
+            }
+          ],
+          "productGroups": [
+            {
+              "id": "accounts",
+              "title": "Cuentas",
+              "aggregations": [
+                {
+                  "field": "balance",
+                  "title": "Saldo",
+                  "value": {
+                    "amount": 21412226.18,
+                    "currency": "EUR"
+                  }
+                }
+              ],
+              "links": [
+                {
+                  "rel": "accounts"
+                }
+              ]
+            },
+            {
+              "id": "funds",
+              "title": "Fondos",
+              "aggregations": [
+                {
+                  "field": "balance",
+                  "title": "Saldo",
+                  "value": {
+                    "amount": 1101431.172522503,
+                    "currency": "EUR"
+                  }
+                }
+              ],
+              "links": [
+                {
+                  "rel": "funds"
+                }
+              ]
+            },
+            {
+              "id": "pension_plans",
+              "title": "Planes de Pensiones",
+              "aggregations": [
+                {
+                  "field": "balance",
+                  "title": "Saldo",
+                  "value": {
+                    "amount": 8820.6944624019,
+                    "currency": "EUR"
+                  }
+                }
+              ],
+              "links": [
+                {
+                  "rel": "pension_plans"
+                }
+              ]
+            },
+            {
+              "id": "deposits",
+              "title": "Depósitos",
+              "aggregations": [
+                {
+                  "field": "balance",
+                  "title": "Saldo",
+                  "value": {
+                    "amount": 0,
+                    "currency": "EUR"
+                  }
+                }
+              ],
+              "links": [
+                {
+                  "rel": "deposits"
+                }
+              ]
+            },
+            {
+              "id": "managed_portfolios",
+              "title": "Carteras Gestionadas",
+              "aggregations": [
+                {
+                  "field": "balance",
+                  "title": "Saldo",
+                  "value": {
+                    "amount": 10331635168.94,
+                    "currency": "EUR"
+                  }
+                }
+              ],
+              "links": [
+                {
+                  "rel": "managed_portfolios"
+                }
+              ]
+            },
+            {
+              "id": "securities_market",
+              "title": "Valores",
+              "aggregations": [
+                {
+                  "field": "balance",
+                  "title": "Saldo",
+                  "value": {
+                    "amount": 5924.32,
+                    "currency": "EUR"
+                  }
+                }
+              ],
+              "links": [
+                {
+                  "rel": "securities_market"
+                }
+              ]
+            },
+            {
+              "id": "investment_savings_insurance",
+              "title": "Seguros de Ahorro / Inversión",
+              "aggregations": [],
+              "productGroups": [
+                {
+                  "id": "periodic_savings_insurance",
+                  "title": "Ahorro Periódico",
+                  "aggregations": [],
+                  "links": [
+                    {
+                      "rel": "product_groups",
+                      "ref": "periodic_savings_insurance"
+                    }
+                  ]
+                },
+                {
+                  "id": "ppa_insurance",
+                  "title": "Plan de Previsión Asegurado (PPA)",
+                  "aggregations": [],
+                  "links": [
+                    {
+                      "rel": "product_groups",
+                      "ref": "ppa_insurance"
+                    }
+                  ]
+                },
+                {
+                  "id": "incomes_insurance",
+                  "title": "Rentas",
+                  "aggregations": [],
+                  "links": [
+                    {
+                      "rel": "product_groups",
+                      "ref": "incomes_insurance"
+                    }
+                  ]
+                },
+                {
+                  "id": "unit_link_insurance",
+                  "title": "Unit Link",
+                  "aggregations": [
+                    {
+                      "field": "balance",
+                      "title": "Provisión",
+                      "value": {
+                        "amount": 14977.39,
+                        "currency": "EUR"
+                      }
+                    }
+                  ],
+                  "links": [
+                    {
+                      "rel": "product_groups",
+                      "ref": "unit_link_insurance"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

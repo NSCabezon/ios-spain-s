@@ -1,0 +1,36 @@
+platform :ios, '10.3'
+
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+def libraries
+  pod 'CoreFoundationLib', :path => '../../../../Modules/Libraries/CoreFoundationLib'
+  pod 'SQLite.swift/SQLCipher', :path => '../../../../Modules/Libraries/SQLite.swift'
+  pod 'SQLCipher', '4.4.2'
+  pod 'Kingfisher', '5.15.8'
+  pod 'CoreDomain', :path => '../../../../Modules/Libraries/CoreDomain'
+  pod 'SANLegacyLibrary', :path => '../../../../Modules/Libraries/SANLegacyLibrary'
+  pod 'Locker', :path => '../../../../Modules/Libraries/Locker'
+  pod 'RxCombine', :path => '../../Modules/Libraries/RxCombine'
+end
+
+def pods
+  pod 'OneAuthorizationProcessor/ExampleApp', :path => '../'
+  pod 'CoreTestData', :path => '../../../../Modules/Libraries/CoreTestData'
+  pod 'QuickSetup', :path => '../../../../QuickSetup'
+  pod 'UI', :path => '../../../../UI'
+  pod 'Localization', :path => '../../../../Localization'
+  pod 'Operative', :path => '../../../../Operative'
+  pod 'CorePushNotificationsService', :path => '../../../../CorePushNotificationsService'
+  libraries
+end
+
+
+target 'OneAuthorizationProcessor_Example' do
+  pods
+end
+
+target 'OneAuthorizationProcessor_ExampleTests' do
+  pods
+end

@@ -1,0 +1,33 @@
+public enum PrivateMenuProductHome {
+    case accounts
+    case cards
+    case stocks
+    case deposits
+    case loans
+    case pensions
+    case funds
+    case managedPortfolios
+    case notManagedPortfolios
+    case managedRVPortfolios
+    case notManagedRVPortfolios
+    case insuranceSavings
+    case insuranceProtection
+    case productProfileFund
+    case productProfilePlans
+    case productProfileVariableIncomeNotManaged
+    case productProfileVariableIncomeManaged
+    case productProfileTransaction
+    case impositionsHome
+    case impositionTransactionDetail
+    case impositionDetail
+    case portfolioProductDetail
+    case portfolioProductTransactionDetail
+    case liquidation
+    case liquidationDetail
+    case orders
+    case cardDispensation
+    case cardsPending
+    case bill
+    case sofiaInvestments
+    case savingProducts
+}

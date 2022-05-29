@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Light.ttf">
+            <string>Lato-Light</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Xmi-hL-NXa" customClass="DepositMoneyIntoCardHeaderConfirmationTableViewCell" customModule="DEBUG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xmi-hL-NXa" id="ygo-Aq-INg">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="75.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caJ-aA-ToB">
+                        <rect key="frame" x="10" y="0.0" width="355" height="76"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cX8-f2-kj6">
+                                <rect key="frame" x="14" y="14" width="75" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="FZ9-4w-phe"/>
+                                    <constraint firstAttribute="height" constant="48" id="Zfk-NG-V2C"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFX-VM-kXY">
+                                <rect key="frame" x="101" y="14" width="244" height="20"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EE-CQ-hvl" userLabel="cardAliasLabel">
+                                <rect key="frame" x="101" y="45" width="244" height="17"/>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KlA-W2-uaG">
+                                <rect key="frame" x="10" y="75" width="335" height="1"/>
+                                <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="n1f-wE-cwu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PFX-VM-kXY" secondAttribute="trailing" constant="10" id="4lw-nq-QC3"/>
+                            <constraint firstItem="cX8-f2-kj6" firstAttribute="leading" secondItem="caJ-aA-ToB" secondAttribute="leading" constant="14" id="5mH-Wk-bCU"/>
+                            <constraint firstItem="PFX-VM-kXY" firstAttribute="leading" secondItem="cX8-f2-kj6" secondAttribute="trailing" constant="12" id="6qP-j7-Nxd"/>
+                            <constraint firstAttribute="bottom" secondItem="KlA-W2-uaG" secondAttribute="bottom" id="QJS-Ev-fDG"/>
+                            <constraint firstAttribute="trailing" secondItem="KlA-W2-uaG" secondAttribute="trailing" constant="10" id="a4s-gh-72k"/>
+                            <constraint firstItem="cX8-f2-kj6" firstAttribute="top" secondItem="caJ-aA-ToB" secondAttribute="top" constant="14" id="cOS-XO-KNC"/>
+                            <constraint firstItem="9EE-CQ-hvl" firstAttribute="bottom" secondItem="cX8-f2-kj6" secondAttribute="bottom" id="eV9-Yc-6jC"/>
+                            <constraint firstItem="9EE-CQ-hvl" firstAttribute="leading" secondItem="cX8-f2-kj6" secondAttribute="trailing" constant="12" id="et8-pE-1CZ"/>
+                            <constraint firstItem="KlA-W2-uaG" firstAttribute="top" secondItem="cX8-f2-kj6" secondAttribute="bottom" constant="13" id="ne2-XU-2zE"/>
+                            <constraint firstItem="KlA-W2-uaG" firstAttribute="leading" secondItem="caJ-aA-ToB" secondAttribute="leading" constant="10" id="oky-tq-HE0"/>
+                            <constraint firstItem="PFX-VM-kXY" firstAttribute="top" secondItem="cX8-f2-kj6" secondAttribute="top" id="xHA-Zr-3MD"/>
+                            <constraint firstAttribute="trailing" secondItem="9EE-CQ-hvl" secondAttribute="trailing" constant="10" id="xge-NM-p5z"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="caJ-aA-ToB" firstAttribute="top" secondItem="ygo-Aq-INg" secondAttribute="top" id="9yJ-IE-aiG"/>
+                    <constraint firstAttribute="trailing" secondItem="caJ-aA-ToB" secondAttribute="trailing" constant="10" id="Np0-mc-uxI"/>
+                    <constraint firstAttribute="bottom" secondItem="caJ-aA-ToB" secondAttribute="bottom" id="btr-RR-okb"/>
+                    <constraint firstItem="caJ-aA-ToB" firstAttribute="leading" secondItem="ygo-Aq-INg" secondAttribute="leading" constant="10" id="lQw-jh-rr8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="aliasNameLabel" destination="PFX-VM-kXY" id="rFH-gW-qbA"/>
+                <outlet property="amountLabel" destination="9EE-CQ-hvl" id="wpO-hX-WG2"/>
+                <outlet property="cardImageView" destination="cX8-f2-kj6" id="FG3-4v-ONp"/>
+                <outlet property="containerView" destination="caJ-aA-ToB" id="dhH-ks-8ef"/>
+            </connections>
+            <point key="canvasLocation" x="57.5" y="152"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BigOfferFinanceableView" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="bigofferButton" destination="jgH-qP-bND" id="wSw-6f-LJa"/>
+                <outlet property="containerView" destination="8nC-3I-fbf" id="GNj-kr-Mdr"/>
+                <outlet property="offerImageView" destination="YGu-gp-sRL" id="lKt-zB-JRf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="231"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nC-3I-fbf">
+                    <rect key="frame" x="16" y="66" width="343" height="143"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YGu-gp-sRL">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="143"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgH-qP-bND">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="143"/>
+                            <connections>
+                                <action selector="didSelectedBanner:" destination="-1" eventType="touchUpInside" id="tjW-4T-0tE"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="jgH-qP-bND" firstAttribute="leading" secondItem="8nC-3I-fbf" secondAttribute="leading" id="52f-uJ-SfR"/>
+                        <constraint firstItem="YGu-gp-sRL" firstAttribute="leading" secondItem="8nC-3I-fbf" secondAttribute="leading" id="DPA-7f-Epx"/>
+                        <constraint firstAttribute="trailing" secondItem="YGu-gp-sRL" secondAttribute="trailing" id="F4J-SC-SK6"/>
+                        <constraint firstAttribute="bottom" secondItem="YGu-gp-sRL" secondAttribute="bottom" id="TSS-gA-oJH"/>
+                        <constraint firstAttribute="trailing" secondItem="jgH-qP-bND" secondAttribute="trailing" id="ZE6-2H-Rl0"/>
+                        <constraint firstItem="YGu-gp-sRL" firstAttribute="top" secondItem="8nC-3I-fbf" secondAttribute="top" id="fvy-MK-ghQ"/>
+                        <constraint firstItem="jgH-qP-bND" firstAttribute="top" secondItem="8nC-3I-fbf" secondAttribute="top" id="ixh-l8-8E5"/>
+                        <constraint firstAttribute="bottom" secondItem="jgH-qP-bND" secondAttribute="bottom" id="ucE-nR-az0"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jW3-tT-gPg">
+                    <rect key="frame" x="0.0" y="230" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.85882352941176465" green="0.8784313725490196" blue="0.89162927869999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="0vF-jo-SeS"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8nC-3I-fbf" secondAttribute="bottom" constant="22" id="26y-yt-SGW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8nC-3I-fbf" secondAttribute="trailing" constant="16" id="Do5-Kh-amK"/>
+                <constraint firstItem="8nC-3I-fbf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="H4U-jS-5fp"/>
+                <constraint firstAttribute="bottom" secondItem="jW3-tT-gPg" secondAttribute="bottom" id="Z2b-Qr-hgl"/>
+                <constraint firstAttribute="trailing" secondItem="jW3-tT-gPg" secondAttribute="trailing" id="aCR-Nl-Ed7"/>
+                <constraint firstItem="jW3-tT-gPg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hn8-PP-Rbu"/>
+                <constraint firstItem="8nC-3I-fbf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="22" id="vRM-XQ-rMX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="103.62318840579711" y="-104.12946428571428"/>
+        </view>
+    </objects>
+</document>

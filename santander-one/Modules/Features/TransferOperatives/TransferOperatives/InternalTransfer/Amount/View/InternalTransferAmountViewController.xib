@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InternalTransferAmountViewController" customModule="TransferOperatives" customModuleProvider="target">
+            <connections>
+                <outlet property="contentScrollView" destination="dbq-O7-lq5" id="QNi-K8-Tu5"/>
+                <outlet property="floatingButton" destination="U2H-Er-gAc" id="VOb-Y5-JXV"/>
+                <outlet property="floatingButtonConstraint" destination="9nr-1A-0cz" id="xbb-iE-4vg"/>
+                <outlet property="stackView" destination="I3w-Sh-Pe3" id="AaN-K0-js7"/>
+                <outlet property="view" destination="lVN-1x-6oR" id="ygk-ja-nI8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="lVN-1x-6oR">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbq-O7-lq5">
+                    <rect key="frame" x="0.0" y="44" width="414" height="788"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="128" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="I3w-Sh-Pe3">
+                            <rect key="frame" x="0.0" y="22" width="414" height="128"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="I3w-Sh-Pe3" firstAttribute="leading" secondItem="dbq-O7-lq5" secondAttribute="leading" id="0B6-J4-wvE"/>
+                        <constraint firstItem="I3w-Sh-Pe3" firstAttribute="top" secondItem="dbq-O7-lq5" secondAttribute="top" constant="22" id="igR-Q1-rm7"/>
+                        <constraint firstItem="I3w-Sh-Pe3" firstAttribute="width" secondItem="dbq-O7-lq5" secondAttribute="width" id="lwt-56-wWi"/>
+                        <constraint firstAttribute="bottom" secondItem="I3w-Sh-Pe3" secondAttribute="bottom" constant="94" id="rSj-3a-Qs9"/>
+                        <constraint firstAttribute="trailing" secondItem="I3w-Sh-Pe3" secondAttribute="trailing" id="veE-jw-bTt"/>
+                    </constraints>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2H-Er-gAc" customClass="OneFloatingButton" customModule="UIOneComponents">
+                    <rect key="frame" x="352" y="832" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="WYu-sq-Olk"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="dbq-O7-lq5" firstAttribute="leading" secondItem="WYu-sq-Olk" secondAttribute="leading" id="74v-rh-4kc"/>
+                <constraint firstItem="U2H-Er-gAc" firstAttribute="bottom" secondItem="WYu-sq-Olk" secondAttribute="bottom" id="9nr-1A-0cz"/>
+                <constraint firstItem="WYu-sq-Olk" firstAttribute="trailing" secondItem="U2H-Er-gAc" secondAttribute="trailing" constant="16" id="Cse-9k-Nhb"/>
+                <constraint firstItem="WYu-sq-Olk" firstAttribute="trailing" secondItem="dbq-O7-lq5" secondAttribute="trailing" id="WKS-CB-hcf"/>
+                <constraint firstItem="U2H-Er-gAc" firstAttribute="top" secondItem="dbq-O7-lq5" secondAttribute="bottom" id="XLK-Yc-osM"/>
+                <constraint firstItem="dbq-O7-lq5" firstAttribute="top" secondItem="WYu-sq-Olk" secondAttribute="top" id="vhv-6e-agb"/>
+            </constraints>
+            <point key="canvasLocation" x="27.536231884057973" y="73.660714285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

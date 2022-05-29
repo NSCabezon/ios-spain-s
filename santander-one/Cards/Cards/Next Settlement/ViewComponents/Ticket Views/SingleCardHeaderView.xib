@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SingleCardHeaderView" customModule="Cards" customModuleProvider="target">
+            <connections>
+                <outlet property="amountLabel" destination="jLL-Wj-YmR" id="d8j-Nd-Zyf"/>
+                <outlet property="cardImage" destination="8Ig-gG-klF" id="oiB-w5-Fm0"/>
+                <outlet property="cardNameLabel" destination="X6E-XE-YII" id="hdr-G4-kfG"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="m7T-hN-Wbe"/>
+                <outlet property="datesLabel" destination="1Vt-yn-DKw" id="yGI-yz-npG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEL 20 JUL - 20 AGO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vt-yn-DKw">
+                    <rect key="frame" x="24" y="13" width="123" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-450,00€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLL-Wj-YmR">
+                    <rect key="frame" x="24" y="20.5" width="162.5" height="43"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarjeta Crédito 1|2|3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6E-XE-YII">
+                    <rect key="frame" x="24" y="75" width="123" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Ig-gG-klF">
+                    <rect key="frame" x="305" y="15" width="93" height="57"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="57" id="N1Q-xT-irq"/>
+                        <constraint firstAttribute="width" constant="93" id="paK-jl-TVU"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jLL-Wj-YmR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="4dc-A0-jTe"/>
+                <constraint firstAttribute="trailing" secondItem="8Ig-gG-klF" secondAttribute="trailing" constant="16" id="5xk-iI-YDV"/>
+                <constraint firstItem="jLL-Wj-YmR" firstAttribute="top" secondItem="1Vt-yn-DKw" secondAttribute="bottom" constant="-7" id="8aT-2U-vzM"/>
+                <constraint firstItem="8Ig-gG-klF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jLL-Wj-YmR" secondAttribute="trailing" constant="15" id="8lX-MV-ANj"/>
+                <constraint firstItem="8Ig-gG-klF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="HKT-fd-2M7"/>
+                <constraint firstAttribute="bottom" secondItem="8Ig-gG-klF" secondAttribute="bottom" constant="32" id="TOC-dQ-qQd"/>
+                <constraint firstItem="1Vt-yn-DKw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="aS7-qC-nv8"/>
+                <constraint firstItem="X6E-XE-YII" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="giY-3e-nPn"/>
+                <constraint firstAttribute="bottom" secondItem="X6E-XE-YII" secondAttribute="bottom" constant="13" id="gpg-fo-R6I"/>
+                <constraint firstItem="1Vt-yn-DKw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="iG8-BR-ddP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
+        </view>
+    </objects>
+</document>

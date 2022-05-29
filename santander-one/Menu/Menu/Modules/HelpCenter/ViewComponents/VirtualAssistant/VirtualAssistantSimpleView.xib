@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderText-Bold.otf">
+            <string>SantanderText-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VirtualAssistantSimpleView" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomConstraint" destination="qgL-Ik-zxV" id="ymn-T2-PgX"/>
+                <outlet property="labelTitle" destination="egE-a8-dU9" id="YWy-U5-ZDP"/>
+                <outlet property="viewSimple" destination="iN0-l3-epB" id="Eg3-yl-72h"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8U-sA-7t0">
+                    <rect key="frame" x="23" y="0.0" width="296" height="1"/>
+                    <color key="backgroundColor" red="0.85882352941176465" green="0.8784313725490196" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="05y-zx-2aL"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Realizar otras consultas" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egE-a8-dU9">
+                    <rect key="frame" x="23" y="8" width="296" height="22"/>
+                    <fontDescription key="fontDescription" name="SantanderText-Bold" family="Santander Text" pointSize="16"/>
+                    <color key="textColor" red="0.074509803920000006" green="0.4941176471" blue="0.5192109612056337" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="egE-a8-dU9" firstAttribute="top" secondItem="d8U-sA-7t0" secondAttribute="bottom" constant="7" id="J44-kt-bbT"/>
+                <constraint firstItem="d8U-sA-7t0" firstAttribute="leading" secondItem="egE-a8-dU9" secondAttribute="leading" id="Ms9-Ho-Fxe"/>
+                <constraint firstAttribute="trailing" secondItem="egE-a8-dU9" secondAttribute="trailing" constant="23" id="NfL-6e-TJn"/>
+                <constraint firstItem="d8U-sA-7t0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="QJa-eO-uJT"/>
+                <constraint firstItem="d8U-sA-7t0" firstAttribute="trailing" secondItem="egE-a8-dU9" secondAttribute="trailing" id="gAs-bD-mhg"/>
+                <constraint firstAttribute="bottom" secondItem="egE-a8-dU9" secondAttribute="bottom" constant="10" id="qgL-Ik-zxV"/>
+                <constraint firstItem="egE-a8-dU9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="23" id="sYx-3X-00B"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="135.9375"/>
+        </view>
+    </objects>
+</document>

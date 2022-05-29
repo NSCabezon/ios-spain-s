@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FinancingDistributionView" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="ksW-rF-JlI"/>
+                <outlet property="productsTableView" destination="Q2M-v9-4Fy" id="DE6-qL-Kkb"/>
+                <outlet property="sectorChartView" destination="x0E-FI-83Y" id="Iu8-m6-2pb"/>
+                <outlet property="separatorView" destination="Dmg-23-HBo" id="ph6-h6-v9M"/>
+                <outlet property="tableTopHeight" destination="swC-le-dVw" id="diJ-DZ-bxF"/>
+                <outlet property="titleLabel" destination="7Q9-Xd-F8K" id="rpm-k1-NIt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x0E-FI-83Y" customClass="SectoredChartView" customModule="UI">
+                    <rect key="frame" x="67" y="82.5" width="280" height="280"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="280" id="Xpl-lp-hoW"/>
+                        <constraint firstAttribute="width" constant="280" id="sUB-B8-3Ze"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="innerRadioDelta">
+                            <real key="value" value="1.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="outerRadioDelta">
+                            <real key="value" value="1.3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="showSectorLabels" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="textPositionOffset">
+                            <real key="value" value="0.84999999999999998"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Q9-Xd-F8K">
+                    <rect key="frame" x="186" y="22" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q2M-v9-4Fy" customClass="AutoSizeTableView" customModule="UI">
+                    <rect key="frame" x="0.0" y="412.5" width="414" height="258.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="258.5" id="swC-le-dVw"/>
+                    </constraints>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dmg-23-HBo">
+                    <rect key="frame" x="0.0" y="671" width="414" height="1"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="C1W-6O-D4h"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q2M-v9-4Fy" firstAttribute="top" secondItem="x0E-FI-83Y" secondAttribute="bottom" constant="50" id="4MH-ER-pXG"/>
+                <constraint firstItem="x0E-FI-83Y" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4WJ-Y3-OJc"/>
+                <constraint firstItem="Q2M-v9-4Fy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6cr-6l-Dvp"/>
+                <constraint firstItem="7Q9-Xd-F8K" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8fq-P7-ewi"/>
+                <constraint firstItem="Dmg-23-HBo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="D1s-X0-hnO"/>
+                <constraint firstAttribute="top" secondItem="7Q9-Xd-F8K" secondAttribute="top" constant="-22" id="Es1-2d-rH7"/>
+                <constraint firstItem="x0E-FI-83Y" firstAttribute="top" secondItem="7Q9-Xd-F8K" secondAttribute="bottom" constant="40" id="T7w-I5-kc4"/>
+                <constraint firstItem="Dmg-23-HBo" firstAttribute="top" secondItem="Q2M-v9-4Fy" secondAttribute="bottom" id="Wfp-Zn-L2R"/>
+                <constraint firstAttribute="trailing" secondItem="Q2M-v9-4Fy" secondAttribute="trailing" id="ZfB-fp-yNp"/>
+                <constraint firstAttribute="trailing" secondItem="Dmg-23-HBo" secondAttribute="trailing" id="hnO-ZQ-Tfj"/>
+                <constraint firstAttribute="bottom" secondItem="Dmg-23-HBo" secondAttribute="bottom" id="yzA-et-BX8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="140.57971014492756" y="180.80357142857142"/>
+        </view>
+    </objects>
+</document>

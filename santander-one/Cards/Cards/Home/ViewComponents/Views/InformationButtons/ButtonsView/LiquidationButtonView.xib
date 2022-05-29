@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderText-Bold.ttf">
+            <string>SantanderText-Bold</string>
+        </array>
+        <array key="SantanderText-Regular.otf">
+            <string>SantanderText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiquidationButtonView" customModule="Cards" customModuleProvider="target">
+            <connections>
+                <outlet property="amountLabel" destination="ZDw-Vq-psj" id="Wzg-xz-UK1"/>
+                <outlet property="endDateLabel" destination="X6l-Rk-MDS" id="REg-lz-qRn"/>
+                <outlet property="liquidationLabel" destination="1m5-b7-mT9" id="ddL-7A-scG"/>
+                <outlet property="progreBar" destination="FId-hQ-BeX" id="KHi-qZ-ibT"/>
+                <outlet property="startDateLabel" destination="uq9-gX-Q8u" id="Vnr-th-YAz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="187" height="88"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1m5-b7-mT9">
+                    <rect key="frame" x="16" y="5" width="155" height="19"/>
+                    <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="13"/>
+                    <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDw-Vq-psj">
+                    <rect key="frame" x="16" y="24" width="155" height="22"/>
+                    <fontDescription key="fontDescription" name="SantanderText-Bold" family="Santander Text" pointSize="15"/>
+                    <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="247" verticalHuggingPriority="251" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uq9-gX-Q8u">
+                    <rect key="frame" x="16" y="48" width="5" height="27"/>
+                    <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="11"/>
+                    <color key="textColor" red="0.46274509803921571" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6l-Rk-MDS">
+                    <rect key="frame" x="166" y="48" width="5" height="27"/>
+                    <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="11"/>
+                    <color key="textColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FId-hQ-BeX" customClass="ProgressBar" customModule="UI">
+                    <rect key="frame" x="16" y="77" width="155" height="3"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="3" id="4P2-D3-4XW"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="uq9-gX-Q8u" firstAttribute="top" secondItem="ZDw-Vq-psj" secondAttribute="bottom" constant="2" id="0QR-h2-LdW"/>
+                <constraint firstItem="X6l-Rk-MDS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uq9-gX-Q8u" secondAttribute="trailing" constant="16" id="2rj-JR-4zn"/>
+                <constraint firstItem="uq9-gX-Q8u" firstAttribute="leading" secondItem="ZDw-Vq-psj" secondAttribute="leading" id="37G-Zn-2yr"/>
+                <constraint firstItem="X6l-Rk-MDS" firstAttribute="trailing" secondItem="ZDw-Vq-psj" secondAttribute="trailing" id="46F-C2-wr2"/>
+                <constraint firstItem="FId-hQ-BeX" firstAttribute="leading" secondItem="uq9-gX-Q8u" secondAttribute="leading" id="GQ2-9M-djl"/>
+                <constraint firstItem="FId-hQ-BeX" firstAttribute="top" secondItem="uq9-gX-Q8u" secondAttribute="bottom" constant="2" id="MkN-Kx-0qd"/>
+                <constraint firstItem="ZDw-Vq-psj" firstAttribute="top" secondItem="1m5-b7-mT9" secondAttribute="bottom" id="X3f-ZT-QKO"/>
+                <constraint firstItem="FId-hQ-BeX" firstAttribute="trailing" secondItem="X6l-Rk-MDS" secondAttribute="trailing" id="dnh-pz-dTp"/>
+                <constraint firstItem="X6l-Rk-MDS" firstAttribute="top" secondItem="ZDw-Vq-psj" secondAttribute="bottom" constant="2" id="lWb-VQ-fkY"/>
+                <constraint firstItem="ZDw-Vq-psj" firstAttribute="trailing" secondItem="1m5-b7-mT9" secondAttribute="trailing" id="mKh-eY-nFq"/>
+                <constraint firstItem="1m5-b7-mT9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="qKZ-VL-TUI"/>
+                <constraint firstItem="1m5-b7-mT9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="r6u-Nm-PoS"/>
+                <constraint firstItem="FId-hQ-BeX" firstAttribute="top" secondItem="X6l-Rk-MDS" secondAttribute="bottom" constant="2" id="uUZ-ee-faU"/>
+                <constraint firstAttribute="trailing" secondItem="1m5-b7-mT9" secondAttribute="trailing" constant="16" id="vsk-T9-Xtc"/>
+                <constraint firstItem="ZDw-Vq-psj" firstAttribute="leading" secondItem="1m5-b7-mT9" secondAttribute="leading" id="wPb-hS-x7f"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="FId-hQ-BeX" secondAttribute="bottom" constant="8" id="y84-qW-0RZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="132.60869565217394" y="152.67857142857142"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BusinessDayOneSelectView" customModule="TransferOperatives" customModuleProvider="target">
+            <connections>
+                <outlet property="businessDaySelect" destination="li5-1Q-EKb" id="soH-aX-aqc"/>
+                <outlet property="descriptionOneLabel" destination="7vE-Gx-WOW" id="hqO-8P-d1R"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="chW-Z1-Hs7">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6LJ-yh-ab7">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MGg-Jo-kds">
+                            <rect key="frame" x="16" y="10" width="382" height="76"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vE-Gx-WOW" customClass="OneLabelView" customModule="UIOneComponents">
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="20"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="Lm5-Q5-BVd"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="li5-1Q-EKb" customClass="OneInputSelectView" customModule="UIOneComponents">
+                                    <rect key="frame" x="0.0" y="28" width="382" height="48"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="MGg-Jo-kds" secondAttribute="bottom" constant="18" id="1cr-p7-g8I"/>
+                        <constraint firstItem="MGg-Jo-kds" firstAttribute="top" secondItem="6LJ-yh-ab7" secondAttribute="top" constant="10" id="OPX-72-0E3"/>
+                        <constraint firstAttribute="trailing" secondItem="MGg-Jo-kds" secondAttribute="trailing" constant="16" id="blU-DU-xJJ"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="104" id="d8G-Pk-Xwz"/>
+                        <constraint firstItem="MGg-Jo-kds" firstAttribute="leading" secondItem="6LJ-yh-ab7" secondAttribute="leading" constant="16" id="rl3-rI-y1Q"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="No4-Zp-81m"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="6LJ-yh-ab7" secondAttribute="bottom" id="5Cn-vE-nKe"/>
+                <constraint firstItem="6LJ-yh-ab7" firstAttribute="top" secondItem="chW-Z1-Hs7" secondAttribute="top" id="Jgw-91-Vvg"/>
+                <constraint firstItem="6LJ-yh-ab7" firstAttribute="leading" secondItem="chW-Z1-Hs7" secondAttribute="leading" id="K7Z-pJ-TbO"/>
+                <constraint firstAttribute="trailing" secondItem="6LJ-yh-ab7" secondAttribute="trailing" id="Q28-CT-DxD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="95.652173913043484" y="-158.70535714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

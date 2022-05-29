@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tutorial View Controller-->
+        <scene sceneID="ey3-cZ-rRa">
+            <objects>
+                <viewController storyboardIdentifier="TutorialViewController" id="C9l-BI-66h" customClass="TutorialViewController" customModule="DEBUG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4CS-eF-3ft">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qk4-XU-UqB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="531"/>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDm-y0-uXn">
+                                <rect key="frame" x="0.0" y="551" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="D2V-zl-MBo"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="S7t-p7-Kb2">
+                                <rect key="frame" x="56" y="569" width="263" height="88"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eA0-87-0DX" customClass="RedButton" customModule="DEBUG" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="263" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="tfu-mb-n6x"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="7gQ-zr-158">
+                                        <rect key="frame" x="0.0" y="51" width="263" height="37"/>
+                                    </pageControl>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lBC-2c-OIa" firstAttribute="trailing" secondItem="S7t-p7-Kb2" secondAttribute="trailing" constant="56" id="3ay-FO-4yf"/>
+                            <constraint firstItem="Qk4-XU-UqB" firstAttribute="top" secondItem="lBC-2c-OIa" secondAttribute="top" id="Iu0-VR-cGB"/>
+                            <constraint firstAttribute="trailing" secondItem="pDm-y0-uXn" secondAttribute="trailing" id="PAg-ja-py5"/>
+                            <constraint firstItem="pDm-y0-uXn" firstAttribute="top" secondItem="Qk4-XU-UqB" secondAttribute="bottom" id="PlA-gw-pG8"/>
+                            <constraint firstItem="S7t-p7-Kb2" firstAttribute="top" secondItem="pDm-y0-uXn" secondAttribute="bottom" constant="17" id="Zqj-ub-VZk"/>
+                            <constraint firstItem="lBC-2c-OIa" firstAttribute="trailing" secondItem="Qk4-XU-UqB" secondAttribute="trailing" id="eK2-y5-K27"/>
+                            <constraint firstItem="lBC-2c-OIa" firstAttribute="bottom" secondItem="S7t-p7-Kb2" secondAttribute="bottom" constant="10" id="fdz-tt-b9V"/>
+                            <constraint firstItem="pDm-y0-uXn" firstAttribute="leading" secondItem="4CS-eF-3ft" secondAttribute="leading" id="oz3-Yz-TiU"/>
+                            <constraint firstItem="S7t-p7-Kb2" firstAttribute="leading" secondItem="lBC-2c-OIa" secondAttribute="leading" constant="56" id="plA-Bh-HKV"/>
+                            <constraint firstItem="Qk4-XU-UqB" firstAttribute="leading" secondItem="lBC-2c-OIa" secondAttribute="leading" id="qcL-tu-Bjn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lBC-2c-OIa"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomButton" destination="eA0-87-0DX" id="F0D-Xc-jl0"/>
+                        <outlet property="pageContainer" destination="Qk4-XU-UqB" id="T8d-u7-6cw"/>
+                        <outlet property="pageControl" destination="7gQ-zr-158" id="5jZ-Nb-2s3"/>
+                        <outlet property="stackView" destination="S7t-p7-Kb2" id="GBX-BO-AKf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZII-iW-OyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10.4" y="-90.404797601199405"/>
+        </scene>
+        <!--Tutorial Detail View Controller-->
+        <scene sceneID="Djd-dl-JKo">
+            <objects>
+                <viewController storyboardIdentifier="TutorialDetailViewController" id="jVu-jY-OCa" customClass="TutorialDetailViewController" customModule="DEBUG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mhe-HF-Pbr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="paX-R5-eP4">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qda-m5-R2X" firstAttribute="trailing" secondItem="paX-R5-eP4" secondAttribute="trailing" id="3yq-Fn-v8O"/>
+                            <constraint firstItem="paX-R5-eP4" firstAttribute="top" secondItem="Qda-m5-R2X" secondAttribute="top" id="Blz-Aa-r1U"/>
+                            <constraint firstItem="Qda-m5-R2X" firstAttribute="bottom" secondItem="paX-R5-eP4" secondAttribute="bottom" id="hbZ-ye-qNL"/>
+                            <constraint firstItem="paX-R5-eP4" firstAttribute="leading" secondItem="Qda-m5-R2X" secondAttribute="leading" id="iNS-BQ-iVa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qda-m5-R2X"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="paX-R5-eP4" id="BE0-oj-enX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LtS-I4-6Ez" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1586" y="-90"/>
+        </scene>
+        <!--Tutorial Container Page View Controller-->
+        <scene sceneID="p5r-A4-ztS">
+            <objects>
+                <pageViewController storyboardIdentifier="TutorialContainerPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="hyS-zB-9TT" customClass="TutorialContainerPageViewController" customModule="DEBUG" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B4f-Mi-poM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="812" y="-90"/>
+        </scene>
+    </scenes>
+</document>

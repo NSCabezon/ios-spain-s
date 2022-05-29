@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PageView" customModule="RetailLegacy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="718"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1l-sE-sPK" userLabel="Shadow View">
+                    <rect key="frame" x="24" y="695.5" width="366" height="1"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="0mD-ev-05p"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zyL-94-1Bw">
+                    <rect key="frame" x="22" y="17" width="370" height="678.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="zyL-94-1Bw" secondAttribute="height" multiplier="192:352" id="jlE-t5-SME"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pi-cf-bcP">
+                    <rect key="frame" x="42" y="5" width="330" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="IKU-P8-t7V"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="El5-S6-EVY">
+                    <rect key="frame" x="350" y="653.5" width="64" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="3tU-3j-4Hv"/>
+                        <constraint firstAttribute="height" constant="64" id="C7y-CG-hO1"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="zyL-94-1Bw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="17" id="2PR-CE-VMB"/>
+                <constraint firstItem="a1l-sE-sPK" firstAttribute="top" secondItem="zyL-94-1Bw" secondAttribute="bottom" id="6Ki-F8-47h"/>
+                <constraint firstItem="zyL-94-1Bw" firstAttribute="top" secondItem="3Pi-cf-bcP" secondAttribute="bottom" constant="-2" id="6r8-qk-Idf"/>
+                <constraint firstAttribute="trailing" secondItem="El5-S6-EVY" secondAttribute="trailing" id="F0m-yK-whn"/>
+                <constraint firstItem="3Pi-cf-bcP" firstAttribute="leading" secondItem="zyL-94-1Bw" secondAttribute="leading" constant="20" id="MG0-Pl-hf9"/>
+                <constraint firstItem="a1l-sE-sPK" firstAttribute="leading" secondItem="zyL-94-1Bw" secondAttribute="leading" constant="2" id="MeH-PV-bSA"/>
+                <constraint firstItem="zyL-94-1Bw" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cgT-uW-5Iw"/>
+                <constraint firstItem="zyL-94-1Bw" firstAttribute="trailing" secondItem="3Pi-cf-bcP" secondAttribute="trailing" constant="20" id="iRz-vM-OdA"/>
+                <constraint firstItem="a1l-sE-sPK" firstAttribute="centerX" secondItem="zyL-94-1Bw" secondAttribute="centerX" id="roW-gk-mlz"/>
+                <constraint firstItem="zyL-94-1Bw" firstAttribute="bottom" secondItem="El5-S6-EVY" secondAttribute="centerY" constant="10" id="uPR-YB-0sa"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zyL-94-1Bw" secondAttribute="bottom" constant="22" id="xXX-0w-akW"/>
+                <constraint firstItem="zyL-94-1Bw" firstAttribute="trailing" secondItem="El5-S6-EVY" secondAttribute="centerX" constant="10" id="zTk-Du-gdG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bannedLabel" destination="3Pi-cf-bcP" id="nKl-NL-KfI"/>
+                <outlet property="checkView" destination="El5-S6-EVY" id="JM3-Ke-nke"/>
+                <outlet property="imageView" destination="zyL-94-1Bw" id="YPp-D7-zvQ"/>
+                <outlet property="shadowView" destination="a1l-sE-sPK" id="FiH-Dn-gPg"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="64.955357142857139"/>
+        </view>
+    </objects>
+</document>

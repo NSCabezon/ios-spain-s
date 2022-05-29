@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HelpCenterImageLabelCallView" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="JHg-sC-pR1" id="Mmx-je-nak"/>
+                <outlet property="phoneImageView" destination="w0u-1c-OjZ" id="ThD-x3-CSW"/>
+                <outlet property="titleLabel" destination="dXx-oL-7XV" id="sDm-DI-849"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="YO1-km-pi1">
+            <rect key="frame" x="0.0" y="0.0" width="496" height="88"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHg-sC-pR1">
+                    <rect key="frame" x="0.0" y="0.0" width="496" height="88"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icnPhoneWhite" translatesAutoresizingMaskIntoConstraints="NO" id="w0u-1c-OjZ">
+                            <rect key="frame" x="222" y="26" width="36" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="m2Q-x8-fGu"/>
+                                <constraint firstAttribute="width" constant="36" id="uHq-my-YzZ"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnP-Ln-yot">
+                            <rect key="frame" x="0.0" y="0.0" width="496" height="88"/>
+                            <connections>
+                                <action selector="didTapOnPhone" destination="-1" eventType="touchUpInside" id="PW5-hG-kxf"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXx-oL-7XV">
+                            <rect key="frame" x="266" y="10" width="0.0" height="68"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.074509803921568626" green="0.49411764705882355" blue="0.51764705882352935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="dXx-oL-7XV" secondAttribute="bottom" constant="10" id="76i-II-G8U"/>
+                        <constraint firstItem="w0u-1c-OjZ" firstAttribute="centerY" secondItem="JHg-sC-pR1" secondAttribute="centerY" id="EGV-Qa-kbo"/>
+                        <constraint firstItem="dXx-oL-7XV" firstAttribute="top" secondItem="JHg-sC-pR1" secondAttribute="top" constant="10" id="GW2-hy-rqU"/>
+                        <constraint firstItem="mnP-Ln-yot" firstAttribute="top" secondItem="JHg-sC-pR1" secondAttribute="top" id="HX8-Wm-QGk"/>
+                        <constraint firstItem="dXx-oL-7XV" firstAttribute="centerX" secondItem="JHg-sC-pR1" secondAttribute="centerX" constant="18" id="LcO-q8-nFh"/>
+                        <constraint firstItem="dXx-oL-7XV" firstAttribute="leading" secondItem="w0u-1c-OjZ" secondAttribute="trailing" constant="8" id="Liz-cA-hck"/>
+                        <constraint firstItem="w0u-1c-OjZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JHg-sC-pR1" secondAttribute="leading" constant="20" id="abk-sd-iFF"/>
+                        <constraint firstAttribute="trailing" secondItem="mnP-Ln-yot" secondAttribute="trailing" id="hIl-xa-rkm"/>
+                        <constraint firstItem="dXx-oL-7XV" firstAttribute="centerY" secondItem="w0u-1c-OjZ" secondAttribute="centerY" id="hxD-yz-GcT"/>
+                        <constraint firstItem="mnP-Ln-yot" firstAttribute="leading" secondItem="JHg-sC-pR1" secondAttribute="leading" id="kj3-JJ-i39"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dXx-oL-7XV" secondAttribute="trailing" priority="250" constant="20" id="pir-FF-7Du"/>
+                        <constraint firstAttribute="bottom" secondItem="mnP-Ln-yot" secondAttribute="bottom" id="t0g-Mr-fEU"/>
+                        <constraint firstItem="w0u-1c-OjZ" firstAttribute="leading" secondItem="JHg-sC-pR1" secondAttribute="leading" priority="250" constant="11" id="wFi-nB-sGh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="WOX-ZF-gv6"/>
+            <constraints>
+                <constraint firstItem="WOX-ZF-gv6" firstAttribute="trailing" secondItem="JHg-sC-pR1" secondAttribute="trailing" id="Ans-Ec-u5K"/>
+                <constraint firstItem="JHg-sC-pR1" firstAttribute="top" secondItem="YO1-km-pi1" secondAttribute="top" id="CRF-r1-NDE"/>
+                <constraint firstItem="JHg-sC-pR1" firstAttribute="leading" secondItem="WOX-ZF-gv6" secondAttribute="leading" id="GXQ-xF-ilg"/>
+                <constraint firstAttribute="bottom" secondItem="JHg-sC-pR1" secondAttribute="bottom" id="h8l-jd-RGy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="216" y="153"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icnPhoneWhite" width="36" height="36"/>
+    </resources>
+</document>

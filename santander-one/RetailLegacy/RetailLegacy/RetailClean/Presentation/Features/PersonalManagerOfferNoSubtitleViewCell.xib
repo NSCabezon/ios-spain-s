@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PersonalManagerOfferNoSubtitleViewCell" customModule="DEBUG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ghn-A7-UkH" userLabel="Offer Image View">
+                        <rect key="frame" x="32" y="4" width="34" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="34" id="40k-fy-Rth"/>
+                            <constraint firstAttribute="height" constant="34" id="6Zd-AE-JYb"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfo-yp-010">
+                        <rect key="frame" x="80" y="11" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ghn-A7-UkH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="OxI-tt-vk4"/>
+                    <constraint firstItem="Lfo-yp-010" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dkS-AA-XQZ"/>
+                    <constraint firstItem="Ghn-A7-UkH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="rlZ-vY-C0g"/>
+                    <constraint firstItem="Lfo-yp-010" firstAttribute="leading" secondItem="Ghn-A7-UkH" secondAttribute="trailing" constant="14" id="rnY-aS-O8v"/>
+                    <constraint firstItem="Lfo-yp-010" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="wSH-nj-E6S"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="offerImageView" destination="Ghn-A7-UkH" id="d4L-Lk-DfA"/>
+                <outlet property="titleLabel" destination="Lfo-yp-010" id="oxj-lf-q9I"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

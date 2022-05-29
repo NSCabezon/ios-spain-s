@@ -1,0 +1,58 @@
+<datos>
+    <id12345678z>
+        <respuesta0>
+            <soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                >
+                <soap-env:Header/>
+                <soap-env:Body>
+                    <prefixRigel0:confirmarDineroDirecto_LIPResponse
+                        xmlns:prefixRigel0="http://www.isban.es/webservices/BAMOBI/Tarjetas/F_bamobi_tarjetas_lip/internet/BAMOBITAJ/v1">
+                        <methodResult>
+                            <info>
+                                <errorDesc>Traspaso de dinero directo realizado</errorDesc>
+                                <errorCode>0</errorCode>
+                            </info>
+                            <datosFirma>
+                                <positions>2 6 8 1</positions>
+                                <signatureLength>8</signatureLength>
+                            </datosFirma>
+                        </methodResult>
+                    </prefixRigel0:confirmarDineroDirecto_LIPResponse>
+                </soap-env:Body>
+            </soap-env:Envelope>
+        </respuesta0>
+        <respuesta1>
+            <soap-env:Envelope
+                xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                >
+                <soap-env:Header/>
+                <soap-env:Body>
+                    <soap-env:Fault>
+                        <faultcode>soap-env:Server</faultcode>
+                        <faultstring>Exception Code: BAMOBI_00000. Executing Facade: BAMOBITAJ, Method:
+                            confirmarDineroDirecto_LIP
+                        </faultstring>
+                        <faultactor>http://www.isban.es/soap/banksphere</faultactor>
+                        <detail>
+                            <prefixRigel0:com.isb.bamobi.tarjetas.lip.ef.EX_BAMOBI_DatosErrorYFirma_LIP
+                                xmlns:prefixRigel0="http://www.isban.es/webservices/BAMOBI/Tarjetas/F_bamobi_tarjetas_lip/santander/internet/functionalFaults/v1">
+                                <errorYFirma>
+                                    <error>
+                                        <errorDesc>La clave de firma introducida es errónea. Por favor, vuelva a introducir
+                                            su firma.
+                                        </errorDesc>
+                                        <errorCode>1</errorCode>
+                                    </error>
+                                    <datosFirmaNueva>
+                                        <positions>4 5 7 8</positions>
+                                        <signatureLength>8</signatureLength>
+                                    </datosFirmaNueva>
+                                </errorYFirma>
+                            </prefixRigel0:com.isb.bamobi.tarjetas.lip.ef.EX_BAMOBI_DatosErrorYFirma_LIP>
+                        </detail>
+                    </soap-env:Fault>
+                </soap-env:Body>
+            </soap-env:Envelope>
+        </respuesta1>
+    </id12345678z>
+</datos>

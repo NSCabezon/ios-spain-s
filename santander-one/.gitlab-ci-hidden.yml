@@ -1,0 +1,14 @@
+stages:
+  - build
+  - test
+  
+build project:
+  before_script:
+    - git submodule sync --recursive
+    - git submodule update --init --recursive
+    - export FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT=60
+  stage: build
+  script:
+    - fastlane ci_build
+  only:
+    - merge_requests

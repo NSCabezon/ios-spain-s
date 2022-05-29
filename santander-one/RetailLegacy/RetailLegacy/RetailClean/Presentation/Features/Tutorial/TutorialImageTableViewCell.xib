@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="TutorialImageTableViewCell" selectionStyle="none" indentationWidth="10" rowHeight="44" id="KGk-i7-Jjw" customClass="TutorialImageTableViewCell" customModule="RetailLegacy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3P-08-AmU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rCc-CJ-8gl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rCc-CJ-8gl" secondAttribute="trailing" id="8tB-iP-lSB"/>
+                            <constraint firstAttribute="bottom" secondItem="rCc-CJ-8gl" secondAttribute="bottom" id="DZn-ul-xlP"/>
+                            <constraint firstItem="rCc-CJ-8gl" firstAttribute="top" secondItem="M3P-08-AmU" secondAttribute="top" id="mIm-Wk-yRU"/>
+                            <constraint firstItem="rCc-CJ-8gl" firstAttribute="centerX" secondItem="M3P-08-AmU" secondAttribute="centerX" id="qlh-g9-og3"/>
+                            <constraint firstItem="rCc-CJ-8gl" firstAttribute="leading" secondItem="M3P-08-AmU" secondAttribute="leading" id="rEj-hV-CqW"/>
+                            <constraint firstItem="rCc-CJ-8gl" firstAttribute="centerY" secondItem="M3P-08-AmU" secondAttribute="centerY" id="vzP-QB-ZEx"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="M3P-08-AmU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="O4T-40-xqL"/>
+                    <constraint firstItem="M3P-08-AmU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YwU-qT-rMq"/>
+                    <constraint firstAttribute="trailing" secondItem="M3P-08-AmU" secondAttribute="trailing" id="o9y-Xt-0m1"/>
+                    <constraint firstAttribute="bottom" secondItem="M3P-08-AmU" secondAttribute="bottom" id="vbv-w5-ZCl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="containerView" destination="M3P-08-AmU" id="r2h-6p-oSt"/>
+                <outlet property="imageURLView" destination="rCc-CJ-8gl" id="7QO-8i-OKX"/>
+            </connections>
+            <point key="canvasLocation" x="135" y="103"/>
+        </tableViewCell>
+    </objects>
+</document>

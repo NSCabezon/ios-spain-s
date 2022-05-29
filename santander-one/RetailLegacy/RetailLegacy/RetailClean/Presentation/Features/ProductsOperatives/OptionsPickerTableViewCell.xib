@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OptionsPickerTableViewCell" rowHeight="87" id="3lP-lG-OPx" customClass="OptionsPickerTableViewCell" customModule="DEBUG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3lP-lG-OPx" id="rFI-Je-aLZ">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="86.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KGj-Ds-iEb" customClass="NotCopyPasteTextField" customModule="DEBUG" customModuleProvider="target">
+                        <rect key="frame" x="10" y="11" width="355" height="50"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="3LX-Tb-3JW"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="KGj-Ds-iEb" secondAttribute="bottom" id="HFg-Tf-Ja9"/>
+                    <constraint firstItem="KGj-Ds-iEb" firstAttribute="top" secondItem="rFI-Je-aLZ" secondAttribute="topMargin" id="IIM-qy-JMw"/>
+                    <constraint firstAttribute="trailing" secondItem="KGj-Ds-iEb" secondAttribute="trailing" constant="10" id="coK-Fb-oYf"/>
+                    <constraint firstItem="KGj-Ds-iEb" firstAttribute="leading" secondItem="rFI-Je-aLZ" secondAttribute="leading" constant="10" id="mx7-dv-Yv7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="textField" destination="KGj-Ds-iEb" id="WOU-14-NhA"/>
+            </connections>
+            <point key="canvasLocation" x="-122.40000000000001" y="103.89805097451276"/>
+        </tableViewCell>
+    </objects>
+</document>

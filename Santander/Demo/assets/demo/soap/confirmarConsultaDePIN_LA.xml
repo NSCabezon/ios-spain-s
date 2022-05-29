@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datos>
+    <id12345678z>
+        <respuesta0>
+            <soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                >
+                <soap-env:Header/>
+                <soap-env:Body>
+                    <prefixRigel0:confirmarConsultaDePIN_LAResponse
+                        xmlns:prefixRigel0="http://www.isban.es/webservices/TARSAN/Consultadepin_la/F_tarsan_consultadepin_la/internet/ACTARSANConsultaDePIN/v1">
+                        <methodResult>
+                            <info>
+                                <errorCode>0</errorCode>
+                            </info>
+                            <!-- Se descifra por contratodetarjetapan (menos las dos ultimas del pan un total de 32)-->
+                            <numPINCifrado>f3W0kthEUPs=</numPINCifrado>
+                        </methodResult>
+                    </prefixRigel0:confirmarConsultaDePIN_LAResponse>
+                </soap-env:Body>
+            </soap-env:Envelope>
+        </respuesta0>
+        <respuesta1>
+            <soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                >
+                <soap-env:Header/>
+                <soap-env:Body>
+                    <soap-env:Fault>
+                        <faultcode>soap-env:Server</faultcode>
+                        <faultstring>Exception Code: TARSAN_00000. Executing Facade: ACTARSANConsultaDePIN, Method:
+                            confirmarConsultaDePIN_LA
+                        </faultstring>
+                        <faultactor>http://www.isban.es/soap/banksphere</faultactor>
+                        <detail>
+                            <prefixRigel0:com.isb.al.tarsan.consultadepin.la.f.exc.General_ConsultaDePIN_LA
+                                xmlns:prefixRigel0="http://www.isban.es/webservices/TARSAN/Consultadepin_la/F_tarsan_consultadepin_la/santander/internet/functionalFaults/v1">
+                                <error>
+                                    <errorDesc>Clave de OTP Incorrecta</errorDesc>
+                                    <errorCode>1</errorCode>
+                                </error>
+                            </prefixRigel0:com.isb.al.tarsan.consultadepin.la.f.exc.General_ConsultaDePIN_LA>
+                        </detail>
+                    </soap-env:Fault>
+                </soap-env:Body>
+            </soap-env:Envelope>
+        </respuesta1>
+        <respuesta2>
+            <soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                >
+                <soap-env:Header/>
+                <soap-env:Body>
+                    <soap-env:Fault>
+                        <faultcode>soap-env:Server</faultcode>
+                        <faultstring>Exception Code: TARSAN_00000. Executing Facade: ACTARSANConsultaDePIN, Method:
+                            confirmarConsultaDePIN_LA
+                        </faultstring>
+                        <faultactor>http://www.isban.es/soap/banksphere</faultactor>
+                        <detail>
+                            <prefixRigel0:com.isb.al.tarsan.consultadepin.la.f.exc.General_ConsultaDePIN_LA
+                                xmlns:prefixRigel0="http://www.isban.es/webservices/TARSAN/Consultadepin_la/F_tarsan_consultadepin_la/santander/internet/functionalFaults/v1">
+                                <error>
+                                    <errorDesc>Error aleatorio</errorDesc>
+                                    <errorCode>1</errorCode>
+                                </error>
+                            </prefixRigel0:com.isb.al.tarsan.consultadepin.la.f.exc.General_ConsultaDePIN_LA>
+                        </detail>
+                    </soap-env:Fault>
+                </soap-env:Body>
+            </soap-env:Envelope>
+        </respuesta2>
+        <!-- 24/07/18 - PAN: 4425 9900 0091 9308, CONTRACT: 0049 0800 501 0020153 -->
+        <respuesta3>
+            <soap-env:Envelope
+                xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <soap-env:Header>
+                    <Infra Version="1.0" soap-env:actor="http://www.isban.es/soap/actor/coexistence" soap-env:mustUnderstand="0">
+                        <Control>
+                            <GroupID Type="1">B4C008308B7DCC19CC0338ED</GroupID>
+                            <GroupID Type="2">B4C008308B7DF619CC0338EF</GroupID>
+                            <Created>2018-07-24T14:16:22-503 CEST</Created>
+                        </Control>
+                    </Infra>
+                    <wsse:Security
+                        xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+                        xmlns:S12="http://www.w3.org/2003/05/soap-envelope" soap-env:actor="http://www.isban.es/soap/actor/wssecurity" soap-env:mustUnderstand="1" S12:role="wsssecurity">
+                        <wsse:BinarySecurityToken
+                            xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="SSOToken" ValueType="esquema" EncodingType="wsse:Base64Binary">B4C00830069ABB08CC2C36FF#180.192.8.48#1532435242504#PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iSVNPLTg4NTktMSI/Pjx0b2tlbkRlZmluaXRpb24+PHRpcG9QZXJzb25hPkY8L3RpcG9QZXJzb25hPjxuYW1lPknRQUtJIEFKT05BIE9SQURPUjwvbmFtZT48Y29kaWdvUGVyc29uYT4zMTQ0MjI8L2NvZGlnb1BlcnNvbmE+PHVzZXJJRD4wMDY2NzU0NjwvdXNlcklEPjwvdG9rZW5EZWZpbml0aW9uPg==#DESede/CBC/PKCS5Padding#v1#canalesSANPRE#NOT USED#SHA1withRSA#Y1qLTmE3jLa4fkuptV+bMhEAYTrSe1P7Y0hdlgYaFe66crVKu73tmDhl2OtdbjWyp6Z0wpUur/mvyPa4hCmA/i0El63zZQr+p98YpOYLxDs66q3Trv/JIu1Hl9PDZKw6jZ15IaBoJzA0HcoTInmEYOuDbn9OVyERU7yct/H3zCg=
+                        </wsse:BinarySecurityToken>
+                    </wsse:Security>
+                </soap-env:Header>
+                <soap-env:Body>
+                    <prefixRigel0:confirmarConsultaDePIN_LAResponse
+                        xmlns:prefixRigel0="http://www.isban.es/webservices/TARSAN/Consultadepin_la/F_tarsan_consultadepin_la/internet/ACTARSANConsultaDePIN/v1">
+                        <methodResult>
+                            <info>
+                                <errorCode>0</errorCode>
+                            </info>
+                            <numPINCifrado>WWRhOTLoycE=</numPINCifrado>
+                        </methodResult>
+                    </prefixRigel0:confirmarConsultaDePIN_LAResponse>
+                </soap-env:Body>
+            </soap-env:Envelope>
+        </respuesta3>
+    </id12345678z>
+</datos>

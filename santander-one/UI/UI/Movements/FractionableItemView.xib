@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderText-Regular.otf">
+            <string>SantanderText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FractionableItemView" customModule="UI" customModuleProvider="target">
+            <connections>
+                <outlet property="arrowImageView" destination="yXA-Kj-d19" id="6s3-T1-vQr"/>
+                <outlet property="fractionateHeightConstraint" destination="CD0-hA-QNI" id="OX0-L0-skq"/>
+                <outlet property="fractionateLabel" destination="vl4-XW-S0z" id="aTY-pM-9E4"/>
+                <outlet property="percentageImageView" destination="jtx-bu-kew" id="4rY-2M-tw2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="FDN-HO-NiA">
+            <rect key="frame" x="0.0" y="0.0" width="302" height="32"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bW-Ou-ZNQ">
+                    <rect key="frame" x="0.0" y="0.0" width="302" height="32"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jtx-bu-kew">
+                            <rect key="frame" x="204" y="6" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="0ad-cD-ykS"/>
+                                <constraint firstAttribute="height" constant="20" id="VcD-AK-8Jw"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Fraccionar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="vl4-XW-S0z">
+                            <rect key="frame" x="234" y="5.5" width="52" height="17.5"/>
+                            <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="12"/>
+                            <color key="textColor" red="0.074509803920000006" green="0.4941176471" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yXA-Kj-d19">
+                            <rect key="frame" x="288" y="5.5" width="19" height="19"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="19" id="1gb-w1-aYa"/>
+                                <constraint firstAttribute="width" constant="19" id="O7U-as-0FQ"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="CD0-hA-QNI"/>
+                        <constraint firstItem="yXA-Kj-d19" firstAttribute="leading" secondItem="vl4-XW-S0z" secondAttribute="trailing" constant="2" id="Cuj-95-lws"/>
+                        <constraint firstItem="jtx-bu-kew" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3bW-Ou-ZNQ" secondAttribute="leading" constant="5" id="YdX-Hq-0Ov"/>
+                        <constraint firstItem="yXA-Kj-d19" firstAttribute="centerY" secondItem="3bW-Ou-ZNQ" secondAttribute="centerY" constant="-1" id="Yno-ph-TYB"/>
+                        <constraint firstItem="vl4-XW-S0z" firstAttribute="centerY" secondItem="3bW-Ou-ZNQ" secondAttribute="centerY" constant="-2" id="aDf-Of-BUQ"/>
+                        <constraint firstItem="jtx-bu-kew" firstAttribute="centerY" secondItem="3bW-Ou-ZNQ" secondAttribute="centerY" id="kMa-g9-cJd"/>
+                        <constraint firstItem="vl4-XW-S0z" firstAttribute="leading" secondItem="jtx-bu-kew" secondAttribute="trailing" constant="10" id="phu-dI-pzK"/>
+                        <constraint firstAttribute="trailing" secondItem="yXA-Kj-d19" secondAttribute="trailing" constant="-5" id="wIq-PJ-QWc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="3bW-Ou-ZNQ" firstAttribute="top" secondItem="FDN-HO-NiA" secondAttribute="top" id="3OX-DW-Azm"/>
+                <constraint firstAttribute="trailing" secondItem="3bW-Ou-ZNQ" secondAttribute="trailing" id="C4O-AI-OFI"/>
+                <constraint firstAttribute="bottom" secondItem="3bW-Ou-ZNQ" secondAttribute="bottom" id="grH-zp-mlo"/>
+                <constraint firstItem="3bW-Ou-ZNQ" firstAttribute="leading" secondItem="FDN-HO-NiA" secondAttribute="leading" id="omm-w5-ccU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-274" y="-110"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

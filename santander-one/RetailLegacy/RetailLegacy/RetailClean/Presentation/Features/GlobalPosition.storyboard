@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!-- -->
+        <scene sceneID="HVe-QO-DdU">
+            <objects>
+                <viewController storyboardIdentifier="PGViewController" title=" " id="UhM-CR-av4" customClass="PGViewController" customModule="METRIX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OQG-n2-N8a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jV6-qZ-Vno">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Js2-Zp-bMn"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jV6-qZ-Vno" firstAttribute="leading" secondItem="OQG-n2-N8a" secondAttribute="leading" id="PWi-9g-9Ll"/>
+                            <constraint firstAttribute="trailing" secondItem="jV6-qZ-Vno" secondAttribute="trailing" id="ciJ-NL-w42"/>
+                            <constraint firstItem="jV6-qZ-Vno" firstAttribute="top" secondItem="OQG-n2-N8a" secondAttribute="top" id="ghI-JU-dRx"/>
+                            <constraint firstAttribute="bottom" secondItem="jV6-qZ-Vno" secondAttribute="bottom" id="iFl-JP-hbF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="jV6-qZ-Vno" id="QXA-hF-Txy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nRg-FD-atj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-609" y="118"/>
+        </scene>
+        <!--FakePG View Controller-->
+        <scene sceneID="vb0-Zh-uq0">
+            <objects>
+                <viewController storyboardIdentifier="FakePGViewController" id="sKd-ai-oxJ" customClass="FakePGViewController" customModule="METRIX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7a2-Bt-rp8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="UyT-T4-jif"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RZo-1e-tF2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41" y="786"/>
+        </scene>
+        <!--Variable Income View Controller-->
+        <scene sceneID="b9a-Ui-aVA">
+            <objects>
+                <viewController storyboardIdentifier="VariableIncomeViewController" id="25j-Lu-xXh" customClass="VariableIncomeViewController" customModule="METRIX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1kW-sm-uiN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PgD-uz-KZO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TCr-v9-uWY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TCr-v9-uWY" firstAttribute="trailing" secondItem="PgD-uz-KZO" secondAttribute="trailing" id="LCz-Ao-zHL"/>
+                            <constraint firstItem="PgD-uz-KZO" firstAttribute="leading" secondItem="TCr-v9-uWY" secondAttribute="leading" id="fln-3f-eXG"/>
+                            <constraint firstAttribute="bottom" secondItem="PgD-uz-KZO" secondAttribute="bottom" id="naP-74-KYM"/>
+                            <constraint firstItem="PgD-uz-KZO" firstAttribute="top" secondItem="TCr-v9-uWY" secondAttribute="top" id="pC8-v9-NqO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="PgD-uz-KZO" id="VxA-QL-ESo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y26-lC-98X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="671" y="86"/>
+        </scene>
+    </scenes>
+</document>

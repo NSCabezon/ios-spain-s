@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="IBANTextFieldStackView" customModule="DEBUG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3cf-J6-pfU" customClass="IBANTextField" customModule="DEBUG" customModuleProvider="target">
+                    <rect key="frame" x="12" y="197" width="351" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="geP-iO-DwR"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="3cf-J6-pfU" secondAttribute="bottom" constant="420" id="1sc-f0-eBy"/>
+                <constraint firstItem="3cf-J6-pfU" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="177" id="J69-52-D9n"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3cf-J6-pfU" secondAttribute="trailing" constant="12" id="rrA-Pt-erB"/>
+                <constraint firstItem="3cf-J6-pfU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="vip-Y2-KtH"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bottom" destination="1sc-f0-eBy" id="ffg-8B-TJ7"/>
+                <outlet property="ibanTextField" destination="3cf-J6-pfU" id="8s6-Op-Afa"/>
+                <outlet property="left" destination="vip-Y2-KtH" id="X4P-hW-cM0"/>
+                <outlet property="right" destination="rrA-Pt-erB" id="8FS-Sn-DaW"/>
+                <outlet property="top" destination="J69-52-D9n" id="lPA-Ql-DJG"/>
+            </connections>
+        </view>
+    </objects>
+</document>

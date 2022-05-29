@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderText-Regular.ttf">
+            <string>SantanderText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapButtonView" customModule="Cards" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionLabel" destination="tYJ-6b-f7K" id="ZW2-rF-Ppw"/>
+                <outlet property="mapImageView" destination="haM-Su-elj" id="XBI-9v-DRu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="187" height="88"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="haM-Su-elj">
+                    <rect key="frame" x="0.0" y="0.0" width="187" height="88"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYJ-6b-f7K">
+                    <rect key="frame" x="91" y="10" width="72" height="68"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="72" id="iiO-mu-Z19"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="16"/>
+                    <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <accessibility key="accessibilityConfiguration" identifier="imgPurchaseModule">
+                <bool key="isElement" value="NO"/>
+            </accessibility>
+            <constraints>
+                <constraint firstItem="haM-Su-elj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1yY-C0-Kxv"/>
+                <constraint firstItem="haM-Su-elj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4T6-n7-gNT"/>
+                <constraint firstAttribute="trailing" secondItem="haM-Su-elj" secondAttribute="trailing" id="Ccp-Fs-WFW"/>
+                <constraint firstAttribute="trailing" secondItem="tYJ-6b-f7K" secondAttribute="trailing" constant="24" id="QkM-LA-kZq"/>
+                <constraint firstItem="tYJ-6b-f7K" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="bic-CF-SrW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="tYJ-6b-f7K" secondAttribute="bottom" constant="10" id="c5R-Rf-8H2"/>
+                <constraint firstAttribute="bottom" secondItem="haM-Su-elj" secondAttribute="bottom" id="cAe-NQ-AFh"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="61" y="149"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,23 @@
+source 'https://github.com/CocoaPods/Specs'
+source "git@github.com:globile-software/Globile-Spec.git"
+source 'git@github.com:globile-software/Arch-Components-iOS.git'
+
+
+use_frameworks!
+
+target 'TimeLine_PRE' do
+  pod 'FinantialTimeline', :path => '../', :testspecs => ['TimeLineTests']
+  pod 'netfox'
+end
+
+target 'TimeLine_DEMO' do
+  pod 'FinantialTimeline', :path => '../', :testspecs => ['TimeLineTests']
+  pod 'netfox'
+end
+
+target 'TimeLine_PRO' do
+  pod 'SCAL_iOS', '1.1.1'
+  pod 'STGKeychain_Access', '1.0.0'
+  pod 'FinantialTimeline', :path => '../', :testspecs => ['TimeLineTests']
+  pod 'netfox'
+end

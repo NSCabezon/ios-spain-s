@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderText-Regular.otf">
+            <string>SantanderText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactsSimpleView" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="contactView" destination="iBL-fM-6YB" id="6pD-oU-EiN"/>
+                <outlet property="descriptionLabel" destination="uJI-pI-Gti" id="xnt-qs-dot"/>
+                <outlet property="imageViewIcon" destination="Cd2-xb-M1b" id="43h-a6-kLl"/>
+                <outlet property="labelTitle" destination="zJa-OK-iC5" id="8ei-mK-qw2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="344" height="72"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iBL-fM-6YB">
+                    <rect key="frame" x="0.0" y="0.0" width="344" height="72"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" image="icnHelpChat" translatesAutoresizingMaskIntoConstraints="NO" id="Cd2-xb-M1b">
+                            <rect key="frame" x="8" y="16" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Cd2-xb-M1b" secondAttribute="height" multiplier="1:1" id="mrq-J7-CKs"/>
+                                <constraint firstAttribute="height" constant="40" id="o8q-xq-Gg8"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hSK-26-4Be">
+                            <rect key="frame" x="64" y="14" width="265" height="46"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJa-OK-iC5">
+                                    <rect key="frame" x="0.0" y="0.0" width="265" height="29"/>
+                                    <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="20"/>
+                                    <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJI-pI-Gti">
+                                    <rect key="frame" x="0.0" y="29" width="265" height="17"/>
+                                    <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="14"/>
+                                    <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="hSK-26-4Be" firstAttribute="top" secondItem="iBL-fM-6YB" secondAttribute="top" constant="14" id="SHQ-G7-umA"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="72" id="kWb-md-p4j"/>
+                        <constraint firstAttribute="trailing" secondItem="hSK-26-4Be" secondAttribute="trailing" constant="15" id="mtq-Hb-YMd"/>
+                        <constraint firstItem="hSK-26-4Be" firstAttribute="leading" secondItem="Cd2-xb-M1b" secondAttribute="trailing" constant="16" id="pib-dt-FRn"/>
+                        <constraint firstItem="zJa-OK-iC5" firstAttribute="top" secondItem="Cd2-xb-M1b" secondAttribute="top" constant="-2" id="q5J-sW-XVg"/>
+                        <constraint firstAttribute="bottom" secondItem="hSK-26-4Be" secondAttribute="bottom" constant="12" id="qgu-XK-sFD"/>
+                        <constraint firstItem="Cd2-xb-M1b" firstAttribute="leading" secondItem="iBL-fM-6YB" secondAttribute="leading" constant="8" id="zQG-hP-gEf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="iBL-fM-6YB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6uE-ZD-8dA"/>
+                <constraint firstAttribute="bottom" secondItem="iBL-fM-6YB" secondAttribute="bottom" id="NNy-g3-umS"/>
+                <constraint firstItem="iBL-fM-6YB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VdQ-fs-Y0U"/>
+                <constraint firstAttribute="trailing" secondItem="iBL-fM-6YB" secondAttribute="trailing" id="qgj-d3-PSi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="125.89285714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icnHelpChat" width="40" height="40"/>
+    </resources>
+</document>

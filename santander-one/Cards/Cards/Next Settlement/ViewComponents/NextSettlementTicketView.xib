@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NextSettlementTicketView" customModule="Cards" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="uOQ-9j-aM1" id="WBc-nN-wXO"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="tWd-oK-kTv"/>
+                <outlet property="footerImage" destination="kjF-63-Dka" id="03n-E6-9Ie"/>
+                <outlet property="ticketStackView" destination="gfr-pZ-Bb5" id="8kF-42-APp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="406" height="521"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOQ-9j-aM1" customClass="BittenFrameView" customModule="UI">
+                    <rect key="frame" x="32" y="59" width="342" height="442"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gfr-pZ-Bb5">
+                            <rect key="frame" x="1" y="5" width="340" height="442"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="250" constant="1" id="G50-wU-RV3"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="gfr-pZ-Bb5" firstAttribute="top" secondItem="uOQ-9j-aM1" secondAttribute="top" constant="5" id="Nph-N4-ITf"/>
+                        <constraint firstItem="gfr-pZ-Bb5" firstAttribute="leading" secondItem="uOQ-9j-aM1" secondAttribute="leading" constant="1" id="Qlb-7Y-u7c"/>
+                        <constraint firstItem="gfr-pZ-Bb5" firstAttribute="width" secondItem="uOQ-9j-aM1" secondAttribute="width" constant="-2" id="XeV-Wc-njN"/>
+                        <constraint firstItem="gfr-pZ-Bb5" firstAttribute="height" secondItem="uOQ-9j-aM1" secondAttribute="height" id="s0t-f9-rKR"/>
+                        <constraint firstAttribute="trailing" secondItem="gfr-pZ-Bb5" secondAttribute="trailing" constant="1" id="vTV-RE-d0h"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kjF-63-Dka">
+                    <rect key="frame" x="32" y="496" width="342" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="EXT-Wf-1Hc"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="kjF-63-Dka" secondAttribute="trailing" constant="32" id="Cpb-hW-B1w"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="uOQ-9j-aM1" secondAttribute="bottom" constant="20" id="UIf-G9-T6S"/>
+                <constraint firstItem="uOQ-9j-aM1" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="YVg-CW-NJR"/>
+                <constraint firstAttribute="trailing" secondItem="uOQ-9j-aM1" secondAttribute="trailing" constant="32" id="fox-7r-4sE"/>
+                <constraint firstItem="kjF-63-Dka" firstAttribute="top" secondItem="uOQ-9j-aM1" secondAttribute="bottom" constant="-5" id="mAg-Iu-Mit"/>
+                <constraint firstItem="uOQ-9j-aM1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="tc2-Fu-05s"/>
+                <constraint firstItem="kjF-63-Dka" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="xIp-Fz-dNY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="100.00000000000001" y="238.05803571428569"/>
+        </view>
+    </objects>
+</document>

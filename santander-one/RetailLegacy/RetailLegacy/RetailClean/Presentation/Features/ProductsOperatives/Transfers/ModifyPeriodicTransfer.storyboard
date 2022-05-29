@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Modify Periodic Transfer View Controller-->
+        <scene sceneID="wqQ-GK-gBr">
+            <objects>
+                <viewController storyboardIdentifier="ModifyPeriodicTransferViewController" id="LPo-gm-gye" customClass="ModifyPeriodicTransferViewController" customModule="DEBUG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lFl-k0-0WO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kku-ds-zgt">
+                                <rect key="frame" x="0.0" y="20" width="375" height="566"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pKU-2u-kO3" userLabel="Separator">
+                                <rect key="frame" x="0.0" y="586" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="LhA-AE-zeq"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dc4-yA-xyn" userLabel="containerButton">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSr-8F-jM5" userLabel="continueButton" customClass="RedButton" customModule="DEBUG" customModuleProvider="target">
+                                        <rect key="frame" x="57.5" y="20" width="260" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="C2E-A2-8bw"/>
+                                            <constraint firstAttribute="width" constant="260" id="jvw-5z-GmG"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="continueButtonTapped:" destination="LPo-gm-gye" eventType="touchUpInside" id="YcD-b5-LW3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="KEM-7W-ex6"/>
+                                    <constraint firstItem="kSr-8F-jM5" firstAttribute="centerX" secondItem="dc4-yA-xyn" secondAttribute="centerX" id="P3h-mp-bWu"/>
+                                    <constraint firstItem="kSr-8F-jM5" firstAttribute="centerY" secondItem="dc4-yA-xyn" secondAttribute="centerY" id="W5D-JQ-bhd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dc4-yA-xyn" firstAttribute="leading" secondItem="BUa-hE-cuB" secondAttribute="leading" id="6tf-Ey-Hat"/>
+                            <constraint firstItem="pKU-2u-kO3" firstAttribute="top" secondItem="kku-ds-zgt" secondAttribute="bottom" id="GPm-hu-t5b"/>
+                            <constraint firstItem="BUa-hE-cuB" firstAttribute="trailing" secondItem="kku-ds-zgt" secondAttribute="trailing" id="LTL-dP-PyK"/>
+                            <constraint firstItem="dc4-yA-xyn" firstAttribute="trailing" secondItem="BUa-hE-cuB" secondAttribute="trailing" id="Qj8-JH-LBw"/>
+                            <constraint firstItem="dc4-yA-xyn" firstAttribute="top" secondItem="pKU-2u-kO3" secondAttribute="bottom" id="U5G-I3-yEM"/>
+                            <constraint firstItem="kku-ds-zgt" firstAttribute="top" secondItem="BUa-hE-cuB" secondAttribute="top" id="VFu-Q9-Okj"/>
+                            <constraint firstItem="BUa-hE-cuB" firstAttribute="bottom" secondItem="dc4-yA-xyn" secondAttribute="bottom" id="Ycd-sc-1fx"/>
+                            <constraint firstItem="kku-ds-zgt" firstAttribute="leading" secondItem="BUa-hE-cuB" secondAttribute="leading" id="e89-tJ-70k"/>
+                            <constraint firstAttribute="trailing" secondItem="pKU-2u-kO3" secondAttribute="trailing" id="vgy-K0-E5Q"/>
+                            <constraint firstItem="pKU-2u-kO3" firstAttribute="leading" secondItem="lFl-k0-0WO" secondAttribute="leading" id="xpf-Xh-qEr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BUa-hE-cuB"/>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="kSr-8F-jM5" id="2Kj-2x-4ns"/>
+                        <outlet property="separtorView" destination="pKU-2u-kO3" id="AbD-P1-nfi"/>
+                        <outlet property="tableView" destination="kku-ds-zgt" id="njA-lk-Wwp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xWA-gA-rIl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="502" y="856"/>
+        </scene>
+    </scenes>
+</document>

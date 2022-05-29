@@ -1,0 +1,30 @@
+name: SANLegacyLibrary
+options:
+    createIntermediateGroups: true
+    bundleIdPrefix: santander
+
+targets:
+    SANLegacyLibrary:
+        type: framework
+        platform: iOS
+        deploymentTarget: "9.0"
+        sources: [./SANLegacyLibrary, ./project.yml, ./Podfile, ./SANLegacyLibrary.podspec, ./README.md]
+        scheme:
+            testTargets:
+                - SANLegacyLibraryTests
+        postCompileScripts:
+            - script: |
+                    if which swiftlint >/dev/null; then
+                    swiftlint
+                    else
+                    echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+                    fi
+              name: Swiftlint
+
+    SANLegacyLibraryTests:
+        type: bundle.unit-test
+        platform: iOS
+        deploymentTarget: "9.0"
+        sources: [./SANLegacyLibraryTests]
+        dependencies: 
+            - target: SANLegacyLibrary

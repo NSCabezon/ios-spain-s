@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BizumDonationNGOSelectorViewController" customModule="Bizum" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="fqI-Dx-BWx" id="Xdd-Da-TL3"/>
+                <outlet property="continueButton" destination="Pxl-CD-r4d" id="woi-vp-OhR"/>
+                <outlet property="separatorView" destination="ZR2-zC-AG4" id="5Hd-Bm-RD1"/>
+                <outlet property="view" destination="iN0-l3-epB" id="6jO-Yi-wvh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqI-Dx-BWx">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLn-Gk-oRb">
+                    <rect key="frame" x="0.0" y="794" width="414" height="68"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZR2-zC-AG4">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="1aK-6y-wbT"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pxl-CD-r4d" customClass="WhiteLisboaButton" customModule="UI">
+                            <rect key="frame" x="16" y="14" width="382" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="cQz-LN-8KE"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="ZR2-zC-AG4" secondAttribute="trailing" id="0n0-7M-jZW"/>
+                        <constraint firstItem="Pxl-CD-r4d" firstAttribute="leading" secondItem="MLn-Gk-oRb" secondAttribute="leading" constant="16" id="F6R-5N-CvW"/>
+                        <constraint firstItem="Pxl-CD-r4d" firstAttribute="centerY" secondItem="MLn-Gk-oRb" secondAttribute="centerY" id="MIj-vA-fXN"/>
+                        <constraint firstItem="Pxl-CD-r4d" firstAttribute="centerX" secondItem="MLn-Gk-oRb" secondAttribute="centerX" id="PdX-HP-aKh"/>
+                        <constraint firstItem="ZR2-zC-AG4" firstAttribute="top" secondItem="MLn-Gk-oRb" secondAttribute="top" id="QDO-wV-T71"/>
+                        <constraint firstAttribute="trailing" secondItem="Pxl-CD-r4d" secondAttribute="trailing" constant="16" id="SlK-vF-HGI"/>
+                        <constraint firstItem="ZR2-zC-AG4" firstAttribute="leading" secondItem="MLn-Gk-oRb" secondAttribute="leading" id="rm0-1f-hb3"/>
+                        <constraint firstItem="Pxl-CD-r4d" firstAttribute="top" secondItem="MLn-Gk-oRb" secondAttribute="top" constant="14" id="ze5-eZ-KJX"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="eab-xq-VOq"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="eab-xq-VOq" firstAttribute="top" secondItem="fqI-Dx-BWx" secondAttribute="top" id="AuU-RG-W6K"/>
+                <constraint firstItem="eab-xq-VOq" firstAttribute="trailing" secondItem="fqI-Dx-BWx" secondAttribute="trailing" id="D4T-4J-pfn"/>
+                <constraint firstItem="MLn-Gk-oRb" firstAttribute="bottom" secondItem="eab-xq-VOq" secondAttribute="bottom" id="Lgp-uK-SgY"/>
+                <constraint firstItem="MLn-Gk-oRb" firstAttribute="leading" secondItem="eab-xq-VOq" secondAttribute="leading" id="VQh-z6-j13"/>
+                <constraint firstItem="MLn-Gk-oRb" firstAttribute="bottom" secondItem="fqI-Dx-BWx" secondAttribute="bottom" id="WVH-Ka-kga"/>
+                <constraint firstItem="fqI-Dx-BWx" firstAttribute="leading" secondItem="eab-xq-VOq" secondAttribute="leading" id="hab-2M-lRn"/>
+                <constraint firstItem="eab-xq-VOq" firstAttribute="trailing" secondItem="MLn-Gk-oRb" secondAttribute="trailing" id="nWi-e7-zkH"/>
+            </constraints>
+            <point key="canvasLocation" x="-504.34782608695656" y="71.651785714285708"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="Pxl-CD-r4d">
+            <size key="intrinsicContentSize" width="46" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

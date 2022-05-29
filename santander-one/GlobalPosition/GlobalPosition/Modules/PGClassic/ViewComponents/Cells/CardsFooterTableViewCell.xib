@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CardsFooterTableViewCell" customModule="GlobalPosition" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUV-jT-WF7" customClass="RoundedView" customModule="GlobalPosition" customModuleProvider="target">
+                        <rect key="frame" x="16" y="-1" width="288" height="49"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33 tarjetas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OjH-Ht-Zpv">
+                                <rect key="frame" x="16" y="0.0" width="82.5" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="0Il-HX-dIR"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="90" id="KQP-jm-z2R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" distribution="fillProportionally" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="F1e-vh-kRn">
+                                <rect key="frame" x="272" y="2" width="0.0" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="JRz-fd-gF3"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="F1e-vh-kRn" firstAttribute="top" secondItem="gUV-jT-WF7" secondAttribute="top" constant="2" id="0Aa-zK-ss4"/>
+                            <constraint firstItem="OjH-Ht-Zpv" firstAttribute="leading" secondItem="gUV-jT-WF7" secondAttribute="leading" constant="16" id="5tD-Zt-aTn"/>
+                            <constraint firstItem="OjH-Ht-Zpv" firstAttribute="top" secondItem="gUV-jT-WF7" secondAttribute="top" id="qwb-He-1M0"/>
+                            <constraint firstAttribute="trailing" secondItem="F1e-vh-kRn" secondAttribute="trailing" constant="16" id="zuM-ad-SB7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="gUV-jT-WF7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="GbM-Sn-rOR"/>
+                    <constraint firstAttribute="bottom" secondItem="gUV-jT-WF7" secondAttribute="bottom" id="Rcd-um-4WE"/>
+                    <constraint firstAttribute="trailing" secondItem="gUV-jT-WF7" secondAttribute="trailing" constant="16" id="av1-Ta-kmq"/>
+                    <constraint firstItem="gUV-jT-WF7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="-1" id="x3X-eR-4MR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cardsContainer" destination="F1e-vh-kRn" id="0kY-mt-goI"/>
+                <outlet property="frameView" destination="gUV-jT-WF7" id="Y9r-Jc-MfP"/>
+                <outlet property="titleLabel" destination="OjH-Ht-Zpv" id="Kp5-qv-bW1"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FHFilterCollectionViewCell" id="60d-Xh-myH" customClass="FHFilterCollectionViewCell" customModule="Menu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="568" height="74"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1t7-3x-wR7">
+                <rect key="frame" x="0.0" y="0.0" width="568" height="74"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DMm-kK-Otp">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="74"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mz1-hS-V7p">
+                                <rect key="frame" x="8" y="8" width="552" height="58"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6b-vd-F4f">
+                                        <rect key="frame" x="255.5" y="0.0" width="41.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAs-Ux-7qc">
+                                        <rect key="frame" x="255.5" y="29" width="41.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HYw-vN-aPJ">
+                                <rect key="frame" x="560" y="-8" width="16" height="16"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icnCheckOvalGreen" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24l-Uh-M89">
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="Bf9-2J-yn7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="16" id="NjE-gA-QDh"/>
+                                    <constraint firstAttribute="height" constant="16" id="Sd3-FB-Hit"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="cft-SJ-PZ9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mz1-hS-V7p" secondAttribute="trailing" constant="8" id="1cn-ue-2PK"/>
+                            <constraint firstAttribute="trailing" secondItem="HYw-vN-aPJ" secondAttribute="trailing" constant="-8" id="7uZ-ur-C1l"/>
+                            <constraint firstAttribute="bottom" secondItem="mz1-hS-V7p" secondAttribute="bottom" constant="8" id="H7W-S5-KrW"/>
+                            <constraint firstItem="mz1-hS-V7p" firstAttribute="leading" secondItem="DMm-kK-Otp" secondAttribute="leading" constant="8" id="Jrb-uS-3w7"/>
+                            <constraint firstItem="HYw-vN-aPJ" firstAttribute="top" secondItem="DMm-kK-Otp" secondAttribute="top" constant="-8" id="gj8-cc-Yug"/>
+                            <constraint firstItem="mz1-hS-V7p" firstAttribute="top" secondItem="DMm-kK-Otp" secondAttribute="top" constant="8" id="lqL-E4-KZV"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DMm-kK-Otp" firstAttribute="top" secondItem="1t7-3x-wR7" secondAttribute="top" id="Hrl-0O-cai"/>
+                    <constraint firstAttribute="trailing" secondItem="DMm-kK-Otp" secondAttribute="trailing" id="J7a-P8-ZaZ"/>
+                    <constraint firstAttribute="bottom" secondItem="DMm-kK-Otp" secondAttribute="bottom" id="Nyu-wd-Mwt"/>
+                    <constraint firstItem="DMm-kK-Otp" firstAttribute="leading" secondItem="1t7-3x-wR7" secondAttribute="leading" id="ZuY-3s-TFA"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="568" height="74"/>
+            <connections>
+                <outlet property="containerView" destination="DMm-kK-Otp" id="drT-Kd-2qI"/>
+                <outlet property="filterSubtitle" destination="aAs-Ux-7qc" id="gLd-yf-TYf"/>
+                <outlet property="filterTitle" destination="e6b-vd-F4f" id="4Ok-jj-YSY"/>
+                <outlet property="selectedIndicator" destination="24l-Uh-M89" id="fYr-Of-8kN"/>
+            </connections>
+            <point key="canvasLocation" x="-1404.3478260869567" y="-46.875"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icnCheckOvalGreen" width="16" height="16"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

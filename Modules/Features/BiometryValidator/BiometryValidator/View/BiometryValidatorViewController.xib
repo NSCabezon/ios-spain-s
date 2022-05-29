@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BiometryValidatorViewController">
+            <connections>
+                <outlet property="containerScrollView" destination="cWo-al-qnw" id="OC4-z7-4qZ"/>
+                <outlet property="containerView" destination="WIS-YI-gDC" id="HX7-jb-JIK"/>
+                <outlet property="footerMarginView" destination="cWK-tC-Qwu" id="ju8-0A-15D"/>
+                <outlet property="footerView" destination="C0o-gG-Cx2" id="q2V-57-ZRv"/>
+                <outlet property="headerView" destination="L6l-im-gZa" id="Zqk-Dh-Lfc"/>
+                <outlet property="stackView" destination="n2b-qe-FNh" id="slZ-aM-y4f"/>
+                <outlet property="view" destination="fn3-Fm-07v" id="bSZ-lg-3ff"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="fn3-Fm-07v">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="n2b-qe-FNh" userLabel="Content Stack View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="cWo-al-qnw">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="782"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5z-V6-aBw">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="782"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Yz7-lF-gal">
+                                            <rect key="frame" x="0.0" y="69" width="414" height="713"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6l-im-gZa" customClass="BiometryValidatorHeaderView" customModule="BiometryValidator" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="130" id="8Zw-ha-QPv"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIS-YI-gDC" customClass="BiometryValidatorContainerView" customModule="BiometryValidator" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="130" width="414" height="583"/>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <viewLayoutGuide key="safeArea" id="FmX-Yv-FHn"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Yz7-lF-gal" secondAttribute="trailing" id="MLE-Ah-6AN"/>
+                                        <constraint firstItem="Yz7-lF-gal" firstAttribute="top" secondItem="FmX-Yv-FHn" secondAttribute="top" constant="25" id="Ptp-rt-EfU"/>
+                                        <constraint firstAttribute="bottom" secondItem="Yz7-lF-gal" secondAttribute="bottom" id="QwF-BS-mVt"/>
+                                        <constraint firstItem="Yz7-lF-gal" firstAttribute="leading" secondItem="e5z-V6-aBw" secondAttribute="leading" id="cDL-SW-5uX"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="e5z-V6-aBw" firstAttribute="width" secondItem="cWo-al-qnw" secondAttribute="width" id="0NN-3Z-eX6"/>
+                                <constraint firstItem="e5z-V6-aBw" firstAttribute="top" secondItem="cWo-al-qnw" secondAttribute="top" placeholder="YES" id="Kag-gS-eus"/>
+                                <constraint firstItem="e5z-V6-aBw" firstAttribute="height" secondItem="cWo-al-qnw" secondAttribute="height" placeholder="YES" id="LdX-1f-Cre"/>
+                                <constraint firstItem="e5z-V6-aBw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cWo-al-qnw" secondAttribute="top" id="Nq9-ei-Akf"/>
+                                <constraint firstItem="e5z-V6-aBw" firstAttribute="height" relation="greaterThanOrEqual" secondItem="cWo-al-qnw" secondAttribute="height" id="Vxp-qL-jjN"/>
+                                <constraint firstAttribute="bottom" secondItem="e5z-V6-aBw" secondAttribute="bottom" id="dUO-Xa-NGa"/>
+                                <constraint firstAttribute="trailing" secondItem="e5z-V6-aBw" secondAttribute="trailing" id="er9-5z-WMP"/>
+                                <constraint firstItem="e5z-V6-aBw" firstAttribute="leading" secondItem="cWo-al-qnw" secondAttribute="leading" id="sSQ-gM-ZUp"/>
+                            </constraints>
+                        </scrollView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C0o-gG-Cx2" userLabel="FooterView" customClass="BiometryValidatorFooterView" customModule="BiometryValidator" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="782" width="414" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="KO4-1C-HvD"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="cWo-al-qnw" firstAttribute="top" secondItem="n2b-qe-FNh" secondAttribute="top" id="aUa-bK-74P"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWK-tC-Qwu" userLabel="iPhone X View">
+                    <rect key="frame" x="0.0" y="862" width="414" height="34"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="sa5-HR-fc3"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="sa5-HR-fc3" firstAttribute="trailing" secondItem="n2b-qe-FNh" secondAttribute="trailing" id="08n-wk-1ZK"/>
+                <constraint firstAttribute="trailing" secondItem="cWK-tC-Qwu" secondAttribute="trailing" id="8CC-dF-uql"/>
+                <constraint firstItem="n2b-qe-FNh" firstAttribute="top" secondItem="fn3-Fm-07v" secondAttribute="top" id="FlB-1S-mUf"/>
+                <constraint firstItem="sa5-HR-fc3" firstAttribute="bottom" secondItem="n2b-qe-FNh" secondAttribute="bottom" id="Qn8-2W-Ax3"/>
+                <constraint firstItem="cWK-tC-Qwu" firstAttribute="leading" secondItem="fn3-Fm-07v" secondAttribute="leading" id="VRs-xV-mq8"/>
+                <constraint firstItem="cWK-tC-Qwu" firstAttribute="top" secondItem="n2b-qe-FNh" secondAttribute="bottom" id="dM4-du-gnp"/>
+                <constraint firstItem="n2b-qe-FNh" firstAttribute="leading" secondItem="sa5-HR-fc3" secondAttribute="leading" id="gT8-Wf-NtD"/>
+                <constraint firstAttribute="bottom" secondItem="cWK-tC-Qwu" secondAttribute="bottom" id="yeV-N5-0o9"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="61.607142857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

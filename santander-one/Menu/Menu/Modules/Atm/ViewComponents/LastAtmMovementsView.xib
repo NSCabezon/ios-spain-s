@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LastAtmMovementsView" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="qoC-qZ-VT8" id="CwX-kU-IxZ"/>
+                <outlet property="headerView" destination="DGg-6d-NJh" id="VQA-Jg-iXF"/>
+                <outlet property="lastWithdrawalsStackView" destination="nZU-cx-Cmi" id="8Kd-g1-7av"/>
+                <outlet property="titleLabel" destination="SLw-0t-TXb" id="1H1-Eu-TGp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="344" height="396"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qoC-qZ-VT8">
+                    <rect key="frame" x="16" y="44" width="313" height="352"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DGg-6d-NJh">
+                            <rect key="frame" x="0.0" y="0.0" width="313" height="45"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLw-0t-TXb">
+                                    <rect key="frame" x="15" y="11" width="42" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="SLw-0t-TXb" firstAttribute="top" secondItem="DGg-6d-NJh" secondAttribute="top" constant="11" id="0Ht-HU-Ado"/>
+                                <constraint firstAttribute="bottom" secondItem="SLw-0t-TXb" secondAttribute="bottom" constant="13" id="I7i-0E-mKD"/>
+                                <constraint firstItem="SLw-0t-TXb" firstAttribute="leading" secondItem="DGg-6d-NJh" secondAttribute="leading" constant="15" id="YvA-ZC-kRm"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nZU-cx-Cmi">
+                            <rect key="frame" x="0.0" y="45" width="313" height="307"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="nZU-cx-Cmi" firstAttribute="leading" secondItem="DGg-6d-NJh" secondAttribute="leading" id="4UK-Iw-XdB"/>
+                        <constraint firstAttribute="trailing" secondItem="DGg-6d-NJh" secondAttribute="trailing" id="5y8-FO-fWl"/>
+                        <constraint firstAttribute="bottom" secondItem="nZU-cx-Cmi" secondAttribute="bottom" id="C4g-0e-R2r"/>
+                        <constraint firstItem="DGg-6d-NJh" firstAttribute="top" secondItem="qoC-qZ-VT8" secondAttribute="top" id="Gg6-lK-xrV"/>
+                        <constraint firstItem="DGg-6d-NJh" firstAttribute="leading" secondItem="qoC-qZ-VT8" secondAttribute="leading" id="Her-OY-fch"/>
+                        <constraint firstItem="nZU-cx-Cmi" firstAttribute="trailing" secondItem="DGg-6d-NJh" secondAttribute="trailing" id="Sqc-kq-JWu"/>
+                        <constraint firstItem="nZU-cx-Cmi" firstAttribute="top" secondItem="DGg-6d-NJh" secondAttribute="bottom" id="dKn-Kh-Uen"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qoC-qZ-VT8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="45O-U8-iav"/>
+                <constraint firstItem="qoC-qZ-VT8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="FMA-ar-DaK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qoC-qZ-VT8" secondAttribute="trailing" constant="15" id="IOw-zT-KEU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="qoC-qZ-VT8" secondAttribute="bottom" id="vXe-yM-BaB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="81.159420289855078" y="-44.866071428571423"/>
+        </view>
+    </objects>
+</document>

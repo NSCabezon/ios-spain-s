@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderMicroText-Regular.ttf">
+            <string>SantanderMicroText-Regular</string>
+        </array>
+        <array key="SantanderText-Bold.ttf">
+            <string>SantanderText-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="216" id="KGk-i7-Jjw" customClass="SavingsLoadingTableViewCell" customModule="SavingProducts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="413" height="216"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="413" height="216"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="its-fW-OU4">
+                        <rect key="frame" x="186.5" y="52" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="2lX-u3-ehE"/>
+                            <constraint firstAttribute="width" constant="40" id="GY9-yA-ypR"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9o-bc-AtI">
+                        <rect key="frame" x="36" y="107" width="341" height="0.0"/>
+                        <fontDescription key="fontDescription" name="SantanderText-Bold" family="Santander Text" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URG-YT-hUk">
+                        <rect key="frame" x="36" y="114" width="341" height="0.0"/>
+                        <fontDescription key="fontDescription" name="SantanderMicroText-Regular" family="Santander Micro Text" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="URG-YT-hUk" secondAttribute="trailing" constant="16" id="5hO-ma-0CN"/>
+                    <constraint firstItem="URG-YT-hUk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="FQg-A2-W9A"/>
+                    <constraint firstItem="its-fW-OU4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="52" id="Fj2-ht-CTr"/>
+                    <constraint firstItem="URG-YT-hUk" firstAttribute="top" secondItem="I9o-bc-AtI" secondAttribute="bottom" constant="7" id="hME-kK-ovd"/>
+                    <constraint firstItem="I9o-bc-AtI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="hlR-ws-F0I"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="I9o-bc-AtI" secondAttribute="trailing" constant="16" id="mgf-ZA-6JF"/>
+                    <constraint firstItem="I9o-bc-AtI" firstAttribute="top" secondItem="its-fW-OU4" secondAttribute="bottom" constant="15" id="qDG-Pk-q3T"/>
+                    <constraint firstAttribute="bottom" secondItem="URG-YT-hUk" secondAttribute="bottom" constant="102" id="vBC-lo-xXn"/>
+                    <constraint firstItem="its-fW-OU4" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="yTQ-WG-U8J"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="loadingDescriptionLabel" destination="I9o-bc-AtI" id="s4H-Av-ryI"/>
+                <outlet property="loadingImageView" destination="its-fW-OU4" id="zKl-vd-Z4z"/>
+                <outlet property="loadingInfoLabel" destination="URG-YT-hUk" id="v0k-UY-ABb"/>
+            </connections>
+            <point key="canvasLocation" x="205.07246376811597" y="95.089285714285708"/>
+        </tableViewCell>
+    </objects>
+</document>

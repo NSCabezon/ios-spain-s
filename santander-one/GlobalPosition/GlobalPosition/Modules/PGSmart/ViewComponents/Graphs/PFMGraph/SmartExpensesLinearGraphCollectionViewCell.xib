@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SmartExpensesLinearGraphCollectionViewCell" customModule="GlobalPosition" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KAU-as-Hir" customClass="SmartExpensesLinearGraphCollectionViewCell" customModule="GlobalPosition" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KNP-B9-i6m">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVx-qX-jed" customClass="FinantialStatusView" customModule="GlobalPosition" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="OiK-BV-wC6"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="Goq-je-wYx" customClass="SimpleFinancialStatusView" customModule="GlobalPosition" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="45" width="414" height="30"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="LS6-n8-rgx"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qob-Di-T0S" customClass="ExpensesGraphViewPort" customModule="GlobalPosition" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="90" width="414" height="145"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="qob-Di-T0S" secondAttribute="bottom" constant="15" id="2l7-c2-n3f"/>
+                    <constraint firstItem="Goq-je-wYx" firstAttribute="top" secondItem="VVx-qX-jed" secondAttribute="bottom" id="8Id-RU-FKZ"/>
+                    <constraint firstAttribute="trailing" secondItem="qob-Di-T0S" secondAttribute="trailing" id="9jU-3X-y7d"/>
+                    <constraint firstAttribute="trailing" secondItem="Goq-je-wYx" secondAttribute="trailing" id="Gx9-dN-rY0"/>
+                    <constraint firstItem="qob-Di-T0S" firstAttribute="top" secondItem="Goq-je-wYx" secondAttribute="bottom" constant="15" id="LSH-Xc-p7H"/>
+                    <constraint firstItem="VVx-qX-jed" firstAttribute="top" secondItem="KNP-B9-i6m" secondAttribute="top" id="NAc-g5-HOf"/>
+                    <constraint firstItem="VVx-qX-jed" firstAttribute="leading" secondItem="KNP-B9-i6m" secondAttribute="leading" id="VtV-r8-b8e"/>
+                    <constraint firstItem="Goq-je-wYx" firstAttribute="leading" secondItem="KNP-B9-i6m" secondAttribute="leading" id="d9k-9Y-8ba"/>
+                    <constraint firstItem="qob-Di-T0S" firstAttribute="leading" secondItem="KNP-B9-i6m" secondAttribute="leading" id="t8X-Bs-SZx"/>
+                    <constraint firstAttribute="trailing" secondItem="VVx-qX-jed" secondAttribute="trailing" id="ttk-mo-eSh"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="expensesLinearGraphViewPort" destination="qob-Di-T0S" id="SUW-hg-Tcs"/>
+                <outlet property="financialStatusView" destination="VVx-qX-jed" id="nSq-sv-Jz5"/>
+                <outlet property="simpleFinancialStatusView" destination="Goq-je-wYx" id="Xf5-DQ-ypH"/>
+            </connections>
+            <point key="canvasLocation" x="216" y="225"/>
+        </collectionViewCell>
+    </objects>
+</document>

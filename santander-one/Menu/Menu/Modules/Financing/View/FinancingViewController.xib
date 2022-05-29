@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FinancingViewController" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="7rJ-SG-AcM" id="WBV-bY-T30"/>
+                <outlet property="segmentedControl" destination="EHw-d7-ual" id="HhX-uM-jep"/>
+                <outlet property="segmentedControlContainerView" destination="YRv-gX-4fk" id="4hn-xX-Jho"/>
+                <outlet property="view" destination="iN0-l3-epB" id="5H9-hP-bq8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vTR-ya-2a1">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YRv-gX-4fk">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+                            <subviews>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EHw-d7-ual" customClass="OneFilterView" customModule="UIOneComponents">
+                                    <rect key="frame" x="16" y="8" width="382" height="64"/>
+                                    <segments>
+                                        <segment title="First"/>
+                                        <segment title="Second"/>
+                                    </segments>
+                                    <connections>
+                                        <action selector="didTapInSegmented:" destination="-1" eventType="valueChanged" id="PH1-7I-Fun"/>
+                                    </connections>
+                                </segmentedControl>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="EHw-d7-ual" firstAttribute="top" secondItem="YRv-gX-4fk" secondAttribute="top" constant="8" id="3oe-0f-QJw"/>
+                                <constraint firstItem="EHw-d7-ual" firstAttribute="leading" secondItem="YRv-gX-4fk" secondAttribute="leading" constant="16" id="4WA-NH-Kan"/>
+                                <constraint firstAttribute="trailing" secondItem="EHw-d7-ual" secondAttribute="trailing" constant="16" id="6zW-TF-kBe"/>
+                                <constraint firstAttribute="height" constant="82" id="gxj-n9-4bO"/>
+                                <constraint firstAttribute="bottom" secondItem="EHw-d7-ual" secondAttribute="bottom" constant="11" id="vWt-pS-7Ie"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7rJ-SG-AcM">
+                            <rect key="frame" x="0.0" y="82" width="414" height="770"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="vTR-ya-2a1" secondAttribute="bottom" id="LJy-uF-rmd"/>
+                <constraint firstItem="vTR-ya-2a1" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="c6i-3c-5nG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vTR-ya-2a1" secondAttribute="trailing" id="mhQ-QF-6OR"/>
+                <constraint firstItem="vTR-ya-2a1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="pGl-Xw-ZzB"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="154"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="EHw-d7-ual">
+            <size key="intrinsicContentSize" width="131" height="31"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

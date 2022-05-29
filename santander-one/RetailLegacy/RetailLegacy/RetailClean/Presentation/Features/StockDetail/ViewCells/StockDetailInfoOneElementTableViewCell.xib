@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="StockDetailInfoOneElementTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StockDetailInfoOneElementTableViewCell" id="VJa-A0-bh0" customClass="StockDetailInfoOneElementTableViewCell" customModule="DEBUG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VJa-A0-bh0" id="fPi-gl-Yfr">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QFp-7T-IZF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lp5-N5-jSX">
+                                <rect key="frame" x="10" y="11.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZ7-5T-ciP">
+                                <rect key="frame" x="60" y="12" width="42" height="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MZ7-5T-ciP" firstAttribute="top" secondItem="QFp-7T-IZF" secondAttribute="top" constant="12" id="2F3-Fc-TXP"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MZ7-5T-ciP" secondAttribute="trailing" constant="10" id="4Tg-Ha-DAw"/>
+                            <constraint firstItem="Lp5-N5-jSX" firstAttribute="top" secondItem="QFp-7T-IZF" secondAttribute="top" constant="12" id="6D6-xG-UCu"/>
+                            <constraint firstItem="Lp5-N5-jSX" firstAttribute="leading" secondItem="QFp-7T-IZF" secondAttribute="leading" constant="10" id="BiC-FL-zdG"/>
+                            <constraint firstItem="Lp5-N5-jSX" firstAttribute="centerY" secondItem="QFp-7T-IZF" secondAttribute="centerY" id="Pfk-zq-kmm"/>
+                            <constraint firstItem="MZ7-5T-ciP" firstAttribute="leading" secondItem="Lp5-N5-jSX" secondAttribute="trailing" constant="8" id="Rrr-hb-1Qx"/>
+                            <constraint firstItem="MZ7-5T-ciP" firstAttribute="centerY" secondItem="QFp-7T-IZF" secondAttribute="centerY" id="SeO-Rf-5qe"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QFp-7T-IZF" firstAttribute="height" secondItem="fPi-gl-Yfr" secondAttribute="height" id="Lqq-87-dAi"/>
+                    <constraint firstItem="QFp-7T-IZF" firstAttribute="leading" secondItem="fPi-gl-Yfr" secondAttribute="leading" id="iRX-gx-J6N"/>
+                    <constraint firstItem="QFp-7T-IZF" firstAttribute="width" secondItem="fPi-gl-Yfr" secondAttribute="width" id="sH4-dR-wUM"/>
+                    <constraint firstItem="QFp-7T-IZF" firstAttribute="top" secondItem="fPi-gl-Yfr" secondAttribute="top" id="xyK-z4-Nw6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="firstValueLabel" destination="MZ7-5T-ciP" id="idY-zw-CnY"/>
+                <outlet property="titleLabel" destination="Lp5-N5-jSX" id="AIw-sL-ywA"/>
+            </connections>
+            <point key="canvasLocation" x="342.5" y="52"/>
+        </tableViewCell>
+    </objects>
+</document>

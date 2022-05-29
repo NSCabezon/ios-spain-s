@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderText-Bold.otf">
+            <string>SantanderText-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="DateSectionView" insetsLayoutMarginsFromSafeArea="NO" id="Lva-vx-CpX" customClass="DateSectionView" customModule="UI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="453" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="10 FEB" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZa-QJ-xj6">
+                    <rect key="frame" x="15" y="9.5" width="428" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="SB6-nN-Ddk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SantanderText-Bold" family="Santander Text" pointSize="14"/>
+                    <color key="textColor" red="0.92549019610000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQa-QH-eCC">
+                    <rect key="frame" x="0.0" y="0.0" width="453" height="1"/>
+                    <color key="backgroundColor" red="0.80784313730000001" green="0.87058823529999996" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Zv9-6W-Dem"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="CQa-QH-eCC" secondAttribute="trailing" id="0fZ-h3-OX2"/>
+                <constraint firstItem="vZa-QJ-xj6" firstAttribute="centerY" secondItem="Lva-vx-CpX" secondAttribute="centerY" id="2vb-to-jou"/>
+                <constraint firstItem="CQa-QH-eCC" firstAttribute="top" secondItem="Lva-vx-CpX" secondAttribute="top" id="DJi-l9-fqg"/>
+                <constraint firstAttribute="trailing" secondItem="vZa-QJ-xj6" secondAttribute="trailing" constant="10" id="UIt-6O-mnB"/>
+                <constraint firstItem="vZa-QJ-xj6" firstAttribute="leading" secondItem="Lva-vx-CpX" secondAttribute="leading" constant="15" id="r1T-Dq-h8o"/>
+                <constraint firstItem="CQa-QH-eCC" firstAttribute="leading" secondItem="Lva-vx-CpX" secondAttribute="leading" id="rAZ-lL-hz1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="dateLabel" destination="vZa-QJ-xj6" id="wSe-KA-BLB"/>
+                <outlet property="horizontalLine" destination="CQa-QH-eCC" id="6kn-wf-bgA"/>
+            </connections>
+            <point key="canvasLocation" x="160.1449275362319" y="119.86607142857142"/>
+        </view>
+    </objects>
+</document>

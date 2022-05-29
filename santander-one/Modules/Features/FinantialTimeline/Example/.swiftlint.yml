@@ -1,0 +1,93 @@
+included:
+  - ../FinantialTimeline
+disabled_rules: # rule identifiers to exclude from running
+ - trailing_whitespace
+ - vertical_whitespace
+ - line_length
+ - file_header
+ - trailing_newline
+ - sorted_imports
+excluded:
+  - ../FinantialTimeline/Tests
+  - Tests/SwiftLintFrameworkTests/Resources
+opt_in_rules:
+  - leading_whitespace
+  - array_init
+  - attributes
+  - closure_end_indentation
+  - closure_spacing
+  - contains_over_first_not_nil
+  - empty_count
+  - explicit_init
+  - extension_access_modifier
+  - fatal_error_message
+  - file_header
+  - file_name
+  - first_where
+  - joined_default_parameter
+  - let_var_whitespace
+  - literal_expression_end_indentation
+  - nimble_operator
+  - number_separator
+  - object_literal:
+      enable_color: true
+  - operator_usage_whitespace
+  - overridden_super_call
+  - override_in_extension
+  - pattern_matching_keywords
+  - private_action
+  - private_outlet
+  - prohibited_super_call
+  - quick_discouraged_call
+  - quick_discouraged_focused_test
+  - quick_discouraged_pending_test
+  - redundant_nil_coalescing
+  - single_test_class
+  - sorted_first_last
+  - sorted_imports
+  - unneeded_parentheses_in_closure_argument
+  - vertical_parameter_alignment_on_call
+  - yoda_condition
+
+identifier_name:
+  excluded:
+    - id
+line_length: 120
+number_separator:
+  minimum_length: 5
+file_name:
+  excluded:
+    - main.swift
+    - LinuxMain.swift
+    - TestHelpers.swift
+    - shim.swift
+    - AutomaticRuleTests.generated.swift
+
+cyclomatic_complexity:
+  ignores_case_statements: true
+
+vertical_whitespace:
+  max_empty_lines: 4
+
+
+function_parameter_count:
+  warning: 12
+  error: 15
+
+function_body_length:
+  warning: 60
+  error: 80
+
+custom_rules:
+  rule_id:
+    included: Source/SwiftLintFramework/Rules/\w+\.swift
+    name: Rule ID
+    message: Rule IDs must be all lowercase, snake case and not end with `rule`
+    regex: identifier:\s*("\w+_rule"|"\S*[^a-z_]\S*")
+    severity: error
+  rule_test_function:
+    included: Tests/SwiftLintFrameworkTests/RulesTests.swift
+    name: Rule Test Function
+    message: Rule Test Function mustn't end with `rule`
+    regex: func\s*test\w+(r|R)ule\(\)
+    severity: error

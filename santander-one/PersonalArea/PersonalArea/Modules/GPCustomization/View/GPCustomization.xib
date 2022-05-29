@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GPCustomizationViewController" customModule="PersonalArea" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonsContainer" destination="mfp-sk-prg" id="GF7-ex-wDe"/>
+                <outlet property="buttonsStackView" destination="KA1-3e-80r" id="40Q-qi-7ue"/>
+                <outlet property="collectionView" destination="a7U-no-uLu" id="iNU-g5-NfB"/>
+                <outlet property="initialConfigurationButton" destination="Gg1-h0-dJh" id="oa6-Ca-c7r"/>
+                <outlet property="saveButton" destination="1Ob-MY-m92" id="tWn-74-Gn7"/>
+                <outlet property="separatorView" destination="MU7-Uc-i9B" id="qMe-Qh-upR"/>
+                <outlet property="view" destination="eY3-Bd-lb4" id="GQJ-Ja-wN2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="eY3-Bd-lb4">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="always" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="a7U-no-uLu">
+                    <rect key="frame" x="0.0" y="44" width="414" height="745"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HJN-t1-XtG">
+                        <size key="itemSize" width="1" height="1"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfp-sk-prg">
+                    <rect key="frame" x="0.0" y="789" width="414" height="107"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MU7-Uc-i9B">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                            <color key="backgroundColor" systemColor="separatorColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="2LU-Sq-g9C"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="KA1-3e-80r">
+                            <rect key="frame" x="24" y="17" width="366" height="40"/>
+                            <subviews>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gg1-h0-dJh">
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="40"/>
+                                    <state key="normal" title="**Configuración inicial"/>
+                                    <connections>
+                                        <action selector="didPressInitialConfigurationButton:" destination="-1" eventType="touchUpInside" id="OXE-rI-s7g"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ob-MY-m92" customClass="WhiteLisboaButton" customModule="UI">
+                                    <rect key="frame" x="0.0" y="0.0" width="366" height="40"/>
+                                    <state key="normal" title="**Guardar"/>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="GMK-u2-NCM"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="MU7-Uc-i9B" secondAttribute="trailing" id="0dV-lc-JUM"/>
+                        <constraint firstItem="MU7-Uc-i9B" firstAttribute="leading" secondItem="mfp-sk-prg" secondAttribute="leading" id="1BJ-c5-LE9"/>
+                        <constraint firstAttribute="trailing" secondItem="KA1-3e-80r" secondAttribute="trailing" constant="24" id="3HM-Vc-Epk"/>
+                        <constraint firstItem="KA1-3e-80r" firstAttribute="top" secondItem="MU7-Uc-i9B" secondAttribute="bottom" constant="16" id="Biz-to-n1Y"/>
+                        <constraint firstItem="MU7-Uc-i9B" firstAttribute="top" secondItem="mfp-sk-prg" secondAttribute="top" id="NMD-Wt-gaw"/>
+                        <constraint firstItem="KA1-3e-80r" firstAttribute="leading" secondItem="mfp-sk-prg" secondAttribute="leading" constant="24" id="NTl-DX-m1D"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="v5L-E4-dAL"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="mfp-sk-prg" firstAttribute="top" secondItem="a7U-no-uLu" secondAttribute="bottom" id="1uS-T0-ffp"/>
+                <constraint firstItem="v5L-E4-dAL" firstAttribute="trailing" secondItem="mfp-sk-prg" secondAttribute="trailing" id="2KV-u9-9jt"/>
+                <constraint firstItem="a7U-no-uLu" firstAttribute="trailing" secondItem="v5L-E4-dAL" secondAttribute="trailing" id="6HM-55-wkU"/>
+                <constraint firstItem="a7U-no-uLu" firstAttribute="top" secondItem="v5L-E4-dAL" secondAttribute="top" id="9TG-on-BIG"/>
+                <constraint firstItem="a7U-no-uLu" firstAttribute="leading" secondItem="v5L-E4-dAL" secondAttribute="leading" id="Hpk-dU-5a0"/>
+                <constraint firstAttribute="bottom" secondItem="mfp-sk-prg" secondAttribute="bottom" id="MgZ-no-jNM"/>
+                <constraint firstItem="mfp-sk-prg" firstAttribute="leading" secondItem="v5L-E4-dAL" secondAttribute="leading" id="U2A-GV-jDs"/>
+                <constraint firstItem="v5L-E4-dAL" firstAttribute="bottom" secondItem="KA1-3e-80r" secondAttribute="bottom" constant="16" id="ae0-Gb-d3l"/>
+            </constraints>
+            <point key="canvasLocation" x="862" y="153"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="1Ob-MY-m92">
+            <size key="intrinsicContentSize" width="69" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

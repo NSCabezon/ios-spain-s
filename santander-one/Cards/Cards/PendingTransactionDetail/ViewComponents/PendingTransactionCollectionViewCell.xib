@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderText-Bold.otf">
+            <string>SantanderText-Bold</string>
+        </array>
+        <array key="SantanderText-Regular.ttf">
+            <string>SantanderText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PendingTransactionCollectionViewCell" customModule="Cards" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="312" height="192"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="312" height="192"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TyU-aJ-8rq">
+                        <rect key="frame" x="0.0" y="0.0" width="312" height="192"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zor-8y-E3m">
+                                <rect key="frame" x="16" y="15" width="288" height="26"/>
+                                <fontDescription key="fontDescription" name="SantanderText-Bold" family="Santander Text" pointSize="18"/>
+                                <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9a-u2-F52">
+                                <rect key="frame" x="16" y="41" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="14"/>
+                                <color key="textColor" red="0.43529411764705883" green="0.46666666666666667" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNJ-Pl-39S">
+                                <rect key="frame" x="16" y="62.5" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IaT-dv-epm" customClass="PointLine" customModule="UI">
+                                <rect key="frame" x="15" y="88" width="283" height="1"/>
+                                <color key="backgroundColor" red="0.85882352941176465" green="0.8784313725490196" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="xK6-xX-UIE"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="sNy-H2-N4J">
+                                <rect key="frame" x="16" y="97" width="280" height="41"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jG3-GX-rgQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="41"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wif-Or-ieK">
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="13"/>
+                                                <color key="textColor" red="0.47843137254901957" green="0.50980392156862742" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7en-OK-Rqy">
+                                                <rect key="frame" x="0.0" y="20.5" width="138" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="14"/>
+                                                <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="n9v-fr-tCM">
+                                        <rect key="frame" x="142" y="0.0" width="138" height="41"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Af7-0s-ixi">
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="13"/>
+                                                <color key="textColor" red="0.47843137254901957" green="0.50980392156862742" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmA-fJ-OOf">
+                                                <rect key="frame" x="0.0" y="20.5" width="138" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="14"/>
+                                                <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Zor-8y-E3m" secondAttribute="trailing" constant="8" id="0W3-08-yhp"/>
+                            <constraint firstItem="UNJ-Pl-39S" firstAttribute="leading" secondItem="TyU-aJ-8rq" secondAttribute="leading" constant="16" id="Idp-D4-yxE"/>
+                            <constraint firstItem="sNy-H2-N4J" firstAttribute="top" secondItem="IaT-dv-epm" secondAttribute="bottom" constant="8" id="N75-b7-9cy"/>
+                            <constraint firstItem="IaT-dv-epm" firstAttribute="leading" secondItem="TyU-aJ-8rq" secondAttribute="leading" constant="15" id="OZq-3z-tyC"/>
+                            <constraint firstItem="IaT-dv-epm" firstAttribute="top" secondItem="UNJ-Pl-39S" secondAttribute="bottom" constant="5" id="OlX-lZ-Xqv"/>
+                            <constraint firstItem="UNJ-Pl-39S" firstAttribute="top" secondItem="a9a-u2-F52" secondAttribute="bottom" constant="1" id="ZU5-8M-dEq"/>
+                            <constraint firstAttribute="trailing" secondItem="IaT-dv-epm" secondAttribute="trailing" constant="14" id="aoj-Yy-Wvx"/>
+                            <constraint firstItem="Zor-8y-E3m" firstAttribute="top" secondItem="TyU-aJ-8rq" secondAttribute="top" constant="15" id="bfr-Qp-eaa"/>
+                            <constraint firstItem="Zor-8y-E3m" firstAttribute="leading" secondItem="TyU-aJ-8rq" secondAttribute="leading" constant="16" id="cBa-pU-yih"/>
+                            <constraint firstItem="sNy-H2-N4J" firstAttribute="leading" secondItem="TyU-aJ-8rq" secondAttribute="leading" constant="16" id="cIb-vg-S1A"/>
+                            <constraint firstAttribute="trailing" secondItem="UNJ-Pl-39S" secondAttribute="trailing" constant="8" id="diq-R8-YF0"/>
+                            <constraint firstAttribute="trailing" secondItem="a9a-u2-F52" secondAttribute="trailing" constant="8" id="gGE-e8-6mh"/>
+                            <constraint firstItem="a9a-u2-F52" firstAttribute="top" secondItem="Zor-8y-E3m" secondAttribute="bottom" id="ihX-7p-T0f"/>
+                            <constraint firstAttribute="trailing" secondItem="sNy-H2-N4J" secondAttribute="trailing" constant="16" id="u83-ci-4tQ"/>
+                            <constraint firstItem="a9a-u2-F52" firstAttribute="leading" secondItem="TyU-aJ-8rq" secondAttribute="leading" constant="16" id="z3y-mv-Qaj"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="TyU-aJ-8rq" secondAttribute="trailing" id="4w8-Sc-GIQ"/>
+                <constraint firstAttribute="bottom" secondItem="TyU-aJ-8rq" secondAttribute="bottom" id="N1q-VO-spb"/>
+                <constraint firstItem="TyU-aJ-8rq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OvQ-xP-nMC"/>
+                <constraint firstItem="TyU-aJ-8rq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="StG-Fl-eke"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="208" height="232"/>
+            <connections>
+                <outlet property="amountLabel" destination="UNJ-Pl-39S" id="amN-mk-LTY"/>
+                <outlet property="cardAliasLabel" destination="a9a-u2-F52" id="A31-jC-CIh"/>
+                <outlet property="dividerView" destination="IaT-dv-epm" id="JRE-Zk-CEa"/>
+                <outlet property="operationDateLabel" destination="7en-OK-Rqy" id="Cq9-jK-eeE"/>
+                <outlet property="operationDateTitleLabel" destination="wif-Or-ieK" id="8S6-32-IRt"/>
+                <outlet property="operationTimeLabel" destination="rmA-fJ-OOf" id="jX9-vs-cH6"/>
+                <outlet property="operationTimeTitle" destination="Af7-0s-ixi" id="wGv-OX-LKf"/>
+                <outlet property="titleLabel" destination="Zor-8y-E3m" id="hM6-xV-OEP"/>
+            </connections>
+            <point key="canvasLocation" x="252.17391304347828" y="91.741071428571431"/>
+        </collectionViewCell>
+    </objects>
+</document>

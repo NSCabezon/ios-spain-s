@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FinantialStatusView" customModule="GlobalPosition" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="NIF-9q-bPv"/>
+                <outlet property="leftInfo" destination="vEc-c3-jM2" id="7E4-7m-94X"/>
+                <outlet property="rightInfo" destination="HNU-am-gTy" id="wHj-BT-9Hk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="82" placeholderIntrinsicHeight="34" translatesAutoresizingMaskIntoConstraints="NO" id="vEc-c3-jM2" customClass="AmountButtonWithToolTip" customModule="GlobalPosition" customModuleProvider="target">
+                    <rect key="frame" x="16" y="0.0" width="236" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="82" placeholderIntrinsicHeight="34" translatesAutoresizingMaskIntoConstraints="NO" id="HNU-am-gTy" customClass="AmountButton" customModule="GlobalPosition" customModuleProvider="target">
+                    <rect key="frame" x="258" y="0.0" width="140" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="wC0-Gb-byl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="HNU-am-gTy" firstAttribute="height" secondItem="vEc-c3-jM2" secondAttribute="height" id="4JM-x3-j2b"/>
+                <constraint firstItem="vEc-c3-jM2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="EvH-HY-Cdm"/>
+                <constraint firstItem="HNU-am-gTy" firstAttribute="centerY" secondItem="vEc-c3-jM2" secondAttribute="centerY" id="LQM-cy-RlF"/>
+                <constraint firstItem="HNU-am-gTy" firstAttribute="leading" secondItem="vEc-c3-jM2" secondAttribute="trailing" constant="6" id="P6p-NE-CIt"/>
+                <constraint firstAttribute="trailing" secondItem="HNU-am-gTy" secondAttribute="trailing" constant="16" id="gfa-1Q-1ZQ"/>
+                <constraint firstAttribute="bottom" secondItem="vEc-c3-jM2" secondAttribute="bottom" id="rrl-X1-9bu"/>
+                <constraint firstItem="vEc-c3-jM2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="tig-wU-CG0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-104" y="-106"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

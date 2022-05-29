@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OldAnalysisAreaViewController" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="carouselCollectionView" destination="wZ3-dm-rIq" id="8NU-Rh-wLK"/>
+                <outlet property="financialHealthView" destination="icI-Bt-ecc" id="DGB-WJ-zaQ"/>
+                <outlet property="headerView" destination="8oL-xV-Zdk" id="Kj6-Hu-6Zu"/>
+                <outlet property="headerViewHeightConstraint" destination="gO2-0I-3hP" id="beH-Zm-eEt"/>
+                <outlet property="moneyPlanOffer" destination="qYx-zF-bRP" id="mRA-zg-CVw"/>
+                <outlet property="moneyPlanViewHeightConstraint" destination="Hoi-bV-lBC" id="MV0-ta-qXm"/>
+                <outlet property="piggyBoxHeightConstraint" destination="Bi2-fq-yfe" id="CTF-7e-0zo"/>
+                <outlet property="piggyBoxView" destination="htZ-8n-MQd" id="hvt-KF-bsa"/>
+                <outlet property="savingTipsView" destination="vIV-it-AgG" id="dMH-zk-Hig"/>
+                <outlet property="scrollView" destination="X4U-8K-Dhv" id="fGt-qD-0H5"/>
+                <outlet property="separatorView" destination="d9l-vr-Xkj" id="Qa9-Md-cMr"/>
+                <outlet property="timeLineView" destination="Dvh-F9-ubX" id="kHV-SC-ywk"/>
+                <outlet property="timelineHeightConstraint" destination="RdL-tr-d7d" id="CaY-IM-g6H"/>
+                <outlet property="tipsOfferView" destination="CGw-mQ-UYD" id="kL6-Rz-fvK"/>
+                <outlet property="tipsOfferViewHeightConstraint" destination="blV-Qd-WlW" id="voU-oC-Lmn"/>
+                <outlet property="totalSavingView" destination="GZn-7I-CDQ" id="JP4-X4-2S9"/>
+                <outlet property="totalSavingsHeightConstraint" destination="l4s-Th-g9a" id="hx3-Tv-Xki"/>
+                <outlet property="view" destination="iN0-l3-epB" id="uK4-xk-4vD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4U-8K-Dhv">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="p8A-TV-dl8">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1623"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icI-Bt-ecc" customClass="FinancialHealthView" customModule="Menu" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8oL-xV-Zdk" customClass="AnalysisHeaderView" customModule="Menu" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="128" width="414" height="295"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="295" id="gO2-0I-3hP"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wZ3-dm-rIq" customClass="AnalysisCarouselView" customModule="Menu" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="423" width="414" height="310"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8O-la-JCx" userLabel="TotalSavings">
+                                    <rect key="frame" x="0.0" y="733" width="414" height="62"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZn-7I-CDQ" customClass="TotalSavingsView" customModule="Menu" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="GZn-7I-CDQ" secondAttribute="bottom" id="BgV-Ll-iUy"/>
+                                        <constraint firstItem="GZn-7I-CDQ" firstAttribute="leading" secondItem="z8O-la-JCx" secondAttribute="leading" id="Bxg-UQ-nvp"/>
+                                        <constraint firstAttribute="trailing" secondItem="GZn-7I-CDQ" secondAttribute="trailing" id="QBR-U4-Zw4"/>
+                                        <constraint firstAttribute="height" constant="62" id="l4s-Th-g9a"/>
+                                        <constraint firstItem="GZn-7I-CDQ" firstAttribute="top" secondItem="z8O-la-JCx" secondAttribute="top" id="lwU-H1-oKk"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PVB-rf-uma" userLabel="Timeline">
+                                    <rect key="frame" x="0.0" y="795" width="414" height="400"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dvh-F9-ubX" customClass="TimeLineView" customModule="Menu" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Dvh-F9-ubX" secondAttribute="trailing" id="FCZ-aJ-K09"/>
+                                        <constraint firstItem="Dvh-F9-ubX" firstAttribute="top" secondItem="PVB-rf-uma" secondAttribute="top" id="R7C-q9-ktO"/>
+                                        <constraint firstAttribute="height" constant="400" id="RdL-tr-d7d"/>
+                                        <constraint firstItem="Dvh-F9-ubX" firstAttribute="leading" secondItem="PVB-rf-uma" secondAttribute="leading" id="d48-ga-tkW"/>
+                                        <constraint firstAttribute="bottom" secondItem="Dvh-F9-ubX" secondAttribute="bottom" id="y40-k4-dcB"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9l-vr-Xkj" userLabel="Separator">
+                                    <rect key="frame" x="0.0" y="1195" width="414" height="1"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="qD1-Ek-mOD"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qYx-zF-bRP" userLabel="MoneyPlan" customClass="OfferBannerView" customModule="UI">
+                                    <rect key="frame" x="0.0" y="1196" width="414" height="0.0"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" id="Hoi-bV-lBC"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CGw-mQ-UYD" userLabel="Recomendaciones" customClass="OfferBannerView" customModule="UI">
+                                    <rect key="frame" x="0.0" y="1196" width="414" height="0.0"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" id="blV-Qd-WlW"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="htZ-8n-MQd" customClass="YourMoneyBoxView" customModule="Menu" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="1196" width="414" height="162"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="162" id="Bi2-fq-yfe"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vIV-it-AgG" customClass="SavingTipsView" customModule="Menu" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="1358" width="414" height="265"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="265" id="YaP-vR-Bw8"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="250" constant="1" id="4Xf-WB-Hyw"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="p8A-TV-dl8" firstAttribute="leading" secondItem="X4U-8K-Dhv" secondAttribute="leading" id="9HQ-9F-S1g"/>
+                        <constraint firstAttribute="trailing" secondItem="p8A-TV-dl8" secondAttribute="trailing" id="LpG-2a-EmP"/>
+                        <constraint firstItem="p8A-TV-dl8" firstAttribute="width" secondItem="X4U-8K-Dhv" secondAttribute="width" id="Opn-nP-GmZ"/>
+                        <constraint firstItem="p8A-TV-dl8" firstAttribute="top" secondItem="X4U-8K-Dhv" secondAttribute="top" id="hyH-Tt-RiV"/>
+                        <constraint firstItem="p8A-TV-dl8" firstAttribute="bottom" secondItem="X4U-8K-Dhv" secondAttribute="bottom" id="wiG-ab-fyO"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="X4U-8K-Dhv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="KEF-Nq-Qjt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="X4U-8K-Dhv" secondAttribute="trailing" id="NWD-RA-etx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="X4U-8K-Dhv" secondAttribute="top" id="WwL-CZ-2kz"/>
+                <constraint firstAttribute="bottom" secondItem="X4U-8K-Dhv" secondAttribute="bottom" id="mUK-XA-Iu5"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="145.98214285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

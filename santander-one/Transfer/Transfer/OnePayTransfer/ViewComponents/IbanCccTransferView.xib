@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IbanCccTransferView" customModule="Transfer" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="5Dh-TS-mb8"/>
+                <outlet property="errorIbanLabel" destination="3re-cS-GId" id="55z-gp-fnH"/>
+                <outlet property="errorIbanView" destination="ZWE-yv-czg" id="Q4h-fA-Ka1"/>
+                <outlet property="ibanLisboaTextField" destination="IDZ-cV-CkH" id="rdL-ti-KtB"/>
+                <outlet property="leadingConstraint" destination="ntJ-wI-85m" id="QVV-v0-344"/>
+                <outlet property="tooltipButton" destination="YXL-FH-1Qd" id="6iI-up-7aD"/>
+                <outlet property="trailingConstraint" destination="HvE-cJ-H7A" id="7l0-w0-dh7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="256"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yCU-IG-ZTi">
+                    <rect key="frame" x="16" y="5" width="382" height="68"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDZ-cV-CkH" customClass="IBANLisboaTextField" customModule="UI">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="48"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="HyB-9S-GQr"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWE-yv-czg">
+                            <rect key="frame" x="0.0" y="48" width="382" height="20"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3re-cS-GId">
+                                    <rect key="frame" x="12" y="0.0" width="370" height="20"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="3re-cS-GId" firstAttribute="top" secondItem="ZWE-yv-czg" secondAttribute="top" id="7wg-GS-mWq"/>
+                                <constraint firstAttribute="trailing" secondItem="3re-cS-GId" secondAttribute="trailing" id="Ky1-mv-xDv"/>
+                                <constraint firstItem="3re-cS-GId" firstAttribute="leading" secondItem="ZWE-yv-czg" secondAttribute="leading" constant="12" id="o2t-ld-t90"/>
+                                <constraint firstAttribute="height" constant="20" id="uZ7-fE-FMS"/>
+                                <constraint firstAttribute="bottom" secondItem="3re-cS-GId" secondAttribute="bottom" id="xHH-Aj-gYL"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXL-FH-1Qd">
+                    <rect key="frame" x="16" y="85" width="46" height="171"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="showTooltip:" destination="-1" eventType="touchUpInside" id="BNk-OY-FZS"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="yCU-IG-ZTi" secondAttribute="trailing" constant="16" id="HvE-cJ-H7A"/>
+                <constraint firstAttribute="bottom" secondItem="YXL-FH-1Qd" secondAttribute="bottom" id="OM7-vo-wDx"/>
+                <constraint firstItem="yCU-IG-ZTi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="a7W-Jf-ghp"/>
+                <constraint firstItem="YXL-FH-1Qd" firstAttribute="top" secondItem="yCU-IG-ZTi" secondAttribute="bottom" constant="12" id="j3f-pq-8FP"/>
+                <constraint firstItem="YXL-FH-1Qd" firstAttribute="leading" secondItem="yCU-IG-ZTi" secondAttribute="leading" id="jxR-VA-4xh"/>
+                <constraint firstItem="yCU-IG-ZTi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="ntJ-wI-85m"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="140.57971014492756" y="-74.330357142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

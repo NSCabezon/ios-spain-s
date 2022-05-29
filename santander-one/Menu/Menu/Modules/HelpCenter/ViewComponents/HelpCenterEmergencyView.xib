@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HelpCenterEmergencyView" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="flipCallView" destination="FjF-jg-gL5" id="Ry3-6H-Cq1"/>
+                <outlet property="flipView" destination="QIK-Vv-vgs" id="2qi-M1-yfL"/>
+                <outlet property="phoneNumbersStackView" destination="zoo-PG-EWq" id="tZ0-BL-etk"/>
+                <outlet property="stackView" destination="W1c-ye-i2M" id="Ivo-na-YGk"/>
+                <outlet property="stolenCardView" destination="k7l-PS-DNC" id="Tql-hO-MJt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tZI-Bb-jYZ">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="350"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUy-ov-e6f">
+                    <rect key="frame" x="0.0" y="0.0" width="342" height="350"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="W1c-ye-i2M">
+                    <rect key="frame" x="16" y="0.0" width="310" height="350"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k7l-PS-DNC">
+                            <rect key="frame" x="0.0" y="0.0" width="310" height="350"/>
+                            <subviews>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QIK-Vv-vgs" customClass="ContactsFlipView" customModule="Menu" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="310" height="350"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FjF-jg-gL5">
+                                    <rect key="frame" x="0.0" y="0.0" width="310" height="350"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zoo-PG-EWq">
+                                            <rect key="frame" x="0.0" y="0.0" width="310" height="350"/>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="zoo-PG-EWq" secondAttribute="bottom" id="Rz2-vM-ePT"/>
+                                        <constraint firstItem="zoo-PG-EWq" firstAttribute="leading" secondItem="FjF-jg-gL5" secondAttribute="leading" id="U4N-ga-l4m"/>
+                                        <constraint firstAttribute="trailing" secondItem="zoo-PG-EWq" secondAttribute="trailing" id="lzW-EL-PuQ"/>
+                                        <constraint firstItem="zoo-PG-EWq" firstAttribute="top" secondItem="FjF-jg-gL5" secondAttribute="top" id="tzC-fo-9al"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="QIK-Vv-vgs" firstAttribute="leading" secondItem="k7l-PS-DNC" secondAttribute="leading" id="IpL-hL-Am8"/>
+                                <constraint firstItem="FjF-jg-gL5" firstAttribute="bottom" secondItem="QIK-Vv-vgs" secondAttribute="bottom" id="aLD-rE-WjH"/>
+                                <constraint firstItem="QIK-Vv-vgs" firstAttribute="top" secondItem="k7l-PS-DNC" secondAttribute="top" id="eev-um-ULb"/>
+                                <constraint firstItem="FjF-jg-gL5" firstAttribute="leading" secondItem="QIK-Vv-vgs" secondAttribute="leading" id="g5d-s5-n04"/>
+                                <constraint firstAttribute="trailing" secondItem="QIK-Vv-vgs" secondAttribute="trailing" id="hLx-TN-tVR"/>
+                                <constraint firstItem="FjF-jg-gL5" firstAttribute="top" secondItem="QIK-Vv-vgs" secondAttribute="top" id="iLU-W1-jLt"/>
+                                <constraint firstAttribute="bottom" secondItem="QIK-Vv-vgs" secondAttribute="bottom" id="m9A-Js-HC9"/>
+                                <constraint firstItem="FjF-jg-gL5" firstAttribute="trailing" secondItem="QIK-Vv-vgs" secondAttribute="trailing" id="wnR-0X-R6R"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ZUy-ov-e6f" secondAttribute="trailing" id="Fhm-g4-SpS"/>
+                <constraint firstItem="ZUy-ov-e6f" firstAttribute="leading" secondItem="tZI-Bb-jYZ" secondAttribute="leading" id="NIg-Zs-Sbc"/>
+                <constraint firstAttribute="trailing" secondItem="W1c-ye-i2M" secondAttribute="trailing" constant="16" id="Q0Y-lU-202"/>
+                <constraint firstItem="ZUy-ov-e6f" firstAttribute="top" secondItem="tZI-Bb-jYZ" secondAttribute="top" id="Qv2-CF-ysE"/>
+                <constraint firstItem="W1c-ye-i2M" firstAttribute="top" secondItem="tZI-Bb-jYZ" secondAttribute="top" id="cnp-D5-qWj"/>
+                <constraint firstAttribute="bottom" secondItem="ZUy-ov-e6f" secondAttribute="bottom" id="uhh-a2-CQr"/>
+                <constraint firstAttribute="bottom" secondItem="W1c-ye-i2M" secondAttribute="bottom" id="w3m-Mq-ic2"/>
+                <constraint firstItem="W1c-ye-i2M" firstAttribute="leading" secondItem="tZI-Bb-jYZ" secondAttribute="leading" constant="16" id="wEk-Sj-fYm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="118.84057971014494" y="-24.776785714285712"/>
+        </view>
+    </objects>
+</document>

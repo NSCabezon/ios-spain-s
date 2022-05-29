@@ -1,0 +1,59 @@
+//  Created by Juan Carlos López Robles on 12/23/19.
+//
+
+import UIKit
+import CoreFoundationLib
+
+public class LoadingCollectionView: UIView {
+    
+    @IBOutlet weak var loadingImageView: UIImageView!
+    @IBOutlet weak var loadingLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    private var view: UIView?
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.xibSetup()
+        self.setAppearance()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.xibSetup()
+        self.setAppearance()
+    }
+    
+    private func xibSetup() {
+        self.view = loadViewFromNib()
+        self.view?.frame = bounds
+        self.view?.translatesAutoresizingMaskIntoConstraints = true
+        self.view?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.addSubview(view ?? UIView())
+    }
+    
+    private func loadViewFromNib() -> UIView {
+        let bundle = Bundle.module
+        let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
+        return nib.instantiate(withOwner: self, options: nil)[0] as? UIView ?? UIView()
+    }
+    
+    private func setAppearance() {
+        self.loadingLabel.text = localized("generic_popup_loadingContent")
+        self.subtitleLabel.text = localized("loading_label_moment")
+        self.loadingLabel.textColor = .lisboaGray
+        self.subtitleLabel.textColor = .grafite
+    }
+    
+    public func startAnimating() {
+        self.loadingImageView.setPointsLoader()
+    }
+    
+    public func stopAnimating() {
+        self.loadingImageView.removeLoader()
+    }
+    
+    public func setTitle(_ title: LocalizedStylableText, subtitle: LocalizedStylableText) {
+        self.loadingLabel.configureText(withLocalizedString: title)
+        self.subtitleLabel.configureText(withLocalizedString: subtitle)
+    }
+}

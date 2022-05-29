@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Halter.ttf">
+            <string>Halter</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductDetailCardCollectionViewCell" id="gdj-9y-qwH" customClass="ProductDetailCardCollectionViewCell" customModule="DEBUG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="161"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="161"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qxa-ao-sjn">
+                        <rect key="frame" x="84" y="16" width="207" height="128"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Qxa-ao-sjn" secondAttribute="height" multiplier="207:128" id="tT6-Ia-9CL"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09/19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfu-pT-Cn9">
+                        <rect key="frame" x="173.5" y="111" width="29" height="9.5"/>
+                        <fontDescription key="fontDescription" name="Halter" family="Halter" pointSize="7"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5555 6666 7777 8888" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aJ-Ms-7KZ">
+                        <rect key="frame" x="106" y="87" width="169" height="13.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="169" id="qu7-QP-WBg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Halter" family="Halter" pointSize="10"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FELIPE NAVARRETE R." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqD-3S-79Q">
+                        <rect key="frame" x="106" y="130" width="169" height="11"/>
+                        <fontDescription key="fontDescription" name="Halter" family="Halter" pointSize="8"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qek-ol-ivP">
+                        <rect key="frame" x="0.0" y="160" width="375" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="vAk-OB-1db"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Qxa-ao-sjn" firstAttribute="centerY" secondItem="gdj-9y-qwH" secondAttribute="centerY" id="3jf-sq-qRt"/>
+                <constraint firstItem="4aJ-Ms-7KZ" firstAttribute="centerY" secondItem="gdj-9y-qwH" secondAttribute="centerY" constant="13" id="Fjp-l0-Cvp"/>
+                <constraint firstItem="GqD-3S-79Q" firstAttribute="width" secondItem="4aJ-Ms-7KZ" secondAttribute="width" id="Lv6-B1-vCN"/>
+                <constraint firstItem="Qxa-ao-sjn" firstAttribute="centerX" secondItem="gdj-9y-qwH" secondAttribute="centerX" id="MAe-lU-VGS"/>
+                <constraint firstItem="4aJ-Ms-7KZ" firstAttribute="centerX" secondItem="gdj-9y-qwH" secondAttribute="centerX" constant="3" id="SGS-dS-yem"/>
+                <constraint firstAttribute="trailing" secondItem="Qek-ol-ivP" secondAttribute="trailing" id="Zal-ko-h86"/>
+                <constraint firstItem="bfu-pT-Cn9" firstAttribute="top" secondItem="4aJ-Ms-7KZ" secondAttribute="bottom" constant="10.5" id="ceA-By-L9P"/>
+                <constraint firstItem="bfu-pT-Cn9" firstAttribute="centerX" secondItem="gdj-9y-qwH" secondAttribute="centerX" constant="0.5" id="lu2-wZ-9uQ"/>
+                <constraint firstItem="GqD-3S-79Q" firstAttribute="bottom" secondItem="Qxa-ao-sjn" secondAttribute="bottom" constant="-3" id="oDk-bS-OtK"/>
+                <constraint firstAttribute="bottom" secondItem="Qek-ol-ivP" secondAttribute="bottom" id="xHN-Ri-pqx"/>
+                <constraint firstItem="Qxa-ao-sjn" firstAttribute="top" secondItem="gdj-9y-qwH" secondAttribute="top" constant="16" id="y9c-wU-bKK"/>
+                <constraint firstItem="GqD-3S-79Q" firstAttribute="leading" secondItem="4aJ-Ms-7KZ" secondAttribute="leading" id="yky-jw-hCo"/>
+                <constraint firstItem="Qek-ol-ivP" firstAttribute="leading" secondItem="gdj-9y-qwH" secondAttribute="leading" id="ypf-8e-Aaj"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="mer-a0-5Ud"/>
+            <size key="customSize" width="375" height="50"/>
+            <connections>
+                <outlet property="bottomSeparator" destination="Qek-ol-ivP" id="2vv-F6-dK3"/>
+                <outlet property="cardExpirationLabel" destination="bfu-pT-Cn9" id="QkY-vW-4qh"/>
+                <outlet property="cardImageView" destination="Qxa-ao-sjn" id="OFu-Zn-EhH"/>
+                <outlet property="cardNumberLabel" destination="4aJ-Ms-7KZ" id="mJU-gC-N1P"/>
+                <outlet property="cardUserNameLabel" destination="GqD-3S-79Q" id="d2c-mn-DKy"/>
+            </connections>
+            <point key="canvasLocation" x="-253.5" y="47.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

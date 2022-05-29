@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="NewFavContactCollectionViewCell" customModule="GlobalPosition" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="152"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="152"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnR-7j-5cN">
+                        <rect key="frame" x="8" y="0.0" width="152" height="152"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YI7-ay-N2E">
+                                <rect key="frame" x="44" y="15" width="64" height="64"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icnNewContact" translatesAutoresizingMaskIntoConstraints="NO" id="45Z-nw-Yg0">
+                                        <rect key="frame" x="16" y="16" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="JC5-DH-kSX"/>
+                                            <constraint firstAttribute="width" constant="32" id="KVm-aG-Y2N"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="7vw-fl-hr7"/>
+                                    <constraint firstItem="45Z-nw-Yg0" firstAttribute="centerX" secondItem="YI7-ay-N2E" secondAttribute="centerX" id="8GI-vl-eGT"/>
+                                    <constraint firstAttribute="width" constant="64" id="hZ6-xu-XUN"/>
+                                    <constraint firstItem="45Z-nw-Yg0" firstAttribute="centerY" secondItem="YI7-ay-N2E" secondAttribute="centerY" id="qzc-Ho-pPK"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Nuevo contacto" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIy-64-471">
+                                <rect key="frame" x="25.5" y="87" width="101" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4x-WT-EKy">
+                                <rect key="frame" x="13" y="104" width="126" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="y4x-WT-EKy" firstAttribute="top" secondItem="IIy-64-471" secondAttribute="bottom" id="368-do-iTQ"/>
+                            <constraint firstItem="YI7-ay-N2E" firstAttribute="top" secondItem="lnR-7j-5cN" secondAttribute="top" constant="15" id="COh-Co-Y7o"/>
+                            <constraint firstItem="IIy-64-471" firstAttribute="centerX" secondItem="lnR-7j-5cN" secondAttribute="centerX" id="Qvr-xq-1qk"/>
+                            <constraint firstItem="IIy-64-471" firstAttribute="top" secondItem="YI7-ay-N2E" secondAttribute="bottom" constant="8" id="aPe-lB-Nma"/>
+                            <constraint firstItem="YI7-ay-N2E" firstAttribute="centerX" secondItem="lnR-7j-5cN" secondAttribute="centerX" id="bSh-W2-ljK"/>
+                            <constraint firstItem="y4x-WT-EKy" firstAttribute="leading" secondItem="lnR-7j-5cN" secondAttribute="leading" constant="13" id="e8o-QO-nRi"/>
+                            <constraint firstAttribute="trailing" secondItem="y4x-WT-EKy" secondAttribute="trailing" constant="13" id="zhk-Tr-nxM"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="lnR-7j-5cN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Ffr-jG-eh6"/>
+                <constraint firstAttribute="bottom" secondItem="lnR-7j-5cN" secondAttribute="bottom" id="rcd-OV-64i"/>
+                <constraint firstAttribute="trailing" secondItem="lnR-7j-5cN" secondAttribute="trailing" id="s2z-5X-QrP"/>
+                <constraint firstItem="lnR-7j-5cN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="u6U-bx-MNO"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="circularView" destination="YI7-ay-N2E" id="q9F-OO-dx8"/>
+                <outlet property="descLabel" destination="y4x-WT-EKy" id="5h8-vf-WGf"/>
+                <outlet property="frameView" destination="lnR-7j-5cN" id="qI1-lF-T9C"/>
+                <outlet property="newContactImageView" destination="45Z-nw-Yg0" id="UOF-Fp-prH"/>
+                <outlet property="textLabel" destination="IIy-64-471" id="QBg-QC-Kqq"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icnNewContact" width="32" height="32"/>
+    </resources>
+</document>

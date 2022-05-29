@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LisboaLabelButtonView" customModule="Bizum" customModuleProvider="target">
+            <connections>
+                <outlet property="addImageView" destination="LYb-hG-Ba1" id="Aer-Dn-cDd"/>
+                <outlet property="nameLabel" destination="enl-oe-tSJ" id="0MK-0e-kIZ"/>
+                <outlet property="pressedButton" destination="FTh-kq-HV3" id="wVT-gk-7he"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="429" height="31"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OJe-Qd-lvQ">
+                    <rect key="frame" x="16" y="0.0" width="397" height="31"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTh-kq-HV3">
+                            <rect key="frame" x="0.0" y="0.0" width="397" height="31"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="pressedButton:" destination="-1" eventType="touchUpInside" id="PhN-rk-mxM"/>
+                            </connections>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LYb-hG-Ba1">
+                            <rect key="frame" x="0.0" y="8.5" width="14" height="14"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="14" id="NRa-ta-E9w"/>
+                                <constraint firstAttribute="height" constant="14" id="ns9-4N-85F"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enl-oe-tSJ">
+                            <rect key="frame" x="18" y="15.5" width="371" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="LYb-hG-Ba1" firstAttribute="leading" secondItem="OJe-Qd-lvQ" secondAttribute="leading" id="7i1-F2-d45"/>
+                        <constraint firstAttribute="bottom" secondItem="FTh-kq-HV3" secondAttribute="bottom" id="8Ss-Cl-yMJ"/>
+                        <constraint firstItem="FTh-kq-HV3" firstAttribute="top" secondItem="OJe-Qd-lvQ" secondAttribute="top" id="Htc-EN-FGB"/>
+                        <constraint firstAttribute="trailing" secondItem="FTh-kq-HV3" secondAttribute="trailing" id="LDc-vb-GhF"/>
+                        <constraint firstItem="LYb-hG-Ba1" firstAttribute="centerY" secondItem="OJe-Qd-lvQ" secondAttribute="centerY" id="Lgr-HU-gEp"/>
+                        <constraint firstItem="FTh-kq-HV3" firstAttribute="leading" secondItem="OJe-Qd-lvQ" secondAttribute="leading" id="Nsc-93-S5c"/>
+                        <constraint firstItem="enl-oe-tSJ" firstAttribute="centerY" secondItem="OJe-Qd-lvQ" secondAttribute="centerY" id="eWr-fe-dll"/>
+                        <constraint firstAttribute="trailing" secondItem="enl-oe-tSJ" secondAttribute="trailing" constant="8" id="mgE-Xx-o6M"/>
+                        <constraint firstItem="enl-oe-tSJ" firstAttribute="leading" secondItem="LYb-hG-Ba1" secondAttribute="trailing" constant="4" id="rnF-i5-An9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="OJe-Qd-lvQ" secondAttribute="bottom" id="8EH-t1-pEx"/>
+                <constraint firstItem="OJe-Qd-lvQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Q5q-9q-MdQ"/>
+                <constraint firstItem="OJe-Qd-lvQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="e12-0d-PQu"/>
+                <constraint firstAttribute="trailing" secondItem="OJe-Qd-lvQ" secondAttribute="trailing" constant="16" id="z9k-rO-ovh"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="142.75362318840581" y="-136.94196428571428"/>
+        </view>
+    </objects>
+</document>

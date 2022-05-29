@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kvm-Tk-b2t" customClass="ProductGenericCardCollectionViewCell" customModule="METRIX" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="372" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="372" height="160"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="debito oro 123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXF-mG-YrW">
+                        <rect key="frame" x="26" y="17" width="110.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="debito oro 123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypf-tI-K5i">
+                        <rect key="frame" x="26" y="42" width="110.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hQ-Ih-OzC" customClass="CoachmarkUIButton" customModule="METRIX" customModuleProvider="target">
+                        <rect key="frame" x="142.5" y="42" width="14" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="0wA-Ah-o4Q"/>
+                            <constraint firstAttribute="width" constant="14" id="MeB-d0-Ttg"/>
+                        </constraints>
+                        <state key="normal" image="icShareIban"/>
+                        <connections>
+                            <action selector="shareButtonAction:" destination="kvm-Tk-b2t" eventType="touchUpInside" id="Usx-fC-nrO"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BvE-77-yC7" customClass="CoachmarkUILabel" customModule="METRIX" customModuleProvider="target">
+                        <rect key="frame" x="26" y="99" width="88" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="0lZ-LR-wlp"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="37"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pagado este mes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hr5-Lc-Vty">
+                        <rect key="frame" x="26" y="80" width="111" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBM-Ap-RL0">
+                        <rect key="frame" x="143" y="77.5" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="0ZA-6d-Z1M"/>
+                            <constraint firstAttribute="height" constant="22" id="BaH-62-w6S"/>
+                        </constraints>
+                        <state key="normal" image="icnInfoCard"/>
+                        <connections>
+                            <action selector="infoButtonAction:" destination="kvm-Tk-b2t" eventType="touchUpInside" id="39x-QL-Np7"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8H-vq-QaN">
+                        <rect key="frame" x="0.0" y="159" width="372" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="HgY-51-FMN"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooB-nG-L3X" userLabel="Card Button" customClass="ResponsiveStateButton" customModule="UI">
+                        <rect key="frame" x="228" y="17" width="112" height="72"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ooB-nG-L3X" secondAttribute="height" multiplier="14:9" id="NIU-NC-JSY"/>
+                            <constraint firstAttribute="width" constant="112" id="lio-jQ-83d"/>
+                        </constraints>
+                        <state key="normal" image="defaultCard"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="n8H-vq-QaN" firstAttribute="leading" secondItem="kvm-Tk-b2t" secondAttribute="leading" id="1bg-rd-hM7"/>
+                <constraint firstItem="ooB-nG-L3X" firstAttribute="top" secondItem="kvm-Tk-b2t" secondAttribute="top" constant="17" id="3uJ-YZ-ndR"/>
+                <constraint firstAttribute="trailing" secondItem="n8H-vq-QaN" secondAttribute="trailing" id="DIG-gR-xWr"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BvE-77-yC7" secondAttribute="trailing" constant="26" id="DpG-FH-nbO"/>
+                <constraint firstItem="Ypf-tI-K5i" firstAttribute="top" secondItem="tXF-mG-YrW" secondAttribute="bottom" constant="4" id="Gdk-dH-jPU"/>
+                <constraint firstItem="hr5-Lc-Vty" firstAttribute="leading" secondItem="BvE-77-yC7" secondAttribute="leading" id="HMN-Q5-BMX"/>
+                <constraint firstItem="ooB-nG-L3X" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3hQ-Ih-OzC" secondAttribute="trailing" constant="4" id="Hbr-n4-3b8"/>
+                <constraint firstItem="Ypf-tI-K5i" firstAttribute="leading" secondItem="tXF-mG-YrW" secondAttribute="leading" id="IZt-fg-Ivo"/>
+                <constraint firstItem="BvE-77-yC7" firstAttribute="leading" secondItem="kvm-Tk-b2t" secondAttribute="leading" constant="26" id="J3a-eP-cfJ"/>
+                <constraint firstItem="BvE-77-yC7" firstAttribute="top" secondItem="hr5-Lc-Vty" secondAttribute="bottom" constant="2" id="S1r-bj-3eF"/>
+                <constraint firstAttribute="bottom" secondItem="BvE-77-yC7" secondAttribute="bottom" constant="27" id="UFV-7z-Z9n"/>
+                <constraint firstItem="3hQ-Ih-OzC" firstAttribute="bottom" secondItem="Ypf-tI-K5i" secondAttribute="bottom" id="UNQ-oU-Ilx"/>
+                <constraint firstItem="lBM-Ap-RL0" firstAttribute="centerY" secondItem="hr5-Lc-Vty" secondAttribute="centerY" id="ZyX-JN-msj"/>
+                <constraint firstAttribute="trailing" secondItem="ooB-nG-L3X" secondAttribute="trailing" constant="32" id="bnB-ok-idl"/>
+                <constraint firstItem="lBM-Ap-RL0" firstAttribute="leading" secondItem="hr5-Lc-Vty" secondAttribute="trailing" constant="6" id="dHR-g2-att"/>
+                <constraint firstItem="tXF-mG-YrW" firstAttribute="top" secondItem="kvm-Tk-b2t" secondAttribute="top" constant="17" id="eNK-y4-FMR"/>
+                <constraint firstAttribute="bottom" secondItem="n8H-vq-QaN" secondAttribute="bottom" id="ffw-7B-ytP"/>
+                <constraint firstItem="3hQ-Ih-OzC" firstAttribute="leading" secondItem="Ypf-tI-K5i" secondAttribute="trailing" constant="6" id="oiG-B6-KgO"/>
+                <constraint firstItem="ooB-nG-L3X" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tXF-mG-YrW" secondAttribute="trailing" constant="4" id="p86-Q1-zfp"/>
+                <constraint firstItem="tXF-mG-YrW" firstAttribute="leading" secondItem="kvm-Tk-b2t" secondAttribute="leading" constant="26" id="uL9-HZ-Nhp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Tm5-rP-h3A"/>
+            <connections>
+                <outlet property="amountLabel" destination="BvE-77-yC7" id="Do9-8F-UJc"/>
+                <outlet property="amountTitleLabel" destination="hr5-Lc-Vty" id="UDy-m2-ASl"/>
+                <outlet property="botomSeparator" destination="n8H-vq-QaN" id="SDi-MM-HoB"/>
+                <outlet property="cardButton" destination="ooB-nG-L3X" id="i72-fa-Cbj"/>
+                <outlet property="copyButton" destination="3hQ-Ih-OzC" id="cfb-xG-sxs"/>
+                <outlet property="extraInfoButton" destination="lBM-Ap-RL0" id="lNH-Tf-0qn"/>
+                <outlet property="imageWidthConstraint" destination="lio-jQ-83d" id="0Uj-rw-X7a"/>
+                <outlet property="subtitleLabel" destination="Ypf-tI-K5i" id="YFO-3u-VSC"/>
+                <outlet property="titleLabel" destination="tXF-mG-YrW" id="Yrn-ds-1UY"/>
+            </connections>
+            <point key="canvasLocation" x="-277" y="16"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="defaultCard" width="240" height="158"/>
+        <image name="icShareIban" width="14" height="21"/>
+        <image name="icnInfoCard" width="22" height="22"/>
+    </resources>
+</document>

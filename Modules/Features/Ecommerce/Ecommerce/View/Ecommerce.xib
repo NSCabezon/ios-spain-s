@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EcommerceViewController" customModule="Ecommerce" customModuleProvider="target">
+            <connections>
+                <outlet property="containerScrollView" destination="cke-y3-ARy" id="bWY-Xt-DSp"/>
+                <outlet property="containerView" destination="z8g-us-BMf" id="7mT-mL-lTm"/>
+                <outlet property="footerMarginView" destination="22q-Hj-Oxg" id="bHW-UR-HXq"/>
+                <outlet property="footerView" destination="t8d-iD-FHt" id="Ln2-tz-QUL"/>
+                <outlet property="headerView" destination="sqS-7v-mlz" id="oaI-wE-FyN"/>
+                <outlet property="stackView" destination="Vwn-XH-T4z" id="0z1-mA-PGx"/>
+                <outlet property="view" destination="iN0-l3-epB" id="jzo-Sd-uRP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vwn-XH-T4z" userLabel="Content Stack View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="cke-y3-ARy">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="587"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JWr-RK-Yd3">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="587"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7Dz-6m-rrg">
+                                            <rect key="frame" x="0.0" y="25" width="375" height="562"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sqS-7v-mlz" customClass="EcommerceHeaderView" customModule="Ecommerce" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="130" id="vzN-iT-ChS"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8g-us-BMf" customClass="EcommerceContainerView" customModule="Ecommerce" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="130" width="375" height="432"/>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <viewLayoutGuide key="safeArea" id="2Bg-fq-NQC"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="7Dz-6m-rrg" secondAttribute="trailing" id="Cb5-Vm-i7T"/>
+                                        <constraint firstAttribute="bottom" secondItem="7Dz-6m-rrg" secondAttribute="bottom" id="Ryp-ZX-3uV"/>
+                                        <constraint firstItem="7Dz-6m-rrg" firstAttribute="leading" secondItem="JWr-RK-Yd3" secondAttribute="leading" id="poK-vF-51K"/>
+                                        <constraint firstItem="7Dz-6m-rrg" firstAttribute="top" secondItem="2Bg-fq-NQC" secondAttribute="top" constant="25" id="vaA-x3-Ekh"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="JWr-RK-Yd3" firstAttribute="height" secondItem="cke-y3-ARy" secondAttribute="height" placeholder="YES" id="7V2-21-YZt"/>
+                                <constraint firstAttribute="trailing" secondItem="JWr-RK-Yd3" secondAttribute="trailing" id="Eun-UF-Evt"/>
+                                <constraint firstItem="JWr-RK-Yd3" firstAttribute="top" secondItem="cke-y3-ARy" secondAttribute="top" placeholder="YES" id="GUM-eE-EX6"/>
+                                <constraint firstItem="JWr-RK-Yd3" firstAttribute="width" secondItem="cke-y3-ARy" secondAttribute="width" id="Hf6-Kf-8uI"/>
+                                <constraint firstItem="JWr-RK-Yd3" firstAttribute="height" relation="greaterThanOrEqual" secondItem="cke-y3-ARy" secondAttribute="height" id="MEa-P7-AFQ"/>
+                                <constraint firstAttribute="bottom" secondItem="JWr-RK-Yd3" secondAttribute="bottom" id="QNg-Qp-dxX"/>
+                                <constraint firstItem="JWr-RK-Yd3" firstAttribute="leading" secondItem="cke-y3-ARy" secondAttribute="leading" id="U9I-vY-Fbz"/>
+                                <constraint firstItem="JWr-RK-Yd3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cke-y3-ARy" secondAttribute="top" id="uMd-ex-439"/>
+                            </constraints>
+                        </scrollView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8d-iD-FHt" userLabel="FooterView" customClass="EcommerceFooterView" customModule="Ecommerce" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="SsZ-dE-P1V"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="cke-y3-ARy" firstAttribute="top" secondItem="Vwn-XH-T4z" secondAttribute="top" id="1l4-X3-t8n"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="22q-Hj-Oxg" userLabel="iPhone X View">
+                    <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="NAb-bF-wwt"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Vwn-XH-T4z" firstAttribute="leading" secondItem="NAb-bF-wwt" secondAttribute="leading" id="87R-SB-hCA"/>
+                <constraint firstItem="NAb-bF-wwt" firstAttribute="bottom" secondItem="Vwn-XH-T4z" secondAttribute="bottom" id="H59-8c-Cjw"/>
+                <constraint firstItem="Vwn-XH-T4z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Iym-2O-hXU"/>
+                <constraint firstItem="22q-Hj-Oxg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KFH-EC-3q5"/>
+                <constraint firstItem="NAb-bF-wwt" firstAttribute="trailing" secondItem="Vwn-XH-T4z" secondAttribute="trailing" id="Piu-Xa-Eew"/>
+                <constraint firstAttribute="trailing" secondItem="22q-Hj-Oxg" secondAttribute="trailing" id="dek-XV-P76"/>
+                <constraint firstItem="22q-Hj-Oxg" firstAttribute="top" secondItem="Vwn-XH-T4z" secondAttribute="bottom" id="vBQ-jI-fku"/>
+                <constraint firstAttribute="bottom" secondItem="22q-Hj-Oxg" secondAttribute="bottom" id="xEk-QG-FnG"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="61.607142857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="76" id="KGk-i7-Jjw" customClass="GenericConfirmationTableViewCell" customModule="RetailLegacy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6wL-QO-tWO" userLabel="infoContainer">
+                        <rect key="frame" x="10" y="0.0" width="300" height="73"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHE-ko-U9x" userLabel="nameLabel">
+                                <rect key="frame" x="20" y="16" width="40" height="13.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDE-aQ-xQD" userLabel="identifierLabel">
+                                <rect key="frame" x="70" y="14.5" width="12" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="extra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4e-4P-5nT" userLabel="amountInfoLabel">
+                                <rect key="frame" x="137" y="37.5" width="36.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="-150.004,27€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcY-uc-4kM" userLabel="amountLabel">
+                                <rect key="frame" x="20" y="37.5" width="107" height="19.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VcY-uc-4kM" firstAttribute="top" secondItem="GHE-ko-U9x" secondAttribute="bottom" constant="8" id="3RH-Y0-rKi"/>
+                            <constraint firstItem="Q4e-4P-5nT" firstAttribute="leading" secondItem="VcY-uc-4kM" secondAttribute="trailing" constant="10" id="CFV-OL-frF"/>
+                            <constraint firstItem="VcY-uc-4kM" firstAttribute="leading" secondItem="GHE-ko-U9x" secondAttribute="leading" id="EH1-iI-4HR"/>
+                            <constraint firstAttribute="bottom" secondItem="VcY-uc-4kM" secondAttribute="bottom" constant="16" id="ZzS-Eg-T0L"/>
+                            <constraint firstItem="GHE-ko-U9x" firstAttribute="leading" secondItem="6wL-QO-tWO" secondAttribute="leading" constant="20" id="aey-bE-sXm"/>
+                            <constraint firstItem="Q4e-4P-5nT" firstAttribute="centerY" secondItem="VcY-uc-4kM" secondAttribute="centerY" id="dXm-ei-sxQ"/>
+                            <constraint firstItem="FDE-aQ-xQD" firstAttribute="centerY" secondItem="GHE-ko-U9x" secondAttribute="centerY" id="eM6-Ke-6NB"/>
+                            <constraint firstItem="FDE-aQ-xQD" firstAttribute="leading" secondItem="GHE-ko-U9x" secondAttribute="trailing" constant="10" id="kgH-sp-EAU"/>
+                            <constraint firstItem="GHE-ko-U9x" firstAttribute="top" secondItem="6wL-QO-tWO" secondAttribute="top" constant="16" id="p0r-Mu-VKB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="6wL-QO-tWO" secondAttribute="trailing" constant="10" id="70n-Sw-0ui"/>
+                    <constraint firstItem="6wL-QO-tWO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="TNI-uQ-sJW"/>
+                    <constraint firstItem="6wL-QO-tWO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gUu-sv-sXi"/>
+                    <constraint firstAttribute="bottom" secondItem="6wL-QO-tWO" secondAttribute="bottom" constant="3" id="h3f-YM-992"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="amountInfoLabel" destination="Q4e-4P-5nT" id="K5v-1W-VCi"/>
+                <outlet property="amountLabel" destination="VcY-uc-4kM" id="EX6-F8-LvR"/>
+                <outlet property="identifierLabel" destination="FDE-aQ-xQD" id="otX-zt-ObD"/>
+                <outlet property="infoContainer" destination="6wL-QO-tWO" id="d10-B2-QzD"/>
+                <outlet property="nameLabel" destination="GHE-ko-U9x" id="7Lq-KT-aGs"/>
+            </connections>
+            <point key="canvasLocation" x="35" y="79"/>
+        </tableViewCell>
+    </objects>
+</document>

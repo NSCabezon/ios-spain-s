@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="PhoneInputTextFieldTableViewCell" customModule="DEBUG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8m9-GM-jdy">
+                        <rect key="frame" x="14" y="22" width="39" height="22.5"/>
+                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOr-5Z-ddA" customClass="PhoneTextField" customModule="DEBUG" customModuleProvider="target">
+                        <rect key="frame" x="10" y="48.5" width="300" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Vk9-zx-xla"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="namePhonePad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="tel"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="HOr-5Z-ddA" firstAttribute="top" secondItem="8m9-GM-jdy" secondAttribute="bottom" constant="4" id="7Hu-4P-qXC"/>
+                    <constraint firstItem="8m9-GM-jdy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="CHa-On-enL"/>
+                    <constraint firstItem="HOr-5Z-ddA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="MK9-pU-eGF"/>
+                    <constraint firstAttribute="trailing" secondItem="HOr-5Z-ddA" secondAttribute="trailing" constant="10" id="NA4-f8-9hv"/>
+                    <constraint firstAttribute="bottom" secondItem="HOr-5Z-ddA" secondAttribute="bottom" constant="1" id="W9J-vV-YM7"/>
+                    <constraint firstItem="8m9-GM-jdy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="fyP-sv-ZLg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="inputTextField" destination="HOr-5Z-ddA" id="sEl-R5-H4Z"/>
+                <outlet property="titleLabel" destination="8m9-GM-jdy" id="wSY-2Z-7a6"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="109"/>
+        </tableViewCell>
+    </objects>
+</document>

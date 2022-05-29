@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OneShortcutsView" customModule="UIOneComponents" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonsStackView" destination="Oor-nh-BU4" id="tHG-Ip-IvV"/>
+                <outlet property="containerView" destination="iN0-l3-epB" id="eQZ-Fq-VIs"/>
+                <outlet property="containerViewHeight" destination="H2i-0o-k8d" id="efo-0c-d6e"/>
+                <outlet property="gradientView" destination="jUP-e8-pwA" id="Sxu-fA-xQP"/>
+                <outlet property="moreOptionsView" destination="Iwg-W1-wGc" id="XVM-wP-mcR"/>
+                <outlet property="moreOptionsViewTop" destination="lQr-OI-lk2" id="GPI-ca-doQ"/>
+                <outlet property="oneOvalButton" destination="dSS-gE-YqJ" id="J7n-YN-PTw"/>
+                <outlet property="oneOvalButtonTop" destination="BPK-2j-bei" id="rEP-km-ItE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="144"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iwg-W1-wGc" userLabel="More Options View">
+                    <rect key="frame" x="183" y="104" width="48" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="9Yf-UI-E67"/>
+                        <constraint firstAttribute="height" constant="40" id="Fn9-f5-jCN"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUP-e8-pwA" userLabel="Gradient Background View" customClass="OneGradientView" customModule="UIOneComponents" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="eqS-qa-WZV"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Oor-nh-BU4">
+                    <rect key="frame" x="10" y="24" width="394" height="75"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dSS-gE-YqJ" customClass="OneOvalButton" customModule="UIOneComponents" customModuleProvider="target">
+                    <rect key="frame" x="183" y="104" width="48" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="l54-1L-GAV"/>
+                        <constraint firstAttribute="height" constant="40" id="z5e-c1-w6g"/>
+                    </constraints>
+                    <connections>
+                        <action selector="moreOptionsButtonDidTapped:" destination="-1" eventType="touchUpInside" id="Qf8-Rq-1sU"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Iwg-W1-wGc" secondAttribute="bottom" id="6uY-5k-Lav"/>
+                <constraint firstItem="dSS-gE-YqJ" firstAttribute="top" secondItem="jUP-e8-pwA" secondAttribute="bottom" constant="-16" id="BPK-2j-bei"/>
+                <constraint firstItem="dSS-gE-YqJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="C3r-Jk-HIa"/>
+                <constraint firstAttribute="height" constant="144" id="H2i-0o-k8d"/>
+                <constraint firstAttribute="bottom" secondItem="jUP-e8-pwA" secondAttribute="bottom" constant="24" id="HSn-dr-uiq"/>
+                <constraint firstItem="Oor-nh-BU4" firstAttribute="bottom" secondItem="Iwg-W1-wGc" secondAttribute="top" constant="-5" id="Og7-6d-odQ"/>
+                <constraint firstAttribute="trailing" secondItem="Oor-nh-BU4" secondAttribute="trailing" constant="10" id="V5E-m3-TtB"/>
+                <constraint firstItem="jUP-e8-pwA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="cMd-VH-UEq"/>
+                <constraint firstItem="jUP-e8-pwA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eHL-b5-zw3"/>
+                <constraint firstAttribute="trailing" secondItem="jUP-e8-pwA" secondAttribute="trailing" id="eP1-NU-CLC"/>
+                <constraint firstAttribute="bottom" secondItem="dSS-gE-YqJ" secondAttribute="bottom" id="fvV-KL-PLb"/>
+                <constraint firstItem="Oor-nh-BU4" firstAttribute="top" secondItem="jUP-e8-pwA" secondAttribute="top" constant="24" id="kQR-i9-jJA"/>
+                <constraint firstItem="Iwg-W1-wGc" firstAttribute="top" secondItem="jUP-e8-pwA" secondAttribute="bottom" constant="-16" id="lQr-OI-lk2"/>
+                <constraint firstItem="Iwg-W1-wGc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="n7T-u9-O9J"/>
+                <constraint firstItem="Oor-nh-BU4" firstAttribute="leading" secondItem="jUP-e8-pwA" secondAttribute="leading" constant="10" id="nUo-dK-kZj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="-125.55803571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

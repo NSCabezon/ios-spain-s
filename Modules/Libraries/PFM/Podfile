@@ -1,0 +1,37 @@
+platform :ios, '9.0'
+
+source 'ssh://git@gitlab.ciber-es.com:7346/mobility/Ciber/Common/iOS/iOS-private-specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+def project_pods
+    pod 'SQLite.swift/SQLCipher', :path => '../SQLite.swift'
+    pod 'SQLCipher', '4.4.2'
+    pod 'Logger', '2.0.0'
+    pod 'CoreFoundationLib'
+end
+
+target 'PFM' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  project_pods
+
+end
+
+target 'PublicRelease' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  project_pods
+
+end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            if ["debug"].include? config.name
+                config.build_settings['SWIFT_VERSION'] = '5.0'
+            end
+        end
+    end
+end

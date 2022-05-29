@@ -1,0 +1,43 @@
+platform :ios, '10.3'
+
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+def legacy_libraries
+  pod 'Locker', :path => '../../../../Modules/Libraries/Locker'
+  pod 'Logger', :path => '../../../../Modules/Libraries/Logger'
+end
+
+def libraries
+  pod 'CoreFoundationLib', :path => '../../../../Modules/Libraries/CoreFoundationLib'
+  pod 'RxCombine', :path => '../../../../Modules/Libraries/RxCombine'
+  pod 'CoreDomain', :path => '../../../../Modules/Libraries/CoreDomain'
+  pod 'SQLite.swift/SQLCipher', :path => '../../../../Modules/Libraries/SQLite.swift'
+  pod 'SQLCipher', '4.4.2'
+  #pod 'Kingfisher', '5.15.8'
+  pod 'CoreTestData', :path => '../../../../Modules/Libraries/CoreTestData'
+  pod 'SANServicesLibrary', :path => '../../../../Modules/Libraries/SANServicesLibrary'
+end
+
+def pods
+  pod 'FeatureFlags/ExampleApp', :path => '../'
+  pod 'SANLegacyLibrary', :path => '../../../../Modules/Libraries/SANLegacyLibrary'
+  pod 'QuickSetup', :path => '../../../../QuickSetup'
+  pod 'UI', :path => '../../../../UI'
+  pod 'UIOneComponents', :path => '../../../../UIOneComponents'
+  pod 'Operative', :path => '../../../../Operative'
+  pod 'Localization', :path => '../../../../Localization'
+  pod 'CorePushNotificationsService', :path => '../../../../CorePushNotificationsService'
+  legacy_libraries
+  libraries
+end
+
+
+target 'FeatureFlags_Example' do
+  pods
+end
+
+target 'FeatureFlags_ExampleTests' do
+  pods
+end

@@ -1,0 +1,30 @@
+platform :ios, '10.3'
+
+use_frameworks!
+
+def pods
+  pod 'UI', :path => '../../UI'
+  pod 'CoreDomain', :path => '../../Modules/Libraries/CoreDomain'
+  pod 'SANLegacyLibrary', :path => '../../Modules/Libraries/SANLegacyLibrary'
+  pod 'CoreFoundationLib', :path => '../../Modules/Libraries/CoreFoundationLib'
+  pod 'RxCombine', :path => '../../Modules/Libraries/RxCombine'
+  pod 'Locker', :path => '../../Modules/Libraries/Locker'
+  pod 'SQLite.swift/SQLCipher', :path => '../../Modules/Libraries/SQLite.swift'
+  pod 'RxCombine', :path => '../../Modules/Libraries/RxCombine'
+  pod 'Operative', :path => '../../Operative'
+  pod 'CorePushNotificationsService', :path => '../../CorePushNotificationsService'
+  pod 'Localization', :path => '../../Localization'
+  pod 'UIOneComponents', :path => '../../UIOneComponents'
+  pod 'OneAuthorizationProcessor', :path => '../../Modules/Features/OneAuthorizationProcessor'
+  pod 'CoreTestData', :path => '../../Modules/Libraries/CoreTestData'
+end
+
+target 'UI_Example' do
+  pods
+  target 'UI_ExampleTests' do
+    inherit! :search_paths
+    pod 'UI', :path => '../../UI', :testspecs => ['Tests']
+    pod 'UnitTestCommons', :path => '../../UnitTestCommons'
+  end
+end
+

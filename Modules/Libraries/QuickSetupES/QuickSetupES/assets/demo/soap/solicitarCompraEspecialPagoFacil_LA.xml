@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datos>
+    <id12345678z>
+        <respuesta0>
+            <soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                >
+                <soap-env:Header/>
+                <soap-env:Body>
+                    <prefixRigel0:solicitarCompraEspecialPagoFacil_LAResponse
+                        xmlns:prefixRigel0="http://www.isban.es/webservices/TARSAN/Mvtospagofacil_la/F_tarsan_mvtospagofacil_la/internet/ACTARSANPFacilMov/v1">
+                        <methodResult>
+                            <info>
+                                <errorDesc/>
+                                <errorCode>0</errorCode>
+                            </info>
+                        </methodResult>
+                    </prefixRigel0:solicitarCompraEspecialPagoFacil_LAResponse>
+                </soap-env:Body>
+            </soap-env:Envelope>
+        </respuesta0>
+        <respuesta1>
+            <soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                >
+                <soap-env:Header/>
+                <soap-env:Body>
+                    <soap-env:Fault>
+                        <faultcode>soap-env:Server</faultcode>
+                        <faultstring>Exception Code: TARSAN_00000. Executing Facade: ACTARSANPFacilAlt, Method:
+                            solicitarCompraEspecialPagoFacil_LA
+                        </faultstring>
+                        <faultactor>http://www.isban.es/soap/banksphere</faultactor>
+                        <detail>
+                            <prefixRigel0:com.isb.tarsan.altapagofacil.la.f.exc.General_AltaPagoFacil_LA
+                                xmlns:prefixRigel0="http://www.isban.es/webservices/TARSAN/Altapagofacil_la/F_tarsan_altapagofacil_la/santander/internet/functionalFaults/v1">
+                                <error>
+                                    <errorDesc>La clave introducida es errónea.Por favor, vuelva a introducir su clave de
+                                        firma
+                                    </errorDesc>
+                                    <errorCode>1</errorCode>
+                                </error>
+                            </prefixRigel0:com.isb.tarsan.altapagofacil.la.f.exc.General_AltaPagoFacil_LA>
+                        </detail>
+                    </soap-env:Fault>
+                </soap-env:Body>
+            </soap-env:Envelope>
+        </respuesta1>
+        <respuesta2>
+            <soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                >
+                <soap-env:Header/>
+                <soap-env:Body>
+                    <soap-env:Fault>
+                        <faultcode>soap-env:Server</faultcode>
+                        <faultstring>Executing Facade: ACTARSANPFacilAlt, Method: solicitarCompraEspecialPagoFacil_LA
+                        </faultstring>
+                        <faultactor>http://www.isban.es/soap/banksphere</faultactor>
+                        <detail>
+                            <prefixRigel0:Exception
+                                xmlns:prefixRigel0="http://www.gruposantander.es/webservices/genericFault">
+                                <faultCode>soap-env:Server</faultCode>
+                                <code>
+                                    <Value>Receiver</Value>
+                                    <Subcode>
+                                        <Value/>
+                                    </Subcode>
+                                </code>
+                                <reasons>
+                                    <reason>
+                                        <lang>en</lang>
+                                        <text>The request message could not be processed, because it happened an unexpected
+                                            error in the Server
+                                        </text>
+                                    </reason>
+                                </reasons>
+                                <processInfo>
+                                    <processIncomingMessage>AC15E7542ACC30018506042E</processIncomingMessage>
+                                    <processID>public abstract
+                                        com.isb.tarsan.altapagofacil.la.f.cb.CB_SolicitarCompraEspecialPagoFacil_LA_S
+                                        com.isb.tarsan.altapagofacil.la.f.IF_TARSAN_AltaPagoFacil_LA.solicitarCompraEspecialPagoFacil_LA(com.isb.tarsan.altapagofacil.la.f.cb.CB_SolicitarCompraEspecialPagoFacil_LA_E,com.isb.tarsan.altapagofacil.la.f.cb.CB_Conexion_LA_K,com.isb.tarsan.altapagofacil.la.f.cb.CB_Cabecera_LA_K)
+                                        throws
+                                        com.isb.tarsan.altapagofacil.la.f.exc.General_AltaPagoFacil_LA,com.isb.bs.bl.base.BSComponentException
+                                    </processID>
+                                    <processName>F_TARSAN_AltaPagoFacil_LA</processName>
+                                </processInfo>
+                                <technicalException>
+                                    <technicalPlatform>BKS</technicalPlatform>
+                                    <platformCode>BKSE04034000037</platformCode>
+                                    <message>[BKSE04034000037] : TrxOpFieldParserDate: La cadena 204-0- no cumple el formato
+                                        de fecha D1
+                                    </message>
+                                    <stackTrace>com.isb.rigel.services.messaging.ExtendedMessagingException:
+                                        [BKSE04023000363] : Error de procesamiento en la clase
+                                        'com.isb.rigel.srvcimpl.messaging.facadecaller.FacadeCallerEngineBridgeImpl'.
+                                        Mensaje '[BKSE08003000008] : Error ejecutando la fachada'
+                                        at
+                                        com.isb.rigel.srvcimpl.messaging.facadecaller.FacadeCallerEngineBridgeImpl.onMessage(FacadeCallerEngineBridgeImpl.java:152)
+                                        at
+                                        com.isb.rigel.srvcimpl.messaging.MessagingServiceImpl.onRequest(MessagingServiceImpl.java:1269)
+                                        at
+                                        com.isb.rigel.srvcimpl.messaging.http.MessagingSubsystemHTTPImpl.onMessage(MessagingSubsystemHTTPImpl.java:1261)
+                                        at com.isb.rigel.srvcimpl.messaging.MessageBridge.notify(MessageBridge.java:107)
+                                        at
+                                        com.isb.rigel.srvcimpl.messaging.http.HTTPServletListener.doPost(HTTPServletListener.java:122)
+                                        at javax.servlet.http.HttpServlet.service(HttpServlet.java:738)
+                                        at javax.servlet.http.HttpServlet.service(HttpServlet.java:831)
+                                        at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1657)
+                                        at
+                                        com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:939)
+                                        at
+                                        com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:502)
+                                        at
+                                        com.ibm.ws.webcontainer.servlet.ServletWrapperImpl.handleRequest(ServletWrapperImpl.java:181)
+                                        at
+                                        com.ibm.ws.webcontainer.servlet.CacheServletWrapper.handleRequest(CacheServletWrapper.java:91)
+                                        at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:864)
+                                        at com.ibm.ws.webcontainer.WSWebContainer.handleRequest(WSWebContainer.java:1592)
+                                        at com.ibm.ws.webcontainer.channel.WCChannelLink.ready(WCChannelLink.java:186)
+                                        at
+                                        com.ibm.ws.http.channel.inbound.impl.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:452)
+                                        at
+                                        com.ibm.ws.http.channel.inbound.impl.HttpInboundLink.handleNewRequest(HttpInboundLink.java:511)
+                                        at
+                                        com.ibm.ws.http.channel.inbound.impl.HttpInboundLink.processRequest(HttpInboundLink.java:305)
+                                        at
+                                        com.ibm.ws.http.channel.inbound.impl.HttpInboundLink.ready(HttpInboundLink.java:276)
+                                        at
+                                        com.ibm.ws.tcp.channel.impl.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:214)
+                                        at
+                                        com.ibm.ws.tcp.channel.impl.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:113)
+                                        at
+                                        com.ibm.ws.tcp.channel.impl.AioReadCompletionListener.futureCompleted(AioReadCompletionListener.java:165)
+                                        at com.ibm.io.async.AbstractAsyncFuture.invokeCallback(AbstractAsyncFuture.java:217)
+                                        at com.ibm.io.async.AsyncChannelFuture$1.run(AsyncChannelFuture.java:205)
+                                        at com.ibm.ws.util.ThreadPool$Worker.run(ThreadPool.java:1646)
+                                        Caused by: com.isb.bs.bl.facadecaller.FacadeCallerException: [BKSE08003000008] :
+                                        Error ejecutando la fachada
+                                        at com.isb.bs.bl.facadecaller.FacadeCallerImpl.callFacade(FacadeCallerImpl.java:178)
+                                        at
+                                        com.isb.rigel.srvcimpl.messaging.facadecaller.FacadeCallerEngineBridgeImpl.onMessage(FacadeCallerEngineBridgeImpl.java:132)
+                                        ... 24 more
+                                        Caused by: java.lang.reflect.InvocationTargetException
+                                        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+                                        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:60)
+                                        at
+                                        sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:37)
+                                        at java.lang.reflect.Method.invoke(Method.java:611)
+                                        at com.isb.bs.bl.facadecaller.FacadeCallImpl.innerExecute(FacadeCallImpl.java:110)
+                                        at com.isb.bs.bl.facadecaller.FacadeCallImpl.execute(FacadeCallImpl.java:94)
+                                        at com.isb.bs.bl.facadecaller.FacadeCallerImpl.callFacade(FacadeCallerImpl.java:130)
+                                        ... 25 more
+                                        Caused by: com.isb.bs.bl.base.BSComponentException: [BKSM08001000033] : Error
+                                        ejecutando el metodo 'solicitarCompraEspecialPagoFacil_LA' del helper desde la clase
+                                        'AAL_AltaPagoFacil_LABean'
+                                        at
+                                        com.isb.tarsan.altapagofacil.la.ln.AAL_AltaPagoFacil_LABean.solicitarCompraEspecialPagoFacil_LA(AAL_AltaPagoFacil_LABean.java:61)
+                                        at
+                                        com.isb.tarsan.altapagofacil.la.ln.EJSLocalStatelessTARSAN_AltaPagoFacil_LA_LN_com_i_cdef948e.solicitarCompraEspecialPagoFacil_LA(Unknown
+                                        Source)
+                                        at
+                                        com.isb.tarsan.altapagofacil.la.ln.AAL_AltaPagoFacil_LALocalAdapter.solicitarCompraEspecialPagoFacil_LA(AAL_AltaPagoFacil_LALocalAdapter.java:102)
+                                        ... 32 more
+                                        Caused by: com.isb.bs.bl.base.BSComponentException: [BKSE08001000017] : Excepcion en
+                                        metodo, Tipo: 'LAFAC', Helper: 'AAL_AltaPagoFacil_LAHelper', Metodo:
+                                        'solicitarCompraEspecialPagoFacil_LA'
+                                        at
+                                        com.isb.tarsan.altapagofacil.la.ln.AAL_AltaPagoFacil_LAHelper.solicitarCompraEspecialPagoFacil_LA(AAL_AltaPagoFacil_LAHelper.java:413)
+                                        at
+                                        com.isb.tarsan.altapagofacil.la.ln.AAL_AltaPagoFacil_LAExtended$$FastClassByCGLIB$$c2983f7d.invoke(&lt;generated&gt;)
+                                        at net.sf.cglib.proxy.MethodProxy.invoke(MethodProxy.java:149)
+                                        at
+                                        com.isb.bs.bl.base.proxyDecorators.AuthorizationHelperProxy.intercept(AuthorizationHelperProxy.java:175)
+                                        at
+                                        com.isb.tarsan.altapagofacil.la.ln.AAL_AltaPagoFacil_LAExtended$$EnhancerByCGLIB$$35334b63.solicitarCompraEspecialPagoFacil_LA(&lt;generated&gt;)
+                                        at
+                                        com.isb.tarsan.altapagofacil.la.ln.AAL_AltaPagoFacil_LAExtended$$FastClassByCGLIB$$c2983f7d.invoke(&lt;generated&gt;)
+                                        at net.sf.cglib.proxy.MethodProxy.invoke(MethodProxy.java:149)
+                                        at com.isb.bs.bl.base.proxyDecorators.AspectProxy.intercept(AspectProxy.java:155)
+                                        at
+                                        com.isb.tarsan.altapagofacil.la.ln.AAL_AltaPagoFacil_LAExtended$$EnhancerByCGLIB$$72b90bed.solicitarCompraEspecialPagoFacil_LA(&lt;generated&gt;)
+                                        at
+                                        com.isb.tarsan.altapagofacil.la.ln.AAL_AltaPagoFacil_LABean.solicitarCompraEspecialPagoFacil_LA(AAL_AltaPagoFacil_LABean.java:53)
+                                        ... 34 more
+                                        Caused by: com.isb.rigel.srvcimpl.channelAdapter.RequestProcessingException:
+                                        [BKSE04009000095] : ChannelAdapter 'LAFacadeChannelAdapter': Error en el procesado
+                                        de petición
+                                        at
+                                        com.isb.rigel.srvcimpl.channelAdapter.LAFacadeChannelAdapter.processRequest(LAFacadeChannelAdapter.java:105)
+                                        at
+                                        com.isb.tarsan.altapagofacil.la.ln.AAL_AltaPagoFacil_LAHelper.solicitarCompraEspecialPagoFacil_LA(AAL_AltaPagoFacil_LAHelper.java:377)
+                                        ... 43 more
+                                        Caused by: com.isb.rigel.srvcimpl.channelAdapter.ChannelAdapterException:
+                                        [BKSE04009000096] : ChannelAdapter 'LAFacadeChannelAdapter': Se ha producido un
+                                        error en el procesado de una petición válida
+                                        at
+                                        com.isb.rigel.srvcimpl.channelAdapter.LAFacadeChannelAdapter.processRequestValid(LAFacadeChannelAdapter.java:218)
+                                        at
+                                        com.isb.rigel.srvcimpl.channelAdapter.LAFacadeChannelAdapter.processRequest(LAFacadeChannelAdapter.java:98)
+                                        ... 44 more
+                                        Caused by: com.isb.rigel.common.cmds.CommandException: [BKSE05001000091] : Error
+                                        durante la ejecución del comando 'Cmd-CMD_CREATE_OI_REQ' de creación de la operación
+                                        'solicitarCompraEspecialPagoFacil_LA'
+                                        at
+                                        com.isb.rigel.aeb.cmds.CmdCreateLAFacadeRequest.innerExecute(CmdCreateLAFacadeRequest.java:73)
+                                        at
+                                        com.isb.rigel.common.cmds.AbstractComposedCommand.execute(AbstractComposedCommand.java:154)
+                                        at
+                                        com.isb.rigel.common.cmds.CommandProcessorImpl.processQueue(CommandProcessorImpl.java:245)
+                                        at
+                                        com.isb.rigel.aeb.container.AebRequestHandler.executeRequest(AebRequestHandler.java:135)
+                                        at
+                                        com.isb.rigel.aeb.container.OperationContainerImpl.processRequest(OperationContainerImpl.java:293)
+                                        at
+                                        com.isb.rigel.srvcimpl.opContainer.OperationContainerServiceImpl.executeRequest(OperationContainerServiceImpl.java:73)
+                                        at
+                                        com.isb.rigel.srvcimpl.channelAdapter.LAFacadeChannelAdapter.processRequestValid(LAFacadeChannelAdapter.java:209)
+                                        ... 45 more
+                                        Caused by: com.isb.rigel.aeb.operation.OperationHangingException: [BKSM05003000001]
+                                        : Error Operacion 'solicitarCompraEspecialPagoFacil_LA AC15E7542ACCA900844A287E'
+                                        parada, no se encontró ninguna Transicion a otro Estado, estado =
+                                        'solicitarCompraEspecialPagFacil_LIC' eventos =
+                                        'solicitarCompraEspecialPagFacil_LIC.exception'
+                                        at com.isb.rigel.aeb.operation.AbstractState.doExit(AbstractState.java:289)
+                                        at com.isb.rigel.aeb.operation.AbstractState.doWork(AbstractState.java:226)
+                                        at com.isb.rigel.aeb.operation.AbstractState.activate(AbstractState.java:482)
+                                        at
+                                        com.isb.rigel.aeb.operation.StateDiagramOperationImpl.process(StateDiagramOperationImpl.java:314)
+                                        at
+                                        com.isb.rigel.aeb.operation.StateDiagramOperationImpl.start(StateDiagramOperationImpl.java:295)
+                                        at
+                                        com.isb.rigel.aeb.cmds.CmdCreateLAFacadeRequest.innerExecute(CmdCreateLAFacadeRequest.java:59)
+                                        ... 51 more
+                                        Caused by: com.isb.bs.
+                                    </stackTrace>
+                                </technicalException>
+                                <additionalInfo/>
+                            </prefixRigel0:Exception>
+                        </detail>
+                    </soap-env:Fault>
+                </soap-env:Body>
+            </soap-env:Envelope>
+        </respuesta2>
+        <respuesta3>
+            <soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                >
+                <soap-env:Header/>
+                <soap-env:Body>
+                    <soap-env:Fault>
+                        <faultcode>soap-env:Server</faultcode>
+                        <faultstring>Exception Code: TARSAN_00000. Executing Facade: ACTARSANPFacilAlt, Method:
+                            solicitarCompraEspecialPagoFacil_LA
+                        </faultstring>
+                        <faultactor>http://www.isban.es/soap/banksphere</faultactor>
+                        <detail>
+                            <prefixRigel0:com.isb.tarsan.altapagofacil.la.f.exc.General_AltaPagoFacil_LA
+                                xmlns:prefixRigel0="http://www.isban.es/webservices/TARSAN/Altapagofacil_la/F_tarsan_altapagofacil_la/santander/internet/functionalFaults/v1">
+                                <error>
+                                    <errorDesc>Se ha producido un error al acceder a esta operativa</errorDesc>
+                                    <errorCode>1</errorCode>
+                                </error>
+                            </prefixRigel0:com.isb.tarsan.altapagofacil.la.f.exc.General_AltaPagoFacil_LA>
+                        </detail>
+                    </soap-env:Fault>
+                </soap-env:Body>
+            </soap-env:Envelope>
+        </respuesta3>
+    </id12345678z>
+</datos>

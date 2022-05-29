@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoanDetailViewController">
+            <connections>
+                <outlet property="containerView" destination="2NW-F3-IqV" id="AxQ-D4-iXf"/>
+                <outlet property="loanContainerView" destination="59v-Om-FJL" id="WJs-5y-Jv0"/>
+                <outlet property="loanDetailAnimationView" destination="kIp-cb-HLv" id="mtp-x7-Hoc"/>
+                <outlet property="loanDetailAnimationViewBottomConstraint" destination="BMS-Sk-4f4" id="t6a-hz-v4w"/>
+                <outlet property="loanDetailDataView" destination="utc-NY-O3F" id="Kx1-95-d1e"/>
+                <outlet property="separatorView" destination="PA6-PO-mto" id="vsx-pB-2Sc"/>
+                <outlet property="view" destination="iN0-l3-epB" id="GTg-ne-MLj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2NW-F3-IqV">
+                    <rect key="frame" x="0.0" y="233" width="414" height="629"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59v-Om-FJL">
+                    <rect key="frame" x="0.0" y="60" width="414" height="173"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="S8S-bm-4Ol">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="173"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="utc-NY-O3F" userLabel="Loan Detail Data View" customClass="LoanDetailDataView" customModule="Loans" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="0.0" width="382" height="152"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="152" id="EKT-E8-bGD"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PA6-PO-mto">
+                                    <rect key="frame" x="0.0" y="152" width="414" height="21"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="Wa8-sQ-HU5"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="PA6-PO-mto" firstAttribute="leading" secondItem="S8S-bm-4Ol" secondAttribute="leading" id="26n-dY-13K"/>
+                                <constraint firstAttribute="trailing" secondItem="utc-NY-O3F" secondAttribute="trailing" constant="16" id="SUf-xh-vZd"/>
+                                <constraint firstAttribute="bottom" secondItem="PA6-PO-mto" secondAttribute="bottom" id="WP9-QX-Sz2"/>
+                                <constraint firstAttribute="trailing" secondItem="PA6-PO-mto" secondAttribute="trailing" id="bsB-7D-XLk"/>
+                                <constraint firstItem="utc-NY-O3F" firstAttribute="top" secondItem="S8S-bm-4Ol" secondAttribute="top" id="cW6-0m-AiH"/>
+                                <constraint firstItem="utc-NY-O3F" firstAttribute="leading" secondItem="S8S-bm-4Ol" secondAttribute="leading" constant="16" id="uD9-w6-WVt"/>
+                            </constraints>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qza-CV-qiS">
+                            <rect key="frame" x="0.0" y="172" width="414" height="1"/>
+                            <color key="backgroundColor" red="0.88184458020000001" green="0.90125626329999997" blue="0.90840870139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="4XT-bY-yPQ"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="S8S-bm-4Ol" firstAttribute="top" secondItem="59v-Om-FJL" secondAttribute="top" id="Sgo-j2-vGU"/>
+                        <constraint firstItem="Qza-CV-qiS" firstAttribute="leading" secondItem="59v-Om-FJL" secondAttribute="leading" id="dNV-5t-6dd"/>
+                        <constraint firstAttribute="trailing" secondItem="Qza-CV-qiS" secondAttribute="trailing" id="hHH-1K-2uo"/>
+                        <constraint firstAttribute="bottom" secondItem="S8S-bm-4Ol" secondAttribute="bottom" id="i6y-ZL-1nI"/>
+                        <constraint firstAttribute="bottom" secondItem="Qza-CV-qiS" secondAttribute="bottom" id="kyQ-yD-TzR"/>
+                        <constraint firstAttribute="trailing" secondItem="S8S-bm-4Ol" secondAttribute="trailing" id="ucT-E4-Zkq"/>
+                        <constraint firstItem="S8S-bm-4Ol" firstAttribute="leading" secondItem="59v-Om-FJL" secondAttribute="leading" id="wRE-dx-3GZ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIp-cb-HLv" userLabel="Loan Detail Animation View" customClass="LoanDetailAnimationView" customModule="Loans" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="862" width="414" height="72"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="72" id="3E7-XG-Rj4"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2NW-F3-IqV" secondAttribute="trailing" id="5WH-MT-deN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="kIp-cb-HLv" secondAttribute="bottom" constant="-72" id="BMS-Sk-4f4"/>
+                <constraint firstItem="2NW-F3-IqV" firstAttribute="top" secondItem="59v-Om-FJL" secondAttribute="bottom" id="JCj-fe-KYI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kIp-cb-HLv" secondAttribute="trailing" id="JJ9-bX-gNC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="2NW-F3-IqV" secondAttribute="bottom" id="cHn-E6-riu"/>
+                <constraint firstItem="59v-Om-FJL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ilk-fh-pKD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="59v-Om-FJL" secondAttribute="trailing" id="p2V-gk-her"/>
+                <constraint firstItem="kIp-cb-HLv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="pPX-rx-WjJ"/>
+                <constraint firstItem="59v-Om-FJL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="s4h-cr-2SC"/>
+                <constraint firstItem="2NW-F3-IqV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="shU-ft-Hj3"/>
+            </constraints>
+            <point key="canvasLocation" x="-243.47826086956525" y="100.44642857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

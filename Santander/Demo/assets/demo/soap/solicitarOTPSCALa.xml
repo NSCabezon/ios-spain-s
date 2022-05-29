@@ -1,0 +1,41 @@
+<datos>
+    <id12345678z>
+        <respuesta0>
+            <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:new="http://new.webservice.namespace">
+                <soapenv:Header/>
+                <soapenv:Body>
+                    <new:solicitarOTPSCALaResponse>
+                        <methodResult>
+                            <tokenOTP>AAAAAA</tokenOTP>
+                            <ticket>bBBBBB</ticket>
+                            <numTfno_dispositivo>666999000</numTfno_dispositivo>
+                            <metodoEnvio>PUSH</metodoEnvio>
+                            <numReenOtpRes>3</numReenOtpRes>
+                            <numTfno>*****3896</numTfno>
+                        </methodResult>
+                    </new:solicitarOTPSCALaResponse>
+                </soapenv:Body>
+            </soapenv:Envelope>
+        </respuesta0>
+        <respuesta1>
+            <soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+                <soap-env:Header />
+                <soap-env:Body>
+                    <soap-env:Fault>
+                        <faultcode>soap-env:Server</faultcode>
+                        <faultstring>Exception Code: ADFIEL_00000. Executing Facade: ACADFIELGestionFirma, Method: cambioClaveAcceso_LA</faultstring>
+                        <faultactor>http://www.isban.es/soap/banksphere</faultactor>
+                        <detail>
+                            <prefixRigel0:com.isb.al.adfiel.gestionfirma.la.f.exc.MsgTranslator_GestionFirma_LA xmlns:prefixRigel0="http://www.isban.es/webservices/ADFIEL/Gestionfirma_la/F_adfiel_gestionfirma_la/santander/internet/functionalFaults/v1">
+                                <error>
+                                    <codError>SUPPFP_000015</codError>
+                                    <desError>Error en el procesamiento de la petición. Para más información llame a nuestro servicio de atención telefónica. Código de error: EVSMSXX.</desError>
+                                </error>
+                            </prefixRigel0:com.isb.al.adfiel.gestionfirma.la.f.exc.MsgTranslator_GestionFirma_LA>
+                        </detail>
+                    </soap-env:Fault>
+                </soap-env:Body>
+            </soap-env:Envelope>
+        </respuesta1>
+    </id12345678z>
+</datos>

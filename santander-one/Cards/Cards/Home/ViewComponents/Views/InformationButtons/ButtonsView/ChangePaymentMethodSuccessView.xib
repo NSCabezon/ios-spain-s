@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangePaymentMethodSuccessView" customModule="Cards">
+            <connections>
+                <outlet property="changePaymentMethodImageView" destination="1NX-p1-e2M" id="f19-CO-0bp"/>
+                <outlet property="changePaymentMethodLabel" destination="OFP-5k-Pj2" id="Ap8-pE-LjI"/>
+                <outlet property="paymentMethodLabel" destination="AO6-zl-poP" id="Mik-Iy-eB8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="S5y-Z4-gKD">
+            <rect key="frame" x="0.0" y="0.0" width="187" height="88"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1NX-p1-e2M">
+                    <rect key="frame" x="0.0" y="0.0" width="68" height="88"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="1NX-p1-e2M" secondAttribute="height" multiplier="51:66" id="LOy-3T-hu2"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cambiar forma de pago" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFP-5k-Pj2">
+                    <rect key="frame" x="72" y="10" width="110" height="38.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AO6-zl-poP">
+                    <rect key="frame" x="72" y="64" width="0.0" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="FJU-AU-4i7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="AO6-zl-poP" firstAttribute="leading" secondItem="1NX-p1-e2M" secondAttribute="trailing" constant="4" id="3lK-2W-D6G"/>
+                <constraint firstItem="1NX-p1-e2M" firstAttribute="bottom" secondItem="S5y-Z4-gKD" secondAttribute="bottom" id="9gR-cw-6mS"/>
+                <constraint firstItem="fib-gU-SCI" firstAttribute="bottom" secondItem="AO6-zl-poP" secondAttribute="bottom" constant="7" id="A93-LL-rUo"/>
+                <constraint firstItem="1NX-p1-e2M" firstAttribute="leading" secondItem="S5y-Z4-gKD" secondAttribute="leading" id="P6e-EX-tOt"/>
+                <constraint firstItem="1NX-p1-e2M" firstAttribute="top" secondItem="S5y-Z4-gKD" secondAttribute="top" id="TbM-cs-tiM"/>
+                <constraint firstItem="OFP-5k-Pj2" firstAttribute="top" secondItem="S5y-Z4-gKD" secondAttribute="top" constant="10" id="e0x-on-Ga6"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AO6-zl-poP" secondAttribute="trailing" constant="3" id="jog-Ls-PPE"/>
+                <constraint firstItem="OFP-5k-Pj2" firstAttribute="leading" secondItem="1NX-p1-e2M" secondAttribute="trailing" constant="4" id="tlm-si-c0L"/>
+                <constraint firstItem="fib-gU-SCI" firstAttribute="trailing" secondItem="OFP-5k-Pj2" secondAttribute="trailing" constant="5" id="xyj-hI-HyJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fib-gU-SCI"/>
+            <point key="canvasLocation" x="132.60869565217394" y="81.696428571428569"/>
+        </view>
+    </objects>
+</document>

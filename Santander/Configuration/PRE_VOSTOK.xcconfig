@@ -1,0 +1,47 @@
+//
+//  PRE.xcconfig
+//  Santander
+//
+//  Created by José Carlos Estela Anguita on 2/3/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+PRODUCT_NAME = SP-PRE-$(MARKETING_VERSION)
+PRODUCT_BUNDLE_IDENTIFIER = es.santander.retail
+WIDGET_BUNDLE_IDENTIFIER = es.santander.retail.widget
+SIRI_BUNDLE_IDENTIFIER = es.santander.retail.siri
+SIRI_UI_BUNDLE_IDENTIFIER = es.santander.retail.siriUI
+PUSH_NOTIFICATION_BUNDLE_IDENTIFIER = es.santander.retail.pushNotificationService
+APP_NAME = Santander Pre
+EXCLUDED_ARCHS[sdk=iphonesimulator*] = arm64
+EMMA_API_KEY = santanderpreHdgTYANJ0
+LOAD_PFM_ENABLED = YES
+LOG_ENABLED = YES
+MANAGER_WALL_PRODUCTION_ENVIRONMENT = NO
+SALES_FORCE_ACCESS_TOKEN = 3sdqLPvv6NJnRwPeVmWla4RmuyuqpBPb7rilODAuvFM=
+SALES_FORCE_APP_ID = G9VP5zy9MI7Exgn3L4llc7ycA0tE5ft5cWxp2B3zRUPbryLZwm0TtK0dX+C1HFPD
+SALES_FORCE_MID = NVMX4RCNDARAJZmuOAcccw==
+SALES_FORCE_END_POINT = OkhGaTtWwRfE4280nvK+iPCLjXTeg6TEI6+CgJvF9cAzGgnInWNO+B3PeDLM8tcmzCRydmnHOfWIABK99hDyr2DCHVn5kjQjn8zzfgPd0MA=
+TEALIUM_TARGET = qa
+TWIN_PUSH_API_KEY = tOGY8mIN5LykD576cpmFrYI4q05Gh6xXzE+qXlNcvySjl9Pu9vAfzThZEkfVzVlR
+TWIN_PUSH_APP_ID = 3OG/BQ5/TLkK9vP1o5BCat8i66vfAR53XDeFG3mn4zE=
+TWIN_PUSH_SUBDOMAIN = santander
+APP_CENTER_IDENTIFIER = ffcc0fdd-0d89-4ed9-9bed-e1c7d7c966b8
+TRUST_INVALID_CERTIFICATE = YES
+ENVIRONMENTS_AVAILABLE = YES
+KEYCHAIN_SERVICE = PRE_Santander
+ENVIRONMENTS_FOLDER = $(SRCROOT)/Santander/Configuration/Legacy
+ENVIRONMENTS_TO_EXCLUDE = $(ENVIRONMENTS_FOLDER)/INTERN/* $(ENVIRONMENTS_FOLDER)/PRO/* $(ENVIRONMENTS_FOLDER)/DEV/*
+TRUSTEER_FILES_TO_EXCLUDE = $(SRCROOT)/Santander/Trusteer/Wrapper/PRE/SdkHandler.mm
+EXCLUDED_SOURCE_FILE_NAMES = $(ENVIRONMENTS_TO_EXCLUDE) $(TRUSTEER_FILES_TO_EXCLUDE)
+HEADER_SEARCH_PATHS = $(inherited) $(SRCROOT)/Santander/Trusteer/tas/include
+TAS_ROOT = "$(SRCROOT)/Santander/Trusteer/tas"
+APP_GROUPS_IDENTIFIER = group.com.santander.sso
+SHARED_KEYCHAIN_IDENTIFIER = D33377X979.com.santander.sso
+CODE_SIGN_ENTITLEMENTS = $(SRCROOT)/Santander/Entitlement/Vostok.entitlements
+WIDGET_CODE_SIGN_ENTITLEMENTS = $(SRCROOT)/Widget/WidgetVostok.entitlements
+SIRI_CODE_SIGN_ENTITLEMENTS = $(SRCROOT)/Siri/Config/SiriVostok.entitlements
+SIRI_UI_CODE_SIGN_ENTITLEMENTS = $(SRCROOT)/SiriUI/Config/SiriUIVostok.entitlements
+PUSH_CODE_SIGN_ENTITLEMENTS = $(SRCROOT)/PushNotificationService/NotificationsVostok.entitlements

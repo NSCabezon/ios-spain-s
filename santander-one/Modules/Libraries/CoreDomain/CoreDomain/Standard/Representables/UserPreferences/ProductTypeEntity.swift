@@ -1,0 +1,16 @@
+public enum ProductTypeEntity: String {
+    case account = "Account"
+    case card = "Card"
+    case pension = "Pension"
+    case fund = "Fund"
+    case managedPortfolio = "Portfolio"
+    case notManagedPortfolio = "NotManagedPortfolio"
+    case managedPortfolioVariableIncome = "PortfolioVariableIncome"
+    case notManagedPortfolioVariableIncome = "NotManagedPortfolioVariableIncome"
+    case stockAccount = "StockAccount"
+    case deposit = "Deposit"
+    case loan = "Loan"
+    case insuranceProtection = "InsuranceProtection"
+    case insuranceSaving = "InsuranceSaving"
+    case savingProduct = "SavingProduct"
+}

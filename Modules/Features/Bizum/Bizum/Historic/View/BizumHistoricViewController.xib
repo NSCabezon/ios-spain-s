@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17700" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BizumHistoricViewController" customModule="Bizum" customModuleProvider="target">
+            <connections>
+                <outlet property="segmentedControl" destination="1Rl-L4-QFH" id="tXM-pB-Qf1"/>
+                <outlet property="tableView" destination="z6c-M1-k57" id="shn-8b-C0n"/>
+                <outlet property="textField" destination="ApU-dV-Yac" id="CYe-8v-zoM"/>
+                <outlet property="view" destination="iN0-l3-epB" id="z99-7i-5f6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1Rl-L4-QFH" customClass="LisboaSegmentedControl" customModule="UI">
+                    <rect key="frame" x="16" y="49" width="382" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="u4a-tm-Cub"/>
+                    </constraints>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                    </segments>
+                </segmentedControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ApU-dV-Yac" customClass="LisboaTextfield" customModule="UI">
+                    <rect key="frame" x="16" y="101" width="382" height="52"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <bool key="isElement" value="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="MQ6-Gx-t9r"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z6c-M1-k57">
+                    <rect key="frame" x="0.0" y="163" width="414" height="733"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="z6c-M1-k57" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="8Zb-FB-u4l"/>
+                <constraint firstItem="1Rl-L4-QFH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="Hve-4o-9O4"/>
+                <constraint firstItem="z6c-M1-k57" firstAttribute="top" secondItem="ApU-dV-Yac" secondAttribute="bottom" constant="10" id="ISx-sg-FvF"/>
+                <constraint firstItem="ApU-dV-Yac" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="QyU-yU-rM9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ApU-dV-Yac" secondAttribute="trailing" constant="16" id="RoR-BI-C4L"/>
+                <constraint firstItem="ApU-dV-Yac" firstAttribute="top" secondItem="1Rl-L4-QFH" secondAttribute="bottom" constant="12" id="WrN-Zu-Mo2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1Rl-L4-QFH" secondAttribute="trailing" constant="16" id="cxs-Hu-ZU7"/>
+                <constraint firstItem="1Rl-L4-QFH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="d0j-EY-2PN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="z6c-M1-k57" secondAttribute="trailing" id="iWT-tg-KLs"/>
+                <constraint firstAttribute="bottom" secondItem="z6c-M1-k57" secondAttribute="bottom" id="oui-WI-yvX"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="1Rl-L4-QFH">
+            <size key="intrinsicContentSize" width="131" height="31"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

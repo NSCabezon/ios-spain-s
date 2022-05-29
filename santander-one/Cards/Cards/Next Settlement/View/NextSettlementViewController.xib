@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NextSettlementViewController" customModule="Cards" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButtonView" destination="Jj3-Rr-S4E" id="fAz-9k-iXx"/>
+                <outlet property="faqsView" destination="v4i-N2-TXm" id="9wY-mX-UEL"/>
+                <outlet property="scrollView" destination="Dpl-Nx-wcy" id="Hn8-GK-KWp"/>
+                <outlet property="stackView" destination="ZbB-xr-lZO" id="cfo-35-cbp"/>
+                <outlet property="ticketView" destination="i3z-GT-2AY" id="386-aw-QTM"/>
+                <outlet property="view" destination="iN0-l3-epB" id="hcw-kY-mN5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dpl-Nx-wcy">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZbB-xr-lZO">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3z-GT-2AY" customClass="NextSettlementTicketView" customModule="Cards" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ci2-KQ-bI3">
+                                    <rect key="frame" x="0.0" y="50" width="414" height="50"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jj3-Rr-S4E" customClass="NextSettlementActionView" customModule="Cards" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="5" width="382" height="29"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Jj3-Rr-S4E" secondAttribute="bottom" constant="16" id="QMI-6f-f0m"/>
+                                        <constraint firstItem="Jj3-Rr-S4E" firstAttribute="top" secondItem="ci2-KQ-bI3" secondAttribute="top" constant="5" id="R2g-5W-oja"/>
+                                        <constraint firstItem="Jj3-Rr-S4E" firstAttribute="leading" secondItem="ci2-KQ-bI3" secondAttribute="leading" constant="16" id="SRu-9z-YSZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="Jj3-Rr-S4E" secondAttribute="trailing" constant="16" id="WoZ-a4-aAk"/>
+                                    </constraints>
+                                </view>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4i-N2-TXm" customClass="NextSettlementFaqsView" customModule="Cards" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="100" width="414" height="0.0"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="250" constant="1" id="57I-oI-XJc"/>
+                                <constraint firstItem="ci2-KQ-bI3" firstAttribute="leading" secondItem="ZbB-xr-lZO" secondAttribute="leading" id="M62-sG-Rdc"/>
+                                <constraint firstAttribute="trailing" secondItem="ci2-KQ-bI3" secondAttribute="trailing" id="YFQ-Ai-MtD"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ZbB-xr-lZO" secondAttribute="bottom" id="S8f-HG-byv"/>
+                        <constraint firstItem="ZbB-xr-lZO" firstAttribute="leading" secondItem="Dpl-Nx-wcy" secondAttribute="leading" id="SHv-aR-Nmi"/>
+                        <constraint firstItem="ZbB-xr-lZO" firstAttribute="width" secondItem="Dpl-Nx-wcy" secondAttribute="width" id="fLy-Q8-mmH"/>
+                        <constraint firstItem="ZbB-xr-lZO" firstAttribute="top" secondItem="Dpl-Nx-wcy" secondAttribute="top" id="uyr-vw-WbP"/>
+                        <constraint firstAttribute="trailing" secondItem="ZbB-xr-lZO" secondAttribute="trailing" id="xXe-Vs-BPo"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Dpl-Nx-wcy" firstAttribute="leading" secondItem="lb6-4D-eTR" secondAttribute="leading" id="FiG-4Z-t4y"/>
+                <constraint firstItem="Dpl-Nx-wcy" firstAttribute="trailing" secondItem="lb6-4D-eTR" secondAttribute="trailing" id="Ndo-Ze-Nqa"/>
+                <constraint firstItem="Dpl-Nx-wcy" firstAttribute="top" secondItem="lb6-4D-eTR" secondAttribute="top" id="cYi-vg-aHj"/>
+                <constraint firstAttribute="bottom" secondItem="Dpl-Nx-wcy" secondAttribute="bottom" id="lRh-Hr-zsE"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="lb6-4D-eTR"/>
+            <point key="canvasLocation" x="131.8840579710145" y="152.67857142857142"/>
+        </view>
+    </objects>
+</document>

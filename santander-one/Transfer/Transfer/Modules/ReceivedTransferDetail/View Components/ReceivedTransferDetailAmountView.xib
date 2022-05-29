@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReceivedTransferDetailAmountView" customModule="Transfer" customModuleProvider="target">
+            <connections>
+                <outlet property="amountLabel" destination="uc4-Re-XUk" id="wMp-Sv-cq4"/>
+                <outlet property="amountTitleLabel" destination="eRc-Xq-4wn" id="MQW-B2-e9w"/>
+                <outlet property="conceptLabel" destination="wVf-vF-Qm7" id="ud7-Fx-NRH"/>
+                <outlet property="conceptTitleLabel" destination="YuG-Bk-s3P" id="yRc-LM-IT9"/>
+                <outlet property="containerView" destination="raE-kc-stv" id="Ccf-BH-5OX"/>
+                <outlet property="separator" destination="yuR-z6-MqJ" id="u3e-eY-PUo"/>
+                <outlet property="stackView" destination="W0c-ag-z0x" id="MWH-kJ-otr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="282"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="raE-kc-stv" userLabel="Container View">
+                    <rect key="frame" x="1" y="1" width="412" height="281"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="W0c-ag-z0x">
+                            <rect key="frame" x="17" y="15" width="378" height="252"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="**Importe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRc-Xq-4wn" userLabel="Amount Title Label">
+                                    <rect key="frame" x="0.0" y="0.0" width="378" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="**90,00€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uc4-Re-XUk" userLabel="Amount Label">
+                                    <rect key="frame" x="0.0" y="20.5" width="378" height="190.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="**Concepto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YuG-Bk-s3P" userLabel="Concept Title Label">
+                                    <rect key="frame" x="0.0" y="211" width="378" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="**Regalo de cumpleaños" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVf-vF-Qm7" userLabel="Concept Label">
+                                    <rect key="frame" x="0.0" y="231.5" width="378" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yuR-z6-MqJ" userLabel="Separator" customClass="DottedLineView" customModule="UI">
+                            <rect key="frame" x="14" y="280" width="384" height="1"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="VDo-kA-jpd"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="yuR-z6-MqJ" firstAttribute="top" secondItem="W0c-ag-z0x" secondAttribute="bottom" constant="13" id="5Mw-Nz-tHb"/>
+                        <constraint firstAttribute="trailing" secondItem="W0c-ag-z0x" secondAttribute="trailing" constant="17" id="AuU-Ig-eWe"/>
+                        <constraint firstItem="yuR-z6-MqJ" firstAttribute="leading" secondItem="raE-kc-stv" secondAttribute="leading" constant="14" id="GDU-8b-4rZ"/>
+                        <constraint firstAttribute="bottom" secondItem="yuR-z6-MqJ" secondAttribute="bottom" id="X3t-E6-Kz9"/>
+                        <constraint firstAttribute="trailing" secondItem="yuR-z6-MqJ" secondAttribute="trailing" constant="14" id="dXn-pi-2Fd"/>
+                        <constraint firstItem="W0c-ag-z0x" firstAttribute="top" secondItem="raE-kc-stv" secondAttribute="top" constant="15" id="fAv-hK-tkO"/>
+                        <constraint firstItem="W0c-ag-z0x" firstAttribute="leading" secondItem="raE-kc-stv" secondAttribute="leading" constant="17" id="iv4-V5-pEp"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="raE-kc-stv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="1" id="2i2-oa-N7z"/>
+                <constraint firstAttribute="bottom" secondItem="raE-kc-stv" secondAttribute="bottom" id="b5c-gZ-ax0"/>
+                <constraint firstAttribute="trailing" secondItem="raE-kc-stv" secondAttribute="trailing" constant="1" id="cIZ-l9-CT8"/>
+                <constraint firstItem="raE-kc-stv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="1" id="iMr-cZ-ag6"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="20.289855072463769" y="127.23214285714285"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,41 @@
+platform :ios, '11'
+
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+def legacy_libraries
+  pod 'Locker', :path => '../..//Modules/Libraries/Locker'
+  pod 'Logger', :path => '../..//Modules/Libraries/Logger'
+  pod 'SANLegacyLibrary', :path => '../..//Modules/Libraries/SANLegacyLibrary'
+  pod 'CoreDomain', :path => '../../Modules/Libraries/CoreDomain'
+end
+
+def libraries
+  pod 'CoreFoundationLib', :path => '../..//Modules/Libraries/CoreFoundationLib'
+  pod 'CorePushNotificationsService', :path => '../..//CorePushNotificationsService'
+  pod 'SQLite.swift/SQLCipher', :path => '../..//Modules/Libraries/SQLite.swift'
+  pod 'CorePushNotificationsService', :path => '../..//CorePushNotificationsService'
+  pod 'SQLCipher', '4.4.2'
+  pod 'Localization', :path => '../..//Localization'
+end
+
+def pods
+  pod 'OfferCarousel', :path => '../'
+  pod 'QuickSetup', :path => '../../QuickSetup'
+  pod 'CoreTestData', :path => '../../Modules/Libraries/CoreTestData'
+  pod 'UI', :path => '../..//UI'
+  pod 'Operative', :path => '../..//Operative'
+  pod 'Localization', :path => '../..//Localization'
+
+  legacy_libraries
+  libraries
+end
+
+target 'Example' do
+  pods
+  target 'ExampleTests' do
+    inherit! :search_paths
+    pod 'SnapshotTesting', '~> 1.8.1'
+  end
+end

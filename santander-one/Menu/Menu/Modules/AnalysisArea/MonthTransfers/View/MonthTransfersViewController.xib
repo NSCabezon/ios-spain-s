@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MonthTransfersViewController" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="lisboaSegmentedControl" destination="dzs-sx-jGH" id="BYI-Uz-C9b"/>
+                <outlet property="scrollableView" destination="boG-Vu-eW7" id="vQw-Gj-oHq"/>
+                <outlet property="view" destination="lWN-VS-0js" id="63E-Ox-tfp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="lWN-VS-0js">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAR-Pp-0Uw">
+                    <rect key="frame" x="0.0" y="44" width="414" height="46"/>
+                    <subviews>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dzs-sx-jGH" customClass="LisboaSegmentedControl" customModule="UI">
+                            <rect key="frame" x="16" y="6" width="382" height="41"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="ELw-uJ-h6z"/>
+                            </constraints>
+                            <segments>
+                                <segment title="First"/>
+                                <segment title="Second"/>
+                            </segments>
+                            <connections>
+                                <action selector="didChangedSelectedIndex:" destination="-1" eventType="valueChanged" id="Ld1-hf-WDY"/>
+                            </connections>
+                        </segmentedControl>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="dzs-sx-jGH" firstAttribute="leading" secondItem="eAR-Pp-0Uw" secondAttribute="leading" constant="16" id="1dO-7D-IZl"/>
+                        <constraint firstItem="dzs-sx-jGH" firstAttribute="top" secondItem="eAR-Pp-0Uw" secondAttribute="top" constant="6" id="EOx-3h-6WY"/>
+                        <constraint firstAttribute="trailing" secondItem="dzs-sx-jGH" secondAttribute="trailing" constant="16" id="m1D-Tl-Z3i"/>
+                        <constraint firstAttribute="bottom" secondItem="dzs-sx-jGH" secondAttribute="bottom" id="mga-XO-Mr8"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boG-Vu-eW7">
+                    <rect key="frame" x="0.0" y="105" width="414" height="757"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="boG-Vu-eW7" firstAttribute="top" secondItem="eAR-Pp-0Uw" secondAttribute="bottom" constant="15" id="02b-Er-ZY1"/>
+                <constraint firstItem="eAR-Pp-0Uw" firstAttribute="leading" secondItem="wKq-h9-79e" secondAttribute="leading" id="0fJ-78-Eej"/>
+                <constraint firstItem="wKq-h9-79e" firstAttribute="trailing" secondItem="eAR-Pp-0Uw" secondAttribute="trailing" id="A4h-4x-Mt1"/>
+                <constraint firstItem="eAR-Pp-0Uw" firstAttribute="top" secondItem="wKq-h9-79e" secondAttribute="top" id="E7D-Av-eLm"/>
+                <constraint firstItem="boG-Vu-eW7" firstAttribute="leading" secondItem="wKq-h9-79e" secondAttribute="leading" id="Ikp-Bn-6qg"/>
+                <constraint firstItem="wKq-h9-79e" firstAttribute="bottom" secondItem="boG-Vu-eW7" secondAttribute="bottom" id="JCf-Ug-eIm"/>
+                <constraint firstItem="wKq-h9-79e" firstAttribute="trailing" secondItem="boG-Vu-eW7" secondAttribute="trailing" id="TbZ-nE-sYp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="wKq-h9-79e"/>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </view>
+    </objects>
+</document>

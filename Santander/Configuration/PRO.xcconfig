@@ -1,0 +1,49 @@
+//
+//  PRO.xcconfig
+//  Santander
+//
+//  Created by José Carlos Estela Anguita on 22/2/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+PRODUCT_NAME = Santander
+PRODUCT_BUNDLE_IDENTIFIER = com.isban.bancosantander.es.public
+WIDGET_BUNDLE_IDENTIFIER = com.isban.bancosantander.es.public.widget
+SIRI_BUNDLE_IDENTIFIER = com.isban.bancosantander.es.public.siriintents
+SIRI_UI_BUNDLE_IDENTIFIER = com.isban.bancosantander.es.public.siriintentsui
+PUSH_NOTIFICATION_BUNDLE_IDENTIFIER = com.isban.bancosantander.es.public.pushNotificationService
+APP_NAME = Santander
+EXCLUDED_ARCHS[sdk=iphonesimulator*] = arm64
+EMMA_API_KEY = santanderxqq6LQWwW
+LOAD_PFM_ENABLED = YES
+LOG_ENABLED = NO
+MANAGER_WALL_PRODUCTION_ENVIRONMENT = YES
+SALES_FORCE_ACCESS_TOKEN = PQds9c1BhFk94KZqyktyZmyXt+Zk0VCLNoXcbhkCD+g=
+SALES_FORCE_APP_ID = FukUkeFs1UPCwUYzw+s/mMydpnSn3Yq6BmTWKzz8mxR+CEcUQTVIecWESkREbngz
+SALES_FORCE_MID = erekiP/qtGOhPnPd1/dqTw==
+SALES_FORCE_END_POINT = OkhGaTtWwRfE4280nvK+iPCLjXTeg6TEI6+CgJvF9cAzGgnInWNO+B3PeDLM8tcmzCRydmnHOfWIABK99hDyr2DCHVn5kjQjn8zzfgPd0MA=
+TEALIUM_TARGET = prod
+TWIN_PUSH_API_KEY = mBJYaft9GRTzSYVbe7vgt8Dx/qfvbj0fEsJ0gJ/nGYK9ej0rUP3YZZoLpHdWsRuk
+TWIN_PUSH_APP_ID = Hk0rFVdFKRWqJnZP5k/w0+sGVBorPFXInovZBIrfIxU=
+TWIN_PUSH_SUBDOMAIN = santander
+TRUST_INVALID_CERTIFICATE = NO
+ENVIRONMENTS_AVAILABLE = NO
+KEYCHAIN_SERVICE = Santander
+ENVIRONMENTS_FOLDER = $(SRCROOT)/Santander/Configuration/Legacy
+ENVIRONMENTS_TO_EXCLUDE = $(ENVIRONMENTS_FOLDER)/INTERN/* $(ENVIRONMENTS_FOLDER)/PRE/* $(ENVIRONMENTS_FOLDER)/DEV/*
+TRUSTEER_FILES_TO_EXCLUDE = $(SRCROOT)/Santander/Trusteer/Wrapper/PRE/SdkHandler.mm
+EXCLUDED_SOURCE_FILE_NAMES = $(ENVIRONMENTS_TO_EXCLUDE) $(TRUSTEER_FILES_TO_EXCLUDE) $(SRCROOT)/Santander/Demo/assets/demo/soap/*.xml $(SRCROOT)/Santander/Demo/assets/demo/rest/*.json
+HEADER_SEARCH_PATHS = $(inherited) $(SRCROOT)/Santander/Trusteer/tas/include
+TAS_ROOT = "$(SRCROOT)/Santander/Trusteer/tas"
+APP_GROUPS_IDENTIFIER = group.es.santander.sso
+SHARED_KEYCHAIN_IDENTIFIER = 6YVLU6LV9S.es.santander.sso
+CODE_SIGN_ENTITLEMENTS = $(SRCROOT)/Santander/Entitlement/Release.entitlements
+WIDGET_CODE_SIGN_ENTITLEMENTS = $(SRCROOT)/Widget/WidgetProduction.entitlements
+SIRI_CODE_SIGN_ENTITLEMENTS = $(SRCROOT)/Siri/Config/SiriProduction.entitlements
+SIRI_UI_CODE_SIGN_ENTITLEMENTS = $(SRCROOT)/SiriUI/Config/SiriUIProduction.entitlements
+PUSH_CODE_SIGN_ENTITLEMENTS = $(SRCROOT)/PushNotificationService/NotificationsProduction.entitlements
+DYNATRACE_APP_ID = ef4cd12e-3612-44f4-a472-dd8919eaec6a
+DYNATRACE_BEACON_URL = https:/$()/dynatrace.bancosantander.es:443/mbeacon/a9b631ff-5285-454a-9b3e-4355527a91fd
+DYNATRACE_AUTO_ACTION_TIMEOUT = 5000

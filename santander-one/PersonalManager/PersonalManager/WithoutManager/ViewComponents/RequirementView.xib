@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RequirementView" customModule="PersonalManager" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="CPc-Jp-FVR"/>
+                <outlet property="dotView" destination="znc-a8-4Ef" id="Svv-Ea-87w"/>
+                <outlet property="label" destination="o8I-SP-uYY" id="eYH-Gl-TfX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znc-a8-4Ef">
+                    <rect key="frame" x="25" y="10" width="6" height="6"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="6" id="Cbs-Hs-UQV"/>
+                        <constraint firstAttribute="width" constant="6" id="Yfm-6O-adW"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Tener productos de financiación por importe superior a 3.000€" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8I-SP-uYY">
+                    <rect key="frame" x="42" y="0.0" width="341" height="42"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="znc-a8-4Ef" firstAttribute="top" secondItem="o8I-SP-uYY" secondAttribute="top" constant="10" id="8MH-Cs-Lbk"/>
+                <constraint firstItem="znc-a8-4Ef" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="Ilc-2g-5yj"/>
+                <constraint firstAttribute="bottom" secondItem="o8I-SP-uYY" secondAttribute="bottom" constant="8" id="e1J-u4-psN"/>
+                <constraint firstItem="o8I-SP-uYY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jfK-fS-nSY"/>
+                <constraint firstItem="o8I-SP-uYY" firstAttribute="leading" secondItem="znc-a8-4Ef" secondAttribute="trailing" constant="11" id="r6E-26-xT5"/>
+                <constraint firstAttribute="trailing" secondItem="o8I-SP-uYY" secondAttribute="trailing" constant="31" id="yAY-hg-op5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="112"/>
+        </view>
+    </objects>
+</document>

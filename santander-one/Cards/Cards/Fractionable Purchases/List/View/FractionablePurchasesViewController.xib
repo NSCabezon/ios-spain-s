@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FractionablePurchasesViewController" customModule="Cards" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomSafeAreaView" destination="Dia-ML-SIz" id="IVw-QQ-BwP"/>
+                <outlet property="bottomView" destination="1ko-am-XyX" id="Pgf-DT-YMI"/>
+                <outlet property="bottomViewHeight" destination="Z4c-da-cXe" id="o07-EX-3RB"/>
+                <outlet property="containerView" destination="d7b-Ai-9tn" id="QKO-f7-Rnq"/>
+                <outlet property="headerView" destination="PFo-vg-KU6" id="U1E-yE-RcE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7b-Ai-9tn">
+                    <rect key="frame" x="18" y="99" width="378" height="563"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFo-vg-KU6" customClass="FractionablePurchasesHeaderView" customModule="Cards" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="55"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="vkW-VN-8Bt"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ko-am-XyX" customClass="FractionableCarrouselView" customModule="Cards" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="662" width="414" height="200"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="Z4c-da-cXe"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dia-ML-SIz">
+                    <rect key="frame" x="0.0" y="862" width="414" height="34"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1ko-am-XyX" secondAttribute="bottom" id="01R-kr-gl5"/>
+                <constraint firstItem="d7b-Ai-9tn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="18" id="0Sw-fq-PRR"/>
+                <constraint firstItem="Dia-ML-SIz" firstAttribute="top" secondItem="1ko-am-XyX" secondAttribute="bottom" id="7n5-4y-XPk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="d7b-Ai-9tn" secondAttribute="trailing" constant="18" id="Nwt-hc-fJE"/>
+                <constraint firstItem="PFo-vg-KU6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="OZk-vP-qIQ"/>
+                <constraint firstItem="d7b-Ai-9tn" firstAttribute="top" secondItem="PFo-vg-KU6" secondAttribute="bottom" id="WEz-nc-ON9"/>
+                <constraint firstItem="1ko-am-XyX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WbO-59-jvq"/>
+                <constraint firstAttribute="bottom" secondItem="Dia-ML-SIz" secondAttribute="bottom" id="c7B-yj-Tx8"/>
+                <constraint firstItem="Dia-ML-SIz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dWb-O3-ugM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PFo-vg-KU6" secondAttribute="trailing" id="ec6-fS-hVi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dia-ML-SIz" secondAttribute="trailing" id="hTN-7Z-PpB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1ko-am-XyX" secondAttribute="trailing" id="jhe-fn-pAH"/>
+                <constraint firstItem="PFo-vg-KU6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wWa-IO-VWk"/>
+                <constraint firstItem="1ko-am-XyX" firstAttribute="top" secondItem="d7b-Ai-9tn" secondAttribute="bottom" id="wwv-Lv-8QC"/>
+            </constraints>
+            <point key="canvasLocation" x="-294" y="153"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

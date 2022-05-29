@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeePaymentView" customModule="UI" customModuleProvider="target">
+            <connections>
+                <outlet property="detailView" destination="qdi-qY-hsM" id="ETI-eR-2oD"/>
+                <outlet property="headerView" destination="Xny-vc-avj" id="FjS-eG-Jbc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xny-vc-avj" customClass="FeePaymentHeaderPillView" customModule="UI" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="90" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="3zj-NZ-hca"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdi-qY-hsM" customClass="FeePaymentDetailPillView" customModule="UI" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="50" width="90" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="bmi-oE-5pJ"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bd1-iF-0sg">
+                    <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                    <connections>
+                        <action selector="didSelectFee:" destination="-1" eventType="touchUpInside" id="DAf-Kb-1fJ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qdi-qY-hsM" secondAttribute="bottom" id="5af-eY-ZqR"/>
+                <constraint firstAttribute="trailing" secondItem="qdi-qY-hsM" secondAttribute="trailing" id="7hL-Xd-D7h"/>
+                <constraint firstAttribute="trailing" secondItem="Bd1-iF-0sg" secondAttribute="trailing" id="99g-X7-QFU"/>
+                <constraint firstItem="qdi-qY-hsM" firstAttribute="top" secondItem="Xny-vc-avj" secondAttribute="bottom" id="ENs-BQ-91f"/>
+                <constraint firstAttribute="trailing" secondItem="Xny-vc-avj" secondAttribute="trailing" id="QmD-qR-Mgp"/>
+                <constraint firstItem="Xny-vc-avj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TsW-Zr-uLg"/>
+                <constraint firstItem="Bd1-iF-0sg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="e4j-EV-lTP"/>
+                <constraint firstItem="Bd1-iF-0sg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eg4-pN-kAY"/>
+                <constraint firstItem="qdi-qY-hsM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jDW-RI-iSg"/>
+                <constraint firstAttribute="bottom" secondItem="Bd1-iF-0sg" secondAttribute="bottom" id="rKJ-QN-7aY"/>
+                <constraint firstItem="Xny-vc-avj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tjI-dR-UT5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-12.318840579710146" y="136.14130434782609"/>
+        </view>
+    </objects>
+</document>

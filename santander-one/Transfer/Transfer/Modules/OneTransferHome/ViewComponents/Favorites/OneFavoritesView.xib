@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OneFavoritesView" customModule="Transfer" customModuleProvider="target">
+            <connections>
+                <outlet property="favoritesCollectionView" destination="16V-aT-e1C" id="t3N-pb-zMA"/>
+                <outlet property="seeAllFavoritesButton" destination="QuS-fo-vZh" id="ixC-gm-DeW"/>
+                <outlet property="sendTitleLabel" destination="rwJ-v5-gQI" id="jCB-Lq-xh4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="272"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bJ-rW-Nb3">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="**Enviar a..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwJ-v5-gQI">
+                            <rect key="frame" x="16" y="12" width="282" height="59"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuS-fo-vZh">
+                            <rect key="frame" x="298" y="41" width="100" height="30"/>
+                            <state key="normal" title="**Ver favoritos"/>
+                            <connections>
+                                <action selector="didTapOnSeeFavoritesButton:" destination="-1" eventType="touchUpInside" id="qHl-DY-WeX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="rwJ-v5-gQI" secondAttribute="bottom" id="5u0-5g-iZ1"/>
+                        <constraint firstItem="rwJ-v5-gQI" firstAttribute="leading" secondItem="0bJ-rW-Nb3" secondAttribute="leading" constant="16" id="9bw-WL-GPJ"/>
+                        <constraint firstItem="QuS-fo-vZh" firstAttribute="bottom" secondItem="rwJ-v5-gQI" secondAttribute="bottom" id="Vap-2O-djg"/>
+                        <constraint firstAttribute="trailing" secondItem="QuS-fo-vZh" secondAttribute="trailing" constant="16" id="VwR-2G-Qtc"/>
+                        <constraint firstItem="rwJ-v5-gQI" firstAttribute="top" secondItem="0bJ-rW-Nb3" secondAttribute="top" constant="12" id="o77-9h-bt1"/>
+                        <constraint firstItem="QuS-fo-vZh" firstAttribute="leading" secondItem="rwJ-v5-gQI" secondAttribute="trailing" id="yY6-8Y-Ldv"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="16V-aT-e1C" customClass="OneFavoritesCollectionView" customModule="Transfer" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="71" width="414" height="201"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="201" id="B4p-2z-MWw"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HSd-Gl-YZu">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="0bJ-rW-Nb3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2cM-LD-4Fj"/>
+                <constraint firstItem="16V-aT-e1C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="N5i-GJ-EXG"/>
+                <constraint firstAttribute="trailing" secondItem="16V-aT-e1C" secondAttribute="trailing" id="NSh-Vs-oaU"/>
+                <constraint firstAttribute="bottom" secondItem="16V-aT-e1C" secondAttribute="bottom" id="h7s-jt-SDq"/>
+                <constraint firstItem="0bJ-rW-Nb3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kh3-8f-7Gv"/>
+                <constraint firstItem="0bJ-rW-Nb3" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="pak-ge-7ZB"/>
+                <constraint firstItem="16V-aT-e1C" firstAttribute="top" secondItem="0bJ-rW-Nb3" secondAttribute="bottom" id="xuS-5W-DVS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-145.3125"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

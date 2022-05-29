@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopOfferCarouselView" customModule="GlobalPosition" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="CqQ-Wn-nIV" id="bIO-ep-8c0"/>
+                <outlet property="tableView" destination="dA1-CZ-Jqi" id="w3J-rp-zsB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="CqQ-Wn-nIV">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dA1-CZ-Jqi">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="pJi-gX-s04"/>
+                        <outlet property="delegate" destination="-1" id="OWg-gH-Vl8"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="dA1-CZ-Jqi" secondAttribute="bottom" id="L1U-Mc-jmP"/>
+                <constraint firstItem="dA1-CZ-Jqi" firstAttribute="leading" secondItem="CqQ-Wn-nIV" secondAttribute="leading" id="Xwi-hP-GUS"/>
+                <constraint firstAttribute="trailing" secondItem="dA1-CZ-Jqi" secondAttribute="trailing" id="d3e-jk-7qc"/>
+                <constraint firstItem="dA1-CZ-Jqi" firstAttribute="top" secondItem="CqQ-Wn-nIV" secondAttribute="top" id="nNT-3f-8Is"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="89"/>
+        </view>
+    </objects>
+</document>

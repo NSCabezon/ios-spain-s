@@ -1,0 +1,54 @@
+import CoreFoundationLib
+import CoreDomain
+
+// MARK: CoreFoundationLib
+public typealias Language = CoreFoundationLib.Language
+public typealias LanguageType = CoreFoundationLib.LanguageType
+public typealias RepositoryResponse = CoreFoundationLib.RepositoryResponse
+public typealias PublicFilesEnvironmentDTO = CoreFoundationLib.PublicFilesEnvironmentDTO
+public typealias LanguageRepository = CoreFoundationLib.LanguageRepository
+public typealias Exception = CoreFoundationLib.Exception
+public typealias AppConfigRepositoryProtocol = CoreFoundationLib.AppConfigRepositoryProtocol
+public typealias AppConfigDecodeOptions = CoreFoundationLib.AppConfigDecodeOptions
+public typealias AccountDescriptorRepositoryProtocol = CoreFoundationLib.AccountDescriptorRepositoryProtocol
+public typealias PullOffersRepository = CoreFoundationLib.PullOffersRepositoryProtocol
+public typealias PullOffersInfoDTO = CoreFoundationLib.PullOffersInfoDTO
+public typealias TouchIdData = CoreFoundationLib.TouchIdData
+public typealias LoginIdentityDocumentType = CoreFoundationLib.LoginIdentityDocumentType
+public typealias BSANEnvironment = CoreFoundationLib.EnvironmentEntity
+
+// MARK: Commons
+public typealias LocalizedStylableText = CoreFoundationLib.LocalizedStylableText
+public typealias TimeManager = CoreFoundationLib.TimeManager
+public typealias StringLoader = CoreFoundationLib.StringLoader
+public typealias StringPlaceholder = CoreFoundationLib.StringPlaceholder
+public typealias TimeFormat = CoreFoundationLib.TimeFormat
+public typealias FontEmphasis = CoreFoundationLib.FontEmphasis
+public typealias RootMenuController = CoreFoundationLib.RootMenuController
+public typealias WeakReference = CoreFoundationLib.WeakReference
+public typealias BaseMenuController = CoreFoundationLib.BaseMenuController
+public typealias OtpScaAccountPresenterDelegate = CoreFoundationLib.OtpScaAccountPresenterDelegate
+public typealias UseCaseError = CoreFoundationLib.UseCaseError
+public typealias Cancelable = CoreFoundationLib.Cancelable
+public typealias KeyboardNotifications = CoreFoundationLib.KeyboardNotifications
+public typealias KeyboardTextFieldResponderButtons = CoreFoundationLib.KeyboardTextFieldResponderButtons
+public typealias Subscriptor = CoreFoundationLib.Subscriptor
+public typealias AppEventWillEnterForegroundSuscriptor = CoreFoundationLib.AppEventWillEnterForegroundSuscriptor
+public typealias AppEventDidBecomeActiveSuscriptor = CoreFoundationLib.AppEventDidBecomeActiveSuscriptor
+public typealias AppEventWillResignActiveSuscriptor = CoreFoundationLib.AppEventWillResignActiveSuscriptor
+public typealias LoadSessionError = CoreFoundationLib.LoadSessionError
+public typealias SessionProcessEvent = CoreFoundationLib.SessionManagerProcessEvent
+
+// MARK: CoreDomain
+public typealias CoachmarkIdentifier = CoreDomain.CoachmarkIdentifier
+typealias TrackerDimension = CoreFoundationLib.TrackerDimension
+typealias AutomaticScreenTrackable = CoreFoundationLib.AutomaticScreenTrackable
+typealias AutomaticScreenActionTrackable = CoreFoundationLib.AutomaticScreenActionTrackable
+public typealias WebViewConfiguration = CoreFoundationLib.WebViewConfiguration
+public typealias PdfSource = CoreFoundationLib.PdfSource
+typealias ProductTypeEntity = CoreDomain.ProductTypeEntity
+typealias TripReason = CoreDomain.TripReason
+typealias PGColorMode = CoreDomain.PGColorMode
+typealias PhotoThemeOptionEntity = CoreDomain.PhotoThemeOptionEntity
+typealias GlobalPositionOptionEntity = CoreDomain.GlobalPositionOptionEntity
+typealias UserPrefBoxType = CoreDomain.UserPrefBoxType

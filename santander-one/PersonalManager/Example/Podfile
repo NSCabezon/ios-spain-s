@@ -1,0 +1,37 @@
+platform :ios, '10.3'
+
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+def legacy_libraries
+  pod 'Locker', :path => '../../Modules/Libraries/Locker'
+  pod 'Logger', :path => '../../Modules/Libraries/Logger'
+end
+
+def libraries
+  pod 'CoreTestData', :path => '../../Modules/Libraries/CoreTestData'
+  pod 'CoreFoundationLib', :path => '../../Modules/Libraries/CoreFoundationLib'
+  pod 'RxCombine', :path => '../../Modules/Libraries/RxCombine'
+  pod 'CoreDomain', :path => '../../Modules/Libraries/CoreDomain'
+  pod 'SQLite.swift/SQLCipher', :path => '../../Modules/Libraries/SQLite.swift'
+  pod 'SANLegacyLibrary', :path => '../../Modules/Libraries/SANLegacyLibrary'
+  pod 'SQLCipher', '4.4.2'
+end
+
+def pods
+  pod 'PersonalManager/ExampleApp', :path => '../'
+  pod 'Localization', :path => '../../Localization'
+  pod 'QuickSetup', :path => '../../QuickSetup'
+  pod 'UI', :path => '../../UI'
+  legacy_libraries
+  libraries
+end
+
+target 'PersonalManager_Example' do
+  pods
+  target 'PersonalManager_ExampleTests' do
+    inherit! :search_paths
+    pod 'UnitTestCommons/standard', :path => '../../UnitTestCommons'
+  end
+end

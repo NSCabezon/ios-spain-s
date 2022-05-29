@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuickBalanceErrorView" customModule="Login" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="nZH-ob-p7I" id="Mgu-19-eHX"/>
+                <outlet property="descriptionLabel" destination="z5M-h4-8pN" id="SL3-Zt-bUG"/>
+                <outlet property="titleLabel" destination="5db-jp-juK" id="hop-pr-Ltd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="lpV-6s-FFu">
+                    <rect key="frame" x="64" y="15" width="233" height="4"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5db-jp-juK">
+                            <rect key="frame" x="0.0" y="0.0" width="233" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5M-h4-8pN">
+                            <rect key="frame" x="0.0" y="4" width="233" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZH-ob-p7I" customClass="RedLisboaButton" customModule="UI">
+                    <rect key="frame" x="64" y="42" width="233" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="3X4-f7-RT0"/>
+                    </constraints>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="lpV-6s-FFu" firstAttribute="leading" secondItem="nZH-ob-p7I" secondAttribute="leading" id="7ng-1I-bNO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="nZH-ob-p7I" secondAttribute="bottom" id="Xai-mR-lBp"/>
+                <constraint firstItem="lpV-6s-FFu" firstAttribute="trailing" secondItem="nZH-ob-p7I" secondAttribute="trailing" id="XoE-sK-72a"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nZH-ob-p7I" secondAttribute="trailing" constant="23" id="brB-d5-x8b"/>
+                <constraint firstItem="nZH-ob-p7I" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="64" id="j3s-Uf-f8A"/>
+                <constraint firstItem="lpV-6s-FFu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="qbu-hx-yeU"/>
+                <constraint firstItem="nZH-ob-p7I" firstAttribute="top" secondItem="lpV-6s-FFu" secondAttribute="bottom" constant="23" id="tby-8O-FqE"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="138.75" y="-68.661971830985919"/>
+        </view>
+    </objects>
+</document>

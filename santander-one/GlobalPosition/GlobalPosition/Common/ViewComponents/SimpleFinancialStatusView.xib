@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SimpleFinancialStatusView" customModule="GlobalPosition" customModuleProvider="target">
+            <connections>
+                <outlet property="budgetImageView" destination="CgD-fc-FFH" id="1XU-eN-P6G"/>
+                <outlet property="budgetLabel" destination="Ktf-Ww-MSI" id="9i0-dK-43f"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="CEe-Dw-e7t"/>
+                <outlet property="infoButton" destination="Nt0-qR-4JV" id="E6x-jJ-K0W"/>
+                <outlet property="leftLabel" destination="q3c-SY-f4a" id="Ne4-KL-o61"/>
+                <outlet property="xpenseImageView" destination="mcr-SG-adF" id="OSE-du-0qQ"/>
+                <outlet property="xpenseLabel" destination="mhw-pb-vNq" id="vka-kW-NxR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="mL6-HK-OGR">
+                    <rect key="frame" x="16" y="0.0" width="42" height="35"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3c-SY-f4a">
+                            <rect key="frame" x="0.0" y="14.5" width="42" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nt0-qR-4JV">
+                            <rect key="frame" x="0.0" y="15" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="DKT-hO-go9"/>
+                                <constraint firstAttribute="width" constant="20" id="zCe-dO-4m0"/>
+                            </constraints>
+                            <state key="normal" image="icnInfoWhite">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapOnInfoButtonWithSender:" destination="-1" eventType="touchUpInside" id="Eni-YQ-uRS"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="CH7-Lf-UvI">
+                    <rect key="frame" x="237" y="0.0" width="164" height="35"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icnBudgetChart" translatesAutoresizingMaskIntoConstraints="NO" id="CgD-fc-FFH">
+                            <rect key="frame" x="0.0" y="23" width="12" height="12"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="12" id="rAX-o1-gTv"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presupuesto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktf-Ww-MSI">
+                            <rect key="frame" x="12" y="20.5" width="80" height="14.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="ja1-QT-0bC"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L73-lt-zyk">
+                            <rect key="frame" x="92" y="0.0" width="15" height="35"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="15" id="OOy-1I-fAQ"/>
+                            </constraints>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icnExpensesChart" translatesAutoresizingMaskIntoConstraints="NO" id="mcr-SG-adF">
+                            <rect key="frame" x="107" y="23" width="12" height="12"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="12" id="Fa3-ER-hjJ"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gastos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhw-pb-vNq">
+                            <rect key="frame" x="119" y="20.5" width="45" height="14.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="eXD-F2-JJS"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="0PB-aE-1iD"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="mL6-HK-OGR" secondAttribute="bottom" id="FoC-qF-l3X"/>
+                <constraint firstAttribute="trailing" secondItem="CH7-Lf-UvI" secondAttribute="trailing" constant="13" id="JYC-ES-iPi"/>
+                <constraint firstItem="mL6-HK-OGR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YWw-Ew-bEc"/>
+                <constraint firstItem="mL6-HK-OGR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="c02-tZ-rKw"/>
+                <constraint firstAttribute="bottom" secondItem="CH7-Lf-UvI" secondAttribute="bottom" id="cB1-qY-bAu"/>
+                <constraint firstItem="CH7-Lf-UvI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tn8-hi-8fr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="153.62318840579712" y="28.794642857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icnBudgetChart" width="12" height="12"/>
+        <image name="icnExpensesChart" width="12" height="12"/>
+        <image name="icnInfoWhite" width="16" height="16"/>
+    </resources>
+</document>

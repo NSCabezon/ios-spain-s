@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hybrid Time Line Controller-->
+        <scene sceneID="2CC-Ic-TnB">
+            <objects>
+                <viewController storyboardIdentifier="HybridTimeLineController" id="FSy-nD-KD1" customClass="HybridTimeLineController" customModule="FinantialTimeline" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ack-ji-ZQ5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TBD-Np-qhe">
+                                <rect key="frame" x="164.5" y="405.5" width="85" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="bm6-t2-zyR"/>
+                                    <constraint firstAttribute="width" constant="85" id="x6o-4d-gAb"/>
+                                </constraints>
+                            </imageView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F44-Ly-f5a" customClass="ErrorView" customModule="FinantialTimeline" customModuleProvider="target">
+                                <rect key="frame" x="10" y="104" width="394" height="210"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="3Mv-Bn-sRl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TBD-Np-qhe" firstAttribute="centerY" secondItem="Ack-ji-ZQ5" secondAttribute="centerY" id="Cf5-s1-nOA"/>
+                            <constraint firstItem="F44-Ly-f5a" firstAttribute="top" secondItem="1qu-6l-33O" secondAttribute="top" constant="60" id="DMI-oL-SR1"/>
+                            <constraint firstItem="F44-Ly-f5a" firstAttribute="leading" secondItem="1qu-6l-33O" secondAttribute="leading" constant="10" id="N0x-xa-1cj"/>
+                            <constraint firstItem="1qu-6l-33O" firstAttribute="trailing" secondItem="F44-Ly-f5a" secondAttribute="trailing" constant="10" id="XFF-4o-2en"/>
+                            <constraint firstItem="TBD-Np-qhe" firstAttribute="centerX" secondItem="Ack-ji-ZQ5" secondAttribute="centerX" id="tlj-XJ-8m8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1qu-6l-33O"/>
+                    </view>
+                    <connections>
+                        <outlet property="errorView" destination="F44-Ly-f5a" id="ffj-xo-y9K"/>
+                        <outlet property="loadingView" destination="TBD-Np-qhe" id="TKF-0d-Gjx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4JI-Cx-Bxe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-328.98550724637681" y="47.544642857142854"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderText-Bold.otf">
+            <string>SantanderText-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="78i-2F-15Z" customClass="MonthTransfersDateSectionView" customModule="Menu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="453" height="54"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 FEB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZO-qv-elB">
+                    <rect key="frame" x="20" y="17" width="42" height="20.5"/>
+                    <accessibility key="accessibilityConfiguration" identifier="Date"/>
+                    <fontDescription key="fontDescription" name="SantanderText-Bold" family="Santander Text" pointSize="14"/>
+                    <color key="textColor" red="0.92549019610000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lmo-Zh-CDE">
+                    <rect key="frame" x="0.0" y="0.0" width="453" height="1"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="HPY-ch-Unf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Lmo-Zh-CDE" firstAttribute="top" secondItem="78i-2F-15Z" secondAttribute="top" id="Eww-R7-cdo"/>
+                <constraint firstItem="Lmo-Zh-CDE" firstAttribute="leading" secondItem="78i-2F-15Z" secondAttribute="leading" id="P7z-Yp-M4d"/>
+                <constraint firstItem="RaR-zO-020" firstAttribute="trailing" secondItem="Lmo-Zh-CDE" secondAttribute="trailing" id="YEA-1f-3kX"/>
+                <constraint firstItem="fZO-qv-elB" firstAttribute="leading" secondItem="78i-2F-15Z" secondAttribute="leading" constant="20" id="wTX-bb-bpo"/>
+                <constraint firstItem="fZO-qv-elB" firstAttribute="centerY" secondItem="78i-2F-15Z" secondAttribute="centerY" id="zy8-BK-825"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="RaR-zO-020"/>
+            <connections>
+                <outlet property="fecha" destination="fZO-qv-elB" id="gMN-Qn-ES2"/>
+                <outlet property="separatorView" destination="Lmo-Zh-CDE" id="d1c-J9-qkZ"/>
+            </connections>
+            <point key="canvasLocation" x="160.1449275362319" y="123.21428571428571"/>
+        </view>
+    </objects>
+</document>

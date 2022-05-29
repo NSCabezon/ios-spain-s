@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DialogFilterView" customModule="UI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WOA-nf-8VB">
+                    <rect key="frame" x="24" y="298" width="366" height="300"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5I-2n-vbr">
+                            <rect key="frame" x="322" y="12" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="32" id="cvZ-mp-DAZ"/>
+                                <constraint firstAttribute="height" constant="32" id="gZi-A2-WnJ"/>
+                            </constraints>
+                            <state key="normal" image="icnClose"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1r4-TE-20z">
+                            <rect key="frame" x="183" y="115" width="0.0" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="37" id="Jjb-zb-47I"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTt-jG-wZ6">
+                            <rect key="frame" x="16" y="154" width="334" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fa7-yQ-RcB" customClass="WhiteLisboaButton" customModule="UI" customModuleProvider="target">
+                            <rect key="frame" x="16" y="170" width="334" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="350" id="W4k-4G-1Dp"/>
+                                <constraint firstAttribute="height" constant="40" id="bxf-6B-1uV"/>
+                            </constraints>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZC-Fy-DRg" customClass="RedLisboaButton" customModule="UI" customModuleProvider="target">
+                            <rect key="frame" x="16" y="226" width="334" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="350" id="Emd-d7-bup"/>
+                                <constraint firstAttribute="height" constant="40" id="P97-zK-gbM"/>
+                            </constraints>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="fa7-yQ-RcB" firstAttribute="width" secondItem="XZC-Fy-DRg" secondAttribute="width" id="5fh-I5-pAd"/>
+                        <constraint firstItem="XZC-Fy-DRg" firstAttribute="centerX" secondItem="WOA-nf-8VB" secondAttribute="centerX" id="9kV-NH-jQ2"/>
+                        <constraint firstAttribute="trailing" secondItem="G5I-2n-vbr" secondAttribute="trailing" constant="12" id="D2b-qw-lBd"/>
+                        <constraint firstItem="TTt-jG-wZ6" firstAttribute="top" secondItem="1r4-TE-20z" secondAttribute="bottom" constant="2" id="FcF-AX-hwl"/>
+                        <constraint firstItem="G5I-2n-vbr" firstAttribute="top" secondItem="WOA-nf-8VB" secondAttribute="top" constant="12" id="GgD-z5-FwU"/>
+                        <constraint firstItem="fa7-yQ-RcB" firstAttribute="top" secondItem="TTt-jG-wZ6" secondAttribute="bottom" constant="16" id="OTg-f1-HGU"/>
+                        <constraint firstItem="XZC-Fy-DRg" firstAttribute="leading" secondItem="WOA-nf-8VB" secondAttribute="leading" priority="990" constant="16" id="PlK-u0-TuS"/>
+                        <constraint firstAttribute="bottom" secondItem="XZC-Fy-DRg" secondAttribute="bottom" constant="34" id="Zix-eV-ma6"/>
+                        <constraint firstItem="TTt-jG-wZ6" firstAttribute="leading" secondItem="WOA-nf-8VB" secondAttribute="leading" constant="16" id="eDA-GT-fUY"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="eP3-um-D6C"/>
+                        <constraint firstItem="XZC-Fy-DRg" firstAttribute="top" secondItem="fa7-yQ-RcB" secondAttribute="bottom" constant="16" id="gfM-8n-7cf"/>
+                        <constraint firstItem="fa7-yQ-RcB" firstAttribute="centerX" secondItem="XZC-Fy-DRg" secondAttribute="centerX" id="lmM-di-EJl"/>
+                        <constraint firstItem="1r4-TE-20z" firstAttribute="centerX" secondItem="WOA-nf-8VB" secondAttribute="centerX" id="sSH-cm-0l7"/>
+                        <constraint firstItem="TTt-jG-wZ6" firstAttribute="centerX" secondItem="1r4-TE-20z" secondAttribute="centerX" id="vjE-wY-Ivb"/>
+                        <constraint firstAttribute="height" priority="990" constant="300" id="xAw-wH-6aW"/>
+                        <constraint firstItem="fa7-yQ-RcB" firstAttribute="height" secondItem="XZC-Fy-DRg" secondAttribute="height" id="xso-6q-JZh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="WOA-nf-8VB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" priority="990" constant="24" id="1ba-xU-WNF"/>
+                <constraint firstItem="WOA-nf-8VB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="O5w-SN-aIJ"/>
+                <constraint firstItem="WOA-nf-8VB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="TaX-yy-TEE"/>
+                <constraint firstItem="WOA-nf-8VB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="joS-Ty-3SI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="buttonBottom" destination="XZC-Fy-DRg" id="1dW-h9-4Bt"/>
+                <outlet property="buttonUp" destination="fa7-yQ-RcB" id="NPS-jp-ZwM"/>
+                <outlet property="closeButton" destination="G5I-2n-vbr" id="sTF-BK-we1"/>
+                <outlet property="descriptionLabel" destination="TTt-jG-wZ6" id="pYS-uA-7lG"/>
+                <outlet property="popupFrameView" destination="WOA-nf-8VB" id="BxW-kC-3cl"/>
+                <outlet property="titleLabel" destination="1r4-TE-20z" id="D9p-6D-dqI"/>
+            </connections>
+            <point key="canvasLocation" x="133" y="147"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icnClose" width="24" height="24"/>
+    </resources>
+</document>

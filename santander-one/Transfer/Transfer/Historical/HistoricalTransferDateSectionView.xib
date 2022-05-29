@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderText-Bold.otf">
+            <string>SantanderText-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ycU-oS-Yr0" customClass="HistoricalTransferDateSectionView" customModule="Transfer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="453" height="54"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 FEB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3N-9y-T68">
+                    <rect key="frame" x="24" y="14" width="46" height="32"/>
+                    <accessibility key="accessibilityConfiguration" identifier="Date"/>
+                    <fontDescription key="fontDescription" name="SantanderText-Bold" family="Santander Text" pointSize="14"/>
+                    <color key="textColor" red="0.92549019610000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Hh-qm-tR0">
+                    <rect key="frame" x="0.0" y="0.0" width="453" height="1"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="q4z-jW-Vrp"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="IU4-dW-bKO"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="4Hh-qm-tR0" firstAttribute="top" secondItem="ycU-oS-Yr0" secondAttribute="top" id="11Y-qK-fMb"/>
+                <constraint firstItem="4Hh-qm-tR0" firstAttribute="leading" secondItem="ycU-oS-Yr0" secondAttribute="leading" id="8Cy-5c-ZKk"/>
+                <constraint firstAttribute="bottom" secondItem="S3N-9y-T68" secondAttribute="bottom" constant="8" id="Ry7-h3-uNO"/>
+                <constraint firstItem="IU4-dW-bKO" firstAttribute="trailing" secondItem="4Hh-qm-tR0" secondAttribute="trailing" id="c7a-zz-TPh"/>
+                <constraint firstItem="S3N-9y-T68" firstAttribute="top" secondItem="ycU-oS-Yr0" secondAttribute="top" constant="14" id="lXR-Gd-el6"/>
+                <constraint firstItem="S3N-9y-T68" firstAttribute="leading" secondItem="ycU-oS-Yr0" secondAttribute="leading" constant="24" id="mGP-4Z-JeM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="dateLabel" destination="S3N-9y-T68" id="eKT-8o-ptm"/>
+                <outlet property="separatorView" destination="4Hh-qm-tR0" id="188-A0-JSi"/>
+            </connections>
+            <point key="canvasLocation" x="160.1449275362319" y="123.21428571428571"/>
+        </view>
+    </objects>
+</document>

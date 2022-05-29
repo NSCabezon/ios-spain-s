@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="bam-wd-fIz" customClass="RecentAndScheduledCollectionViewCell" customModule="Transfer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="146"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hwN-GV-KWY">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="146"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="51j-nf-vBO" customClass="OnePastTransferCardView" customModule="UIOneComponents">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="146"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="51j-nf-vBO" secondAttribute="trailing" id="GxV-cW-Bvy"/>
+                    <constraint firstAttribute="bottom" secondItem="51j-nf-vBO" secondAttribute="bottom" id="IXo-KZ-8HS"/>
+                    <constraint firstItem="51j-nf-vBO" firstAttribute="top" secondItem="hwN-GV-KWY" secondAttribute="top" id="Log-Pf-x9V"/>
+                    <constraint firstItem="51j-nf-vBO" firstAttribute="leading" secondItem="hwN-GV-KWY" secondAttribute="leading" id="vbo-2X-o7d"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="onePastTransferCard" destination="51j-nf-vBO" id="hpX-mv-Drh"/>
+            </connections>
+            <point key="canvasLocation" x="274" y="-33"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

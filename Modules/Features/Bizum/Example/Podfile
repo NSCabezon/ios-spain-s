@@ -1,0 +1,53 @@
+platform :ios, '11'
+
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+def legacy_libraries
+  pod 'Locker', :path => '../../../../santander-one/Modules/Libraries/Locker'
+  pod 'Logger', :path => '../../../../santander-one/Modules/Libraries/Logger'
+  pod 'SANLegacyLibrary', :path => '../../../../santander-one/Modules/Libraries/SANLegacyLibrary'
+  pod 'SANLibraryV3', :path => '../../../../Modules/Libraries/SANLibraryV3'
+end
+
+def libraries
+  pod 'CoreFoundationLib', :path => '../../../../santander-one/Modules/Libraries/CoreFoundationLib'
+  pod 'PFM', :path => '../../../../santander-one/Modules/Libraries/PFM'
+  pod 'CorePushNotificationsService', :path => '../../../../santander-one/CorePushNotificationsService'
+  pod 'SQLite.swift/SQLCipher', :path => '../../../../santander-one/Modules/Libraries/SQLite.swift'
+  pod 'SANServicesLibrary', :path => '../../../../santander-one/Modules/Libraries/SANServicesLibrary'
+  pod 'SANSpainLibrary', :path => '../../../../Modules/Libraries/SANSpainLibrary'
+  pod 'CoreDomain', :path => '../../../../santander-one/Modules/Libraries/CoreDomain'
+  pod 'CorePushNotificationsService', :path => '../../../../santander-one/CorePushNotificationsService'
+  pod 'SQLCipher', '4.4.2'
+  pod 'Localization', :path => '../../../../santander-one/Localization'
+  pod 'CoreTestData', :path => '../../../../santander-one/Modules/Libraries/CoreTestData'
+  pod 'QuickSetupES', :path => '../../../../Modules/Libraries/QuickSetupES'
+end
+
+def pods
+  pod 'ESUI', :path => '../../../Libraries/ESUI'
+  pod 'ESCommons', :path => '../../../Libraries/ESCommons'
+  pod 'Bizum', :path => '../'
+  pod 'BiometryValidator', :path => '../../BiometryValidator'
+  pod 'Ecommerce', :path => '../../Ecommerce'
+  pod 'QuickSetup', :path => '../../../../santander-one/QuickSetup'
+  pod 'UI', :path => '../../../../santander-one/UI'
+  pod 'Operative', :path => '../../../../santander-one/Operative'
+  pod 'BiometryValidator', :path => '../../BiometryValidator'
+  pod 'Localization', :path => '../../../../santander-one/Localization'
+  pod 'RxCombine', :path => '../../../../santander-one/Modules/Libraries/RxCombine'
+
+  legacy_libraries
+  libraries
+end
+
+target 'Bizum_Example' do
+  pods
+  target 'Bizum_ExampleTests' do
+    inherit! :search_paths
+    pod 'UnitTestCommons', :path => '../../../../santander-one/UnitTestCommons'
+    pod 'SnapshotTesting', '~> 1.8.1'
+  end
+end

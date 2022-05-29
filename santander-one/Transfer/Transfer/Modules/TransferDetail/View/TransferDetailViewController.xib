@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransferDetailViewController" customModule="Transfer" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonTicketContainer" destination="EJi-gG-GU1" id="5OL-Ny-Wb3"/>
+                <outlet property="expandCollapseButton" destination="zFg-vI-ufj" id="PZa-kz-Nco"/>
+                <outlet property="scrollView" destination="jXT-Da-iaJ" id="Oue-l3-S8G"/>
+                <outlet property="stackView" destination="DTD-uo-RVf" id="kyn-4H-U47"/>
+                <outlet property="ticketImage" destination="aZ4-vi-2n9" id="3pp-mL-eSE"/>
+                <outlet property="toggleButtonCenterConstraint" destination="LPo-2X-jRj" id="Lfl-XR-RqS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="jXT-Da-iaJ">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="172" translatesAutoresizingMaskIntoConstraints="NO" id="5Ug-45-1iy">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DTD-uo-RVf">
+                                    <rect key="frame" x="16" y="8" width="382" height="50"/>
+                                    <subviews>
+                                        <view autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJi-gG-GU1">
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="50"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgTornSummary" translatesAutoresizingMaskIntoConstraints="NO" id="aZ4-vi-2n9">
+                                                    <rect key="frame" x="-3.5" y="0.0" width="389" height="50"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="aZ4-vi-2n9" firstAttribute="centerX" secondItem="EJi-gG-GU1" secondAttribute="centerX" id="F19-fx-XyU"/>
+                                                <constraint firstItem="aZ4-vi-2n9" firstAttribute="width" secondItem="EJi-gG-GU1" secondAttribute="width" multiplier="1018:1000" id="IGO-91-bdN"/>
+                                                <constraint firstAttribute="width" secondItem="EJi-gG-GU1" secondAttribute="height" multiplier="381:50" id="ago-eE-Hvi"/>
+                                                <constraint firstAttribute="bottom" secondItem="aZ4-vi-2n9" secondAttribute="bottom" id="cJQ-2q-Ax8"/>
+                                                <constraint firstItem="aZ4-vi-2n9" firstAttribute="top" secondItem="EJi-gG-GU1" secondAttribute="top" id="gb2-h9-rOt"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="EJi-gG-GU1" firstAttribute="leading" secondItem="DTD-uo-RVf" secondAttribute="leading" id="afG-kI-srQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="EJi-gG-GU1" secondAttribute="trailing" id="wbV-A1-AdY"/>
+                                    </constraints>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFg-vI-ufj">
+                                    <rect key="frame" x="187" y="13" width="40" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40" id="0zB-fh-Gkx"/>
+                                        <constraint firstAttribute="height" constant="40" id="E5F-Qe-FoD"/>
+                                    </constraints>
+                                    <state key="normal" image="icnOvalArrowDown"/>
+                                    <connections>
+                                        <action selector="expandAction:" destination="-1" eventType="touchUpInside" id="YVb-RN-rb0"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="DTD-uo-RVf" secondAttribute="trailing" constant="16" id="ByX-Eb-yVM"/>
+                                <constraint firstAttribute="bottom" secondItem="DTD-uo-RVf" secondAttribute="bottom" id="C8s-Vs-qWZ"/>
+                                <constraint firstItem="DTD-uo-RVf" firstAttribute="leading" secondItem="5Ug-45-1iy" secondAttribute="leading" constant="16" id="LLm-lU-qrR"/>
+                                <constraint firstItem="zFg-vI-ufj" firstAttribute="centerY" secondItem="EJi-gG-GU1" secondAttribute="centerY" id="LPo-2X-jRj"/>
+                                <constraint firstItem="zFg-vI-ufj" firstAttribute="centerX" secondItem="EJi-gG-GU1" secondAttribute="centerX" id="WgH-ik-age"/>
+                                <constraint firstItem="DTD-uo-RVf" firstAttribute="top" secondItem="5Ug-45-1iy" secondAttribute="top" constant="8" id="Wp8-jZ-9ZO"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="5Ug-45-1iy" firstAttribute="leading" secondItem="jXT-Da-iaJ" secondAttribute="leading" id="S3P-D2-ONS"/>
+                        <constraint firstAttribute="height" secondItem="5Ug-45-1iy" secondAttribute="height" priority="750" placeholder="YES" id="Vnv-h9-HNq"/>
+                        <constraint firstItem="5Ug-45-1iy" firstAttribute="top" secondItem="jXT-Da-iaJ" secondAttribute="top" id="a7p-tw-fPK"/>
+                        <constraint firstAttribute="bottom" secondItem="5Ug-45-1iy" secondAttribute="bottom" id="b5s-hj-fzO"/>
+                        <constraint firstAttribute="trailing" secondItem="5Ug-45-1iy" secondAttribute="trailing" id="s2c-Bo-kek"/>
+                        <constraint firstItem="5Ug-45-1iy" firstAttribute="width" secondItem="jXT-Da-iaJ" secondAttribute="width" id="wdv-h5-hHi"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jXT-Da-iaJ" secondAttribute="trailing" id="5a6-et-o7V"/>
+                <constraint firstItem="jXT-Da-iaJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5zN-Ge-PgI"/>
+                <constraint firstItem="jXT-Da-iaJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="cSy-3Y-uUC"/>
+                <constraint firstAttribute="bottom" secondItem="jXT-Da-iaJ" secondAttribute="bottom" id="t7b-jf-8tE"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="129"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icnOvalArrowDown" width="32" height="32"/>
+        <image name="imgTornSummary" width="343" height="45"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

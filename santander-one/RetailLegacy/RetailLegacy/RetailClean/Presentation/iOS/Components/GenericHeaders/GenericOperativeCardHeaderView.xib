@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Light.ttf">
+            <string>Lato-Light</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" ambiguous="YES" id="oKx-iY-ucG" customClass="GenericOperativeCardHeaderView" customModule="RetailLegacy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6l-Dg-N0p" userLabel="cardProposedValue">
+                    <rect key="frame" x="322" y="37" width="39" height="19"/>
+                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5jy-Wo-2pt">
+                    <rect key="frame" x="23" y="17" width="64" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="41" id="fPy-IB-3ly"/>
+                        <constraint firstAttribute="width" constant="64" id="zas-P3-oSD"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bP7-3j-ofx" userLabel="cardProposedLabel">
+                    <rect key="frame" x="327.5" y="14" width="34.5" height="17"/>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9bj-yo-Uzn">
+                    <rect key="frame" x="95" y="17" width="39.5" height="19"/>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNE-0g-IXw" userLabel="cardAliasLabel">
+                    <rect key="frame" x="95" y="36" width="34.5" height="17"/>
+                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X7M-WW-9w2" userLabel="Separator">
+                    <rect key="frame" x="0.0" y="73" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="oTo-8M-5vL"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Njz-BO-E6X"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="9bj-yo-Uzn" firstAttribute="top" secondItem="5jy-Wo-2pt" secondAttribute="top" id="1xY-rL-zi2"/>
+                <constraint firstItem="HNE-0g-IXw" firstAttribute="leading" secondItem="9bj-yo-Uzn" secondAttribute="leading" id="5C3-aJ-zbG"/>
+                <constraint firstItem="bP7-3j-ofx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9bj-yo-Uzn" secondAttribute="trailing" constant="8" id="5K4-nw-vDj"/>
+                <constraint firstItem="9bj-yo-Uzn" firstAttribute="leading" secondItem="5jy-Wo-2pt" secondAttribute="trailing" constant="8" id="935-u7-Vwn"/>
+                <constraint firstItem="Njz-BO-E6X" firstAttribute="trailing" secondItem="s6l-Dg-N0p" secondAttribute="trailing" constant="14" id="Agr-rf-Zuc"/>
+                <constraint firstItem="5jy-Wo-2pt" firstAttribute="leading" secondItem="Njz-BO-E6X" secondAttribute="leading" constant="23" id="DCG-Om-nia"/>
+                <constraint firstItem="Njz-BO-E6X" firstAttribute="trailing" secondItem="X7M-WW-9w2" secondAttribute="trailing" id="NJQ-zw-CBZ"/>
+                <constraint firstItem="X7M-WW-9w2" firstAttribute="leading" secondItem="Njz-BO-E6X" secondAttribute="leading" id="OOS-jX-nwN"/>
+                <constraint firstItem="bP7-3j-ofx" firstAttribute="top" secondItem="Njz-BO-E6X" secondAttribute="top" constant="14" id="RYu-g3-bbO"/>
+                <constraint firstItem="5jy-Wo-2pt" firstAttribute="top" secondItem="Njz-BO-E6X" secondAttribute="top" constant="17" id="SWF-ix-eJz"/>
+                <constraint firstItem="s6l-Dg-N0p" firstAttribute="top" secondItem="bP7-3j-ofx" secondAttribute="bottom" constant="6" id="TpT-s4-GGw"/>
+                <constraint firstItem="HNE-0g-IXw" firstAttribute="top" secondItem="9bj-yo-Uzn" secondAttribute="bottom" id="Tqo-nN-060"/>
+                <constraint firstItem="s6l-Dg-N0p" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HNE-0g-IXw" secondAttribute="trailing" constant="4" id="Vdq-9z-Gyr"/>
+                <constraint firstItem="X7M-WW-9w2" firstAttribute="bottom" secondItem="oKx-iY-ucG" secondAttribute="bottom" id="aS5-fW-nph"/>
+                <constraint firstItem="X7M-WW-9w2" firstAttribute="top" secondItem="5jy-Wo-2pt" secondAttribute="bottom" constant="15" id="aU9-R3-rDM"/>
+                <constraint firstItem="Njz-BO-E6X" firstAttribute="trailing" secondItem="bP7-3j-ofx" secondAttribute="trailing" constant="13" id="rFc-Nm-3M7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="amountLabel" destination="s6l-Dg-N0p" id="Gvv-FV-Gs9"/>
+                <outlet property="cardImageView" destination="5jy-Wo-2pt" id="yh3-r4-QLS"/>
+                <outlet property="rightInfoLabel" destination="bP7-3j-ofx" id="Alv-oi-XIT"/>
+                <outlet property="subtitleLabel" destination="HNE-0g-IXw" id="HOP-LM-r1U"/>
+                <outlet property="titleLabel" destination="9bj-yo-Uzn" id="p5j-lA-7ax"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="70"/>
+        </view>
+    </objects>
+</document>

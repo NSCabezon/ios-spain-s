@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19529"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OneToggleView" customModule="UIOneComponents" customModuleProvider="target">
+            <connections>
+                <outlet property="heightSwitchConstraint" destination="wU5-1g-v5v" id="gYr-oL-MaS"/>
+                <outlet property="switchView" destination="IAD-5n-2Aa" id="9Q0-bn-Xf4"/>
+                <outlet property="widthSwitchConstraint" destination="mgn-88-Pmh" id="hgk-9O-fHW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="168" height="121"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cq0-Ba-nnY">
+                    <rect key="frame" x="0.0" y="0.0" width="168" height="121"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAD-5n-2Aa" customClass="OneToggleSwitch" customModule="UIOneComponents" customModuleProvider="target">
+                            <rect key="frame" x="62.5" y="46.5" width="43" height="28"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" button="YES"/>
+                                <bool key="isElement" value="YES"/>
+                            </accessibility>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="43" id="mgn-88-Pmh"/>
+                                <constraint firstAttribute="height" constant="28" id="wU5-1g-v5v"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="IAD-5n-2Aa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cq0-Ba-nnY" secondAttribute="top" id="2wg-Ih-VZ3"/>
+                        <constraint firstItem="IAD-5n-2Aa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cq0-Ba-nnY" secondAttribute="leading" id="MfJ-ZD-F7Z"/>
+                        <constraint firstItem="IAD-5n-2Aa" firstAttribute="centerY" secondItem="cq0-Ba-nnY" secondAttribute="centerY" id="WcA-ZF-qQV"/>
+                        <constraint firstItem="IAD-5n-2Aa" firstAttribute="centerX" secondItem="cq0-Ba-nnY" secondAttribute="centerX" id="kmg-qJ-Z9j"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="cq0-Ba-nnY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="26I-6A-Ygh"/>
+                <constraint firstAttribute="bottom" secondItem="cq0-Ba-nnY" secondAttribute="bottom" id="9tW-jN-MZv"/>
+                <constraint firstItem="cq0-Ba-nnY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BTL-cr-pgd"/>
+                <constraint firstAttribute="trailing" secondItem="cq0-Ba-nnY" secondAttribute="trailing" id="Nww-xJ-xxl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-614.49275362318849" y="-133.59375"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

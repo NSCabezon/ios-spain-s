@@ -1,0 +1,38 @@
+platform :ios, '10.3'
+
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+def legacy_libraries
+  pod 'Locker', :path => '../../Modules/Libraries/Locker'
+  pod 'Logger', :path => '../../Modules/Libraries/Logger'
+end
+
+def libraries
+  pod 'CoreFoundationLib', :path => '../../Modules/Libraries/CoreFoundationLib'
+  pod 'CoreDomain', :path => '../../Modules/Libraries/CoreDomain'
+  pod 'CoreTestData', :path => '../../Modules/Libraries/CoreTestData'
+  pod 'SQLite.swift/SQLCipher', :path => '../../Modules/Libraries/SQLite.swift'
+  pod 'SQLCipher', '4.4.2'
+  pod 'SANLegacyLibrary', :path => '../../Modules/Libraries/SANLegacyLibrary'
+  pod 'RxCombine', :path => '../../Modules/Libraries/RxCombine'
+end
+
+def inbox_Example_pods
+  pod 'Inbox/ExampleApp', :path => '../'
+  pod 'QuickSetup', :path => '../../QuickSetup'
+  pod 'UI', :path => '../../UI'
+  pod 'Inbox', :path => '../'
+  pod 'Localization', :path => '../../Localization'
+  legacy_libraries
+  libraries
+end
+
+target 'Inbox_Example' do
+  inbox_Example_pods
+  target 'Inbox_ExampleTests' do
+    inherit! :search_paths
+    pod 'UnitTestCommons/standard', :path => '../../UnitTestCommons'
+  end
+end

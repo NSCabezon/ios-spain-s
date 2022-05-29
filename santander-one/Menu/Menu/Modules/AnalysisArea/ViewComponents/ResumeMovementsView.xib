@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResumeMovementsView" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="baseStackView" destination="Tbu-fb-tRz" id="OKu-id-pul"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="fMR-55-Eww"/>
+                <outlet property="detailView" destination="JRZ-RE-jcn" id="gSG-Ke-OCB"/>
+                <outlet property="extraView" destination="gn0-Sb-l54" id="8Ig-fl-ds8"/>
+                <outlet property="stackView" destination="uI6-nv-Z0O" id="1Ll-Cz-4rn"/>
+                <outlet property="verticalSeparator" destination="xM2-80-CqC" id="xwk-UL-FCG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="344" height="92"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tbu-fb-tRz">
+                    <rect key="frame" x="16" y="2" width="312" height="88"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xM2-80-CqC">
+                            <rect key="frame" x="155.5" y="9" width="1" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="Qoo-lx-whn"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="uI6-nv-Z0O">
+                            <rect key="frame" x="0.0" y="0.0" width="312" height="88"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JRZ-RE-jcn" customClass="ResumeDetailView" customModule="Menu" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="155.5" height="88"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gn0-Sb-l54" customClass="ResumeDetailView" customModule="Menu" customModuleProvider="target">
+                                    <rect key="frame" x="156.5" y="0.0" width="155.5" height="88"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="uI6-nv-Z0O" firstAttribute="top" secondItem="Tbu-fb-tRz" secondAttribute="top" id="Gxd-qq-Vjq"/>
+                        <constraint firstItem="uI6-nv-Z0O" firstAttribute="leading" secondItem="Tbu-fb-tRz" secondAttribute="leading" id="Jb1-Lz-MDF"/>
+                        <constraint firstItem="xM2-80-CqC" firstAttribute="centerX" secondItem="Tbu-fb-tRz" secondAttribute="centerX" id="Lz4-0c-4LG"/>
+                        <constraint firstAttribute="bottom" secondItem="uI6-nv-Z0O" secondAttribute="bottom" id="P9A-6j-2Yw"/>
+                        <constraint firstItem="xM2-80-CqC" firstAttribute="height" secondItem="uI6-nv-Z0O" secondAttribute="height" multiplier="0.795455" id="Rxx-cr-bM4"/>
+                        <constraint firstItem="xM2-80-CqC" firstAttribute="centerY" secondItem="Tbu-fb-tRz" secondAttribute="centerY" id="hXn-5d-0nC"/>
+                        <constraint firstAttribute="trailing" secondItem="uI6-nv-Z0O" secondAttribute="trailing" id="sQz-bI-yFM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Tbu-fb-tRz" secondAttribute="trailing" constant="16" id="IHc-UP-eTa"/>
+                <constraint firstItem="Tbu-fb-tRz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="OYP-NR-NK3"/>
+                <constraint firstItem="Tbu-fb-tRz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="2" id="XNb-kl-eVJ"/>
+                <constraint firstAttribute="bottom" secondItem="Tbu-fb-tRz" secondAttribute="bottom" constant="2" id="sYz-Ld-e3G"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="132" y="147"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderText-Bold.otf">
+            <string>SantanderText-Bold</string>
+        </array>
+        <array key="SantanderText-Regular.otf">
+            <string>SantanderText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardsCollapsedHeaderView" customModule="Cards" customModuleProvider="target">
+            <connections>
+                <outlet property="aliasLabel" destination="lP4-w3-36W" id="LjH-mb-m8B"/>
+                <outlet property="amountLabel" destination="guo-vJ-aDY" id="5em-E3-nhq"/>
+                <outlet property="cardIcon" destination="ejU-Ug-S8b" id="a7z-kP-wx9"/>
+                <outlet property="filterButton" destination="k7V-eM-Bl2" id="KBy-5S-E8q"/>
+                <outlet property="filterLabel" destination="8dK-8O-oE4" id="pF1-q4-h0l"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icnCard" translatesAutoresizingMaskIntoConstraints="NO" id="ejU-Ug-S8b">
+                    <rect key="frame" x="16" y="12" width="45" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="eCc-vc-dxW"/>
+                        <constraint firstAttribute="height" constant="27" id="wq5-6v-nKx"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="seb-ak-f3l">
+                    <rect key="frame" x="69" y="4" width="288" height="51"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Débito Zero" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lP4-w3-36W">
+                            <rect key="frame" x="0.0" y="0.0" width="288" height="26"/>
+                            <fontDescription key="fontDescription" name="SantanderText-Bold" family="Santander Text" pointSize="18"/>
+                            <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.500,00€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guo-vJ-aDY">
+                            <rect key="frame" x="0.0" y="26" width="288" height="25"/>
+                            <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="17"/>
+                            <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7V-eM-Bl2">
+                    <rect key="frame" x="365" y="4" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="240-ni-Wlw"/>
+                        <constraint firstAttribute="height" constant="24" id="MNK-qo-oM3"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="icnFilter"/>
+                    <connections>
+                        <action selector="didTapInFilter:" destination="-1" eventType="touchUpInside" id="6pd-Rd-iHo"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filtros" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dK-8O-oE4">
+                    <rect key="frame" x="360" y="30" width="34" height="13.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4BF-bW-Waa">
+                    <rect key="frame" x="0.0" y="58" width="414" height="1"/>
+                    <color key="backgroundColor" red="0.80784313725490198" green="0.87058823529411766" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="cvg-2Q-Nq0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="4BF-bW-Waa" secondAttribute="trailing" id="6cV-hR-jCg"/>
+                <constraint firstItem="seb-ak-f3l" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="8Gv-Ch-HkO"/>
+                <constraint firstAttribute="trailing" secondItem="8dK-8O-oE4" secondAttribute="trailing" constant="20" id="8ff-0H-a3V"/>
+                <constraint firstItem="k7V-eM-Bl2" firstAttribute="leading" secondItem="seb-ak-f3l" secondAttribute="trailing" constant="8" id="FZi-FW-TIP"/>
+                <constraint firstAttribute="bottom" secondItem="4BF-bW-Waa" secondAttribute="bottom" id="GKC-aw-F8U"/>
+                <constraint firstItem="8dK-8O-oE4" firstAttribute="top" secondItem="k7V-eM-Bl2" secondAttribute="bottom" constant="2" id="U4K-2e-1QY"/>
+                <constraint firstItem="k7V-eM-Bl2" firstAttribute="top" secondItem="seb-ak-f3l" secondAttribute="top" id="Ugs-6a-KIP"/>
+                <constraint firstItem="8dK-8O-oE4" firstAttribute="leading" secondItem="seb-ak-f3l" secondAttribute="trailing" constant="3" id="YPI-29-vAl"/>
+                <constraint firstItem="ejU-Ug-S8b" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="edj-fg-0i0"/>
+                <constraint firstItem="seb-ak-f3l" firstAttribute="leading" secondItem="ejU-Ug-S8b" secondAttribute="trailing" constant="8" id="f35-px-foa"/>
+                <constraint firstItem="k7V-eM-Bl2" firstAttribute="centerX" secondItem="8dK-8O-oE4" secondAttribute="centerX" id="pnv-yJ-hhi"/>
+                <constraint firstItem="ejU-Ug-S8b" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="ubs-n0-vql"/>
+                <constraint firstItem="4BF-bW-Waa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wnA-i9-Waz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="131.8840579710145" y="143.63839285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icnCard" width="39" height="24"/>
+        <image name="icnFilter" width="24" height="24"/>
+    </resources>
+</document>

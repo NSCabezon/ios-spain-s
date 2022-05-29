@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SegmentStackView" customModule="DEBUG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Fw6-fI-T7g">
+                    <rect key="frame" x="10" y="30" width="355" height="628"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="baa-6C-Ohr"/>
+                    </constraints>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                        <segment title=""/>
+                    </segments>
+                    <color key="tintColor" red="0.92549019610000005" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Fw6-fI-T7g" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="AEc-eT-77y"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Fw6-fI-T7g" secondAttribute="trailing" constant="10" id="I3Z-xR-Bjh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Fw6-fI-T7g" secondAttribute="bottom" constant="10" id="JzO-FO-Pzb"/>
+                <constraint firstItem="Fw6-fI-T7g" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="pQx-MI-fnl"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bottom" destination="JzO-FO-Pzb" id="kKF-gT-t7T"/>
+                <outlet property="left" destination="pQx-MI-fnl" id="qVh-Na-jLc"/>
+                <outlet property="right" destination="I3Z-xR-Bjh" id="V6f-3u-Yzz"/>
+                <outlet property="segmentedControl" destination="Fw6-fI-T7g" id="58c-g8-VOu"/>
+                <outlet property="top" destination="AEc-eT-77y" id="xGo-kG-nfk"/>
+            </connections>
+        </view>
+    </objects>
+</document>

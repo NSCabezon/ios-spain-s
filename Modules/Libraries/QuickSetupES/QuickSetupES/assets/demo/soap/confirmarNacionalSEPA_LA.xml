@@ -1,0 +1,94 @@
+<datos>
+    <id12345678z>
+        <respuesta0>
+            <soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                >
+                <soap-env:Header/>
+                <soap-env:Body>
+                    <prefixRigel0:confirmarNacionalSEPA_LAResponse
+                        xmlns:prefixRigel0="http://www.isban.es/webservices/BAMOBI/Transfcobrossepa_la/F_bamobi_transfcobrossepa_la/internet/ACBAMOBISEP/v1">
+                        <methodResult>
+                            <info>
+                                <errorDesc>Transferencia nacional realizada correctamente</errorDesc>
+                                <errorCode>0</errorCode>
+                            </info>
+                            <datosBasicos>
+                                <fechaEmisionTransf>2014-03-27</fechaEmisionTransf>
+                                <impTransferencia>
+                                    <IMPORTE>+256789.54</IMPORTE>
+                                    <DIVISA>EUR</DIVISA>
+                                </impTransferencia>
+                                <impComision>
+                                    <IMPORTE>+3.95</IMPORTE>
+                                    <DIVISA>EUR</DIVISA>
+                                </impComision>
+                                <impGastos>
+                                    <IMPORTE>+0.37</IMPORTE>
+                                    <DIVISA>EUR</DIVISA>
+                                </impGastos>
+                                <impLiquido>
+                                    <IMPORTE>+5.62</IMPORTE>
+                                    <DIVISA>EUR</DIVISA>
+                                </impLiquido>
+                                <referencia>ES0321001234561234567890</referencia>
+                                <nombreOrdenante>MARTIN DAPEN JUAN</nombreOrdenante>
+                                <descCuentaAbono>ES 03 21001234561234567890</descCuentaAbono>
+                                <descCuentaCargo>ES 25 00491234161234567890</descCuentaCargo>
+                            </datosBasicos>
+                        </methodResult>
+                    </prefixRigel0:confirmarNacionalSEPA_LAResponse>
+                </soap-env:Body>
+            </soap-env:Envelope>
+        </respuesta0>
+        <respuesta1>
+            <soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                >
+                <soap-env:Header/>
+                <soap-env:Body>
+                    <soap-env:Fault>
+                        <faultcode>soap-env:Server</faultcode>
+                        <faultstring>Exception Code: BAMOBI_00000. Executing Facade: ACBAMOBISEP, Method:
+                            confirmarNacionalSEPA_LA
+                        </faultstring>
+                        <faultactor>http://www.isban.es/soap/banksphere</faultactor>
+                        <detail>
+                            <prefixRigel0:com.isb.bamobi.transfcobrossepa.la.f.exc.EX_BAMOBI_DatosError_LA
+                                xmlns:prefixRigel0="http://www.isban.es/webservices/BAMOBI/Transfcobrossepa_la/F_bamobi_transfcobrossepa_la/santander/internet/functionalFaults/v1">
+                                <error>
+                                    <errorCode>1</errorCode>
+                                    <errorDesc>Ha superado el máximo número de intentos permitido. El usuario está
+                                        revocado.
+                                    </errorDesc>
+                                </error>
+                            </prefixRigel0:com.isb.bamobi.transfcobrossepa.la.f.exc.EX_BAMOBI_DatosError_LA>
+                        </detail>
+                    </soap-env:Fault>
+                </soap-env:Body>
+            </soap-env:Envelope>
+        </respuesta1>
+        <respuesta2>
+            <soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                >
+                <soap-env:Header/>
+                <soap-env:Body>
+                    <soap-env:Fault>
+                        <faultcode>soap-env:Server</faultcode>
+                        <faultstring>Exception Code: BAMOBI_00000. Executing Facade: ACBAMOBISEP, Method:
+                            confirmarNacionalSEPA_LA
+                        </faultstring>
+                        <faultactor>http://www.isban.es/soap/banksphere</faultactor>
+                        <detail>
+                            <prefixRigel0:com.isb.bamobi.transfcobrossepa.la.f.exc.EX_BAMOBI_DatosError_LA
+                                xmlns:prefixRigel0="http://www.isban.es/webservices/BAMOBI/Transfcobrossepa_la/F_bamobi_transfcobrossepa_la/santander/internet/functionalFaults/v1">
+                                <error>
+                                    <errorCode>1</errorCode>
+                                    <errorDesc>El código de otp no es válido</errorDesc>
+                                </error>
+                            </prefixRigel0:com.isb.bamobi.transfcobrossepa.la.f.exc.EX_BAMOBI_DatosError_LA>
+                        </detail>
+                    </soap-env:Fault>
+                </soap-env:Body>
+            </soap-env:Envelope>
+        </respuesta2>
+    </id12345678z>
+</datos>

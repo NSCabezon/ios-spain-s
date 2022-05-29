@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderText-Bold.otf">
+            <string>SantanderText-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TripDetailATMsView" customModule="PersonalArea" customModuleProvider="target">
+            <connections>
+                <outlet property="iconImageView" destination="7CL-9w-tBc" id="4qr-N8-NeD"/>
+                <outlet property="imageContentView" destination="uMe-mp-Sqt" id="ybT-gK-1Lw"/>
+                <outlet property="mapImageView" destination="v5j-XS-mXB" id="DAW-OE-ekG"/>
+                <outlet property="separatorView" destination="lxS-fJ-sVG" id="5LL-fq-OJh"/>
+                <outlet property="titleImageContentView" destination="WCh-NS-1aH" id="6nL-n9-JVo"/>
+                <outlet property="titleImageLabel" destination="RNe-X0-EKp" id="emj-8f-dME"/>
+                <outlet property="titleLabel" destination="gMr-Fd-qoT" id="gQO-2C-GJ1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="UwW-uO-0SL">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="306"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consulta tus cajeros Santander" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMr-Fd-qoT">
+                    <rect key="frame" x="16" y="64" width="343" height="40"/>
+                    <fontDescription key="fontDescription" name="SantanderText-Bold" family="Santander Text" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMe-mp-Sqt">
+                    <rect key="frame" x="16" y="125" width="343" height="143"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v5j-XS-mXB">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="143"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="143" id="Oen-jK-3tb"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCh-NS-1aH">
+                            <rect key="frame" x="0.0" y="83" width="343" height="60"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7CL-9w-tBc">
+                                    <rect key="frame" x="17" y="14" width="32" height="32"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="32" id="3Qe-8X-AmU"/>
+                                        <constraint firstAttribute="height" constant="32" id="BIC-x6-tpm"/>
+                                    </constraints>
+                                </imageView>
+                                <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consulta si existen cajeros Santander" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.14999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="RNe-X0-EKp">
+                                    <rect key="frame" x="51" y="21.5" width="259" height="17"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="7CL-9w-tBc" firstAttribute="leading" secondItem="WCh-NS-1aH" secondAttribute="leading" constant="17" id="8AX-zQ-k5e"/>
+                                <constraint firstAttribute="height" constant="60" id="B47-ke-PT5"/>
+                                <constraint firstItem="RNe-X0-EKp" firstAttribute="centerY" secondItem="7CL-9w-tBc" secondAttribute="centerY" id="MbW-59-A4q"/>
+                                <constraint firstItem="7CL-9w-tBc" firstAttribute="centerY" secondItem="WCh-NS-1aH" secondAttribute="centerY" id="Zrr-MA-FLs"/>
+                                <constraint firstItem="RNe-X0-EKp" firstAttribute="leading" secondItem="7CL-9w-tBc" secondAttribute="trailing" constant="2" id="s4R-Cx-V5H"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="WCh-NS-1aH" firstAttribute="leading" secondItem="uMe-mp-Sqt" secondAttribute="leading" id="8gB-HN-Ser"/>
+                        <constraint firstAttribute="bottom" secondItem="WCh-NS-1aH" secondAttribute="bottom" id="F8S-QZ-J48"/>
+                        <constraint firstItem="v5j-XS-mXB" firstAttribute="leading" secondItem="uMe-mp-Sqt" secondAttribute="leading" id="Q7M-Rj-nJe"/>
+                        <constraint firstAttribute="bottom" secondItem="v5j-XS-mXB" secondAttribute="bottom" id="fYJ-HR-hjD"/>
+                        <constraint firstItem="v5j-XS-mXB" firstAttribute="top" secondItem="uMe-mp-Sqt" secondAttribute="top" id="lIb-Fn-9UW"/>
+                        <constraint firstItem="WCh-NS-1aH" firstAttribute="trailing" secondItem="uMe-mp-Sqt" secondAttribute="trailing" id="rrd-Y9-ZDi"/>
+                        <constraint firstAttribute="trailing" secondItem="v5j-XS-mXB" secondAttribute="trailing" id="zpj-TE-6QT"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxS-fJ-sVG">
+                    <rect key="frame" x="0.0" y="44" width="375" height="1"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="KjO-uH-F8g"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="OQl-ce-n27" firstAttribute="bottom" secondItem="uMe-mp-Sqt" secondAttribute="bottom" constant="38" id="0Tz-kD-lQf"/>
+                <constraint firstItem="OQl-ce-n27" firstAttribute="trailing" secondItem="uMe-mp-Sqt" secondAttribute="trailing" constant="16" id="6ev-iV-D5T"/>
+                <constraint firstItem="OQl-ce-n27" firstAttribute="trailing" secondItem="lxS-fJ-sVG" secondAttribute="trailing" id="8Jn-00-rpG"/>
+                <constraint firstItem="lxS-fJ-sVG" firstAttribute="leading" secondItem="OQl-ce-n27" secondAttribute="leading" id="IbT-p4-rYI"/>
+                <constraint firstItem="gMr-Fd-qoT" firstAttribute="leading" secondItem="OQl-ce-n27" secondAttribute="leading" constant="16" id="KHc-e4-Dx1"/>
+                <constraint firstItem="uMe-mp-Sqt" firstAttribute="top" secondItem="gMr-Fd-qoT" secondAttribute="bottom" constant="21" id="dky-50-qMW"/>
+                <constraint firstItem="lxS-fJ-sVG" firstAttribute="top" secondItem="OQl-ce-n27" secondAttribute="top" id="lqO-Sw-dUg"/>
+                <constraint firstItem="uMe-mp-Sqt" firstAttribute="leading" secondItem="UwW-uO-0SL" secondAttribute="leading" constant="16" id="qtX-Jj-D1a"/>
+                <constraint firstItem="gMr-Fd-qoT" firstAttribute="top" secondItem="lxS-fJ-sVG" secondAttribute="bottom" constant="19" id="uPU-Lx-Nep"/>
+                <constraint firstItem="OQl-ce-n27" firstAttribute="trailing" secondItem="gMr-Fd-qoT" secondAttribute="trailing" constant="16" id="zxN-vZ-tnt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="OQl-ce-n27"/>
+            <point key="canvasLocation" x="-483" y="-693"/>
+        </view>
+    </objects>
+</document>

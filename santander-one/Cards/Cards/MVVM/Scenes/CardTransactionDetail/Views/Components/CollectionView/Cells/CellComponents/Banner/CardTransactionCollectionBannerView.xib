@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardTransactionCollectionBannerView" customModule="Cards" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomBorderLineView" destination="68o-Ea-wRq" id="zX3-2Y-9z9"/>
+                <outlet property="loadingImageView" destination="rkh-pA-Dj2" id="hGk-0u-VJ1"/>
+                <outlet property="offerView" destination="F8p-4J-wjb" id="AVv-SR-Inn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="zKj-nL-NbC">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68o-Ea-wRq" userLabel="BottomBorderLineView">
+                    <rect key="frame" x="0.0" y="-1" width="414" height="14"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="SVz-N5-zid"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpZ-uG-iT2">
+                    <rect key="frame" x="1" y="-1" width="411" height="1"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="IP1-qX-god"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8p-4J-wjb" userLabel="OfferView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" id="bRV-Nc-hfR"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rkh-pA-Dj2" userLabel="Loading Image View">
+                    <rect key="frame" x="191" y="-16" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="MUU-0A-rHU"/>
+                        <constraint firstAttribute="height" constant="32" id="wG5-Ci-2ce"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Z2c-8h-jRz"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="F8p-4J-wjb" secondAttribute="trailing" id="2vH-b4-BTn"/>
+                <constraint firstItem="Z2c-8h-jRz" firstAttribute="bottom" secondItem="F8p-4J-wjb" secondAttribute="bottom" id="3Il-46-BJO"/>
+                <constraint firstItem="F8p-4J-wjb" firstAttribute="top" secondItem="zKj-nL-NbC" secondAttribute="top" id="92R-TV-fpY"/>
+                <constraint firstAttribute="trailing" secondItem="dpZ-uG-iT2" secondAttribute="trailing" constant="2" id="AQc-u8-M45"/>
+                <constraint firstItem="dpZ-uG-iT2" firstAttribute="top" secondItem="zKj-nL-NbC" secondAttribute="top" constant="-1" id="ARh-QX-LHK"/>
+                <constraint firstItem="F8p-4J-wjb" firstAttribute="bottom" secondItem="Z2c-8h-jRz" secondAttribute="bottom" priority="750" constant="31" id="CBq-j8-Hmc"/>
+                <constraint firstItem="68o-Ea-wRq" firstAttribute="top" secondItem="dpZ-uG-iT2" secondAttribute="bottom" constant="-1" id="D5A-RL-aiU"/>
+                <constraint firstItem="rkh-pA-Dj2" firstAttribute="top" secondItem="dpZ-uG-iT2" secondAttribute="bottom" constant="-16" id="JME-9p-xYr"/>
+                <constraint firstItem="rkh-pA-Dj2" firstAttribute="centerX" secondItem="zKj-nL-NbC" secondAttribute="centerX" id="Wh5-le-oyc"/>
+                <constraint firstItem="dpZ-uG-iT2" firstAttribute="leading" secondItem="zKj-nL-NbC" secondAttribute="leading" constant="1" id="lSl-bm-Z3o"/>
+                <constraint firstAttribute="trailing" secondItem="68o-Ea-wRq" secondAttribute="trailing" id="vi3-tf-nbU"/>
+                <constraint firstItem="68o-Ea-wRq" firstAttribute="leading" secondItem="zKj-nL-NbC" secondAttribute="leading" id="yjf-e7-ZVz"/>
+                <constraint firstItem="F8p-4J-wjb" firstAttribute="leading" secondItem="zKj-nL-NbC" secondAttribute="leading" id="zCt-UV-4J9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="102"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

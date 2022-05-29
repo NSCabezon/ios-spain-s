@@ -1,0 +1,45 @@
+platform :ios, '10.3'
+
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+def legacy_libraries
+  pod 'RefreshableSantander', :path => '../../Modules/Libraries/RefreshableSantander'
+  pod 'GlobileSquadsCore/UIComponents', :path => '../../Modules/Libraries/GlobileSquadsCore'
+  pod 'CacheLib', :path => '../../Modules/Libraries/CacheLib'
+  pod 'GlobileUtilsLib', :path => '../../Modules/Libraries/GlobileUtilsLib'
+  pod 'HapticResponseLib', :path => '../../Modules/Libraries/HapticResponseLib'
+  pod 'SantanderUIKitLib', :path => '../../Modules/Libraries/SantanderUIKitLib'
+  pod 'SensorsLib', :path => '../../Modules/Libraries/SensorsLib'
+  pod 'ServiceInvocationLib', :path => '../../Modules/Libraries/ServiceInvocationLib'
+  pod 'WebViewBridgeLib', :path => '../../Modules/Libraries/WebViewBridgeLib'
+  pod 'Locker', :path => '../../Modules/Libraries/Locker'
+  pod 'Logger', :path => '../../Modules/Libraries/Logger'
+end
+
+def libraries
+  pod 'CoreFoundationLib', :path => '../../Modules/Libraries/CoreFoundationLib'
+  pod 'SANLibraryV3', :path => '../../Modules/Libraries/SANLibraryV3'
+  pod 'iOSPullOffers', :path => '../../Modules/Libraries/iOSPullOffers'
+  pod 'PFM', :path => '../../Modules/Libraries/PFM'
+  pod 'SQLite.swift/SQLCipher', :path => '../../Modules/Libraries/SQLite.swift'
+  pod 'SQLCipher', '4.4.2'
+end
+
+def pods
+  pod 'ESCommons', :path => '../../Modules/Libraries/ESCommons'
+  pod 'QuickSetup', :path => '../../QuickSetup'
+  pod 'UI', :path => '../../UI'
+  pod 'Login', :path => '../'
+  legacy_libraries
+  libraries
+end
+
+target 'Login_Example' do
+  pods
+  target 'Login_ExampleTests' do
+    inherit! :search_paths
+    pod 'UnitTestCommons', :path => '../../UnitTestCommons'
+  end
+end

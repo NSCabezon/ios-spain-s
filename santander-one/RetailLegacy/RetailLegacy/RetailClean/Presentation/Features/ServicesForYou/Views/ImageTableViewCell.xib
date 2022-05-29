@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="225" id="KGk-i7-Jjw" customClass="ImageTableViewCell" customModule="DEBUG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="224.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bNm-19-rVL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="224.5"/>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.93725490196078431" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" priority="250" constant="225" id="663-4p-tqw"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" red="0.92549019607843142" green="0.93725490196078431" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="bNm-19-rVL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="BLU-92-ZlB"/>
+                    <constraint firstItem="bNm-19-rVL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ghw-pW-Qh3"/>
+                    <constraint firstAttribute="trailing" secondItem="bNm-19-rVL" secondAttribute="trailing" id="KIW-Zc-wwY"/>
+                    <constraint firstAttribute="bottom" secondItem="bNm-19-rVL" secondAttribute="bottom" id="Lsw-JZ-1FB"/>
+                    <constraint firstItem="bNm-19-rVL" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="TYp-hI-qg0"/>
+                    <constraint firstItem="bNm-19-rVL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="uWg-Ne-Jt8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bottomConstraint" destination="Lsw-JZ-1FB" id="PuK-CX-xDS"/>
+                <outlet property="heightConstraint" destination="663-4p-tqw" id="tcs-Da-SGH"/>
+                <outlet property="imageURLView" destination="bNm-19-rVL" id="hgc-S0-qVj"/>
+                <outlet property="leadingContraint" destination="BLU-92-ZlB" id="I15-TF-nHQ"/>
+                <outlet property="topConstraint" destination="Ghw-pW-Qh3" id="CU7-xb-vTF"/>
+                <outlet property="trailingConstraint" destination="KIW-Zc-wwY" id="PcW-Ka-pQQ"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="118"/>
+        </tableViewCell>
+    </objects>
+</document>

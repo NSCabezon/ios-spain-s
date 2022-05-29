@@ -1,0 +1,995 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		32537D541899F01434694394 /* Pods_Bizum_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70645239E3F6FBDB01D18B9C /* Pods_Bizum_ExampleTests.framework */; };
+		3F45B53D2541BD4F002C90E3 /* BizumTypeUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F45B53C2541BD4F002C90E3 /* BizumTypeUseCaseTests.swift */; };
+		3F45B53F2541BDF9002C90E3 /* BizumOperationUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F45B53E2541BDF9002C90E3 /* BizumOperationUseCaseTests.swift */; };
+		3F45B5432541C835002C90E3 /* BizumHomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F45B5422541C835002C90E3 /* BizumHomePresenterTests.swift */; };
+		42005D4E265BFB0900DBF9FA /* eu.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42005D43265BFAF300DBF9FA /* eu.strings */; };
+		42005D4F265BFB0900DBF9FA /* gl.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42005D44265BFAF500DBF9FA /* gl.strings */; };
+		42005D50265BFB0900DBF9FA /* zu.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42005D45265BFAF700DBF9FA /* zu.strings */; };
+		42005D51265BFB0900DBF9FA /* es.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42005D46265BFAFA00DBF9FA /* es.strings */; };
+		42005D52265BFB0900DBF9FA /* ca.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42005D47265BFAFD00DBF9FA /* ca.strings */; };
+		42005D53265BFB0900DBF9FA /* fr.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42005D48265BFAFF00DBF9FA /* fr.strings */; };
+		42005D54265BFB0900DBF9FA /* it.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42005D49265BFB0100DBF9FA /* it.strings */; };
+		42005D55265BFB0900DBF9FA /* pj.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42005D4A265BFB0300DBF9FA /* pj.strings */; };
+		42005D56265BFB0900DBF9FA /* pl.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42005D4B265BFB0500DBF9FA /* pl.strings */; };
+		42005D57265BFB0900DBF9FA /* pt.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42005D4C265BFB0700DBF9FA /* pt.strings */; };
+		42005D58265BFB0900DBF9FA /* en.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42005D4D265BFB0900DBF9FA /* en.strings */; };
+		4283AF5C267908D600F724D6 /* SoapClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283AF58267908D600F724D6 /* SoapClient.swift */; };
+		4283AF5D267908D600F724D6 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283AF59267908D600F724D6 /* Environment.swift */; };
+		4283AF5E267908D600F724D6 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283AF5A267908D600F724D6 /* RestClient.swift */; };
+		4283AF5F267908D600F724D6 /* DemoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4283AF5B267908D600F724D6 /* DemoClient.swift */; };
+		42B21996268379E5005A8AEC /* ConfirmationViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B21995268379E5005A8AEC /* ConfirmationViewControllerTests.swift */; };
+		45926ECC2578F6620000F1B9 /* BizumValidateMoneyRequestMultiUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45926ECB2578F6620000F1B9 /* BizumValidateMoneyRequestMultiUseCaseTests.swift */; };
+		45926ECE2578F68A0000F1B9 /* BizumValidateMoneyRequestUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45926ECD2578F68A0000F1B9 /* BizumValidateMoneyRequestUseCaseTests.swift */; };
+		45C0B71E2588C3A100971D15 /* BizumMoneyRequestUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C0B71D2588C3A100971D15 /* BizumMoneyRequestUseCaseTests.swift */; };
+		45C0B7452588D0D400971D15 /* BizumMoneyRequestMultiUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C0B7442588D0D400971D15 /* BizumMoneyRequestMultiUseCaseTests.swift */; };
+		45FDF7262562729D0091C4B3 /* BizumDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FDF7252562729D0091C4B3 /* BizumDetailPresenterTests.swift */; };
+		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
+		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
+		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
+		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		72E9846A277E19E600D37C9E /* BizumTestsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E98469277E19E600D37C9E /* BizumTestsRepository.swift */; };
+		85395F3226038C6300286042 /* BizumDocumentUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85395F3126038C6300286042 /* BizumDocumentUseCaseTests.swift */; };
+		85B96BB725825ED6008D08E3 /* BizumSetupRefundMoneyUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B96BB625825ED6008D08E3 /* BizumSetupRefundMoneyUseCaseTests.swift */; };
+		BADCC4622590964600EE5919 /* BizumAcceptRequestMoneySignatureUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADCC4612590964600EE5919 /* BizumAcceptRequestMoneySignatureUseCaseTests.swift */; };
+		DABE0A1D5DDD107E56EE0258 /* Pods_Bizum_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC270960201E557F311EF0AD /* Pods_Bizum_Example.framework */; };
+		DD3259C4256BFC2C00076EDB /* BizumSendMoneyPreSetupUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3259C3256BFC2C00076EDB /* BizumSendMoneyPreSetupUseCaseTests.swift */; };
+		DD45BDA32578F76F00F154D0 /* BizumImage.png in Resources */ = {isa = PBXBuildFile; fileRef = DD45BDA22578F76F00F154D0 /* BizumImage.png */; };
+		DD45BDA92578F7D700F154D0 /* HelperMultimediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD45BDA82578F7D700F154D0 /* HelperMultimediaTests.swift */; };
+		DD50D6DB25765D1400CFB3F0 /* BizumRequestMoneyInviteClientUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50D6DA25765D1400CFB3F0 /* BizumRequestMoneyInviteClientUseCase.swift */; };
+		DD50D6DE25766C4800CFB3F0 /* BizumSimpleAmountUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD50D6DD25766C4700CFB3F0 /* BizumSimpleAmountUseCaseTests.swift */; };
+		DD9437882566972100A498D9 /* ReuseContactBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9437872566972100A498D9 /* ReuseContactBuilderTests.swift */; };
+		DDA4333C258BFC6D00A775A3 /* BizumSendAgainBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA4333B258BFC6C00A775A3 /* BizumSendAgainBuilderTest.swift */; };
+		DDA43342258C163300A775A3 /* BizumSendAgainCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA43341258C163300A775A3 /* BizumSendAgainCoordinatorTest.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33489882254045E6007BBA9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
+			remoteInfo = Bizum_Example;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07C79F02190A2433D1611252 /* Pods-Bizum_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bizum_Example.debug.xcconfig"; path = "Target Support Files/Pods-Bizum_Example/Pods-Bizum_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		3348987D254045E5007BBA9B /* Bizum_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Bizum_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33489881254045E6007BBA9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A5D40C34347C79B00882A18 /* Pods-Bizum_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bizum_Example.release.xcconfig"; path = "Target Support Files/Pods-Bizum_Example/Pods-Bizum_Example.release.xcconfig"; sourceTree = "<group>"; };
+		3F45B53C2541BD4F002C90E3 /* BizumTypeUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizumTypeUseCaseTests.swift; sourceTree = "<group>"; };
+		3F45B53E2541BDF9002C90E3 /* BizumOperationUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizumOperationUseCaseTests.swift; sourceTree = "<group>"; };
+		3F45B5422541C835002C90E3 /* BizumHomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizumHomePresenterTests.swift; sourceTree = "<group>"; };
+		42005D43265BFAF300DBF9FA /* eu.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = eu.strings; sourceTree = "<group>"; };
+		42005D44265BFAF500DBF9FA /* gl.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = gl.strings; sourceTree = "<group>"; };
+		42005D45265BFAF700DBF9FA /* zu.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = zu.strings; sourceTree = "<group>"; };
+		42005D46265BFAFA00DBF9FA /* es.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = es.strings; sourceTree = "<group>"; };
+		42005D47265BFAFD00DBF9FA /* ca.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = ca.strings; sourceTree = "<group>"; };
+		42005D48265BFAFF00DBF9FA /* fr.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = fr.strings; sourceTree = "<group>"; };
+		42005D49265BFB0100DBF9FA /* it.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = it.strings; sourceTree = "<group>"; };
+		42005D4A265BFB0300DBF9FA /* pj.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = pj.strings; sourceTree = "<group>"; };
+		42005D4B265BFB0500DBF9FA /* pl.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = pl.strings; sourceTree = "<group>"; };
+		42005D4C265BFB0700DBF9FA /* pt.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = pt.strings; sourceTree = "<group>"; };
+		42005D4D265BFB0900DBF9FA /* en.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = en.strings; sourceTree = "<group>"; };
+		4283AF58267908D600F724D6 /* SoapClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoapClient.swift; path = Bizum/SoapClient.swift; sourceTree = SOURCE_ROOT; };
+		4283AF59267908D600F724D6 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Environment.swift; path = Bizum/Environment.swift; sourceTree = SOURCE_ROOT; };
+		4283AF5A267908D600F724D6 /* RestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestClient.swift; path = Bizum/RestClient.swift; sourceTree = SOURCE_ROOT; };
+		4283AF5B267908D600F724D6 /* DemoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoClient.swift; path = Bizum/DemoClient.swift; sourceTree = SOURCE_ROOT; };
+		42B21995268379E5005A8AEC /* ConfirmationViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewControllerTests.swift; sourceTree = "<group>"; };
+		45926ECB2578F6620000F1B9 /* BizumValidateMoneyRequestMultiUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizumValidateMoneyRequestMultiUseCaseTests.swift; sourceTree = "<group>"; };
+		45926ECD2578F68A0000F1B9 /* BizumValidateMoneyRequestUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizumValidateMoneyRequestUseCaseTests.swift; sourceTree = "<group>"; };
+		45C0B71D2588C3A100971D15 /* BizumMoneyRequestUseCaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BizumMoneyRequestUseCaseTests.swift; sourceTree = "<group>"; };
+		45C0B7442588D0D400971D15 /* BizumMoneyRequestMultiUseCaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BizumMoneyRequestMultiUseCaseTests.swift; sourceTree = "<group>"; };
+		45FDF7252562729D0091C4B3 /* BizumDetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizumDetailPresenterTests.swift; sourceTree = "<group>"; };
+		4C62CAAF275406D0327EFBF9 /* Pods-Bizum_ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bizum_ExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-Bizum_ExampleTests/Pods-Bizum_ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		607FACD01AFB9204008FA782 /* Bizum_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bizum_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		70645239E3F6FBDB01D18B9C /* Pods_Bizum_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bizum_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72E98469277E19E600D37C9E /* BizumTestsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizumTestsRepository.swift; sourceTree = "<group>"; };
+		85395F3126038C6300286042 /* BizumDocumentUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizumDocumentUseCaseTests.swift; sourceTree = "<group>"; };
+		85B96BB625825ED6008D08E3 /* BizumSetupRefundMoneyUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizumSetupRefundMoneyUseCaseTests.swift; sourceTree = "<group>"; };
+		B2E44836ED8FB73FA37AA9E5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B6509E1638A19DEDE96112F5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B6F9DD940985973E54A3BCB6 /* Bizum.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Bizum.podspec; path = ../Bizum.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BADCC4612590964600EE5919 /* BizumAcceptRequestMoneySignatureUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizumAcceptRequestMoneySignatureUseCaseTests.swift; sourceTree = "<group>"; };
+		BC270960201E557F311EF0AD /* Pods_Bizum_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bizum_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD3259C3256BFC2C00076EDB /* BizumSendMoneyPreSetupUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizumSendMoneyPreSetupUseCaseTests.swift; sourceTree = "<group>"; };
+		DD45BDA22578F76F00F154D0 /* BizumImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BizumImage.png; sourceTree = "<group>"; };
+		DD45BDA82578F7D700F154D0 /* HelperMultimediaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMultimediaTests.swift; sourceTree = "<group>"; };
+		DD50D6DA25765D1400CFB3F0 /* BizumRequestMoneyInviteClientUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizumRequestMoneyInviteClientUseCase.swift; sourceTree = "<group>"; };
+		DD50D6DD25766C4700CFB3F0 /* BizumSimpleAmountUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizumSimpleAmountUseCaseTests.swift; sourceTree = "<group>"; };
+		DD9437872566972100A498D9 /* ReuseContactBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseContactBuilderTests.swift; sourceTree = "<group>"; };
+		DDA4333B258BFC6C00A775A3 /* BizumSendAgainBuilderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizumSendAgainBuilderTest.swift; sourceTree = "<group>"; };
+		DDA43341258C163300A775A3 /* BizumSendAgainCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizumSendAgainCoordinatorTest.swift; sourceTree = "<group>"; };
+		FD45DB1B095CA0B88EE47B94 /* Pods-Bizum_ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bizum_ExampleTests.release.xcconfig"; path = "Target Support Files/Pods-Bizum_ExampleTests/Pods-Bizum_ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3348987A254045E5007BBA9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32537D541899F01434694394 /* Pods_Bizum_ExampleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607FACCD1AFB9204008FA782 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DABE0A1D5DDD107E56EE0258 /* Pods_Bizum_Example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		242D809111C9D2954E9E243B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC270960201E557F311EF0AD /* Pods_Bizum_Example.framework */,
+				70645239E3F6FBDB01D18B9C /* Pods_Bizum_ExampleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3348987E254045E5007BBA9B /* Bizum_ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				42B21994268379B6005A8AEC /* UI */,
+				DD45BDA12578F75800F154D0 /* Resources */,
+				DD3259C7256C08BF00076EDB /* UseCases */,
+				33489881254045E6007BBA9B /* Info.plist */,
+				3F45B5422541C835002C90E3 /* BizumHomePresenterTests.swift */,
+				45FDF7252562729D0091C4B3 /* BizumDetailPresenterTests.swift */,
+				DD9437872566972100A498D9 /* ReuseContactBuilderTests.swift */,
+				DD45BDA82578F7D700F154D0 /* HelperMultimediaTests.swift */,
+				DDA4333B258BFC6C00A775A3 /* BizumSendAgainBuilderTest.swift */,
+				DDA43341258C163300A775A3 /* BizumSendAgainCoordinatorTest.swift */,
+			);
+			path = Bizum_ExampleTests;
+			sourceTree = "<group>";
+		};
+		4283AF60267908DF00F724D6 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				4283AF5B267908D600F724D6 /* DemoClient.swift */,
+				4283AF59267908D600F724D6 /* Environment.swift */,
+				4283AF5A267908D600F724D6 /* RestClient.swift */,
+				4283AF58267908D600F724D6 /* SoapClient.swift */,
+				72E98469277E19E600D37C9E /* BizumTestsRepository.swift */,
+			);
+			name = Commons;
+			sourceTree = "<group>";
+		};
+		42B21994268379B6005A8AEC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				42B21995268379E5005A8AEC /* ConfirmationViewControllerTests.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		607FACC71AFB9204008FA782 = {
+			isa = PBXGroup;
+			children = (
+				DDCA851225137B4F0055F09D /* String */,
+				607FACF51AFB993E008FA782 /* Podspec Metadata */,
+				607FACD21AFB9204008FA782 /* Example for Bizum */,
+				3348987E254045E5007BBA9B /* Bizum_ExampleTests */,
+				607FACD11AFB9204008FA782 /* Products */,
+				BB1C54581BE7B7C07C5A9431 /* Pods */,
+				242D809111C9D2954E9E243B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		607FACD11AFB9204008FA782 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD01AFB9204008FA782 /* Bizum_Example.app */,
+				3348987D254045E5007BBA9B /* Bizum_ExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		607FACD21AFB9204008FA782 /* Example for Bizum */ = {
+			isa = PBXGroup;
+			children = (
+				4283AF60267908DF00F724D6 /* Commons */,
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				607FACD31AFB9204008FA782 /* Supporting Files */,
+			);
+			name = "Example for Bizum";
+			path = Bizum;
+			sourceTree = "<group>";
+		};
+		607FACD31AFB9204008FA782 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD41AFB9204008FA782 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				B6F9DD940985973E54A3BCB6 /* Bizum.podspec */,
+				B2E44836ED8FB73FA37AA9E5 /* README.md */,
+				B6509E1638A19DEDE96112F5 /* LICENSE */,
+			);
+			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		BB1C54581BE7B7C07C5A9431 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07C79F02190A2433D1611252 /* Pods-Bizum_Example.debug.xcconfig */,
+				3A5D40C34347C79B00882A18 /* Pods-Bizum_Example.release.xcconfig */,
+				4C62CAAF275406D0327EFBF9 /* Pods-Bizum_ExampleTests.debug.xcconfig */,
+				FD45DB1B095CA0B88EE47B94 /* Pods-Bizum_ExampleTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DD3259C7256C08BF00076EDB /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				DD3259C3256BFC2C00076EDB /* BizumSendMoneyPreSetupUseCaseTests.swift */,
+				45926ECB2578F6620000F1B9 /* BizumValidateMoneyRequestMultiUseCaseTests.swift */,
+				45926ECD2578F68A0000F1B9 /* BizumValidateMoneyRequestUseCaseTests.swift */,
+				45C0B71D2588C3A100971D15 /* BizumMoneyRequestUseCaseTests.swift */,
+				45C0B7442588D0D400971D15 /* BizumMoneyRequestMultiUseCaseTests.swift */,
+				3F45B53C2541BD4F002C90E3 /* BizumTypeUseCaseTests.swift */,
+				3F45B53E2541BDF9002C90E3 /* BizumOperationUseCaseTests.swift */,
+				85B96BB625825ED6008D08E3 /* BizumSetupRefundMoneyUseCaseTests.swift */,
+				DD50D6DA25765D1400CFB3F0 /* BizumRequestMoneyInviteClientUseCase.swift */,
+				DD50D6DD25766C4700CFB3F0 /* BizumSimpleAmountUseCaseTests.swift */,
+				BADCC4612590964600EE5919 /* BizumAcceptRequestMoneySignatureUseCaseTests.swift */,
+				85395F3126038C6300286042 /* BizumDocumentUseCaseTests.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		DD45BDA12578F75800F154D0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DD45BDA22578F76F00F154D0 /* BizumImage.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DDCA851225137B4F0055F09D /* String */ = {
+			isa = PBXGroup;
+			children = (
+				42005D47265BFAFD00DBF9FA /* ca.strings */,
+				42005D4D265BFB0900DBF9FA /* en.strings */,
+				42005D46265BFAFA00DBF9FA /* es.strings */,
+				42005D43265BFAF300DBF9FA /* eu.strings */,
+				42005D48265BFAFF00DBF9FA /* fr.strings */,
+				42005D44265BFAF500DBF9FA /* gl.strings */,
+				42005D49265BFB0100DBF9FA /* it.strings */,
+				42005D4A265BFB0300DBF9FA /* pj.strings */,
+				42005D4B265BFB0500DBF9FA /* pl.strings */,
+				42005D4C265BFB0700DBF9FA /* pt.strings */,
+				42005D45265BFAF700DBF9FA /* zu.strings */,
+			);
+			name = String;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3348987C254045E5007BBA9B /* Bizum_ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33489884254045E6007BBA9B /* Build configuration list for PBXNativeTarget "Bizum_ExampleTests" */;
+			buildPhases = (
+				80E32CEEA2B8463879992BF7 /* [CP] Check Pods Manifest.lock */,
+				33489879254045E5007BBA9B /* Sources */,
+				3348987A254045E5007BBA9B /* Frameworks */,
+				3348987B254045E5007BBA9B /* Resources */,
+				B961B34371DBEBCE95232ADB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33489883254045E6007BBA9B /* PBXTargetDependency */,
+			);
+			name = Bizum_ExampleTests;
+			productName = Bizum_ExampleTests;
+			productReference = 3348987D254045E5007BBA9B /* Bizum_ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		607FACCF1AFB9204008FA782 /* Bizum_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Bizum_Example" */;
+			buildPhases = (
+				69A4A5D90F2E98048214BA7E /* [CP] Check Pods Manifest.lock */,
+				607FACCC1AFB9204008FA782 /* Sources */,
+				607FACCD1AFB9204008FA782 /* Frameworks */,
+				607FACCE1AFB9204008FA782 /* Resources */,
+				F94CC486B592C3F218D177A0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bizum_Example;
+			productName = Bizum;
+			productReference = 607FACD01AFB9204008FA782 /* Bizum_Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		607FACC81AFB9204008FA782 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = CocoaPods;
+				TargetAttributes = {
+					3348987C254045E5007BBA9B = {
+						CreatedOnToolsVersion = 11.3.1;
+						DevelopmentTeam = JFX6PVNK48;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
+					607FACCF1AFB9204008FA782 = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = JFX6PVNK48;
+						LastSwiftMigration = 0900;
+					};
+				};
+			};
+			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "Bizum" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = 607FACC71AFB9204008FA782;
+			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				607FACCF1AFB9204008FA782 /* Bizum_Example */,
+				3348987C254045E5007BBA9B /* Bizum_ExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3348987B254045E5007BBA9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD45BDA32578F76F00F154D0 /* BizumImage.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607FACCE1AFB9204008FA782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42005D55265BFB0900DBF9FA /* pj.strings in Resources */,
+				42005D4E265BFB0900DBF9FA /* eu.strings in Resources */,
+				42005D56265BFB0900DBF9FA /* pl.strings in Resources */,
+				42005D58265BFB0900DBF9FA /* en.strings in Resources */,
+				42005D4F265BFB0900DBF9FA /* gl.strings in Resources */,
+				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				42005D51265BFB0900DBF9FA /* es.strings in Resources */,
+				42005D57265BFB0900DBF9FA /* pt.strings in Resources */,
+				42005D50265BFB0900DBF9FA /* zu.strings in Resources */,
+				42005D54265BFB0900DBF9FA /* it.strings in Resources */,
+				42005D53265BFB0900DBF9FA /* fr.strings in Resources */,
+				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				42005D52265BFB0900DBF9FA /* ca.strings in Resources */,
+				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		69A4A5D90F2E98048214BA7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bizum_Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80E32CEEA2B8463879992BF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bizum_ExampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B961B34371DBEBCE95232ADB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bizum_ExampleTests/Pods-Bizum_ExampleTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CoreDomain/CoreDomain.framework",
+				"${BUILT_PRODUCTS_DIR}/CoreFoundationLib/CoreFoundationLib.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Fuzi/Fuzi.framework",
+				"${BUILT_PRODUCTS_DIR}/Locker/Locker.framework",
+				"${BUILT_PRODUCTS_DIR}/OpenCombine/OpenCombine.framework",
+				"${BUILT_PRODUCTS_DIR}/OpenCombineDispatch/OpenCombineDispatch.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCombine/RxCombine.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SANLegacyLibrary/SANLegacyLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLCipher/SQLCipher.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapshotTesting/SnapshotTesting.framework",
+				"${BUILT_PRODUCTS_DIR}/UnitTestCommons/UnitTestCommons.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoreDomain.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoreFoundationLib.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fuzi.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenCombine.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenCombineDispatch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCombine.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SANLegacyLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLCipher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapshotTesting.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UnitTestCommons.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bizum_ExampleTests/Pods-Bizum_ExampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F94CC486B592C3F218D177A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bizum_Example/Pods-Bizum_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-Synchronous/Alamofire_Synchronous.framework",
+				"${BUILT_PRODUCTS_DIR}/BiometryValidator/BiometryValidator.framework",
+				"${BUILT_PRODUCTS_DIR}/Bizum/Bizum.framework",
+				"${BUILT_PRODUCTS_DIR}/CoreDomain/CoreDomain.framework",
+				"${BUILT_PRODUCTS_DIR}/CoreFoundationLib/CoreFoundationLib.framework",
+				"${BUILT_PRODUCTS_DIR}/CorePushNotificationsService/CorePushNotificationsService.framework",
+				"${BUILT_PRODUCTS_DIR}/CoreTestData/CoreTestData.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ESCommons/ESCommons.framework",
+				"${BUILT_PRODUCTS_DIR}/ESUI/ESUI.framework",
+				"${BUILT_PRODUCTS_DIR}/Ecommerce/Ecommerce.framework",
+				"${BUILT_PRODUCTS_DIR}/Fuzi/Fuzi.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Localization/Localization.framework",
+				"${BUILT_PRODUCTS_DIR}/Locker/Locker.framework",
+				"${BUILT_PRODUCTS_DIR}/Logger/Logger.framework",
+				"${BUILT_PRODUCTS_DIR}/OpenCombine/OpenCombine.framework",
+				"${BUILT_PRODUCTS_DIR}/OpenCombineDispatch/OpenCombineDispatch.framework",
+				"${BUILT_PRODUCTS_DIR}/Operative/Operative.framework",
+				"${BUILT_PRODUCTS_DIR}/PFM/PFM.framework",
+				"${BUILT_PRODUCTS_DIR}/QuickSetup/QuickSetup.framework",
+				"${BUILT_PRODUCTS_DIR}/QuickSetupES/QuickSetupES.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCombine/RxCombine.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SANLegacyLibrary/SANLegacyLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/SANLibraryV3/SANLibraryV3.framework",
+				"${BUILT_PRODUCTS_DIR}/SANServicesLibrary/SANServicesLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/SANSpainLibrary/SANSpainLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLCipher/SQLCipher.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/UI/UI.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+				"${BUILT_PRODUCTS_DIR}/youtube-ios-player-helper/youtube_ios_player_helper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_Synchronous.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BiometryValidator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bizum.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoreDomain.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoreFoundationLib.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CorePushNotificationsService.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoreTestData.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESCommons.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESUI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Ecommerce.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fuzi.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Logger.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenCombine.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenCombineDispatch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Operative.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PFM.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QuickSetup.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QuickSetupES.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCombine.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SANLegacyLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SANLibraryV3.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SANServicesLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SANSpainLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLCipher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/youtube_ios_player_helper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bizum_Example/Pods-Bizum_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		33489879254045E5007BBA9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD3259C4256BFC2C00076EDB /* BizumSendMoneyPreSetupUseCaseTests.swift in Sources */,
+				45C0B71E2588C3A100971D15 /* BizumMoneyRequestUseCaseTests.swift in Sources */,
+				3F45B53F2541BDF9002C90E3 /* BizumOperationUseCaseTests.swift in Sources */,
+				DDA4333C258BFC6D00A775A3 /* BizumSendAgainBuilderTest.swift in Sources */,
+				3F45B5432541C835002C90E3 /* BizumHomePresenterTests.swift in Sources */,
+				45C0B7452588D0D400971D15 /* BizumMoneyRequestMultiUseCaseTests.swift in Sources */,
+				DD9437882566972100A498D9 /* ReuseContactBuilderTests.swift in Sources */,
+				45926ECE2578F68A0000F1B9 /* BizumValidateMoneyRequestUseCaseTests.swift in Sources */,
+				DD45BDA92578F7D700F154D0 /* HelperMultimediaTests.swift in Sources */,
+				DD50D6DB25765D1400CFB3F0 /* BizumRequestMoneyInviteClientUseCase.swift in Sources */,
+				3F45B53D2541BD4F002C90E3 /* BizumTypeUseCaseTests.swift in Sources */,
+				45926ECC2578F6620000F1B9 /* BizumValidateMoneyRequestMultiUseCaseTests.swift in Sources */,
+				42B21996268379E5005A8AEC /* ConfirmationViewControllerTests.swift in Sources */,
+				BADCC4622590964600EE5919 /* BizumAcceptRequestMoneySignatureUseCaseTests.swift in Sources */,
+				45FDF7262562729D0091C4B3 /* BizumDetailPresenterTests.swift in Sources */,
+				85395F3226038C6300286042 /* BizumDocumentUseCaseTests.swift in Sources */,
+				DDA43342258C163300A775A3 /* BizumSendAgainCoordinatorTest.swift in Sources */,
+				85B96BB725825ED6008D08E3 /* BizumSetupRefundMoneyUseCaseTests.swift in Sources */,
+				DD50D6DE25766C4800CFB3F0 /* BizumSimpleAmountUseCaseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607FACCC1AFB9204008FA782 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				4283AF5F267908D600F724D6 /* DemoClient.swift in Sources */,
+				4283AF5D267908D600F724D6 /* Environment.swift in Sources */,
+				4283AF5C267908D600F724D6 /* SoapClient.swift in Sources */,
+				4283AF5E267908D600F724D6 /* RestClient.swift in Sources */,
+				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				72E9846A277E19E600D37C9E /* BizumTestsRepository.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33489883254045E6007BBA9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 607FACCF1AFB9204008FA782 /* Bizum_Example */;
+			targetProxy = 33489882254045E6007BBA9B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				607FACDA1AFB9204008FA782 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				607FACDF1AFB9204008FA782 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		33489885254045E6007BBA9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C62CAAF275406D0327EFBF9 /* Pods-Bizum_ExampleTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = JFX6PVNK48;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Bizum_ExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "es.ciber.AccountTests.Bizum-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bizum_Example.app/Bizum_Example";
+			};
+			name = Debug;
+		};
+		33489886254045E6007BBA9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD45DB1B095CA0B88EE47B94 /* Pods-Bizum_ExampleTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JFX6PVNK48;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Bizum_ExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "es.ciber.AccountTests.Bizum-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bizum_Example.app/Bizum_Example";
+			};
+			name = Release;
+		};
+		607FACED1AFB9204008FA782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		607FACEE1AFB9204008FA782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		607FACF01AFB9204008FA782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07C79F02190A2433D1611252 /* Pods-Bizum_Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JFX6PVNK48;
+				INFOPLIST_FILE = Bizum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"xml2\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"Alamofire_Synchronous\"",
+					"-framework",
+					"\"Bizum\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CommonUseCase\"",
+					"-framework",
+					"\"Commons\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CryptoSwift\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"Fuzi\"",
+					"-framework",
+					"\"IQKeyboardManagerSwift\"",
+					"-framework",
+					"\"Lottie\"",
+					"-framework",
+					"\"Operative\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"QuickSetup\"",
+					"-framework",
+					"\"SANLibraryV3\"",
+					"-framework",
+					"\"SQLCipher\"",
+					"-framework",
+					"\"SQLite\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"UI\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"youtube_ios_player_helper\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		607FACF11AFB9204008FA782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A5D40C34347C79B00882A18 /* Pods-Bizum_Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JFX6PVNK48;
+				INFOPLIST_FILE = Bizum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"xml2\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"Alamofire_Synchronous\"",
+					"-framework",
+					"\"Bizum\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CommonUseCase\"",
+					"-framework",
+					"\"Commons\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CryptoSwift\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"Fuzi\"",
+					"-framework",
+					"\"IQKeyboardManagerSwift\"",
+					"-framework",
+					"\"Lottie\"",
+					"-framework",
+					"\"Operative\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"QuickSetup\"",
+					"-framework",
+					"\"SANLibraryV3\"",
+					"-framework",
+					"\"SQLCipher\"",
+					"-framework",
+					"\"SQLite\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"UI\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"youtube_ios_player_helper\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		33489884254045E6007BBA9B /* Build configuration list for PBXNativeTarget "Bizum_ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33489885254045E6007BBA9B /* Debug */,
+				33489886254045E6007BBA9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "Bizum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607FACED1AFB9204008FA782 /* Debug */,
+				607FACEE1AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Bizum_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607FACF01AFB9204008FA782 /* Debug */,
+				607FACF11AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
+}

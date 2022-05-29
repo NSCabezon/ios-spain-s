@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderText-Regular.otf">
+            <string>SantanderText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TouchIDLoginView" customModule="UI" customModuleProvider="target">
+            <connections>
+                <outlet property="footerLogin" destination="KZc-qX-zmr" id="GTc-6B-YGB"/>
+                <outlet property="touchIDButton" destination="lwW-Lv-t6Z" id="iwr-Na-quw"/>
+                <outlet property="touchIDLabel" destination="0sx-Bl-j46" id="S5p-8Z-9bU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="HpX-Yy-FJy">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icnFingerprintLogin" translatesAutoresizingMaskIntoConstraints="NO" id="vJh-Qq-nkP">
+                    <rect key="frame" x="120" y="74" width="80" height="80"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="PEs-Wn-oHD"/>
+                        <constraint firstAttribute="height" constant="80" id="WC5-XB-1Yr"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwW-Lv-t6Z">
+                    <rect key="frame" x="120" y="74" width="80" height="80"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapOnAccessWithTouchID:" destination="-1" eventType="touchUpInside" id="uzZ-0P-b2J"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accede con tu huella en el sensor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sx-Bl-j46">
+                    <rect key="frame" x="49.5" y="170" width="221.5" height="23.5"/>
+                    <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZc-qX-zmr" customClass="LoginFooterView" customModule="UI" customModuleProvider="target">
+                    <rect key="frame" x="24" y="402" width="272" height="48"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Cqe-5e-AYY"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="KZc-qX-zmr" firstAttribute="leading" secondItem="HpX-Yy-FJy" secondAttribute="leading" constant="24" id="0gP-03-JW6"/>
+                <constraint firstItem="lwW-Lv-t6Z" firstAttribute="top" secondItem="vJh-Qq-nkP" secondAttribute="top" id="I65-Ck-Aou"/>
+                <constraint firstItem="Cqe-5e-AYY" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="KZc-qX-zmr" secondAttribute="bottom" constant="35" id="SsU-X6-9Mp"/>
+                <constraint firstItem="Cqe-5e-AYY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KZc-qX-zmr" secondAttribute="bottom" constant="15" id="bRF-8M-arW"/>
+                <constraint firstItem="KZc-qX-zmr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0sx-Bl-j46" secondAttribute="bottom" constant="16" id="blo-hZ-91o"/>
+                <constraint firstItem="lwW-Lv-t6Z" firstAttribute="leading" secondItem="vJh-Qq-nkP" secondAttribute="leading" id="c0i-gp-dFH"/>
+                <constraint firstItem="Cqe-5e-AYY" firstAttribute="bottom" secondItem="KZc-qX-zmr" secondAttribute="bottom" priority="250" constant="30" id="c3p-6v-Cgb"/>
+                <constraint firstItem="0sx-Bl-j46" firstAttribute="centerX" secondItem="HpX-Yy-FJy" secondAttribute="centerX" id="cb6-yf-aad"/>
+                <constraint firstItem="lwW-Lv-t6Z" firstAttribute="bottom" secondItem="vJh-Qq-nkP" secondAttribute="bottom" id="e4j-3K-Khh"/>
+                <constraint firstItem="KZc-qX-zmr" firstAttribute="height" secondItem="HpX-Yy-FJy" secondAttribute="height" multiplier="0.1" id="gZV-TH-Kw2"/>
+                <constraint firstItem="lwW-Lv-t6Z" firstAttribute="trailing" secondItem="vJh-Qq-nkP" secondAttribute="trailing" id="kgh-T6-WBD"/>
+                <constraint firstItem="vJh-Qq-nkP" firstAttribute="top" secondItem="Cqe-5e-AYY" secondAttribute="top" constant="74" id="rOd-Nt-b3A"/>
+                <constraint firstItem="Cqe-5e-AYY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0sx-Bl-j46" secondAttribute="trailing" constant="16" id="su0-zC-cPp"/>
+                <constraint firstItem="0sx-Bl-j46" firstAttribute="top" secondItem="vJh-Qq-nkP" secondAttribute="bottom" constant="16" id="vvX-hv-lIL"/>
+                <constraint firstItem="vJh-Qq-nkP" firstAttribute="centerX" secondItem="HpX-Yy-FJy" secondAttribute="centerX" id="xxQ-4a-qdB"/>
+                <constraint firstAttribute="trailing" secondItem="KZc-qX-zmr" secondAttribute="trailing" constant="24" id="yLH-yr-dU6"/>
+                <constraint firstItem="0sx-Bl-j46" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Cqe-5e-AYY" secondAttribute="leading" constant="16" id="zLA-IF-hPe"/>
+            </constraints>
+            <point key="canvasLocation" x="172.5" y="212.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icnFingerprintLogin" width="80" height="80"/>
+    </resources>
+</document>

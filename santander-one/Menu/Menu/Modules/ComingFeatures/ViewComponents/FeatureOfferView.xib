@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeatureOfferView" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="wBv-iC-MwA" id="xqB-ly-GGp"/>
+                <outlet property="offerImageView" destination="T7t-1c-XTA" id="GhS-u2-h1f"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wBv-iC-MwA">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yXx-9L-VL7">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="T7t-1c-XTA">
+                                    <rect key="frame" x="16" y="0.0" width="382" height="136"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="136" id="3gO-Zx-scO"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="T7t-1c-XTA" firstAttribute="leading" secondItem="yXx-9L-VL7" secondAttribute="leading" constant="16" id="DPu-r2-efe"/>
+                                <constraint firstAttribute="trailing" secondItem="T7t-1c-XTA" secondAttribute="trailing" constant="16" id="Gn8-4X-bum"/>
+                                <constraint firstAttribute="height" id="Kmm-qq-pwf"/>
+                                <constraint firstAttribute="bottom" secondItem="T7t-1c-XTA" secondAttribute="bottom" id="dfi-BH-DvY"/>
+                                <constraint firstItem="T7t-1c-XTA" firstAttribute="top" secondItem="yXx-9L-VL7" secondAttribute="top" id="dhU-IX-zik"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="Kmm-qq-pwf"/>
+                                </mask>
+                            </variation>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7P-Md-ULw">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
+                            <connections>
+                                <action selector="offerButtonPressed:" destination="-1" eventType="touchUpInside" id="g19-hx-NUq"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="q7P-Md-ULw" firstAttribute="height" secondItem="wBv-iC-MwA" secondAttribute="height" id="2DR-eV-AXF"/>
+                        <constraint firstItem="yXx-9L-VL7" firstAttribute="leading" secondItem="wBv-iC-MwA" secondAttribute="leading" id="5Aq-eg-DJA"/>
+                        <constraint firstAttribute="bottom" secondItem="yXx-9L-VL7" secondAttribute="bottom" id="BIs-0i-rSR"/>
+                        <constraint firstAttribute="trailing" secondItem="yXx-9L-VL7" secondAttribute="trailing" id="I2j-Ua-9uI"/>
+                        <constraint firstItem="yXx-9L-VL7" firstAttribute="top" secondItem="wBv-iC-MwA" secondAttribute="top" id="ZzC-hb-zUT"/>
+                        <constraint firstItem="q7P-Md-ULw" firstAttribute="centerX" secondItem="wBv-iC-MwA" secondAttribute="centerX" id="if9-Oh-8cX"/>
+                        <constraint firstItem="q7P-Md-ULw" firstAttribute="width" secondItem="wBv-iC-MwA" secondAttribute="width" id="jZa-OI-oyM"/>
+                        <constraint firstItem="q7P-Md-ULw" firstAttribute="centerY" secondItem="wBv-iC-MwA" secondAttribute="centerY" id="kNH-yq-bSX"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="wBv-iC-MwA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Aoz-2u-MLm"/>
+                <constraint firstAttribute="trailing" secondItem="wBv-iC-MwA" secondAttribute="trailing" id="U37-B4-8Ox"/>
+                <constraint firstItem="wBv-iC-MwA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZiP-cX-x9N"/>
+                <constraint firstAttribute="bottom" secondItem="wBv-iC-MwA" secondAttribute="bottom" id="ttE-dp-lYr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="105.79710144927537" y="-101.78571428571428"/>
+        </view>
+    </objects>
+</document>

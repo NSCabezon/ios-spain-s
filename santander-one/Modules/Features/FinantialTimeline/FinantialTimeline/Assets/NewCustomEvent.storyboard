@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Custom Event View Controller-->
+        <scene sceneID="Agv-gx-8rF">
+            <objects>
+                <viewController storyboardIdentifier="NewCustomEventViewController" id="tTf-DY-9io" customClass="NewCustomEventViewController" customModule="FinantialTimeline" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H2d-Br-44h">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4o-yI-geQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRd-Bi-OZA">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eRl-tM-X8f" customClass="GlobileTextfield" customModule="SantanderUIKitLib">
+                                                <rect key="frame" x="16" y="30" width="568" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="FJO-pU-nNh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qd3-Un-2MM" customClass="GlobileTextfield" customModule="SantanderUIKitLib">
+                                                <rect key="frame" x="16" y="124" width="568" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="vww-H6-1uz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zDC-k9-Ruo" customClass="GlobileTextfield" customModule="SantanderUIKitLib">
+                                                <rect key="frame" x="16" y="290" width="568" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="Hhm-nC-tDu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="sincePickDate:" destination="tTf-DY-9io" eventType="editingDidBegin" id="pWQ-fJ-9Hg"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yqz-te-7L8" customClass="GlobileTextfield" customModule="SantanderUIKitLib">
+                                                <rect key="frame" x="16" y="362" width="568" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="FBZ-oJ-Zeh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="untilPickDate:" destination="tTf-DY-9io" eventType="editingDidBegin" id="tqA-7O-qR0"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.93725490196078431" green="0.96470588235294119" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="zDC-k9-Ruo" firstAttribute="leading" secondItem="aRd-Bi-OZA" secondAttribute="leading" constant="16" id="3Av-tx-bU8"/>
+                                            <constraint firstItem="eRl-tM-X8f" firstAttribute="leading" secondItem="aRd-Bi-OZA" secondAttribute="leading" constant="16" id="8T4-Kp-ezA"/>
+                                            <constraint firstItem="zDC-k9-Ruo" firstAttribute="top" secondItem="Qd3-Un-2MM" secondAttribute="bottom" constant="118" id="9RQ-po-goL"/>
+                                            <constraint firstItem="eRl-tM-X8f" firstAttribute="top" secondItem="aRd-Bi-OZA" secondAttribute="top" constant="30" id="J89-3R-fdp"/>
+                                            <constraint firstAttribute="trailing" secondItem="zDC-k9-Ruo" secondAttribute="trailing" constant="16" id="LYv-ht-irY"/>
+                                            <constraint firstAttribute="trailing" secondItem="Qd3-Un-2MM" secondAttribute="trailing" constant="16" id="Nho-fP-acR"/>
+                                            <constraint firstItem="Yqz-te-7L8" firstAttribute="leading" secondItem="aRd-Bi-OZA" secondAttribute="leading" constant="16" id="Q8j-OW-6cx"/>
+                                            <constraint firstItem="Yqz-te-7L8" firstAttribute="top" secondItem="zDC-k9-Ruo" secondAttribute="bottom" constant="24" id="VhU-fV-vdg"/>
+                                            <constraint firstItem="Qd3-Un-2MM" firstAttribute="leading" secondItem="aRd-Bi-OZA" secondAttribute="leading" constant="16" id="iwH-V1-kO3"/>
+                                            <constraint firstAttribute="trailing" secondItem="Yqz-te-7L8" secondAttribute="trailing" constant="16" id="ltO-8R-NS2"/>
+                                            <constraint firstAttribute="trailing" secondItem="eRl-tM-X8f" secondAttribute="trailing" constant="16" id="pWX-kS-EXQ"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Yqz-te-7L8" secondAttribute="bottom" constant="150" id="w6T-Tl-B6h"/>
+                                            <constraint firstItem="Qd3-Un-2MM" firstAttribute="top" secondItem="eRl-tM-X8f" secondAttribute="bottom" constant="46" id="y5f-zc-JZX"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="aRd-Bi-OZA" secondAttribute="bottom" id="ATh-Zg-1MP"/>
+                                    <constraint firstItem="aRd-Bi-OZA" firstAttribute="width" secondItem="w4o-yI-geQ" secondAttribute="width" id="S4O-3c-qf9"/>
+                                    <constraint firstItem="aRd-Bi-OZA" firstAttribute="top" secondItem="w4o-yI-geQ" secondAttribute="top" id="TOY-5M-kJX"/>
+                                    <constraint firstItem="aRd-Bi-OZA" firstAttribute="leading" secondItem="w4o-yI-geQ" secondAttribute="leading" id="cZJ-Mi-okW"/>
+                                    <constraint firstItem="aRd-Bi-OZA" firstAttribute="height" secondItem="w4o-yI-geQ" secondAttribute="height" priority="250" id="nfT-MT-SyK"/>
+                                    <constraint firstAttribute="trailing" secondItem="aRd-Bi-OZA" secondAttribute="trailing" id="qgR-ET-s5V"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dvz-Dz-ipc">
+                                <rect key="frame" x="0.0" y="490" width="600" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13P-64-hrL" customClass="GlobileEndingButton" customModule="SantanderUIKitLib">
+                                        <rect key="frame" x="23" y="16" width="554" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Wkw-Pu-XOl"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isPrimary" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="createCustomEvent:" destination="tTf-DY-9io" eventType="touchUpInside" id="J20-ZU-FeO"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bB1-a9-ltS" customClass="GlobileLabel" customModule="SantanderUIKitLib">
+                                        <rect key="frame" x="23" y="67" width="554" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.96470588235294119" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="13P-64-hrL" firstAttribute="top" secondItem="Dvz-Dz-ipc" secondAttribute="top" constant="16" id="Hkw-Bf-O4f"/>
+                                    <constraint firstAttribute="trailing" secondItem="13P-64-hrL" secondAttribute="trailing" constant="23" id="OHu-ke-V4s"/>
+                                    <constraint firstItem="bB1-a9-ltS" firstAttribute="top" secondItem="13P-64-hrL" secondAttribute="bottom" constant="7" id="W7n-3O-pXI"/>
+                                    <constraint firstAttribute="trailing" secondItem="bB1-a9-ltS" secondAttribute="trailing" constant="23" id="WEW-Xx-huv"/>
+                                    <constraint firstItem="bB1-a9-ltS" firstAttribute="leading" secondItem="Dvz-Dz-ipc" secondAttribute="leading" constant="23" id="WkF-sX-o7Q"/>
+                                    <constraint firstItem="13P-64-hrL" firstAttribute="leading" secondItem="Dvz-Dz-ipc" secondAttribute="leading" constant="23" id="bTk-Xf-aea"/>
+                                    <constraint firstAttribute="height" constant="110" id="lTl-xe-hyC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.96470588235294119" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="w4o-yI-geQ" firstAttribute="top" secondItem="GPx-9i-zCq" secondAttribute="top" id="9nO-XP-Asz"/>
+                            <constraint firstItem="GPx-9i-zCq" firstAttribute="bottom" secondItem="w4o-yI-geQ" secondAttribute="bottom" id="A6f-XX-WZv"/>
+                            <constraint firstItem="GPx-9i-zCq" firstAttribute="trailing" secondItem="w4o-yI-geQ" secondAttribute="trailing" id="Ndv-vb-rA0"/>
+                            <constraint firstItem="Dvz-Dz-ipc" firstAttribute="leading" secondItem="GPx-9i-zCq" secondAttribute="leading" id="QS5-FH-Nes"/>
+                            <constraint firstAttribute="bottom" secondItem="Dvz-Dz-ipc" secondAttribute="bottom" id="S9Q-0N-ctX"/>
+                            <constraint firstItem="GPx-9i-zCq" firstAttribute="trailing" secondItem="Dvz-Dz-ipc" secondAttribute="trailing" id="XFb-tT-7lM"/>
+                            <constraint firstItem="w4o-yI-geQ" firstAttribute="leading" secondItem="GPx-9i-zCq" secondAttribute="leading" id="aLg-c6-7bS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GPx-9i-zCq"/>
+                    </view>
+                    <connections>
+                        <outlet property="confirmButton" destination="13P-64-hrL" id="AcI-nj-oAX"/>
+                        <outlet property="confirmLabel" destination="bB1-a9-ltS" id="Sxy-VF-XHN"/>
+                        <outlet property="confirmView" destination="Dvz-Dz-ipc" id="gsf-Fq-RAS"/>
+                        <outlet property="confirmViewBottomConstraint" destination="S9Q-0N-ctX" id="Vqw-RK-Frk"/>
+                        <outlet property="eventDescriptionTextfield" destination="Qd3-Un-2MM" id="RSB-0f-nmT"/>
+                        <outlet property="eventTitleTextfield" destination="eRl-tM-X8f" id="tyh-op-naH"/>
+                        <outlet property="scrollContentView" destination="aRd-Bi-OZA" id="qkc-fq-RXa"/>
+                        <outlet property="sinceTextfield" destination="zDC-k9-Ruo" id="GlS-eU-2sK"/>
+                        <outlet property="untilTextfield" destination="Yqz-te-7L8" id="Vi9-ZK-6z2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9l-1c-Je2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20.289855072463769" y="-52.232142857142854"/>
+        </scene>
+    </scenes>
+</document>

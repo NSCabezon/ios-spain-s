@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EcommerceNumberPadLoginView" customModule="Ecommerce" customModuleProvider="target">
+            <connections>
+                <outlet property="numberPad" destination="UJY-tr-Jsg" id="IYm-mJ-eNu"/>
+                <outlet property="passwordView" destination="tVh-ef-qKU" id="tpG-QX-Y0k"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OGc-Zg-IhH">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="331"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPx-vh-Yy9" userLabel="Password">
+                    <rect key="frame" x="91" y="0.0" width="160" height="16"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tVh-ef-qKU" customClass="EcommercePasswordView" customModule="Ecommerce" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="16"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="9qx-C4-c7O"/>
+                        <constraint firstItem="tVh-ef-qKU" firstAttribute="centerX" secondItem="WPx-vh-Yy9" secondAttribute="centerX" id="LYQ-Jk-GKj"/>
+                        <constraint firstAttribute="height" constant="16" id="ble-n5-rcl"/>
+                        <constraint firstItem="tVh-ef-qKU" firstAttribute="top" secondItem="WPx-vh-Yy9" secondAttribute="top" id="eAE-JV-thV"/>
+                        <constraint firstItem="tVh-ef-qKU" firstAttribute="leading" secondItem="WPx-vh-Yy9" secondAttribute="leading" placeholder="YES" id="eG4-6W-ZOw"/>
+                        <constraint firstAttribute="bottom" secondItem="tVh-ef-qKU" secondAttribute="bottom" id="gBc-Zb-lwm"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJY-tr-Jsg" userLabel="NumberPad" customClass="NumberPadView" customModule="UI">
+                    <rect key="frame" x="51.5" y="39" width="239" height="224"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="999" constant="224" id="RVF-XH-qCM"/>
+                        <constraint firstAttribute="width" priority="999" constant="194" id="z0a-99-rYo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="2cd-oY-J1N"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="WPx-vh-Yy9" firstAttribute="centerX" secondItem="OGc-Zg-IhH" secondAttribute="centerX" id="8ZR-Mp-9gb"/>
+                <constraint firstItem="UJY-tr-Jsg" firstAttribute="centerX" secondItem="OGc-Zg-IhH" secondAttribute="centerX" id="IqD-Zx-OFZ"/>
+                <constraint firstItem="WPx-vh-Yy9" firstAttribute="top" secondItem="OGc-Zg-IhH" secondAttribute="top" id="LHT-B5-sNL"/>
+                <constraint firstItem="UJY-tr-Jsg" firstAttribute="width" secondItem="OGc-Zg-IhH" secondAttribute="width" multiplier="0.7" id="hHo-Y9-P3l"/>
+                <constraint firstItem="UJY-tr-Jsg" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WPx-vh-Yy9" secondAttribute="bottom" constant="10" id="rBP-Pj-dlw"/>
+                <constraint firstItem="UJY-tr-Jsg" firstAttribute="top" secondItem="WPx-vh-Yy9" secondAttribute="bottom" priority="750" constant="23" id="ult-81-szj"/>
+                <constraint firstItem="2cd-oY-J1N" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="UJY-tr-Jsg" secondAttribute="bottom" constant="10" id="ywA-ya-Cbe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="53.623188405797109" y="46.875000000000007"/>
+        </view>
+    </objects>
+</document>

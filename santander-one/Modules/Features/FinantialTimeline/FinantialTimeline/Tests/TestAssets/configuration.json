@@ -1,0 +1,1893 @@
+{
+    "v" : "1.4",
+    "timelineProperties" : {
+        "showMonthsSelector" : true,
+        "showDetails" : true,
+        "showDetailGraph" : true,
+        "previousEventsPages" : 1,
+        "comingEventsPages" : 2,
+        "ctaAlert" : true,
+        "ctaShare" : true,
+        "ctaFurtherDetail" : true
+    },
+    "taggingSetup" : {
+        "enabled" : true,
+        "country" : "ES / UK / PL / BR",
+        "scrollSize" : 30,
+        "tagEntryPonit" : true,
+        "tagScreenViews" : true,
+        "tagSelectCta" : true,
+        "tagSelectMonth" : true,
+        "tagScrollPages" : true,
+        "tagScrollMonths" : true,
+        "tagScrollEdges": true
+    },
+    "textProductCodes" : {
+        "000" : {
+            "es" : "Desconocido",
+            "en" : "Unknown"
+        },
+        "001" : {
+            "es" : "cuenta",
+            "en" : "account"
+        },
+        "002" : {
+            "es" : "tarjeta",
+            "en" : "card"
+        },
+        "003" : {
+            "es" : "prÃ©stamo",
+            "en" : "loan"
+        },
+        "004" : {
+            "es" : "hipoteca",
+            "en" : "mortage"
+        }
+    },
+    "textCalculationUnitCodes" : {
+        "001" : {
+            "es" : "dia",
+            "en" : "day"
+        },
+        "002" : {
+            "es" : "dias",
+            "en" : "days"
+        },
+        "003" : {
+            "es" : "mes",
+            "en" : "month"
+        },
+        "004" : {
+            "es" : "meses",
+            "en" : "months"
+        },
+        "005" : {
+            "es" : "aÃ±o",
+            "en" : "year"
+        },
+        "006" : {
+            "es" : "aÃ±os",
+            "en" : "years"
+        }
+    },
+    "CTAs" : {
+        "001" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Recuérdamelo",
+                "en" : "Add reminder"
+            },
+            "action" : {
+                "type" : "REMINDER"
+            }
+        },
+        "002" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Compartir",
+                "en" : "Share"
+            },
+            "action" : {
+                "type" : "SHARE",
+                "composedDescription" : {
+                    "es" :[
+                        {"text" : "Aquí tienes los detalles del evento:\n"},
+                        {"transactionDescription" : "Evento: %transactionDescription%\n"},
+                        {"transactionIssueDate" : "Fecha: %transactionIssueDate%\n"},
+                        {"amount" : "Importe: %amount%"}
+                    ],
+                    "en" : [
+                        {"text" : "Find the details for the event:\n"},
+                        {"transactionDescription" : "Event: %transactionDescription%\n"},
+                        {"transactionIssueDate" : "Date: %transactionIssueDate%\n"},
+                        {"amount" : "Amount: %amount%"}
+                    ]
+                }
+            }
+        },
+        "003" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Ir a cuentas",
+                "en" : "Go to accounts"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/accounts",
+                "delegateReference" : "goToAccounts"
+            }
+        },
+        "004" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Ir a tarjetas",
+                "en" : "Go to cards"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/cards",
+                "delegateReference" : "goToCards"
+            }
+        },
+        "005" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Ir a préstamos",
+                "en" : "Go to loans"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/loans",
+                "delegateReference" : "goToLoans"
+            }
+        },
+        "006" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Ir a seguros",
+                "en" : "Go to insurances"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/insurance",
+                "delegateReference" : "goToInsurances"
+            }
+        },
+        "007" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Ir a hipotecas",
+                "en" : "Go to mortages"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/mortages",
+                "delegateReference" : "goToMortages"
+            }
+        },
+        "008" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Ver PDF",
+                "en" : "PDF"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/accounts/pdf/%transactionId%",
+                "delegateReference" : "goToAccountsPDF"
+            }
+        },
+        "009" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Ver PDF",
+                "en" : "PDF"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/cards/pdf/%transactionId%",
+                "delegateReference" : "goToCardsPDF"
+            }
+        },
+        "010" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Mis transferencias",
+                "en" : "My transfers"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/transfers",
+                "delegateReference" : "goToTransfers"
+            }
+        },
+        "011" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Modificar / Anular",
+                "en" : "Edit / Cancel"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/deferredTransfers",
+                "delegateReference" : "goToDeferredTransferEdit"
+            }
+        },
+        "012" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Financiar",
+                "en" : "Financiar"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/accounts/finances/%transactionId%",
+                "delegateReference" : "goToAccountsFinance"
+            }
+        },
+        "013" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Financiar",
+                "en" : "Financiar"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/cards/finances/%transactionId%",
+                "delegateReference" : "goToCardsFinance"
+            }
+        },
+        "014" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Devolver recibo",
+                "en" : "Return charge"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/accounts/returns/%transactionId%",
+                "delegateReference" : "goToAccountsReturnCharge"
+            }
+        },
+        "015" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Devolver recibo",
+                "en" : "Return charge"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/cards/returns/%transactionId%",
+                "delegateReference" : "goToCardsReturnCharge"
+            }
+        },
+        "016" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Reportar fraude",
+                "en" : "Fraud report"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/accounts/fraud/%transactionId%",
+                "delegateReference" : "goToAccountsMovementFraud"
+            }
+        },
+        "017" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Reportar fraude",
+                "en" : "Fraud report"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/cards/fraud/%transactionId%",
+                "delegateReference" : "goToCardsMovementsFraud"
+            }
+        },
+        "018" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Mis productos",
+                "en" : "My products"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/myProducts",
+                "delegateReference" : "goToMyProducts"
+            }
+        },
+        "019" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Cambiar domiciliación",
+                "en" : "Change direct billing"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/accounts/directBilling/%transactionId%",
+                "delegateReference" : "goToAccountsDirectBilling"
+            }
+        },
+        "020" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Bloquear tarjeta",
+                "en" : "Card lock"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/cards/lock/%transactionId%",
+                "delegateReference" : "goToCardsLock"
+            }
+        },
+        "021" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Cancelar suscripción",
+                "en" : "Cancel Suscription"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/subscriptions/cancel/%transactionId%",
+                "delegateReference" : "goToCancelSuscriptions"
+            }
+        },
+        "022" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Enviar dinero",
+                "en" : "Send money"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/sendMoney",
+                "delegateReference" : "goToSendMoney"
+            }
+        },
+        "023" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Programar transferencia",
+                "en" : "Programar transferencia"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/accounts/deferredTransfers/new",
+                "delegateReference" : "goToDeferredTransferNew"
+            }
+        },
+        "024" : {
+            "icon" : {
+                "URL" : "https://www...",
+                "svg" : "svg_name"
+            },
+            "name" : {
+                "es" : "Tarjetas Santander",
+                "en" : "Santander Cards"
+            },
+            "action" : {
+                "type" : "DEEP_LINK",
+                "destinationURL" : "/santanderCards",
+                "delegateReference" : "goTosantanderCards"
+            }
+        }
+    },
+    "textTransactions": [
+        {
+            "transactionType": "100",
+            "transactionName" : {
+                "es" : "Transferencia puntual",
+                "en" : "Transfer"
+            },
+            "coming": {
+                "es" : [
+                    [
+                        {"text" : "Se realizarÃ¡ tu transferencia"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se emitirÃ¡ tu transferencia"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se efectuarÃ¡ tu transferencia"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se ejecutarÃ¡ tu transferencia"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text": "Your transfer"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "will be made"}
+                    ],
+                    [
+                        {"text": "Your transfer"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "will be issued"}
+                    ],
+                    [
+                        {"text": "Your transfer"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "will be sent"}
+                    ],
+                    [
+                        {"text": "Your transfer"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "will be completed"}
+                    ]
+                ]
+            },
+            "previous": {
+                "es" : [
+                    [
+                        {"text" : "Se realizÃ³ tu transferencia"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se emitiÃ³ tu transferencia"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se efectuÃ³ tu transferencia"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se ejecutÃ³ tu transferencia"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text": "Your transfer"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "was made"}
+                    ],
+                    [
+                        {"text": "Your transfer"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "was issued"}
+                    ],
+                    [
+                        {"text": "Your transfer"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "was sent"}
+                    ],
+                    [
+                        {"text": "Your transfer"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "was completed"}
+                    ]
+                ]
+            }
+        },
+        {
+            "transactionType": "101",
+            "transactionName" : {
+                "es" : "Transferencia programada",
+                "en" : "Scheduled transfer"
+            },
+            "coming": {
+                "es" : [
+                    [
+                        {"text" : "Se realizarÃ¡ tu transferencia programada"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se emitirÃ¡ tu transferencia programada"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se efectuarÃ¡ tu transferencia programada"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se ejecutarÃ¡ tu transferencia programada"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text": "Your scheduled transfer"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "will be made"}
+                    ],
+                    [
+                        {"text": "Your scheduled transfer"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "will be issued"}
+                    ],
+                    [
+                        {"text": "Your scheduled transfer"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "will be sent"}
+                    ],
+                    [
+                        {"text": "Your scheduled transfer"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "will be completed"}
+                    ]
+                ]
+            },
+            "previous": {
+                "es" : [
+                    [
+                        {"text" : "Se realizÃ³ tu transferencia programada"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se emitiÃ³ tu transferencia programada"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se efectuÃ³ tu transferencia programada"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se ejecutÃ³ tu transferencia programada"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text": "Your scheduled transfer"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "was made"}
+                    ],
+                    [
+                        {"text": "Your scheduled transfer"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "was issued"}
+                    ],
+                    [
+                        {"text": "Your scheduled transfer"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "was sent"}
+                    ],
+                    [
+                        {"text": "Your scheduled transfer"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "was completed"}
+                    ]
+                ]
+            }
+        },
+        {
+            "transactionType": "102",
+            "transactionName" : {
+                "es" : "Recibo",
+                "en" : "Receipt"
+            },
+            "coming": {
+                "es" : [
+                    [
+                        {"remainingDays" : "En aprÃ³ximadamente %remainingDays% dÃ­as deberÃ­a cargarse en tu cuenta el recibo"},
+                        {"!remainingDays" : "DeberÃ­a llegarte tu recibo"},
+                        {"transactionDescription" : "de %transactionDescription%"},
+                        {"amount" : "por valor de %amount%"}
+                    ],
+                    [
+                        {"remainingDays" : "En los prÃ³ximos %remainingDays% dÃ­as deberÃ­as recibir en tu cuenta la factura"},
+                        {"!remainingDays" : "Estimamos que se cargarÃ¡ en tu cuenta  tu factura"},
+                        {"transactionDescription" : "de %transactionDescription%"},
+                        {"amount" : "por valor de %amount%"}
+                    ],
+                    [
+                        {"remainingDays" : "Seguramente en %remainingDays% dÃ­as llegue a tu cuenta  la factura"},
+                        {"!remainingDays" : "Seguramente llegue a tu cuenta la factura"},
+                        {"transactionDescription" : "de %transactionDescription%"},
+                        {"amount" : "por valor de %amount%"}
+                    ],
+                    [
+                        {"remainingDays" : "Es probable que en %remainingDays% dÃ­as se cobre en tu cuenta  el recibo"},
+                        {"!remainingDays" : "Probablemente se cobre en tu cuenta el recibo"},
+                        {"transactionDescription" : "de %transactionDescription%"},
+                        {"amount" : "por valor de %amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"remainingDays" : "In approximately %remainingDays% days you should receive an invoice"},
+                        {"!remainingDays" : "you should receive an invoice"},
+                        {"transactionDescription" : "for %transactionDescription%"},
+                        {"amount" : "for %amount%"}
+                    ],
+                    [
+                        {"remainingDays" : "According to our estimations, in the next %remainingDays% days your"},
+                        {"!remainingDays" : "According to our estimations your "},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"text" : "invoice will be charged to your account"},
+                        {"amount" : "for %amount%"}
+                    ],
+                    [
+                        {"remainingDays" : "During the next %remainingDays% your"},
+                        {"!remainingDays" : "Your"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"text" : "receipt should be charged to your account"},
+                        {"amount" : "for %amount%"}
+                    ],
+                    [
+                        {"remainingDays" : "In the next %remainingDays% days your"},
+                        {"!remainingDays" : "Your"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"text" : "receipt"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "will probably be charged to your account"}
+                    ]
+                ]
+            },
+            "previous": {
+                "es" : [
+                    [
+                        {"text" : "Se realizÃ³ el cobro de tu recibo"},
+                        {"transactionDescription" : "de %transactionDescription%"},
+                        {"amount" : "por valor de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se cargÃ³ en tu cuenta  tu factura"},
+                        {"transactionDescription" : "de %transactionDescription%"},
+                        {"amount" : "por valor de %amount%"}
+                    ],
+                    [
+                        {"text" : "Te llegÃ³ tu factura"},
+                        {"transactionDescription" : "de %transactionDescription%"},
+                        {"amount" : "por valor de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se cobrÃ³ en tu cuenta tu recibo"},
+                        {"transactionDescription" : "de %transactionDescription%"},
+                        {"amount" : "por valor de %amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "A receipt"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "was sent to your account"},
+                        {"transactionDescription" : "for %transactionDescription%"}
+                    ],
+                    [
+                        {"text" : "Your invoice"},
+                        {"transactionDescription" : "for %transactionDescription%"},
+                        {"text" : "has been charged to your account"},
+                        {"amount" : "for %amount%"}
+                    ],
+                    [
+                        {"text" : "You received an invoice"},
+                        {"transactionDescription" : "for %transactionDescription%"},
+                        {"amount" : "for %amount%"}
+                    ],
+                    [
+                        {"text" : "A receipt"},
+                        {"transactionDescription" : "for %transactionDescription%"},
+                        {"text" : "was charged to your account"},
+                        {"amount" : "for %amount%"}
+                    ]
+                ]
+            }
+        },
+        {
+            "transactionType": "103",
+            "transactionName" : {
+                "es" : "SubscripciÃ³n de tarjeta",
+                "en" : "Suscription"
+            },
+            "coming": {
+                "es" : [
+                    [
+                        {"remainingDays" : "En aproximadamente %remainingDays% dÃ­as deberÃ­a cargarse en tu tarjeta el pago de tu suscripciÃ³n"},
+                        {"!remainingDays" : "DeberÃ­a efectuarse en tu tarjeta el pago de tu suscripciÃ³n"},
+                        {"merchantName" : "de %merchantName%"},
+                        {"amount" : "por importe de %amount%"}
+                    ],
+                    [
+                        {"remainingDays" : "Seguramente en %remainingDays% dÃ­as recibas en tu tarjeta el pago de tu suscripciÃ³n"},
+                        {"!remainingDays" : "Seguramente se cargarÃ¡ tu tarjeta  el pago"},
+                        {"merchantName" : "de %merchantName%"},
+                        {"amount" : "por valor de %amount%"}
+                    ],
+                    [
+                        {"remainingDays" : "Es probable que en %remainingDays% dÃ­as se cargue en tu tarjeta  el pago de tu suscripciÃ³n"},
+                        {"!remainingDays" : "Estimamos que recibiras en tu tarjeta el pago"},
+                        {"merchantName" : "de %merchantName%"},
+                        {"amount" : "de %amount%"}
+                    ],
+                    [
+                        {"remainingDays" : "Estimamos que en %remainingDays% dÃ­as te llegarÃ¡ a tu tarjeta el pago de tu suscripciÃ³n"},
+                        {"!remainingDays" : "Probablemente se cargue en tu tarjeta  el pago"},
+                        {"merchantName" : "de %merchantName%"},
+                        {"amount" : "por valor de %amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"remainingDays" : "In approximately %remainingDays% days a payment for your"},
+                        {"!remainingDays" : "A payment for your"},
+                        {"merchantName" : "%merchantName%"},
+                        {"text" : "subscription will be charged to your card"},
+                        {"amount" : "for %amount%"}
+                    ],
+                    [
+                        {"remainingDays" : "SAccording to our estimations, in the next %remainingDays% days you should be charged with a card payment for your susbscription"},
+                        {"!remainingDays" : "You should be charged with a card payment for your susbscription"},
+                        {"merchantName" : "to %merchantName%"},
+                        {"amount" : "for %amount%"}
+                    ],
+                    [
+                        {"remainingDays" : "During the next %remainingDays% days a payment"},
+                        {"!remainingDays" : "A payment"},
+                        {"amount" : "for %amount%"},
+                        {"text" : "for your subscription"},
+                        {"merchantName" : "to %merchantName%"},
+                        {"text" : "will be done"}
+                    ],
+                    [
+                        {"remainingDays" : "In the next %remainingDays% days your subscription payment"},
+                        {"!remainingDays" : "Your subscription payment"},
+                        {"merchantName" : "to %merchantName%"},
+                        {"amount" : "for %amount%"},
+                        {"text" : "is likely to be charged intoyour card"}
+                    ]
+                ]
+            },
+            "previous": {
+                "es" : [
+                    [
+                        {"text" : "Recibiste en tu tarjeta el cargo de tu suscripciÃ³n" },
+                        {"merchantName" : "de %merchantName%"},
+                        {"amount" : "por importe de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se ejecuto un pago en tu tarjeta"},
+                        {"merchantName" : "de %merchantName%"},
+                        {"amount" : "por valor de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se realizo un pago en tu tarjeta por tu suscripciÃ³n"},
+                        {"merchantName" : "de %merchantName%"},
+                        {"amount" : "de %amount%"}
+                    ],
+                    [
+                        {"text" : "Te llegÃ³ a tu tarjeta el pago por tu suscripciÃ³n"},
+                        {"merchantName" : "de %merchantName%"},
+                        {"amount" : "por valor de %amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "Your card was charged" },
+                        {"amount" : "an amount of %amount%"},
+                        {"text" : "for your subscription" },
+                        {"merchantName" : "to %merchantName%"}
+                    ],
+                    [
+                        {"text" : "You made a payment with your card"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "for your subscription" },
+                        {"merchantName" : "to %merchantName%"}
+                    ],
+                    [
+                        {"text" : "A payment"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "was made with your card for your subscription" },
+                        {"merchantName" : "to %merchantName%"}
+                    ],
+                    [
+                        {"text" : "You received a charge on your card for your subscription"},
+                        {"merchantName" : "to %merchantName%"},
+                        {"amount" : "of %amount%"}
+                    ]
+                ]
+            }
+        },
+        {
+            "transactionType": "104",
+            "transactionName" : {
+                "es" : "Hipoteca",
+                "en" : "Mortage"
+            },
+            "coming": {
+                "es" : [
+                    [
+                        {"text" : "Se cargarÃ¡ en tu cuenta la cuota de tu hipoteca"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por valor de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se efectuarÃ¡ el cobro de tu hipoteca"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"text" : "en tu cuenta"},
+                        {"amount" : "de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se realizarÃ¡ un cargo en tu cuenta por la cuota de tu hipoteca"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ],
+                    [
+                        {"text" : "RecibirÃ¡s un cobro  en tu cuenta por la cuota de tu hipoteca"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "Your mortage fee"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"text" : "will be charged to your account"},
+                        {"amount" : "for %amount%"}
+                    ],
+                    [
+                        {"text" : "Your mortage"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"text" : "will be charged to your account"},
+                        {"amount" : "for %amount%"}
+                    ],
+                    [
+                        {"text" : "A charge will be applied to your account for your mortage fee"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"}
+                    ],
+                    [
+                        {"text" : "You will receive a charge in your account for your mortage fee"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"}
+                    ]
+                ]
+            },
+            "previous": {
+                "es" : [
+                    [
+                        {"text" : "Se cargÃ³ en tu cuenta la cuota de tu hipoteca"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por valor de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se efectuo el cobro de tu hipoteca"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por importe de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se realizÃ³ un cargo en tu cuenta por la cuota de tu hipoteca"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por valor de %amount%"}
+                    ],
+                    [
+                        {"text" : "Recibiste un cobro en tu cuenta de la cuota de tu hipoteca"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por importe de %amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "Your mortage fee"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "was charged to your account"}
+                    ],
+                    [
+                        {"text" : "Your mortage"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "has been charged to your account"}
+                    ],
+                    [
+                        {"text" : "A charge"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "was made to your account for your mortage fee"},
+                        {"transactionDescription" : "%transactionDescription%"}
+                    ],
+                    [
+                        {"text" : "You received a charge"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "in your account for your mortage"},
+                        {"transactionDescription" : "%transactionDescription%"}
+                    ]
+                ]
+            }
+        },
+        {
+            "transactionType": "105",
+            "transactionName" : {
+                "es" : "PrÃ©stamo",
+                "en" : "Loan"
+            },
+            "coming": {
+                "es" : [
+                    [
+                        {"text" : "Se cargarÃ¡ en tu cuenta la cuota de tu prÃ©stamo"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por valor de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se efectuarÃ¡ el cobro de tu prÃ©stamo"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"text" : "en tu cuenta"},
+                        {"amount" : "de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se realizarÃ¡ un cargo en tu cuenta por la cuota de tu prÃ©stamo"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ],
+                    [
+                        {"text" : "RecibirÃ¡s un cobro  en tu cuenta por la cuota de tu prÃ©stamo"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "Your loan fee"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"text" : "will be charged to your account"},
+                        {"amount" : "for %amount%"}
+                    ],
+                    [
+                        {"text" : "Your loan"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"text" : "will be charged to your account"},
+                        {"amount" : "for %amount%"}
+                    ],
+                    [
+                        {"text" : "A charge will be applied to your account for your loan fee"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"}
+                    ],
+                    [
+                        {"text" : "You will receive a charge in your account for your loan fee"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"}
+                    ]
+                ]
+            },
+            "previous": {
+                "es" : [
+                    [
+                        {"text" : "Se cargÃ³ en tu cuenta la cuota de tu prÃ©stamo"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por valor de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se efectuo el cobro de tu prÃ©stamo"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por importe de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se realizÃ³ un cargo en tu cuenta por la cuota de tu prÃ©stamo"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por valor de %amount%"}
+                    ],
+                    [
+                        {"text" : "Recibiste un cobro en tu cuenta de la cuota de tu prÃ©stamo"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por importe de %amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "Your loan fee"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "was charged to your account"}
+                    ],
+                    [
+                        {"text" : "Your loan"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "has been charged to your account"}
+                    ],
+                    [
+                        {"text" : "A charge"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "was made to your account for your loan fee"},
+                        {"transactionDescription" : "%transactionDescription%"}
+                    ],
+                    [
+                        {"text" : "You received a charge"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "in your account for your loan"},
+                        {"transactionDescription" : "%transactionDescription%"}
+                    ]
+                ]
+            }
+        },
+        {
+            "transactionType": "106",
+            "transactionName" : {
+                "es" : "Seguro",
+                "en" : "Insurance"
+            },
+            "coming": {
+                "es" : [
+                    [
+                        {"text" : "Se cargarÃ¡ en tu cuenta la cuota de tu seguro"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por valor de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se efectuarÃ¡ el cobro de tu seguro"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"text" : "en tu cuenta"},
+                        {"amount" : "de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se realizarÃ¡ un cargo en tu cuenta por la cuota de tu seguro"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ],
+                    [
+                        {"text" : "RecibirÃ¡s un cobro  en tu cuenta por la cuota de tu seguro"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "Your insurance fee"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"text" : "will be charged to your account"},
+                        {"amount" : "for %amount%"}
+                    ],
+                    [
+                        {"text" : "Your insurance charges"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"text" : "will be charged to your account"},
+                        {"amount" : "for %amount%"}
+                    ],
+                    [
+                        {"text" : "A charge will be applied to your account for your insurance fee"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"}
+                    ],
+                    [
+                        {"text" : "You will receive a charge in your account for your insurance fee"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"}
+                    ]
+                ]
+            },
+            "previous": {
+                "es" : [
+                    [
+                        {"text" : "Se cargÃ³ en tu cuenta la cuota de tu seguro"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por valor de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se efectuo el cobro de tu seguro"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por importe de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se realizÃ³ un cargo en tu cuenta por la cuota de tu seguro"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por valor de %amount%"}
+                    ],
+                    [
+                        {"text" : "Recibiste un cobro en tu cuenta de la cuota de tu seguro"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por importe de %amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "Your insurance fee"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "was charged to your account"}
+                    ],
+                    [
+                        {"text" : "Your insurance charges"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "has been charged to your account"}
+                    ],
+                    [
+                        {"text" : "A charge"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "was made to your account for your insurance fee"},
+                        {"transactionDescription" : "%transactionDescription%"}
+                    ],
+                    [
+                        {"text" : "You received a charge"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "in your account for your insurance fee"},
+                        {"transactionDescription" : "%transactionDescription%"}
+                    ]
+                ]
+            }
+        },
+        {
+            "transactionType": "107",
+            "transactionName" : {
+                "es" : "Plan de pensiones",
+                "en" : "Pension plan"
+            },
+            "coming": {
+                "es" : [
+                    [
+                        {"text" : "Se realizarÃ¡ la aportaciÃ³n a tu plan de pensiones"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por un importe de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se realizarÃ¡ la aportaciÃ³n a tu plan de pensiones"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por un valor de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se realizarÃ¡ la aportaciÃ³n a tu plan de pensiones"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "A contribution to your pension plan"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"text" : "will be wired"},
+                        {"amount" : "for an amount of %amount%"}
+                    ]
+                ]
+            },
+            "previous": {
+                "es" : [
+                    [
+                        {"text" : "Se realizÃ³ la aportaciÃ³n a tu plan de pensiones"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por un importe de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se realizÃ³ la aportaciÃ³n a tu plan de pensiones"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por un valor de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se realizÃ³ la aportaciÃ³n a tu plan de pensiones"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "de %amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "A contribution to your pension plan"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"text" : "was made"},
+                        {"amount" : "for an amount of %amount%"}
+                    ]
+                ]
+            }
+        },
+        {
+            "transactionType": "108",
+            "transactionName" : {
+                "es" : "LiquidaciÃ³n de tarjeta",
+                "en" : "Card settlement"
+            },
+            "coming": {
+                "es" : [
+                    [
+                        {"text" : "Seguramente se efectuarÃ¡  en tu cuenta la liquidaciÃ³n mensual de tu tarjeta de crÃ©dito"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por un valor de %amount%"}
+                    ],
+                    [
+                        {"text" : "Probablemente se produzca en tu cuenta la liquidaciÃ³n mensual de tu tarjeta de crÃ©dito"},
+                        {"transactionDescription" : "acabada en %transactionDescription%"},
+                        {"amount" : "por un valor de %amount%"}
+                    ],
+                    [
+                        {"text" : "Estimamos que recibirÃ¡s en tu cuenta la liquidaciÃ³n mensual de tu tarjeta de crÃ©dito"},
+                        {"transactionDescription" : "acabada en %transactionDescription%"},
+                        {"amount" : "por un importe de %amount%"}
+                    ],
+                    [
+                        {"text" : "DeberÃ­a cargarse  en tu cuenta la liquidaciÃ³n mensual de tu  tarjeta de crÃ©dito"},
+                        {"transactionDescription" : "acabada en %transactionDescription%"},
+                        {"amount" : "por un valor de %amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "You should receive the monthly liquidation of your card"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "for %amount%"}
+                    ],
+                    [
+                        {"text" : "Your account will be charged with the monthly settlement of your card"},
+                        {"transactionDescription" : "acabada en %transactionDescription%"},
+                        {"amount" : "for %amount%"}
+                    ],
+                    [
+                        {"text" : "You will be charged with your monthly payment for your card"},
+                        {"transactionDescription" : "acabada en %transactionDescription%"},
+                        {"amount" : "for %amount%"}
+                    ],
+                    [
+                        {"text" : "The monthly settlement of your card"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "will be charged to your account"}
+                    ]
+                ]
+            },
+            "previous": {
+                "es" : [
+                    [
+                        {"text" : "Se efectuÃ³ en tu cuenta  la liquidaciÃ³n mensual de tu tarjeta de crÃ©dito"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por un valor de %amount%"}
+                    ],
+                    [
+                        {"text" : "Recibiste en tu cuenta  la liquidaciÃ³n mensual de tu tarjeta de crÃ©dito"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por %amount%"}
+                    ],
+                    [
+                        {"text" : "Llego a tu cuenta la liquidaciÃ³n mensual de tu tarjeta de crÃ©dito"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por un importe de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se cargÃ³ en tu cuenta la liquidaciÃ³n mensual de tu tarjeta de crÃ©dito"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "por un valor de %amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "The monthly liquidation of your card"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "for %amount%"},
+                        {"text" : "was made"}
+                    ],
+                    [
+                        {"text" : "Your account was charged with the monthly settlement of your card"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "for %amount%"}
+                    ],
+                    [
+                        {"text" : "You were charged  with your monthly payment for your card"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "for %amount%"}
+                    ],
+                    [
+                        {"text" : "The monthly settlement of your card"},
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "for %amount%"},
+                        {"text" : "was charged to your account"}
+                    ]
+                ]
+            }
+        },
+        {
+            "transactionType": "200",
+            "transactionName" : {
+                "es" : "NÃ³mina",
+                "en" : "Salary"
+            },
+            "coming": {
+                "es" : [
+                    [
+                        {"remainingDays" : "Es probable que en %remainingDays% dÃ­as recibas el pago mensual de tu nÃ³mina"},
+                        {"!remainingDays" : "DeberÃ­as recibir el pago mensual de tu nÃ³mina"},
+                        {"amount" : "por importe de %amount%"}
+                    ],
+                    [
+                        {"remainingDays" : "Seguramente en %remainingDays% dÃ­as se ingrese tu nÃ³mina"},
+                        {"!remainingDays" : "Seguramente se ingrese tu nÃ³mina"},
+                        {"amount" : "por importe de %amount%"}
+                    ],
+                    [
+                        {"remainingDays" : "En aproximadamente %remainingDays% se realizarÃ¡ el ingreso en cuenta de tu nÃ³mina"},
+                        {"!remainingDays" : "Estimamos que recibirÃ¡s en tu cuenta el pago de tu nÃ³mina"},
+                        {"amount" : "por valor de %amount%"}
+                    ],
+                    [
+                        {"remainingDays" : "Estimamos que en %remainingDays% dÃ­as te llegarÃ¡ el ingreso de tu nÃ³mina en tu cuenta"},
+                        {"!remainingDays" : "Probablemente se ingrese en tu cuenta tu nÃ³mina"},
+                        {"amount" : "por valor de %amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "You should receive your salary"},
+                        {"amount" : "of %amount%"}
+                    ],
+                    [
+                        {"text" : "Your salary"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "should be invoiced to your account"}
+                    ],
+                    [
+                        {"text" : "A transfer for your salary"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "should be sent to your account"}
+                    ]
+                ]
+            },
+            "previous": {
+                "es" : [
+                    [
+                        {"text" : "Recibiste el pago mensual de tu nÃ³mina"},
+                        {"amount" : "por un importe de %amount%"}
+                    ],
+                    [
+                        {"text" : "Se ingresÃ³ tu nÃ³mina"},
+                        {"amount" : "por un importe de %amount%"},
+                        {"text" : "en tu cuenta"}
+                    ],
+                    [
+                        {"text" : "Se realizo el ingreso en cuenta de tu nÃ³mina"},
+                        {"amount" : "por valor de %amount%"}
+                    ],
+                    [
+                        {"text" : "Recibiste el ingreso de tu nÃ³mina en tu cuenta"},
+                        {"amount" : "por un valor de %amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "You received your salary"},
+                        {"amount" : "for the amount of %amount%"}
+                    ],
+                    [
+                        {"text" : "Your salary"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "was invoiced to your account"}
+                    ],
+                    [
+                        {"text" : "The transfer for your salary"},
+                        {"amount" : "of %amount%"},
+                        {"text" : "was invoiced to your account"}
+                    ]
+                ]
+            }
+        },
+        {
+            "transactionType": "300",
+            "transactionName" : {
+                "es" : "Alta",
+                "en" : "Enrollment"
+            },
+            "coming": {
+                "es" : [
+                ],
+                "en" : [
+                ]
+            },
+            "previous": {
+                "es" : [
+                    [
+                        {"text" : "Abriste con nosotros"},
+                        {"productType": "tu %productType%"},
+                        {"!productType": "un producto"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"}
+                    ],
+                    [
+                        {"text" : "Contrataste con nosotros"},
+                        {"productType": "tu %productType%"},
+                        {"!productType": "un producto"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"}
+                    ],
+                    [
+                        {"text" : "Abriste"},
+                        {"productType": "tu %productType%"},
+                        {"!productType": "un producto"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"},
+                        {"text" : "con nosotros"}
+                    ],
+                    [
+                        {"text" : "Contrataste"},
+                        {"productType": "tu %productType%"},
+                        {"!productType": "un producto"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"},
+                        {"text" : "con nosotros"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "You opened"},
+                        {"productType": "your %productType%"},
+                        {"!productType": "a product"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"},
+                        {"text" : "with us"}
+                    ],
+                    [
+                        {"text" : "You applied and signed"},
+                        {"productType": "your %productType%"},
+                        {"!productType": "a product"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"},
+                        {"text" : "with us"}
+                    ]
+                ]
+            }
+        },
+        {
+            "transactionType": "301",
+            "transactionName" : {
+                "es" : "Baja",
+                "en" : "Cancellation"
+            },
+            "coming": {
+                "es" : [
+                ],
+                "en" : [
+                ]
+            },
+            "previous": {
+                "es" : [
+                    [
+                        {"text" : "Diste de baja con nosotros"},
+                        {"productType": "tu %productType%"},
+                        {"!productType": "un producto"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"}
+                    ],
+                    [
+                        {"text" : "Diste de baja tu %productType%"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"},
+                        {"text" : "con nosotros"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "You cancelled"},
+                        {"productType": "your %productType%"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"}
+                    ]
+                ]
+            }
+        },
+        {
+            "transactionType": "302",
+            "transactionName" : {
+                "es" : "Caducidad",
+                "en" : "Expiration"
+            },
+            "coming": {
+                "es" : [
+                    [
+                        {"productType" : "Tu %productType%"},
+                        {"!productType" : "Un producto"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"},
+                        {"text" : "caducarÃ¡" }
+                    ],
+                    [
+                        {"productType" : "CaducarÃ¡ tu %productType%"},
+                        {"!productType" : "CaducarÃ¡ un producto"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"productType" : "Your %productType%"},
+                        {"!productType" : "A product"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"},
+                        {"text" : "will expire" }
+                    ],
+                    [
+                        {"productType" : "Your %productType%"},
+                        {"!productType" : "A product"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"},
+                        {"text" : "will mature" }
+                    ]
+                ]
+            },
+            "previous": {
+                "es" : [
+                    [
+                        {"productType" : "Tu %productType%"},
+                        {"!productType" : "Un producto"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"},
+                        {"text" : "ha caducado" }
+                    ],
+                    [
+                        {"productType" : "CaducÃ³ tu %productType%"},
+                        {"!productType" : "CaducÃ³ un producto"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"productType" : "Your %productType%"},
+                        {"!productType" : "A product"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"},
+                        {"text" : "expired" }
+                    ]
+                ]
+            }
+        },
+        {
+            "transactionType": "303",
+            "transactionName" : {
+                "es" : "Vencimiento",
+                "en" : "Expiration"
+            },
+            "coming": {
+                "es" : [
+                    [
+                        {"productType" : "Tu %productType%"},
+                        {"!productType" : "Un producto"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"},
+                        {"text" : "ha vencido" }
+                    ],
+                    [
+                        {"productType" : "VencerÃ¡ tu %productType%"},
+                        {"!productType" : "VencerÃ¡ un producto"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"productType" : "Your %productType%"},
+                        {"!productType" : "A product"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"},
+                        {"text" : "will expire" }
+                    ],
+                    [
+                        {"productType" : "Your %productType%"},
+                        {"!productType" : "A product"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"},
+                        {"text" : "will mature" }
+                    ]
+                ]
+            },
+            "previous": {
+                "es" : [
+                    [
+                        {"productType" : "Tu %productType%"},
+                        {"!productType" : "Un producto"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"},
+                        {"text" : "ha vencido" }
+                    ],
+                    [
+                        {"productType" : "Ha vencido tu %productType%"},
+                        {"!productType" : "ha vencido un producto"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"productType" : "Your %productType%"},
+                        {"!productType" : "A product"},
+                        {"productDisplayNumber" : "%productDisplayNumber%"},
+                        {"text" : "expired" }
+                    ]
+                ]
+            }
+        },
+        {
+            "transactionType" : "900",
+            "transactionName" : {
+                "es" : "Evento personal",
+                "en" : "Personal event"
+            },
+            "coming": {
+                "es" : [
+                    [
+                        {"text" : "%transactionDescription%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "%transactionDescription%"}
+                    ]
+                ]
+            },
+            "previous": {
+                "es" : [
+                    [
+                        {"text" : "%transactionDescription%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "%transactionDescription%"}
+                    ]
+                ]
+            }
+        },
+        {
+            "transactionType": "901",
+            "transactionName" : {
+                "es" : "Evento externo",
+                "en" : "External event"
+            },
+            "coming": {
+                "es" : [
+                    [
+                        {"text" : "%transactionDescription%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "%transactionDescription%"}
+                    ]
+                ]
+            },
+            "previous": {
+                "es" : [
+                    [
+                        {"text" : "%transactionDescription%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "%transactionDescription%"}
+                    ]
+                ]
+            }
+        },
+        {
+            "transactionType": "902",
+            "transactionName" : {
+                "es" : "Evento externo empieza",
+                "en" : "Externa event begins"
+            },
+            "coming": {
+                "es" : [
+                    [
+                        {"text" : "Comienza %transactionDescription%"}
+                    ],
+                    [
+                        {"text" : "Empieza %transactionDescription%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "Begins the %transactionDescription%"}
+                    ],
+                    [
+                        {"text" : "Is starting the %transactionDescription%"}
+                    ],
+                    [
+                        {"text" : "Beggining of the %transactionDescription%"}
+                    ]
+                ]
+            },
+            "previous": {
+                "es" : [
+                    [
+                        {"text" : "Ha comenzado %transactionDescription%"}
+                    ],
+                    [
+                        {"text" : "Ha empezado %transactionDescription%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "Has begun the %transactionDescription%"}
+                    ],
+                    [
+                        {"text" : "Has started the %transactionDescription%"}
+                    ]
+                ]
+            }
+        },
+        {
+            "transactionType": "903",
+            "transactionName" : {
+                "es" : "Evento externo termina",
+                "en" : "External event ends"
+            },
+            "coming": {
+                "es" : [
+                    [
+                        {"text" : "Termina %transactionDescription%"}
+                    ],
+                    [
+                        {"text" : "Concluye %transactionDescription%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "The %transactionDescription% ends"}
+                    ],
+                    [
+                        {"text" : "Deadline of the %transactionDescription%"}
+                    ]
+                ]
+            },
+            "previous": {
+                "es" : [
+                    [
+                        {"text" : "Ha terminado %transactionDescription%"}
+                    ],
+                    [
+                        {"text" : "%transactionDescription% ha terminado"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "Has ended the %transactionDescription%"}
+                    ],
+                    [
+                        {"text" : "The %transactionDescription% has ended"}
+                    ]
+                ]
+            }
+        },
+        {
+            "transactionType": "904",
+            "transactionName" : {
+                "es" : "Evento externo caduca",
+                "en" : "External event expires"
+            },
+            "coming": {
+                "es" : [
+                    [
+                        {"text" : "Caduca tu %transactionDescription%"}
+                    ],
+                    [
+                        {"text" : "Tu %transactionDescription% caduca"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "Your %transactionDescription% expires"}
+                    ]
+                ]
+            },
+            "previous": {
+                "es" : [
+                    [
+                        {"text" : "Ha caducado tu %transactionDescription%"}
+                    ],
+                    [
+                        {"text" : "Tu %transactionDescription% ha caducado"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"text" : "Your %transactionDescription% expired"}
+                    ]
+                ]
+            }
+        },
+        {
+            "transactionType": "000",
+            "transactionName" : {
+                "es" : "Desconocido",
+                "en" : "Unknown"
+            },
+            "coming": {
+                "es" : [
+                    [
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "%amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "%amount%"}
+                    ]
+                ]
+            },
+            "previous": {
+                "es" : [
+                    [
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "%amount%"}
+                    ]
+                ],
+                "en" : [
+                    [
+                        {"transactionDescription" : "%transactionDescription%"},
+                        {"amount" : "%amount%"}
+                    ]
+                ]
+            }
+        }
+    ],
+    "groupedMonthsDisclaimer": {
+      "es": "The following graph shows the sum of all your monthly changes",
+      "en": "The following graph shows the sum of all your monthly changes"
+    }
+}

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoriesListView" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="Xum-fQ-qnt" id="zSH-w4-IlP"/>
+                <outlet property="tableView" destination="f6r-ld-UMd" id="GlT-58-BxM"/>
+                <outlet property="tableViewHeight" destination="oVw-Pw-1Oj" id="j27-Nf-Rop"/>
+                <outlet property="titleLabel" destination="9la-8y-t7v" id="lLu-dD-IeL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="364" height="662"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xum-fQ-qnt">
+                    <rect key="frame" x="0.0" y="0.0" width="364" height="662"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9la-8y-t7v">
+                            <rect key="frame" x="16" y="16" width="332" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="ylb-qf-WIL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f6r-ld-UMd">
+                            <rect key="frame" x="0.0" y="48" width="364" height="590"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="590" id="oVw-Pw-1Oj"/>
+                            </constraints>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="f6r-ld-UMd" firstAttribute="top" secondItem="9la-8y-t7v" secondAttribute="bottom" constant="8" id="HfL-Cs-ShR"/>
+                        <constraint firstAttribute="trailing" secondItem="f6r-ld-UMd" secondAttribute="trailing" id="N95-FV-N5b"/>
+                        <constraint firstItem="f6r-ld-UMd" firstAttribute="leading" secondItem="Xum-fQ-qnt" secondAttribute="leading" id="Q1H-UJ-ZPP"/>
+                        <constraint firstAttribute="bottom" secondItem="f6r-ld-UMd" secondAttribute="bottom" constant="24" id="XZw-me-f1w"/>
+                        <constraint firstItem="9la-8y-t7v" firstAttribute="leading" secondItem="Xum-fQ-qnt" secondAttribute="leading" constant="16" id="ioN-LJ-77t"/>
+                        <constraint firstAttribute="trailing" secondItem="9la-8y-t7v" secondAttribute="trailing" constant="16" id="jfa-Jl-vwN"/>
+                        <constraint firstItem="9la-8y-t7v" firstAttribute="top" secondItem="Xum-fQ-qnt" secondAttribute="top" constant="16" id="peO-8G-YDM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Xum-fQ-qnt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6No-GE-gp2"/>
+                <constraint firstItem="Xum-fQ-qnt" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="7D7-tj-RmS"/>
+                <constraint firstItem="Xum-fQ-qnt" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="yQW-uA-VqO"/>
+                <constraint firstItem="Xum-fQ-qnt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="zL8-lb-Zg5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="129.59999999999999" y="69.265367316341838"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

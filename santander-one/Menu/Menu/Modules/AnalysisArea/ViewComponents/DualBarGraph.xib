@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DualBarGraph" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="wDB-xD-GIC"/>
+                <outlet property="expenseGraph" destination="jMX-ee-Nye" id="gp8-oH-LDb"/>
+                <outlet property="expenseGraphHeightConstraint" destination="6W4-5y-k88" id="3iG-P5-84c"/>
+                <outlet property="expenseGraphPredictive" destination="pQx-kf-sWv" id="75g-O8-Har"/>
+                <outlet property="expenseGraphPredictivelHeightConstraint" destination="ngy-3R-9kP" id="dY0-4U-laQ"/>
+                <outlet property="incomeGraph" destination="ez5-YV-6t8" id="c2n-Ic-gJ5"/>
+                <outlet property="incomeGraphHeightConstraint" destination="fQB-0V-juD" id="zFI-5t-Utz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rK4-BO-wpf" userLabel="stackConatainer">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="70"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JsB-DM-rMd">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="70"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ygz-2R-BmZ" userLabel="incomeContainer">
+                                    <rect key="frame" x="0.0" y="0.0" width="25" height="70"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ez5-YV-6t8" customClass="GradientBar" customModule="Menu" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="65" width="25" height="5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="5" id="fQB-0V-juD"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="ez5-YV-6t8" secondAttribute="trailing" id="D9i-rT-zUW"/>
+                                        <constraint firstAttribute="bottom" secondItem="ez5-YV-6t8" secondAttribute="bottom" id="gxa-J1-GKz"/>
+                                        <constraint firstItem="ez5-YV-6t8" firstAttribute="leading" secondItem="Ygz-2R-BmZ" secondAttribute="leading" id="wz4-JF-FGw"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WVH-sP-NLL" userLabel="xpenseContainer">
+                                    <rect key="frame" x="35" y="0.0" width="25" height="70"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQx-kf-sWv" userLabel="predictive">
+                                            <rect key="frame" x="0.0" y="65" width="25" height="5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="5" id="ngy-3R-9kP"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jMX-ee-Nye" userLabel="normal">
+                                            <rect key="frame" x="0.0" y="65" width="25" height="5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="5" id="6W4-5y-k88"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="pQx-kf-sWv" secondAttribute="bottom" id="1qb-gU-KGU"/>
+                                        <constraint firstItem="jMX-ee-Nye" firstAttribute="leading" secondItem="WVH-sP-NLL" secondAttribute="leading" id="Bj6-O6-8xZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="pQx-kf-sWv" secondAttribute="trailing" id="QeO-n2-LrS"/>
+                                        <constraint firstItem="pQx-kf-sWv" firstAttribute="leading" secondItem="WVH-sP-NLL" secondAttribute="leading" id="emU-ID-mpE"/>
+                                        <constraint firstAttribute="bottom" secondItem="jMX-ee-Nye" secondAttribute="bottom" id="niz-1D-oQL"/>
+                                        <constraint firstAttribute="trailing" secondItem="jMX-ee-Nye" secondAttribute="trailing" id="tSy-GV-0dP"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="WVH-sP-NLL" secondAttribute="bottom" id="SDB-ni-Kzd"/>
+                                <constraint firstAttribute="bottom" secondItem="Ygz-2R-BmZ" secondAttribute="bottom" id="roR-SJ-c26"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="JsB-DM-rMd" secondAttribute="bottom" id="72A-bu-LZ2"/>
+                        <constraint firstItem="JsB-DM-rMd" firstAttribute="leading" secondItem="rK4-BO-wpf" secondAttribute="leading" id="cd0-XQ-Yru"/>
+                        <constraint firstItem="JsB-DM-rMd" firstAttribute="top" secondItem="rK4-BO-wpf" secondAttribute="top" id="nIX-Yj-fIo"/>
+                        <constraint firstAttribute="trailing" secondItem="JsB-DM-rMd" secondAttribute="trailing" id="oJJ-ZB-YsA"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rK4-BO-wpf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ldc-LA-V2S"/>
+                <constraint firstItem="rK4-BO-wpf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MS1-gB-JvT"/>
+                <constraint firstAttribute="trailing" secondItem="rK4-BO-wpf" secondAttribute="trailing" id="pSH-id-chB"/>
+                <constraint firstAttribute="bottom" secondItem="rK4-BO-wpf" secondAttribute="bottom" id="qvW-9b-g8F"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="177" y="141"/>
+        </view>
+    </objects>
+</document>

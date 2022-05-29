@@ -1,0 +1,34 @@
+
+platform :ios, '10.3'
+
+use_frameworks!
+
+source 'ssh://git@gitlab.ciber-es.com:7346/mobility/Ciber/Common/iOS/iOS-private-specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+def libraries
+  pod 'CoreFoundationLib', :path => '../../Modules/Libraries/CoreFoundationLib'
+  pod 'SQLite.swift/SQLCipher', :path => '../../Modules/Libraries/SQLite.swift'
+  pod 'SQLCipher', '4.4.2'
+  pod 'SANLegacyLibrary', :path => '../../Modules/Libraries/SANLegacyLibrary'
+  pod 'CoreDomain', :path => '../../Modules/Libraries/CoreDomain'
+  pod 'Locker', :path => '../../Modules/Libraries/Locker'
+  pod 'CoreTestData', :path => '../../Modules/Libraries/CoreTestData'
+  pod 'RxCombine', :path => '../../Modules/Libraries/RxCombine'
+end
+
+def pods
+  pod 'Localization', :path => '../'
+  pod 'QuickSetup', :path => '../../QuickSetup'
+  libraries
+end
+
+
+target 'Localization_Example' do
+  pods
+end
+
+target 'Localization_ExampleTests' do
+  pods
+  pod 'UnitTestCommons/standard', :path => '../../UnitTestCommons'
+end

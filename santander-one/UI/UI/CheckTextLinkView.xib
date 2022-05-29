@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderText-Regular.ttf">
+            <string>SantanderText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckTextLinkView" customModule="UI" customModuleProvider="target">
+            <connections>
+                <outlet property="containerViewHeight" destination="7bx-gi-31e" id="ewt-z4-4oj"/>
+                <outlet property="containerViewWidth" destination="Ffj-gr-wey" id="ghX-uY-Uku"/>
+                <outlet property="labelTitle" destination="dfg-Pt-c1Y" id="HuV-ed-aHX"/>
+                <outlet property="selectedIndicator" destination="33d-pT-BI2" id="4cc-Y2-2cP"/>
+                <outlet property="viewShadow" destination="eE1-V5-hab" id="xTn-hG-qqb"/>
+                <outlet property="viewShadowBottom" destination="RcT-hL-VfH" id="amQ-Th-dVR"/>
+                <outlet property="viewShadowTop" destination="JbL-Wp-Eyl" id="Hnd-qw-Z39"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="kTh-A8-Vsu">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJj-uX-JOb" userLabel="ContainerView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yoZ-wv-D5b">
+                            <rect key="frame" x="16" y="20" width="382" height="57"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33d-pT-BI2">
+                                    <rect key="frame" x="0.0" y="0.0" width="26" height="26"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="26" id="9rw-4g-Csp"/>
+                                    </constraints>
+                                    <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" image="icnCheckBoxUnSelected"/>
+                                    <state key="selected" image="icnCheckBoxSelectedGreen"/>
+                                    <connections>
+                                        <action selector="didTapCheckButton:" destination="-1" eventType="touchUpInside" id="I2z-Tx-l79"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfg-Pt-c1Y">
+                                    <rect key="frame" x="36" y="0.0" width="346" height="20.5"/>
+                                    <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="14"/>
+                                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="yoZ-wv-D5b" secondAttribute="bottom" constant="20" id="2FU-lP-Q0H"/>
+                        <constraint firstAttribute="height" constant="97" id="7bx-gi-31e"/>
+                        <constraint firstAttribute="trailing" secondItem="yoZ-wv-D5b" secondAttribute="trailing" constant="16" id="CsP-Yl-wG9"/>
+                        <constraint firstAttribute="width" constant="414" id="Ffj-gr-wey"/>
+                        <constraint firstItem="yoZ-wv-D5b" firstAttribute="top" secondItem="XJj-uX-JOb" secondAttribute="top" constant="20" id="Zy7-XX-R2k"/>
+                        <constraint firstItem="yoZ-wv-D5b" firstAttribute="leading" secondItem="XJj-uX-JOb" secondAttribute="leading" constant="16" id="dUP-uj-ecN"/>
+                    </constraints>
+                </view>
+                <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eE1-V5-hab" userLabel="ShadowView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JbL-Wp-Eyl" userLabel="ViewShadowTop">
+                            <rect key="frame" x="0.0" y="-1" width="414" height="1"/>
+                            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="kfz-9K-b4A"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RcT-hL-VfH" userLabel="ViewShadowBottom">
+                            <rect key="frame" x="0.0" y="97" width="414" height="1"/>
+                            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="TUI-Qd-khR"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="RcT-hL-VfH" secondAttribute="bottom" constant="-1" id="3Q0-zF-uRG"/>
+                        <constraint firstAttribute="trailing" secondItem="JbL-Wp-Eyl" secondAttribute="trailing" id="4TO-q8-ZuE"/>
+                        <constraint firstAttribute="trailing" secondItem="RcT-hL-VfH" secondAttribute="trailing" id="7DO-kJ-i5D"/>
+                        <constraint firstItem="JbL-Wp-Eyl" firstAttribute="leading" secondItem="eE1-V5-hab" secondAttribute="leading" id="V7q-5z-6u1"/>
+                        <constraint firstItem="JbL-Wp-Eyl" firstAttribute="top" secondItem="eE1-V5-hab" secondAttribute="top" constant="-1" id="cWQ-Zt-cmO"/>
+                        <constraint firstItem="RcT-hL-VfH" firstAttribute="leading" secondItem="eE1-V5-hab" secondAttribute="leading" id="o9H-f5-2g6"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="JZQ-u2-W9r"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="XJj-uX-JOb" secondAttribute="bottom" id="AS0-cu-9zN"/>
+                <constraint firstItem="eE1-V5-hab" firstAttribute="bottom" secondItem="XJj-uX-JOb" secondAttribute="bottom" id="Bbn-yJ-0LP"/>
+                <constraint firstItem="eE1-V5-hab" firstAttribute="trailing" secondItem="XJj-uX-JOb" secondAttribute="trailing" id="N8u-Sn-qqX"/>
+                <constraint firstItem="eE1-V5-hab" firstAttribute="leading" secondItem="XJj-uX-JOb" secondAttribute="leading" id="Wtk-pT-dqR"/>
+                <constraint firstAttribute="trailing" secondItem="XJj-uX-JOb" secondAttribute="trailing" id="bi3-AC-HNQ"/>
+                <constraint firstItem="eE1-V5-hab" firstAttribute="top" secondItem="XJj-uX-JOb" secondAttribute="top" id="khR-sa-1eh"/>
+                <constraint firstItem="XJj-uX-JOb" firstAttribute="leading" secondItem="kTh-A8-Vsu" secondAttribute="leading" id="pSB-Qa-8KH"/>
+                <constraint firstItem="XJj-uX-JOb" firstAttribute="top" secondItem="kTh-A8-Vsu" secondAttribute="top" id="t7U-Y6-vHs"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="624.63768115942037" y="-305.69196428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icnCheckBoxSelectedGreen" width="24" height="24"/>
+        <image name="icnCheckBoxUnSelected" width="24" height="24"/>
+    </resources>
+</document>

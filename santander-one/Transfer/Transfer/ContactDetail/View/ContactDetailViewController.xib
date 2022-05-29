@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactDetailViewController" customModule="Transfer" customModuleProvider="target">
+            <connections>
+                <outlet property="detailFooterView" destination="P4H-zQ-rE9" id="OcQ-Fe-8Vw"/>
+                <outlet property="detailsView" destination="PvO-U5-RIE" id="Lzb-Uz-EkF"/>
+                <outlet property="view" destination="iN0-l3-epB" id="gDS-Os-K6a"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvO-U5-RIE" customClass="ContactDetailView" customModule="Transfer" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="760"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4H-zQ-rE9" customClass="ContactDetailFooterView" customModule="Transfer" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="804" width="414" height="58"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="58" id="1a5-Wq-L76"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WlY-Gc-fwc" userLabel="iPhone X Bottom View">
+                    <rect key="frame" x="0.0" y="862" width="414" height="34"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="PvO-U5-RIE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="3AE-5e-cnG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="P4H-zQ-rE9" secondAttribute="bottom" id="5KH-h6-iKK"/>
+                <constraint firstItem="PvO-U5-RIE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="DKV-7l-efj"/>
+                <constraint firstAttribute="bottom" secondItem="WlY-Gc-fwc" secondAttribute="bottom" id="Gkp-LA-xhp"/>
+                <constraint firstItem="WlY-Gc-fwc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="MxS-HR-cfr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="P4H-zQ-rE9" secondAttribute="trailing" id="gak-BG-HkA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PvO-U5-RIE" secondAttribute="trailing" id="hHO-tw-cLL"/>
+                <constraint firstItem="P4H-zQ-rE9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hK2-lV-QIZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WlY-Gc-fwc" secondAttribute="trailing" id="mMg-KA-g2f"/>
+                <constraint firstItem="P4H-zQ-rE9" firstAttribute="bottom" secondItem="WlY-Gc-fwc" secondAttribute="top" id="nsN-9b-P1t"/>
+                <constraint firstItem="P4H-zQ-rE9" firstAttribute="top" secondItem="PvO-U5-RIE" secondAttribute="bottom" id="rAu-5h-ZUe"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="153"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

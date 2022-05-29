@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderText-Regular.otf">
+            <string>SantanderText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="45" id="KGk-i7-Jjw" customClass="AccountListFinanceableTransactionTableViewCell" customModule="Menu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="434" height="45"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="434" height="45"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movistar TV" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKj-Io-m5O">
+                        <rect key="frame" x="16" y="8" width="80" height="27"/>
+                        <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="16"/>
+                        <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="-870,00€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5q-qn-Ree">
+                        <rect key="frame" x="345" y="1" width="74" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwj-7A-WOA" customClass="PointLine" customModule="UI">
+                        <rect key="frame" x="16" y="43" width="417" height="1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="pPV-qw-jhV"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXy-zD-hMd">
+                        <rect key="frame" x="0.0" y="42" width="434" height="1"/>
+                        <color key="backgroundColor" red="0.85882352941176465" green="0.8784313725490196" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="KVp-HN-cBe"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xwj-7A-WOA" firstAttribute="top" secondItem="NXy-zD-hMd" secondAttribute="bottom" id="0ra-uS-dth"/>
+                    <constraint firstAttribute="bottom" secondItem="GKj-Io-m5O" secondAttribute="bottom" constant="10" id="7Ta-Cd-WBp"/>
+                    <constraint firstItem="NXy-zD-hMd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="9ay-Ba-M5R"/>
+                    <constraint firstItem="I5q-qn-Ree" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GKj-Io-m5O" secondAttribute="trailing" constant="16" id="Ef9-P5-HM8"/>
+                    <constraint firstItem="I5q-qn-Ree" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="HGG-ku-nx5"/>
+                    <constraint firstItem="xwj-7A-WOA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="XsO-gn-kOx"/>
+                    <constraint firstAttribute="bottom" secondItem="xwj-7A-WOA" secondAttribute="bottom" constant="1" id="iAw-mf-IPM"/>
+                    <constraint firstItem="GKj-Io-m5O" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="qeC-gJ-8we"/>
+                    <constraint firstAttribute="trailing" secondItem="I5q-qn-Ree" secondAttribute="trailing" constant="15" id="qpj-WF-85G"/>
+                    <constraint firstItem="I5q-qn-Ree" firstAttribute="bottom" secondItem="GKj-Io-m5O" secondAttribute="bottom" id="tS8-ql-wIj"/>
+                    <constraint firstAttribute="trailing" secondItem="xwj-7A-WOA" secondAttribute="trailing" constant="1" id="uPP-J9-zd0"/>
+                    <constraint firstItem="GKj-Io-m5O" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="y7m-Sg-nyt"/>
+                    <constraint firstAttribute="trailing" secondItem="NXy-zD-hMd" secondAttribute="trailing" id="ymz-He-rgR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="amountLabel" destination="I5q-qn-Ree" id="2Ef-Dk-iIF"/>
+                <outlet property="descriptionLabel" destination="GKj-Io-m5O" id="iO3-2k-WcW"/>
+                <outlet property="dividerView" destination="NXy-zD-hMd" id="c96-aS-be7"/>
+                <outlet property="pointLineDivider" destination="xwj-7A-WOA" id="SJy-jP-JMF"/>
+            </connections>
+            <point key="canvasLocation" x="214.49275362318843" y="115.51339285714285"/>
+        </tableViewCell>
+    </objects>
+</document>

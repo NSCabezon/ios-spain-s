@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BankableCardReceiptsView" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="cardCollectionView" destination="AnY-DI-eX1" id="B0V-Xd-fsH"/>
+                <outlet property="headerLabel" destination="mYj-Zl-ucE" id="r39-tP-vHF"/>
+                <outlet property="loadingImageView" destination="Hcp-om-hiX" id="o4U-bk-ydK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="383" height="169"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="AnY-DI-eX1" customClass="BankableCardReceiptsCollectionView" customModule="Menu" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="18" width="383" height="128"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="sxb-C0-duj"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Riz-XD-cz3">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYj-Zl-ucE">
+                    <rect key="frame" x="16" y="0.0" width="351" height="10"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Hcp-om-hiX" userLabel="Loading Image View">
+                    <rect key="frame" x="141" y="47" width="100" height="75"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="AnY-DI-eX1" firstAttribute="top" secondItem="mYj-Zl-ucE" secondAttribute="bottom" constant="8" id="5j9-Pd-zNB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="AnY-DI-eX1" secondAttribute="bottom" constant="23" id="CDO-SW-6oA"/>
+                <constraint firstItem="mYj-Zl-ucE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="JWm-ax-T8j"/>
+                <constraint firstAttribute="trailing" secondItem="mYj-Zl-ucE" secondAttribute="trailing" constant="16" id="RmG-AP-usc"/>
+                <constraint firstItem="AnY-DI-eX1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="f0H-iX-ybN"/>
+                <constraint firstItem="mYj-Zl-ucE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rKM-IT-jf5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="AnY-DI-eX1" secondAttribute="trailing" id="u0e-Kw-vbR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="115.21739130434783" y="360.60267857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

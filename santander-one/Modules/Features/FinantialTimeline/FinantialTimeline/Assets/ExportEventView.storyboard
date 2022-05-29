@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h0q-Wv-AVE">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Export Event View Controller-->
+        <scene sceneID="XZK-Iu-UWQ">
+            <objects>
+                <viewController storyboardIdentifier="ExportEventViewController" id="h0q-Wv-AVE" customClass="ExportEventViewController" customModule="FinantialTimeline" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nDy-L8-K6p">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LBk-3x-Bfk">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jkg-H5-W4O">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1235"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UB5-Zy-fl0">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="85"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zg-Yy-KtM" customClass="GlobileLabel" customModule="SantanderUIKitLib">
+                                                        <rect key="frame" x="17" y="32.5" width="575" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="4zg-Yy-KtM" firstAttribute="centerY" secondItem="UB5-Zy-fl0" secondAttribute="centerY" id="aLq-QO-4lQ"/>
+                                                    <constraint firstAttribute="height" constant="85" id="dRi-ZL-RKi"/>
+                                                    <constraint firstAttribute="trailing" secondItem="4zg-Yy-KtM" secondAttribute="trailing" constant="8" id="hKs-Wk-TWf"/>
+                                                    <constraint firstItem="4zg-Yy-KtM" firstAttribute="leading" secondItem="UB5-Zy-fl0" secondAttribute="leading" constant="17" id="lf1-sf-prM"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Vq-Fd-kmT">
+                                                <rect key="frame" x="0.0" y="85" width="600" height="150"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dRg-zL-MZg">
+                                                        <rect key="frame" x="17" y="0.0" width="575" height="150"/>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="dRg-zL-MZg" secondAttribute="trailing" constant="8" id="24u-d5-tgJ"/>
+                                                    <constraint firstItem="dRg-zL-MZg" firstAttribute="leading" secondItem="8Vq-Fd-kmT" secondAttribute="leading" constant="17" id="3uZ-1s-Qqi"/>
+                                                    <constraint firstItem="dRg-zL-MZg" firstAttribute="top" secondItem="8Vq-Fd-kmT" secondAttribute="top" id="LGP-2h-g6x"/>
+                                                    <constraint firstAttribute="height" constant="150" id="PtZ-fA-Eb2"/>
+                                                    <constraint firstAttribute="bottom" secondItem="dRg-zL-MZg" secondAttribute="bottom" id="js2-RY-QzS"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IaQ-ws-E8C">
+                                                <rect key="frame" x="0.0" y="235" width="600" height="1000"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLt-bE-a0O" customClass="GlobileCards" customModule="SantanderUIKitLib">
+                                                        <rect key="frame" x="16" y="8" width="568" height="920"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="oLt-bE-a0O" secondAttribute="trailing" constant="16" id="3eR-cY-gs7"/>
+                                                    <constraint firstAttribute="bottom" secondItem="oLt-bE-a0O" secondAttribute="bottom" constant="72" id="FRe-Il-Hde"/>
+                                                    <constraint firstAttribute="height" constant="1000" id="JPp-bm-IVl"/>
+                                                    <constraint firstItem="oLt-bE-a0O" firstAttribute="leading" secondItem="IaQ-ws-E8C" secondAttribute="leading" constant="16" id="k9G-bQ-pra"/>
+                                                    <constraint firstItem="oLt-bE-a0O" firstAttribute="top" secondItem="IaQ-ws-E8C" secondAttribute="top" constant="8" id="yYa-s3-csg"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jkg-H5-W4O" firstAttribute="leading" secondItem="LBk-3x-Bfk" secondAttribute="leading" id="GY2-vl-uQq"/>
+                                    <constraint firstAttribute="trailing" secondItem="jkg-H5-W4O" secondAttribute="trailing" id="I5p-AX-A7l"/>
+                                    <constraint firstItem="jkg-H5-W4O" firstAttribute="top" secondItem="LBk-3x-Bfk" secondAttribute="top" id="WwU-Wj-Nhq"/>
+                                    <constraint firstAttribute="bottom" secondItem="jkg-H5-W4O" secondAttribute="bottom" id="fmi-cT-URS"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8f-aB-tcE" customClass="GlobileEndingButton" customModule="SantanderUIKitLib">
+                                <rect key="frame" x="25" y="554" width="550" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onExportTap:" destination="h0q-Wv-AVE" eventType="touchUpInside" id="8da-YZ-BZx"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOW-be-IeG" customClass="LoadingView" customModule="FinantialTimeline" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.96470588239999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="nWZ-13-h7U" firstAttribute="trailing" secondItem="LBk-3x-Bfk" secondAttribute="trailing" id="4f5-Du-Pqm"/>
+                            <constraint firstItem="rOW-be-IeG" firstAttribute="top" secondItem="nWZ-13-h7U" secondAttribute="top" id="4nG-KA-4DJ"/>
+                            <constraint firstAttribute="bottom" secondItem="rOW-be-IeG" secondAttribute="bottom" id="FcO-Fb-hIa"/>
+                            <constraint firstItem="nWZ-13-h7U" firstAttribute="trailing" secondItem="D8f-aB-tcE" secondAttribute="trailing" constant="25" id="QcI-W2-6hT"/>
+                            <constraint firstItem="jkg-H5-W4O" firstAttribute="width" secondItem="nDy-L8-K6p" secondAttribute="width" id="UMt-ck-98G"/>
+                            <constraint firstItem="LBk-3x-Bfk" firstAttribute="leading" secondItem="nWZ-13-h7U" secondAttribute="leading" id="UV0-Sd-GLZ"/>
+                            <constraint firstItem="LBk-3x-Bfk" firstAttribute="top" secondItem="nWZ-13-h7U" secondAttribute="top" id="XmF-jP-h7N"/>
+                            <constraint firstItem="nWZ-13-h7U" firstAttribute="bottom" secondItem="LBk-3x-Bfk" secondAttribute="bottom" id="fMg-S9-Mhy"/>
+                            <constraint firstItem="rOW-be-IeG" firstAttribute="leading" secondItem="nWZ-13-h7U" secondAttribute="leading" id="h6o-Jw-s06"/>
+                            <constraint firstItem="nWZ-13-h7U" firstAttribute="bottom" secondItem="D8f-aB-tcE" secondAttribute="bottom" constant="16" id="mmN-Mm-yqV"/>
+                            <constraint firstItem="nWZ-13-h7U" firstAttribute="trailing" secondItem="rOW-be-IeG" secondAttribute="trailing" id="q34-3X-2aO"/>
+                            <constraint firstItem="D8f-aB-tcE" firstAttribute="leading" secondItem="nWZ-13-h7U" secondAttribute="leading" constant="25" id="rA7-tR-zs4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nWZ-13-h7U"/>
+                    </view>
+                    <connections>
+                        <outlet property="exportEventButton" destination="D8f-aB-tcE" id="xkq-LF-He4"/>
+                        <outlet property="groupView" destination="dRg-zL-MZg" id="CUQ-fV-0eF"/>
+                        <outlet property="infoLabel" destination="4zg-Yy-KtM" id="XTH-hj-FSx"/>
+                        <outlet property="loadingView" destination="rOW-be-IeG" id="UGV-T4-K0E"/>
+                        <outlet property="typeListCard" destination="oLt-bE-a0O" id="srb-l7-0jO"/>
+                        <outlet property="typeListHeight" destination="JPp-bm-IVl" id="Kzf-Fc-ejf"/>
+                        <outlet property="typeListView" destination="IaQ-ws-E8C" id="Vug-9P-7jg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uXj-TG-98r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115.94202898550725" y="14.732142857142856"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,92 @@
+name: Checks Countries
+
+on:
+  pull_request:
+    types: [ labeled ]
+
+jobs:
+  compile-and-test-spain:
+    if: ${{ github.event.label.name == 'spain'}}
+    runs-on: self-hosted
+    defaults:
+      run:
+        working-directory: ios-${{ github.event.label.name }}
+    steps: 
+      - uses: actions/checkout@v2
+        with:
+          repository: santander-group-europe/ios-${{ github.event.label.name }}
+          token: ${{ secrets.ACCESS_TOKEN }}
+          submodules: recursive
+          ref: ${{ github.base_ref }}
+          path: ios-${{ github.event.label.name }}
+
+      - name: Checkout core branch into submodule
+        run: |
+          cd santander-one
+          git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +refs/heads/${{ github.head_ref }}*:refs/remotes/origin/${{ github.head_ref }}*
+          git checkout --progress --force -B ${{ github.head_ref }} refs/remotes/origin/${{ github.head_ref }}
+          git log -1 --format='%H'
+          cd ..
+      # Setup ruby
+      - name: Setup - Ruby and bundler dependencies
+        run: bundle install
+          
+      - name: Cache Pods packages
+        uses: actions/cache@v2
+        with:
+          path: Pods
+          key: ${{ runner.os }}-pods-${{ hashFiles('Podfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-pods-
+      
+      - name: Pods update
+        run: bundle exec pod install
+
+      # Runs test lane created earlier
+      - name: Run tests
+        run: bundle exec fastlane ios test
+        
+  compile-and-test:
+    if: ${{ github.event.label.name == 'poland' || github.event.label.name == 'uk'|| github.event.label.name == 'portugal' }}
+    runs-on: self-hosted
+    defaults:
+      run:
+        working-directory: ios-${{ github.event.label.name }}
+    steps: 
+      - uses: actions/checkout@v2
+        with:
+          repository: santander-group-europe/ios-${{ github.event.label.name }}
+          token: ${{ secrets.ACCESS_TOKEN }}
+          submodules: recursive
+          ref: ${{ github.base_ref }}
+          path: ios-${{ github.event.label.name }}
+          lfs: true
+
+
+      - name: Checkout core branch into submodule
+        run: |
+          cd santander-one || cd OneApp || cd ios-santander-one
+          git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +refs/heads/${{ github.head_ref }}*:refs/remotes/origin/${{ github.head_ref }}*
+          git checkout --progress --force -B ${{ github.head_ref }} refs/remotes/origin/${{ github.head_ref }}
+          git log -1 --format='%H'
+          cd ..
+      # Setup ruby
+      - name: Setup - Ruby and bundler dependencies
+        run: bundle install
+          
+      - name: Cache Pods packages
+        uses: actions/cache@v2
+        with:
+          path: Pods
+          key: ${{ runner.os }}-pods-${{ hashFiles('Project/Podfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-pods-
+      
+      - name: Pods update
+        run: cd Project && bundle exec pod install && cd ..
+
+      # Runs test lane created earlier
+      - name: Run tests
+        run: cd Project && bundle exec fastlane ios test && cd ..
+        
+

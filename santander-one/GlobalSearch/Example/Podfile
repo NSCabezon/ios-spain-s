@@ -1,0 +1,38 @@
+platform :ios, '10.3'
+
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+def legacy_libraries
+  pod 'Locker', :path => '../../Modules/Libraries/Locker'
+  pod 'Logger', :path => '../../Modules/Libraries/Logger'
+end
+
+def libraries
+  pod 'SANServicesLibrary', :path => '../../Modules/Libraries/SANServicesLibrary'
+  pod 'CoreFoundationLib', :path => '../../Modules/Libraries/CoreFoundationLib'
+  pod 'CoreDomain', :path => '../../Modules/Libraries/CoreDomain'
+  pod 'SQLite.swift/SQLCipher', :path => '../../Modules/Libraries/SQLite.swift'
+  pod 'SQLCipher', '4.4.2'
+  pod 'CoreTestData', :path => '../../Modules/Libraries/CoreTestData'
+  pod 'Localization', :path => '../../Localization'
+  pod 'RxCombine', :path => '../../Modules/Libraries/RxCombine'
+end
+
+def pods
+  pod 'SANLegacyLibrary', :path => '../../Modules/Libraries/SANLegacyLibrary'
+  pod 'QuickSetup', :path => '../../QuickSetup'
+  pod 'UI', :path => '../../UI'
+  pod 'GlobalSearch', :path => '../'
+  legacy_libraries
+  libraries
+end
+
+target 'GlobalSearch_Example' do
+  pods
+  target 'GlobalSearch_ExampleTests' do
+    inherit! :search_paths
+    pod 'UnitTestCommons', :path => '../../UnitTestCommons'
+  end
+end

@@ -1,0 +1,57 @@
+//
+// Created by SYS_CIBER_ADMIN on 9/4/18.
+// Copyright (c) 2018 Ciber. All rights reserved.
+//
+
+import Foundation
+
+public struct WSErrors {
+
+    public static let operativeErrorMp0598 = "MP_0598"
+    public static let operativeErrorMd1112 = "MD_1112"
+    public static let operativeErrorMd0327 = "MD_0327"
+    public static let operativeErrorMp8157 = "MP_8157"
+    public static let operativeErrorMd1113 = "MD_1113"
+    public static let operativeErrorMd8080 = "MD_8080"
+    public static let operativeErrorM41265 = "M4_1265"
+    public static let operativeErrorSv0106 = "SV_0106"
+    public static let operativeErrorSv0003 = "SV_0003"
+    public static let operativeErrorMd7009 = "MD_7009"
+    public static let operativeErrorCrypto1 = "CRYPTO_1"
+    public static let operativeErrorM41371 = "M4_1371"
+    public static let operativeErrorM44752 = "M4_4752"
+    public static let operativeErrorM44687 = "M4_4687"
+    public static let operativeErrorM42843 = "M4_2843"
+    public static let operativeErrorM44788 = "M4_4788"
+    public static let operativeErrorM41504 = "M4_1504"
+    public static let operativeErrorM40610 = "M4_0610"
+    public static let operativeErrorM40018 = "M4_0018"
+    public static let operativeErrorA50475 = "A5_0475"
+    public static let operativeErrorM40566 = "M4_0566"
+    public static let operativeErrorM44594 = "M4_4594"
+    public static let operativeErrorM44754 = "M44754"
+    public static let operativeErrorM40000 = "M4_0000"
+    public static let operativeErrorSv0173 = "SV_0173"
+    public static let operativeErrorM44622 = "M4_4622"
+    public static let operativeErrorM404754 = "M4_4754"
+    public static let operativeErrorM40315 = "M4_0315"
+    public static let operativeErrorMP8170 = "MP_8170"
+    public static let operativeErrorMP1385 = "MP_1385"
+    public static let operativeErrorMP1387 = "MP_1387"
+    public static let operativeErrorFacseg40201009 = "FACSEG_40201009"
+    public static let operativeErrorFacseg50201001 = "FACSEG_50201001"
+    public static let operativeErrorFacseg50300012 = "FACSEG_50300012"
+    public static let operativeErrorFacseg50201014 = "FACSEG_50201014"
+    public static let operativeErrorFacseg50201003 = "FACSEG_50201003"
+    public static let operativeErrorFacseg50300015 = "FACSEG_50300015"
+    public static let operativeErrorFacseg50300016 = "FACSEG_50300016"
+    public static let operativeErrorFacseg30300023 = "FACSEG_30300023"
+    public static let operativeErrorFacseg50200072 = "FACSEG_50200072"
+    public static let operativeErrorSigbro00003 = "SIGBRO_00003"
+    public static let operativeErrorSigbro00004 = "SIGBRO_00004"
+    public static let operativeErrorSigbro00006 = "SIGBRO_00006"
+    public static let operativeErrorSv0108 = "SV_0108"
+    public static let operativeErrorFo0693 = "FO_0693"
+    public static let operativeErrorXx1111 = "XX_1111"
+    public static let operativeErrorFi4021 = "FI_4021"
+}

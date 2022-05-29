@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportFraudView">
+            <connections>
+                <outlet property="button" destination="evO-iH-liH" id="a0w-Tu-Ixk"/>
+                <outlet property="contentView" destination="E35-uB-cSb" id="LFg-Mo-KAN"/>
+                <outlet property="iconImageView" destination="5z5-4E-XGI" id="zXI-Jb-qNg"/>
+                <outlet property="phoneImageView" destination="wye-KU-Yd6" id="V6B-Kd-inD"/>
+                <outlet property="phoneView" destination="4T8-33-XEc" id="g0Q-fm-Tmk"/>
+                <outlet property="reportLabel" destination="CHL-Wx-ATD" id="cwp-vg-7Ao"/>
+                <outlet property="titleLabel" destination="Fc1-oU-TO5" id="M4d-Xe-sNt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ihs-H0-1g6">
+            <rect key="frame" x="0.0" y="0.0" width="168" height="184"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E35-uB-cSb">
+                    <rect key="frame" x="0.0" y="0.0" width="168" height="184"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icnHackersBig" translatesAutoresizingMaskIntoConstraints="NO" id="5z5-4E-XGI">
+                            <rect key="frame" x="16" y="17" width="48" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="48" id="DUh-GC-CXv"/>
+                                <constraint firstAttribute="height" constant="48" id="hSg-z5-9Y8"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fc1-oU-TO5">
+                            <rect key="frame" x="16" y="76" width="136" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CHL-Wx-ATD" userLabel="ReportLabel">
+                            <rect key="frame" x="16" y="78" width="136" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="Fc1-oU-TO5" firstAttribute="top" secondItem="5z5-4E-XGI" secondAttribute="bottom" constant="11" id="0Yg-eR-8Nz"/>
+                        <constraint firstAttribute="height" constant="184" id="1bG-lh-Fs0"/>
+                        <constraint firstItem="CHL-Wx-ATD" firstAttribute="top" secondItem="Fc1-oU-TO5" secondAttribute="bottom" constant="2" id="6c6-Qy-cNe"/>
+                        <constraint firstItem="5z5-4E-XGI" firstAttribute="top" secondItem="E35-uB-cSb" secondAttribute="top" constant="17" id="6ij-Jo-cvx"/>
+                        <constraint firstAttribute="trailing" secondItem="Fc1-oU-TO5" secondAttribute="trailing" constant="16" id="7zL-Ad-qAZ"/>
+                        <constraint firstItem="5z5-4E-XGI" firstAttribute="leading" secondItem="E35-uB-cSb" secondAttribute="leading" constant="16" id="8RQ-A0-CmW"/>
+                        <constraint firstItem="Fc1-oU-TO5" firstAttribute="leading" secondItem="E35-uB-cSb" secondAttribute="leading" constant="16" id="IAO-Bi-qK5"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="CHL-Wx-ATD" secondAttribute="bottom" constant="6" id="qS6-gt-DG2"/>
+                        <constraint firstAttribute="trailing" secondItem="CHL-Wx-ATD" secondAttribute="trailing" constant="16" id="qtd-a7-3cn"/>
+                        <constraint firstItem="CHL-Wx-ATD" firstAttribute="leading" secondItem="E35-uB-cSb" secondAttribute="leading" constant="16" id="r6V-Sb-Yd2"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4T8-33-XEc">
+                    <rect key="frame" x="126" y="-2" width="45" height="50"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icnCornerPhone" translatesAutoresizingMaskIntoConstraints="NO" id="wye-KU-Yd6" userLabel="Icon Image Phone">
+                            <rect key="frame" x="0.0" y="0.0" width="45" height="50"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.9565365911" green="0.96472436189999999" blue="0.96876436470000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="666-Vp-gS7"/>
+                        <constraint firstAttribute="trailing" secondItem="wye-KU-Yd6" secondAttribute="trailing" id="FdK-Zn-0GU"/>
+                        <constraint firstItem="wye-KU-Yd6" firstAttribute="top" secondItem="4T8-33-XEc" secondAttribute="top" id="K0M-LZ-XXn"/>
+                        <constraint firstAttribute="bottom" secondItem="wye-KU-Yd6" secondAttribute="bottom" id="ZVG-cb-QKJ"/>
+                        <constraint firstItem="wye-KU-Yd6" firstAttribute="leading" secondItem="4T8-33-XEc" secondAttribute="leading" id="lLC-kY-efq"/>
+                        <constraint firstAttribute="width" constant="45" id="oBS-HF-pqK"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evO-iH-liH">
+                    <rect key="frame" x="0.0" y="0.0" width="168" height="184"/>
+                    <connections>
+                        <action selector="reportFraudViewPressed:" destination="-1" eventType="touchUpInside" id="2Ln-lM-IL4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="E35-uB-cSb" secondAttribute="bottom" id="2GD-hb-U33"/>
+                <constraint firstItem="evO-iH-liH" firstAttribute="leading" secondItem="lM3-yb-rck" secondAttribute="leading" id="GBX-zh-YM6"/>
+                <constraint firstItem="E35-uB-cSb" firstAttribute="top" secondItem="ihs-H0-1g6" secondAttribute="top" id="U60-ae-cQw"/>
+                <constraint firstAttribute="trailing" secondItem="4T8-33-XEc" secondAttribute="trailing" constant="-3" id="YbF-14-G72"/>
+                <constraint firstAttribute="trailing" secondItem="E35-uB-cSb" secondAttribute="trailing" id="aQt-ns-dMf"/>
+                <constraint firstItem="E35-uB-cSb" firstAttribute="leading" secondItem="ihs-H0-1g6" secondAttribute="leading" id="fAy-xd-qK1"/>
+                <constraint firstItem="4T8-33-XEc" firstAttribute="top" secondItem="ihs-H0-1g6" secondAttribute="top" constant="-2" id="jm1-PB-tN8"/>
+                <constraint firstItem="evO-iH-liH" firstAttribute="top" secondItem="ihs-H0-1g6" secondAttribute="top" id="m32-SL-TVb"/>
+                <constraint firstItem="evO-iH-liH" firstAttribute="trailing" secondItem="lM3-yb-rck" secondAttribute="trailing" id="nVI-z0-Amw"/>
+                <constraint firstItem="evO-iH-liH" firstAttribute="bottom" secondItem="lM3-yb-rck" secondAttribute="bottom" id="zrA-y6-zgr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="lM3-yb-rck"/>
+            <point key="canvasLocation" x="121.73913043478262" y="153.34821428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icnCornerPhone" width="51" height="55"/>
+        <image name="icnHackersBig" width="48" height="48"/>
+    </resources>
+</document>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="258" id="NbB-Pe-3EM" customClass="BannerPGViewCell" customModule="DEBUG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="373" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NbB-Pe-3EM" id="ceX-oo-zpK">
+                <rect key="frame" x="0.0" y="0.0" width="373" height="75.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="71.5" translatesAutoresizingMaskIntoConstraints="NO" id="myK-mJ-Nus" userLabel="Container">
+                        <rect key="frame" x="15" y="0.0" width="343" height="71.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PrF-dV-7KT">
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="71.5"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyh-Cd-rBG">
+                                <rect key="frame" x="319" y="0.0" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="RMB-pY-mcd"/>
+                                    <constraint firstAttribute="height" constant="24" id="rB1-xe-bHp"/>
+                                </constraints>
+                                <state key="normal" image="icnXPullofferCopy"/>
+                                <connections>
+                                    <action selector="touchUpInsideCloseButton:" destination="NbB-Pe-3EM" eventType="touchUpInside" id="WwS-xz-4SR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PrF-dV-7KT" secondAttribute="trailing" id="1re-3O-pah"/>
+                            <constraint firstItem="PrF-dV-7KT" firstAttribute="top" secondItem="myK-mJ-Nus" secondAttribute="top" id="OpJ-Yw-P0k"/>
+                            <constraint firstAttribute="trailing" secondItem="Eyh-Cd-rBG" secondAttribute="trailing" id="SaS-KS-4L9"/>
+                            <constraint firstItem="PrF-dV-7KT" firstAttribute="leading" secondItem="myK-mJ-Nus" secondAttribute="leading" id="TJj-Ql-3Kx"/>
+                            <constraint firstAttribute="bottom" secondItem="PrF-dV-7KT" secondAttribute="bottom" id="lq4-YD-NyU"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Eyh-Cd-rBG" firstAttribute="top" secondItem="ceX-oo-zpK" secondAttribute="top" id="21F-eX-y5x"/>
+                    <constraint firstAttribute="bottom" secondItem="myK-mJ-Nus" secondAttribute="bottom" priority="999" constant="4" id="BBh-KM-nRV"/>
+                    <constraint firstItem="myK-mJ-Nus" firstAttribute="top" secondItem="ceX-oo-zpK" secondAttribute="top" id="TYf-AT-jHr"/>
+                    <constraint firstAttribute="trailing" secondItem="myK-mJ-Nus" secondAttribute="trailing" constant="15" id="Wh2-1c-GsK"/>
+                    <constraint firstItem="myK-mJ-Nus" firstAttribute="leading" secondItem="ceX-oo-zpK" secondAttribute="leading" constant="15" id="jQR-GO-eSh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="pMH-XL-Hh9"/>
+            <connections>
+                <outlet property="bannerImage" destination="PrF-dV-7KT" id="eLi-LD-yoV"/>
+                <outlet property="closeButton" destination="Eyh-Cd-rBG" id="GI1-PM-3FO"/>
+                <outlet property="containerView" destination="myK-mJ-Nus" id="WkM-ky-2E1"/>
+                <outlet property="content" destination="ceX-oo-zpK" id="fQC-g8-0nm"/>
+                <outlet property="imageBottomConstraint" destination="lq4-YD-NyU" id="8gd-gx-o1q"/>
+                <outlet property="imageLeadingConstraint" destination="TJj-Ql-3Kx" id="s4d-3W-ZWZ"/>
+                <outlet property="imageTopConstraint" destination="OpJ-Yw-P0k" id="5Wb-cl-Kmy"/>
+                <outlet property="imageTrailingConstraint" destination="1re-3O-pah" id="cgL-R4-eIG"/>
+            </connections>
+            <point key="canvasLocation" x="84" y="-213"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icnXPullofferCopy" width="24" height="24"/>
+    </resources>
+</document>

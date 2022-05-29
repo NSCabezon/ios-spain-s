@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderMicroText-Bold.ttf">
+            <string>SantanderMicroText-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FundLastMovementsView" customModule="Funds" customModuleProvider="target">
+            <connections>
+                <outlet property="moreMovementsButton" destination="iNH-lX-WVw" id="HoP-4V-HNN"/>
+                <outlet property="moreMovementsImageView" destination="aFE-yN-qZJ" id="lt1-5S-MYz"/>
+                <outlet property="moreMovementsLabel" destination="H0W-hG-ea5" id="36M-tk-cUj"/>
+                <outlet property="moreMovementsView" destination="Y7T-m3-Zzo" id="T9v-3V-zwy"/>
+                <outlet property="movementsStackView" destination="zIO-0P-gXf" id="bnU-Qh-cQ3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kmQ-77-YFC">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zIO-0P-gXf" userLabel="Movements Stack View">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7T-m3-Zzo" userLabel="More Movements View">
+                            <rect key="frame" x="0.0" y="764" width="414" height="54"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aFE-yN-qZJ" userLabel="More Movements Image View">
+                                    <rect key="frame" x="373" y="15" width="24" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="24" id="emc-r2-vpz"/>
+                                        <constraint firstAttribute="height" constant="24" id="lR0-n5-fVO"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*View More" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0W-hG-ea5" userLabel="More Movements Label">
+                                    <rect key="frame" x="286.5" y="17.5" width="78.5" height="19.5"/>
+                                    <accessibility key="accessibilityConfiguration">
+                                        <accessibilityTraits key="traits" none="YES"/>
+                                        <bool key="isElement" value="NO"/>
+                                    </accessibility>
+                                    <fontDescription key="fontDescription" name="SantanderMicroText-Bold" family="Santander Micro Text" pointSize="14"/>
+                                    <color key="textColor" red="0.074509803921568626" green="0.49411764705882355" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNH-lX-WVw" userLabel="More Movements Button">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <connections>
+                                        <action selector="goToMoreMovements:" destination="-1" eventType="touchUpInside" id="SeK-8R-pMa"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="H0W-hG-ea5" firstAttribute="centerY" secondItem="aFE-yN-qZJ" secondAttribute="centerY" id="1N7-4v-SCR"/>
+                                <constraint firstItem="aFE-yN-qZJ" firstAttribute="leading" secondItem="H0W-hG-ea5" secondAttribute="trailing" constant="8" id="25P-G7-Rkw"/>
+                                <constraint firstItem="iNH-lX-WVw" firstAttribute="top" secondItem="Y7T-m3-Zzo" secondAttribute="top" id="4sv-gg-OQq"/>
+                                <constraint firstItem="iNH-lX-WVw" firstAttribute="leading" secondItem="Y7T-m3-Zzo" secondAttribute="leading" id="Gad-eU-MB6"/>
+                                <constraint firstAttribute="trailing" secondItem="iNH-lX-WVw" secondAttribute="trailing" id="Iqb-GU-dLw"/>
+                                <constraint firstAttribute="trailing" secondItem="aFE-yN-qZJ" secondAttribute="trailing" constant="17" id="Ql7-Zy-EMG"/>
+                                <constraint firstAttribute="height" constant="54" id="dmF-De-ePX"/>
+                                <constraint firstItem="aFE-yN-qZJ" firstAttribute="centerY" secondItem="Y7T-m3-Zzo" secondAttribute="centerY" id="nTC-1j-cnT"/>
+                                <constraint firstAttribute="bottom" secondItem="iNH-lX-WVw" secondAttribute="bottom" id="yMq-c4-FSR"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="kmQ-77-YFC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Fha-wE-hQr"/>
+                <constraint firstItem="kmQ-77-YFC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Vee-g3-bdJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kmQ-77-YFC" secondAttribute="trailing" id="Xe6-9z-ob1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="kmQ-77-YFC" secondAttribute="bottom" id="cDh-eq-Amp"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="124.55357142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

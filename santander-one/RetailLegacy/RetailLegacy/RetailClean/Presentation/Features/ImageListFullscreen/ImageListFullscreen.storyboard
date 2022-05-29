@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image List Fullscreen View Controller-->
+        <scene sceneID="J1b-aa-CNI">
+            <objects>
+                <viewController storyboardIdentifier="ImageListFullscreenViewController" id="CeN-LB-GD2" customClass="ImageListFullscreenViewController" customModule="RetailLegacy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vMs-Eh-hjr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFm-9o-QMN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZk-Aq-bnx">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <subviews>
+                                    <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="iSO-ge-WD3">
+                                        <rect key="frame" x="127" y="1.5" width="121.5" height="27.5"/>
+                                    </pageControl>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="iSO-ge-WD3" firstAttribute="top" secondItem="aZk-Aq-bnx" secondAttribute="top" constant="1.5" id="KRT-W1-qng"/>
+                                    <constraint firstItem="iSO-ge-WD3" firstAttribute="centerX" secondItem="aZk-Aq-bnx" secondAttribute="centerX" id="wYu-IL-5o3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="q6w-yg-aoq"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fFm-9o-QMN" firstAttribute="bottom" secondItem="vMs-Eh-hjr" secondAttribute="bottom" id="5ox-tW-PnX"/>
+                            <constraint firstItem="q6w-yg-aoq" firstAttribute="bottom" secondItem="aZk-Aq-bnx" secondAttribute="top" constant="40" id="8N6-Kp-UFl"/>
+                            <constraint firstItem="q6w-yg-aoq" firstAttribute="trailing" secondItem="fFm-9o-QMN" secondAttribute="trailing" id="8v3-eJ-4OC"/>
+                            <constraint firstAttribute="bottom" secondItem="aZk-Aq-bnx" secondAttribute="bottom" id="Dhc-tM-qpb"/>
+                            <constraint firstItem="q6w-yg-aoq" firstAttribute="trailing" secondItem="aZk-Aq-bnx" secondAttribute="trailing" id="SnR-f1-a1d"/>
+                            <constraint firstItem="fFm-9o-QMN" firstAttribute="leading" secondItem="q6w-yg-aoq" secondAttribute="leading" id="UhV-7s-9MX"/>
+                            <constraint firstItem="fFm-9o-QMN" firstAttribute="top" secondItem="q6w-yg-aoq" secondAttribute="top" id="lYD-tR-wUJ"/>
+                            <constraint firstItem="aZk-Aq-bnx" firstAttribute="leading" secondItem="q6w-yg-aoq" secondAttribute="leading" id="zBl-ML-r8i"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageContainer" destination="fFm-9o-QMN" id="tfn-ec-ck4"/>
+                        <outlet property="pageControl" destination="iSO-ge-WD3" id="9DA-WQ-rbY"/>
+                        <outlet property="pageControlContainerView" destination="aZk-Aq-bnx" id="Nlv-fe-ATv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rxT-df-5nX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181.59999999999999" y="93.103448275862078"/>
+        </scene>
+        <!--Image List Fullscreen Container Page View Controller-->
+        <scene sceneID="Y1N-JU-DbV">
+            <objects>
+                <pageViewController storyboardIdentifier="ImageListFullscreenContainerPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="BkM-Xc-6iz" customClass="ImageListFullscreenContainerPageViewController" customModule="RetailLegacy" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OGo-sS-iFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858" y="92"/>
+        </scene>
+        <!--Image List Fullscreen Page View Controller-->
+        <scene sceneID="gfZ-Xh-iTe">
+            <objects>
+                <viewController storyboardIdentifier="ImageListFullscreenPageViewController" id="yFN-n5-Hl3" customClass="ImageListFullscreenPageViewController" customModule="RetailLegacy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WU6-S9-Ig1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OyJ-zJ-Kuk" customClass="AnimatedImageView" customModule="Kingfisher">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vii-NM-IX3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OyJ-zJ-Kuk" firstAttribute="bottom" secondItem="Vii-NM-IX3" secondAttribute="bottom" id="DAP-xa-sUz"/>
+                            <constraint firstItem="OyJ-zJ-Kuk" firstAttribute="top" secondItem="Vii-NM-IX3" secondAttribute="top" id="H3L-QJ-pGq"/>
+                            <constraint firstItem="OyJ-zJ-Kuk" firstAttribute="leading" secondItem="Vii-NM-IX3" secondAttribute="leading" id="iIf-nK-gVO"/>
+                            <constraint firstItem="OyJ-zJ-Kuk" firstAttribute="trailing" secondItem="Vii-NM-IX3" secondAttribute="trailing" id="zjJ-4o-Gcj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="OyJ-zJ-Kuk" id="vgh-Ku-HUm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bdS-Wz-fQs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1513" y="93"/>
+        </scene>
+    </scenes>
+</document>

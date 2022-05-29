@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GPCustomizationProductHeaderView" customModule="PersonalArea" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GPCustomizationProductHeaderView" customModule="PersonalArea" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4W-vk-Fkb" userLabel="Container View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="41"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIP-Na-zaH">
+                            <rect key="frame" x="13" y="8" width="41.5" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nIY-q0-I4C">
+                            <rect key="frame" x="382" y="8" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="ZsW-sR-uJu"/>
+                                <constraint firstAttribute="width" secondItem="nIY-q0-I4C" secondAttribute="height" id="g2v-al-Xij"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="396-fK-Iqa" userLabel="Separator View">
+                            <rect key="frame" x="0.0" y="40" width="414" height="1"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="Rbe-lH-PGI"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="396-fK-Iqa" firstAttribute="top" secondItem="qIP-Na-zaH" secondAttribute="bottom" constant="8" id="BTX-zM-zxc"/>
+                        <constraint firstItem="nIY-q0-I4C" firstAttribute="top" secondItem="q4W-vk-Fkb" secondAttribute="top" constant="8" id="Ihd-cX-hN6"/>
+                        <constraint firstItem="nIY-q0-I4C" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qIP-Na-zaH" secondAttribute="trailing" constant="8" id="LzB-HJ-Lmf"/>
+                        <constraint firstItem="396-fK-Iqa" firstAttribute="leading" secondItem="q4W-vk-Fkb" secondAttribute="leading" id="Pdl-kE-H7V"/>
+                        <constraint firstItem="qIP-Na-zaH" firstAttribute="leading" secondItem="q4W-vk-Fkb" secondAttribute="leading" constant="13" id="euk-Wj-uo4"/>
+                        <constraint firstAttribute="bottom" secondItem="396-fK-Iqa" secondAttribute="bottom" id="hQF-ds-EaO"/>
+                        <constraint firstItem="qIP-Na-zaH" firstAttribute="top" secondItem="q4W-vk-Fkb" secondAttribute="top" constant="8" id="qxh-ag-hky"/>
+                        <constraint firstAttribute="trailing" secondItem="nIY-q0-I4C" secondAttribute="trailing" constant="8" id="roU-Pp-gxJ" userLabel="Drag Icon Trailing Constraint"/>
+                        <constraint firstItem="396-fK-Iqa" firstAttribute="top" secondItem="nIY-q0-I4C" secondAttribute="bottom" constant="8" id="x1C-zm-qkg"/>
+                        <constraint firstAttribute="trailing" secondItem="396-fK-Iqa" secondAttribute="trailing" id="zFI-9X-rEm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="q4W-vk-Fkb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="59u-Ok-Xdx"/>
+                <constraint firstItem="q4W-vk-Fkb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="aPt-Kr-oLE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="q4W-vk-Fkb" secondAttribute="trailing" id="rFY-77-ndt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="containerView" destination="q4W-vk-Fkb" id="3wR-AD-ral"/>
+                <outlet property="dragIcon" destination="nIY-q0-I4C" id="5Th-ZO-yJb"/>
+                <outlet property="dragIconTrailingConstraint" destination="roU-Pp-gxJ" id="jGo-xp-LEb"/>
+                <outlet property="separatorView" destination="396-fK-Iqa" id="RbP-c2-K5Q"/>
+                <outlet property="titleLabel" destination="qIP-Na-zaH" id="6K6-Uj-8vC"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="112"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

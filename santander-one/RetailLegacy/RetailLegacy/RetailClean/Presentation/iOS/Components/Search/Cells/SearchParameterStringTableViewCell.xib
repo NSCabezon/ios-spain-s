@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="188" id="KGk-i7-Jjw" customClass="SearchParameterStringTableViewCell" customModule="METRIX" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="188"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="188"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eet-FU-qIh">
+                        <rect key="frame" x="11" y="15" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ef8-s9-j1o">
+                        <rect key="frame" x="11" y="40" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JDQ-5f-RVk" customClass="KeyboardTextField" customModule="UI">
+                        <rect key="frame" x="11" y="62" width="298" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="43" id="L8u-sl-GLw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EdJ-Lm-LGG">
+                        <rect key="frame" x="8" y="187" width="304" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Vrj-0u-shU"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQG-5X-hHl" customClass="RedButton" customModule="METRIX" customModuleProvider="target">
+                        <rect key="frame" x="48" y="136" width="224" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="oaz-98-g4e"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="eet-FU-qIh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="0L5-JT-wEG"/>
+                    <constraint firstItem="eet-FU-qIh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="1Zo-yG-M1w"/>
+                    <constraint firstAttribute="trailing" secondItem="EdJ-Lm-LGG" secondAttribute="trailing" constant="8" id="BSP-MZ-eGC"/>
+                    <constraint firstItem="nQG-5X-hHl" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JDQ-5f-RVk" secondAttribute="bottom" constant="14" id="BhA-Ym-Ypi"/>
+                    <constraint firstAttribute="bottom" secondItem="EdJ-Lm-LGG" secondAttribute="bottom" id="BxZ-OD-TjN"/>
+                    <constraint firstItem="EdJ-Lm-LGG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Cnf-t6-9kB"/>
+                    <constraint firstItem="nQG-5X-hHl" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Xpw-ld-ltj"/>
+                    <constraint firstItem="Ef8-s9-j1o" firstAttribute="leading" secondItem="eet-FU-qIh" secondAttribute="leading" id="aJB-6V-JXp"/>
+                    <constraint firstItem="JDQ-5f-RVk" firstAttribute="leading" secondItem="Ef8-s9-j1o" secondAttribute="leading" id="mFw-47-dpo"/>
+                    <constraint firstItem="JDQ-5f-RVk" firstAttribute="top" secondItem="Ef8-s9-j1o" secondAttribute="bottom" constant="1" id="qZW-mV-fig"/>
+                    <constraint firstItem="nQG-5X-hHl" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.7" id="rT1-p6-ZEr"/>
+                    <constraint firstAttribute="bottom" secondItem="nQG-5X-hHl" secondAttribute="bottom" constant="12" id="rbh-CH-Cf9"/>
+                    <constraint firstAttribute="trailing" secondItem="JDQ-5f-RVk" secondAttribute="trailing" constant="11" id="rl6-bk-ehV"/>
+                    <constraint firstItem="Ef8-s9-j1o" firstAttribute="top" secondItem="eet-FU-qIh" secondAttribute="bottom" constant="4" id="xRV-jj-PuM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="inputTextField" destination="JDQ-5f-RVk" id="GbD-8E-hjB"/>
+                <outlet property="searchButton" destination="nQG-5X-hHl" id="8QY-5p-f4R"/>
+                <outlet property="separatorView" destination="EdJ-Lm-LGG" id="Xps-s5-v2G"/>
+                <outlet property="subtitleLabel" destination="Ef8-s9-j1o" id="sSY-KF-DBb"/>
+                <outlet property="titleLabel" destination="eet-FU-qIh" id="xUr-7s-hGb"/>
+            </connections>
+            <point key="canvasLocation" x="50" y="113"/>
+        </tableViewCell>
+    </objects>
+</document>

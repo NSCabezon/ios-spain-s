@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lisboa Generic Otp View Controller-->
+        <scene sceneID="s59-a9-pdN">
+            <objects>
+                <viewController storyboardIdentifier="LisboaGenericOtpViewController" id="VOp-BI-Vhi" customClass="LisboaGenericOtpViewController" customModule="METRIX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J4V-XG-6d4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="** Clave de seguridad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ax-Tx-AWw">
+                                <rect key="frame" x="15" y="60" width="290" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="U6l-MM-r2E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="** Te lo hemos enviado a tu móvil terminado en 606" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cv-fI-kmi">
+                                <rect key="frame" x="40" y="90" width="240" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsa-c3-HO4" userLabel="Text Field Container">
+                                <rect key="frame" x="60" y="145" width="200" height="48"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LR2-1E-FCI" customClass="LimitedTextField" customModule="UI">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="AWv-zv-C6o"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLj-My-x68">
+                                        <rect key="frame" x="0.0" y="47" width="200" height="1"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="6yg-gr-kx9"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="nLj-My-x68" secondAttribute="trailing" id="LZs-QY-Gtr"/>
+                                    <constraint firstItem="nLj-My-x68" firstAttribute="leading" secondItem="vsa-c3-HO4" secondAttribute="leading" id="M8C-DF-gj7"/>
+                                    <constraint firstAttribute="trailing" secondItem="LR2-1E-FCI" secondAttribute="trailing" id="Qfv-V7-Oa9"/>
+                                    <constraint firstItem="LR2-1E-FCI" firstAttribute="top" secondItem="vsa-c3-HO4" secondAttribute="top" id="gQG-sI-Fvk"/>
+                                    <constraint firstAttribute="height" constant="48" id="giD-cB-Fib"/>
+                                    <constraint firstItem="LR2-1E-FCI" firstAttribute="leading" secondItem="vsa-c3-HO4" secondAttribute="leading" id="nfm-OH-oxp"/>
+                                    <constraint firstAttribute="bottom" secondItem="LR2-1E-FCI" secondAttribute="bottom" id="yWf-IU-eeF"/>
+                                    <constraint firstAttribute="bottom" secondItem="nLj-My-x68" secondAttribute="bottom" id="ydO-jY-GZe"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLl-Eg-g38">
+                                <rect key="frame" x="17" y="208" width="286" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="aY7-lW-CaN"/>
+                                </constraints>
+                                <state key="normal" title="** ¿No te ha llegado?"/>
+                                <connections>
+                                    <action selector="didTouchSendAgainButton" destination="VOp-BI-Vhi" eventType="touchUpInside" id="cWD-e7-ILb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGk-qz-0pd" customClass="LisboaButton" customModule="UI">
+                                <rect key="frame" x="23" y="259" width="274" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="KY9-0D-KW6"/>
+                                </constraints>
+                                <state key="normal" title="**Aceptar"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CdO-Dh-XvF">
+                                <rect key="frame" x="0.0" y="568" width="320" height="0.0"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="7Nf-xd-eU2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7cv-fI-kmi" firstAttribute="width" secondItem="J4V-XG-6d4" secondAttribute="width" multiplier="0.75" id="7RO-zS-b5n"/>
+                            <constraint firstItem="5ax-Tx-AWw" firstAttribute="top" secondItem="qCZ-ES-Xck" secondAttribute="top" priority="990" constant="60" id="98K-eO-J1e"/>
+                            <constraint firstItem="7cv-fI-kmi" firstAttribute="top" secondItem="5ax-Tx-AWw" secondAttribute="bottom" priority="980" constant="5" id="98L-w1-tay"/>
+                            <constraint firstItem="hLl-Eg-g38" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vsa-c3-HO4" secondAttribute="bottom" constant="3" id="FHp-WC-qcg"/>
+                            <constraint firstItem="vGk-qz-0pd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="hLl-Eg-g38" secondAttribute="bottom" constant="3" id="IID-C2-TYl"/>
+                            <constraint firstItem="hLl-Eg-g38" firstAttribute="leading" secondItem="qCZ-ES-Xck" secondAttribute="leading" constant="17" id="JaC-dp-XGI"/>
+                            <constraint firstItem="CdO-Dh-XvF" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vGk-qz-0pd" secondAttribute="bottom" constant="5" id="M7x-mL-U4C"/>
+                            <constraint firstItem="vsa-c3-HO4" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7cv-fI-kmi" secondAttribute="bottom" constant="7" id="N9c-pm-85X"/>
+                            <constraint firstItem="5ax-Tx-AWw" firstAttribute="leading" secondItem="qCZ-ES-Xck" secondAttribute="leading" constant="15" id="T9H-yy-Snz"/>
+                            <constraint firstItem="qCZ-ES-Xck" firstAttribute="trailing" secondItem="5ax-Tx-AWw" secondAttribute="trailing" constant="15" id="TGk-Bt-NeV"/>
+                            <constraint firstItem="qCZ-ES-Xck" firstAttribute="bottom" secondItem="CdO-Dh-XvF" secondAttribute="bottom" id="axe-qc-oZC"/>
+                            <constraint firstItem="vGk-qz-0pd" firstAttribute="leading" secondItem="qCZ-ES-Xck" secondAttribute="leading" constant="23" id="b2B-Eg-FlO"/>
+                            <constraint firstItem="vsa-c3-HO4" firstAttribute="leading" secondItem="qCZ-ES-Xck" secondAttribute="leading" constant="60" id="c3y-q4-0EX"/>
+                            <constraint firstItem="vsa-c3-HO4" firstAttribute="top" secondItem="7cv-fI-kmi" secondAttribute="bottom" priority="980" constant="14" id="c6T-t1-h8C"/>
+                            <constraint firstItem="7cv-fI-kmi" firstAttribute="centerX" secondItem="qCZ-ES-Xck" secondAttribute="centerX" id="dQd-Rm-dCZ"/>
+                            <constraint firstItem="qCZ-ES-Xck" firstAttribute="trailing" secondItem="CdO-Dh-XvF" secondAttribute="trailing" id="jKi-aa-m7t"/>
+                            <constraint firstItem="vGk-qz-0pd" firstAttribute="top" secondItem="hLl-Eg-g38" secondAttribute="bottom" priority="970" constant="21" id="kcz-Vf-QKg"/>
+                            <constraint firstItem="7cv-fI-kmi" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5ax-Tx-AWw" secondAttribute="bottom" id="ohp-bA-qcW"/>
+                            <constraint firstItem="qCZ-ES-Xck" firstAttribute="trailing" secondItem="hLl-Eg-g38" secondAttribute="trailing" constant="17" id="puZ-Sp-yoU"/>
+                            <constraint firstItem="hLl-Eg-g38" firstAttribute="top" secondItem="vsa-c3-HO4" secondAttribute="bottom" priority="990" constant="15" id="v7H-9X-euE"/>
+                            <constraint firstItem="CdO-Dh-XvF" firstAttribute="leading" secondItem="qCZ-ES-Xck" secondAttribute="leading" id="wDm-TZ-fKe"/>
+                            <constraint firstItem="qCZ-ES-Xck" firstAttribute="trailing" secondItem="vGk-qz-0pd" secondAttribute="trailing" constant="23" id="yYz-fB-vcW"/>
+                            <constraint firstItem="qCZ-ES-Xck" firstAttribute="trailing" secondItem="vsa-c3-HO4" secondAttribute="trailing" constant="60" id="z10-GP-M8H"/>
+                            <constraint firstItem="5ax-Tx-AWw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qCZ-ES-Xck" secondAttribute="top" constant="5" id="zah-xT-h3C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qCZ-ES-Xck"/>
+                    </view>
+                    <connections>
+                        <outlet property="acceptButton" destination="vGk-qz-0pd" id="F6V-8V-jxt"/>
+                        <outlet property="bottomConstraint" destination="axe-qc-oZC" id="Q1h-u6-MGB"/>
+                        <outlet property="otpTextField" destination="LR2-1E-FCI" id="SNY-Z9-2W3"/>
+                        <outlet property="sendAgainButton" destination="hLl-Eg-g38" id="GEf-Qj-NOj"/>
+                        <outlet property="subtitleOtp" destination="7cv-fI-kmi" id="PaA-xN-n7k"/>
+                        <outlet property="textFieldSeparator" destination="nLj-My-x68" id="yIw-66-rT6"/>
+                        <outlet property="titleOtp" destination="5ax-Tx-AWw" id="Kot-ar-qVm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQw-ND-wph" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-322" y="131"/>
+        </scene>
+    </scenes>
+</document>

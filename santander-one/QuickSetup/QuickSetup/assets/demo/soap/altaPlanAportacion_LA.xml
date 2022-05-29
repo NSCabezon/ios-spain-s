@@ -1,0 +1,61 @@
+<datos>
+    <id12345678z>
+        <respuesta0>
+            <soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <soap-env:Header>
+                    <wsse:Security xmlns:S12="http://www.w3.org/2003/05/soap-envelope"
+                        xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" S12:role="wsssecurity"
+                        soap-env:actor="http://www.isban.es/soap/actor/wssecurity" soap-env:mustUnderstand="1">
+                        <wsse:BinarySecurityToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                            EncodingType="wsse:Base64Binary" ValueType="esquema" wsu:Id="SSOToken">
+                            B4C00830B8B90101D9990049#180.192.8.48#1481110240423#PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iSVNPLTg4NTktMSI/Pjx0b2tlbkRlZmluaXRpb24+PHVzZXJJRD4wMDc5MDI5NjwvdXNlcklEPjwvdG9rZW5EZWZpbml0aW9uPg==#DESede/CBC/PKCS5Padding#v1#canalesSANPRE#NOT
+                            USED#SHA1withRSA#bld7BIyuTkg5uh/MTU0+9RAumCbhd4D37jDSzzYj+pn/KUdp5QVMoUWv85Sf5tmxvkgkA02NDd/hfrUrTayGJU+iG1LvABvbBUWjQgNEANAJ4FSJFvsu3tJIWhWc283vXnamwK+Sk/p/JDb5i/Y6JBUGRbjhA/pV/L8HJGXQUFU=
+                        </wsse:BinarySecurityToken>
+                    </wsse:Security>
+                </soap-env:Header>
+                <soap-env:Body>
+                    <prefixRigel0:altaPlanAportacion_LAResponse
+                        xmlns:prefixRigel0="http://www.isban.es/webservices/PLANE1/Aportacionplan_la/F_plane1_aportacionplan_la/ACPLANE1AportacionPlan/v1">
+                        <methodResult>
+                            <info>
+                                <errorCode>0</errorCode>
+                            </info>
+                        </methodResult>
+                    </prefixRigel0:altaPlanAportacion_LAResponse>
+                </soap-env:Body>
+            </soap-env:Envelope>
+        </respuesta0>
+        <respuesta1>
+            <soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <soap-env:Header>
+                    <wsse:Security xmlns:S12="http://www.w3.org/2003/05/soap-envelope"
+                        xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" S12:role="wsssecurity"
+                        soap-env:actor="http://www.isban.es/soap/actor/wssecurity" soap-env:mustUnderstand="1">
+                        <wsse:BinarySecurityToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                            EncodingType="wsse:Base64Binary" ValueType="esquema" wsu:Id="SSOToken">
+                            B4C00616D3857F00D807D9F9#180.192.8.48#1481107570763#PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iSVNPLTg4NTktMSI/Pjx0b2tlbkRlZmluaXRpb24+PHVzZXJJRD4wMDY2NzU0NjwvdXNlcklEPjwvdG9rZW5EZWZpbml0aW9uPg==#DESede/CBC/PKCS5Padding#v1#canalesSANPRE#NOT
+                            USED#SHA1withRSA#aJsc4ptVQduh2nUdKS6qSwrjJ2XDRQtKsk8FInLwuENuzruYuy6D/Yw4iBEw2VW6GsWFoyfwZozwzwJvZoADCs26xjVZ8u6GwjvnSqO+feUJEwWJOd/CmK9+6DvgfUdYc2km+3c0VFU2ubOCZQCAyjdjG0nC/SKGWKPlrTsOpoU=
+                        </wsse:BinarySecurityToken>
+                    </wsse:Security>
+                </soap-env:Header>
+                <soap-env:Body>
+                    <soap-env:Fault>
+                        <faultcode>soap-env:Server</faultcode>
+                        <faultstring>Exception Code: PLANE1_00000. Executing Facade: ACPLANE1AportacionPlan, Method: altaPlanAportacion_LA</faultstring>
+                        <faultactor>http://www.isban.es/soap/banksphere</faultactor>
+                        <detail>
+                            <prefixRigel0:com.isb.plane1.aportacionplan.la.exc.MsgTranslator_AportacionPlan_LA
+                                xmlns:prefixRigel0="http://www.isban.es/webservices/PLANE1/Aportacionplan_la/F_plane1_aportacionplan_la/functionalFaults/v1">
+                                <error>
+                                    <codError>PK_0736</codError>
+                                    <errorDesc>SÓLO SE ADMITE UN PLAN SISTEMÁTICO ACTIVO.</errorDesc>
+                                    <errorCode>1</errorCode>
+                                </error>
+                            </prefixRigel0:com.isb.plane1.aportacionplan.la.exc.MsgTranslator_AportacionPlan_LA>
+                        </detail>
+                    </soap-env:Fault>
+                </soap-env:Body>
+            </soap-env:Envelope>
+        </respuesta1>
+    </id12345678z>
+</datos>

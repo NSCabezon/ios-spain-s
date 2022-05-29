@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="StockSummaryItemView" customModule="DEBUG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BBVA(BBVA)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WL-su-IsN" userLabel="stockTickerLabel">
+                    <rect key="frame" x="0.0" y="0.0" width="93" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="753" text="4,5090€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heD-CO-EyT">
+                    <rect key="frame" x="0.0" y="23" width="142" height="42"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="254" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="iconValueArrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="lp5-iC-WmD">
+                    <rect key="frame" x="314" y="49" width="11" height="11"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="1,42%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHt-aB-sAU">
+                    <rect key="frame" x="331" y="44" width="44" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6WL-su-IsN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="1l9-hf-Da2"/>
+                <constraint firstItem="lp5-iC-WmD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="heD-CO-EyT" secondAttribute="trailing" constant="10" id="4k9-av-7Y3"/>
+                <constraint firstItem="heD-CO-EyT" firstAttribute="top" secondItem="6WL-su-IsN" secondAttribute="bottom" constant="3" id="8lY-M6-qN4"/>
+                <constraint firstItem="heD-CO-EyT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="BBf-68-NhC"/>
+                <constraint firstItem="lp5-iC-WmD" firstAttribute="centerY" secondItem="zHt-aB-sAU" secondAttribute="centerY" id="Mw1-Qa-0pm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="heD-CO-EyT" secondAttribute="bottom" id="ZDG-YJ-k2B"/>
+                <constraint firstItem="zHt-aB-sAU" firstAttribute="leading" secondItem="lp5-iC-WmD" secondAttribute="trailing" constant="6" id="pGc-3M-UPg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="zHt-aB-sAU" secondAttribute="bottom" constant="1" id="xK0-ZQ-333"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zHt-aB-sAU" secondAttribute="trailing" id="xVm-yi-Jbk"/>
+                <constraint firstItem="6WL-su-IsN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="xZG-xM-jgj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="priceLabel" destination="heD-CO-EyT" id="eqV-8w-Bpj"/>
+                <outlet property="tickerLabel" destination="6WL-su-IsN" id="GGs-yq-vgT"/>
+                <outlet property="variationImage" destination="lp5-iC-WmD" id="eD4-AQ-asZ"/>
+                <outlet property="variationLabel" destination="zHt-aB-sAU" id="2tr-d7-Fbi"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="140.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="iconValueArrowDown" width="11" height="11"/>
+    </resources>
+</document>

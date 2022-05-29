@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderText-Regular.ttf">
+            <string>SantanderText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="192" id="KGk-i7-Jjw" customClass="EmitterLoadingTableViewCell" customModule="Bills" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="192"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="401" height="192"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n4W-84-SQd">
+                        <rect key="frame" x="175.5" y="50" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="dQB-4I-1YX"/>
+                            <constraint firstAttribute="height" constant="50" id="ul9-yW-sTk"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="HOla" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcl-xK-9UU">
+                        <rect key="frame" x="17" y="92" width="367" height="29"/>
+                        <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="20"/>
+                        <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="fdsfa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfo-RV-eZt">
+                        <rect key="frame" x="17" y="121" width="367" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="9zZ-F3-XxZ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="14"/>
+                        <color key="textColor" red="0.43529411764705883" green="0.46666666666666667" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Xfo-RV-eZt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="Fdy-u8-TTb"/>
+                    <constraint firstItem="Xfo-RV-eZt" firstAttribute="top" secondItem="fcl-xK-9UU" secondAttribute="bottom" id="Rk6-r1-6jQ"/>
+                    <constraint firstItem="n4W-84-SQd" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="RpO-ae-7Mg"/>
+                    <constraint firstAttribute="trailing" secondItem="Xfo-RV-eZt" secondAttribute="trailing" constant="17" id="VqJ-Pk-Fxn"/>
+                    <constraint firstItem="fcl-xK-9UU" firstAttribute="top" secondItem="n4W-84-SQd" secondAttribute="bottom" constant="-8" id="XwY-77-IfB"/>
+                    <constraint firstItem="fcl-xK-9UU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="bB7-Wn-p9e"/>
+                    <constraint firstAttribute="trailing" secondItem="fcl-xK-9UU" secondAttribute="trailing" constant="17" id="dRm-tF-9FS"/>
+                    <constraint firstItem="n4W-84-SQd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="50" id="iBL-Ak-dzI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="loadintImageView" destination="n4W-84-SQd" id="XKM-21-Izj"/>
+                <outlet property="subTitleLoading" destination="Xfo-RV-eZt" id="3af-1U-96N"/>
+                <outlet property="titleLoading" destination="fcl-xK-9UU" id="QwW-TH-1yn"/>
+            </connections>
+            <point key="canvasLocation" x="196.37681159420291" y="10.044642857142856"/>
+        </tableViewCell>
+    </objects>
+</document>

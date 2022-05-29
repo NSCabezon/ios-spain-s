@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfirmationAmortizationStepViewController" customModule="Loans" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="G8o-j9-00s" id="bMW-rA-XcH"/>
+                <outlet property="continueButton" destination="LFW-cE-4k7" id="pBx-uM-vw9"/>
+                <outlet property="view" destination="iN0-l3-epB" id="qld-G3-nWh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hph-Ql-v7N" userLabel="View button">
+                    <rect key="frame" x="0.0" y="714" width="375" height="98"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IhQ-PF-kgH" userLabel="View separator">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                            <color key="backgroundColor" red="0.85882352941176465" green="0.8784313725490196" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="v7Z-W2-RIN"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFW-cE-4k7" customClass="WhiteLisboaButton" customModule="UI">
+                            <rect key="frame" x="16" y="16" width="343" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="kGA-oj-B1H"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="IhQ-PF-kgH" firstAttribute="top" secondItem="hph-Ql-v7N" secondAttribute="top" id="AsZ-w9-0Vd"/>
+                        <constraint firstItem="IhQ-PF-kgH" firstAttribute="leading" secondItem="hph-Ql-v7N" secondAttribute="leading" id="CTw-m5-AHf"/>
+                        <constraint firstAttribute="trailing" secondItem="IhQ-PF-kgH" secondAttribute="trailing" id="DO0-S6-HpF"/>
+                        <constraint firstItem="LFW-cE-4k7" firstAttribute="leading" secondItem="hph-Ql-v7N" secondAttribute="leading" constant="16" id="PHh-Nb-TVg"/>
+                        <constraint firstItem="LFW-cE-4k7" firstAttribute="top" secondItem="hph-Ql-v7N" secondAttribute="top" constant="16" id="gdZ-F3-avx"/>
+                        <constraint firstAttribute="trailing" secondItem="LFW-cE-4k7" secondAttribute="trailing" constant="16" id="qks-aQ-d2o"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8o-j9-00s" userLabel="View form">
+                    <rect key="frame" x="0.0" y="80" width="375" height="634"/>
+                    <color key="backgroundColor" red="0.95686274510000002" green="0.96470588239999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="G8o-j9-00s" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6DA-gT-F1d"/>
+                <constraint firstItem="G8o-j9-00s" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="JbU-XW-aav"/>
+                <constraint firstItem="LFW-cE-4k7" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-8" id="QyY-s8-wie"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hph-Ql-v7N" secondAttribute="trailing" id="b8R-1L-iUY"/>
+                <constraint firstItem="hph-Ql-v7N" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="g4z-pF-IKz"/>
+                <constraint firstItem="hph-Ql-v7N" firstAttribute="top" secondItem="G8o-j9-00s" secondAttribute="bottom" id="jeo-Pd-ZwT"/>
+                <constraint firstItem="G8o-j9-00s" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="36" id="kM3-6u-XKc"/>
+                <constraint firstAttribute="bottom" secondItem="hph-Ql-v7N" secondAttribute="bottom" id="qg9-aj-xo8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="G8o-j9-00s" secondAttribute="trailing" id="v4d-Go-HRf"/>
+            </constraints>
+            <point key="canvasLocation" x="162.31884057971016" y="169.56521739130437"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="LFW-cE-4k7">
+            <size key="intrinsicContentSize" width="46" height="30"/>
+        </designable>
+    </designables>
+</document>

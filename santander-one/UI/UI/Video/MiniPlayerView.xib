@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MiniPlayerView" customModule="UI">
+            <connections>
+                <outlet property="buttonClose" destination="qc8-BE-aIz" id="rpI-eV-sg8"/>
+                <outlet property="buttonPlay" destination="RI3-gX-uD3" id="X5i-Ut-kvu"/>
+                <outlet property="loadingIndicator" destination="qVi-xb-AoP" id="kne-t3-FFg"/>
+                <outlet property="loadingView" destination="01v-wg-BEN" id="aCX-PJ-XuE"/>
+                <outlet property="playerView" destination="YhP-he-bTv" id="1GH-jH-yPs"/>
+                <outlet property="topConstraint" destination="e6W-Xb-UQG" id="p7C-Z7-7wK"/>
+                <outlet property="ytpPlayerView" destination="5Jp-mp-0qs" id="BiG-ha-Y5K"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YhP-he-bTv">
+                    <rect key="frame" x="8" y="284" width="398" height="224"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Jp-mp-0qs" customClass="YTPlayerView">
+                            <rect key="frame" x="0.0" y="0.0" width="398" height="224"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RI3-gX-uD3">
+                            <rect key="frame" x="177" y="90" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="R22-aV-IuS"/>
+                                <constraint firstAttribute="height" constant="44" id="RTu-rH-h6P"/>
+                            </constraints>
+                            <connections>
+                                <action selector="play" destination="-1" eventType="touchUpInside" id="HLX-yk-WUR"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01v-wg-BEN">
+                            <rect key="frame" x="0.0" y="0.0" width="398" height="224"/>
+                            <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="qVi-xb-AoP">
+                            <rect key="frame" x="180.5" y="93.5" width="37" height="37"/>
+                        </activityIndicatorView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qc8-BE-aIz">
+                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="BjV-Bl-8cL"/>
+                                <constraint firstAttribute="height" constant="44" id="jma-6M-lmo"/>
+                            </constraints>
+                            <connections>
+                                <action selector="close" destination="-1" eventType="touchUpInside" id="8wr-ih-Wyh"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="YhP-he-bTv" secondAttribute="height" multiplier="400:225" id="69y-bS-EVT"/>
+                        <constraint firstItem="qVi-xb-AoP" firstAttribute="centerY" secondItem="YhP-he-bTv" secondAttribute="centerY" id="8gK-ID-yus"/>
+                        <constraint firstItem="RI3-gX-uD3" firstAttribute="centerY" secondItem="YhP-he-bTv" secondAttribute="centerY" id="Asa-wZ-WCu"/>
+                        <constraint firstAttribute="bottom" secondItem="5Jp-mp-0qs" secondAttribute="bottom" id="Goz-0Z-gf0"/>
+                        <constraint firstItem="5Jp-mp-0qs" firstAttribute="leading" secondItem="YhP-he-bTv" secondAttribute="leading" id="K9g-mH-Egu"/>
+                        <constraint firstItem="qc8-BE-aIz" firstAttribute="leading" secondItem="YhP-he-bTv" secondAttribute="leading" id="LJe-WM-IF0"/>
+                        <constraint firstItem="qc8-BE-aIz" firstAttribute="top" secondItem="YhP-he-bTv" secondAttribute="top" id="Qrs-5i-c5N"/>
+                        <constraint firstAttribute="trailing" secondItem="5Jp-mp-0qs" secondAttribute="trailing" id="Sx1-Rh-ocn"/>
+                        <constraint firstItem="01v-wg-BEN" firstAttribute="top" secondItem="YhP-he-bTv" secondAttribute="top" id="afM-ES-Ki7"/>
+                        <constraint firstItem="qVi-xb-AoP" firstAttribute="centerX" secondItem="YhP-he-bTv" secondAttribute="centerX" id="b76-40-H4e"/>
+                        <constraint firstItem="5Jp-mp-0qs" firstAttribute="top" secondItem="YhP-he-bTv" secondAttribute="top" id="fOI-Er-yHO"/>
+                        <constraint firstItem="RI3-gX-uD3" firstAttribute="centerX" secondItem="YhP-he-bTv" secondAttribute="centerX" id="he7-Le-Jbn"/>
+                        <constraint firstAttribute="bottom" secondItem="01v-wg-BEN" secondAttribute="bottom" id="qBQ-xy-fCg"/>
+                        <constraint firstItem="01v-wg-BEN" firstAttribute="leading" secondItem="YhP-he-bTv" secondAttribute="leading" id="qwk-a7-5YP"/>
+                        <constraint firstAttribute="trailing" secondItem="01v-wg-BEN" secondAttribute="trailing" id="rRw-yR-RNE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="YhP-he-bTv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="2mV-0R-yUR"/>
+                <constraint firstAttribute="trailing" secondItem="YhP-he-bTv" secondAttribute="trailing" constant="8" id="OBy-jb-ZBG"/>
+                <constraint firstItem="YhP-he-bTv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="240" id="e6W-Xb-UQG"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="151"/>
+        </view>
+    </objects>
+</document>

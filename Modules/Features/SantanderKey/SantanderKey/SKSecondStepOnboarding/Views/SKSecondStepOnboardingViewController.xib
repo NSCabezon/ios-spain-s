@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SKSecondStepOnboardingViewController" customModule="SantanderKey" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomView" destination="RAL-R7-zzs" id="L7c-q9-U8T"/>
+                <outlet property="contentView" destination="i5M-Pr-FkT" id="Rfg-4T-z0M"/>
+                <outlet property="lockRoundedImageView" destination="xBx-gC-zly" id="B5T-AN-fiN"/>
+                <outlet property="lockRoundedView" destination="uHH-NH-PFT" id="Pgs-6T-g6b"/>
+                <outlet property="oneAppLinkButton" destination="LVG-kH-0dT" id="KSP-Fi-v4Z"/>
+                <outlet property="oneFloatingButton" destination="UGF-5K-vNX" id="8Sw-he-EML"/>
+                <outlet property="phoneImageView" destination="cSO-Yn-e5l" id="stG-AI-GYR"/>
+                <outlet property="stackView" destination="E6d-ui-Xsm" id="fxx-Vv-MmH"/>
+                <outlet property="titleLabel" destination="782-YL-tRi" id="JIX-KP-kGR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgSanKeyTutorial" translatesAutoresizingMaskIntoConstraints="NO" id="cSO-Yn-e5l">
+                    <rect key="frame" x="132" y="62" width="150" height="288"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="Vry-L7-PP1"/>
+                        <constraint firstAttribute="height" constant="288" id="hsP-PE-TiQ"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAL-R7-zzs">
+                    <rect key="frame" x="0.0" y="212" width="414" height="684"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="E6d-ui-Xsm">
+                            <rect key="frame" x="0.0" y="76.5" width="414" height="465.5"/>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_Ya tienes Santander Key!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="782-YL-tRi">
+                            <rect key="frame" x="20" y="40" width="374" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGF-5K-vNX" customClass="OneFloatingButton" customModule="UIOneComponents">
+                            <rect key="frame" x="83" y="558" width="248" height="30"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="oneFloatingButtonPressed:" destination="-1" eventType="touchUpInside" id="1Kk-7s-Lf7"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVG-kH-0dT" customClass="OneAppLink" customModule="UIOneComponents">
+                            <rect key="frame" x="184" y="604" width="46" height="30"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="oneAppLinkPressed:" destination="-1" eventType="touchUpInside" id="cla-wX-TiY"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="UGF-5K-vNX" firstAttribute="top" secondItem="E6d-ui-Xsm" secondAttribute="bottom" constant="16" placeholder="YES" id="BZL-h0-S6H"/>
+                        <constraint firstAttribute="trailing" secondItem="E6d-ui-Xsm" secondAttribute="trailing" id="Cfn-TG-8FA"/>
+                        <constraint firstItem="UGF-5K-vNX" firstAttribute="centerX" secondItem="RAL-R7-zzs" secondAttribute="centerX" id="JES-ZB-g5G"/>
+                        <constraint firstItem="782-YL-tRi" firstAttribute="leading" secondItem="RAL-R7-zzs" secondAttribute="leading" constant="20" id="Mc5-53-BJ3"/>
+                        <constraint firstAttribute="trailing" secondItem="782-YL-tRi" secondAttribute="trailing" constant="20" id="Mei-QK-1Gb"/>
+                        <constraint firstItem="E6d-ui-Xsm" firstAttribute="leading" secondItem="RAL-R7-zzs" secondAttribute="leading" id="Q96-VJ-Da2"/>
+                        <constraint firstItem="UGF-5K-vNX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="E6d-ui-Xsm" secondAttribute="bottom" constant="16" id="SWg-Ev-WDJ"/>
+                        <constraint firstItem="E6d-ui-Xsm" firstAttribute="top" secondItem="782-YL-tRi" secondAttribute="bottom" constant="16" id="b60-at-CsS"/>
+                        <constraint firstItem="LVG-kH-0dT" firstAttribute="centerX" secondItem="RAL-R7-zzs" secondAttribute="centerX" id="og3-p6-8lr"/>
+                        <constraint firstItem="782-YL-tRi" firstAttribute="top" secondItem="RAL-R7-zzs" secondAttribute="top" constant="40" id="olb-VR-ivR"/>
+                        <constraint firstItem="LVG-kH-0dT" firstAttribute="top" secondItem="UGF-5K-vNX" secondAttribute="bottom" constant="16" id="pDo-27-n5P"/>
+                        <constraint firstItem="UGF-5K-vNX" firstAttribute="width" secondItem="RAL-R7-zzs" secondAttribute="width" multiplier="0.6" id="wQ6-pX-wKX"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHH-NH-PFT">
+                    <rect key="frame" x="175" y="180" width="64" height="64"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IcnSanKeyLock" translatesAutoresizingMaskIntoConstraints="NO" id="xBx-gC-zly">
+                            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="90P-eO-3wY"/>
+                        <constraint firstItem="xBx-gC-zly" firstAttribute="top" secondItem="uHH-NH-PFT" secondAttribute="top" id="EVe-jx-fM3"/>
+                        <constraint firstAttribute="bottom" secondItem="xBx-gC-zly" secondAttribute="bottom" id="RbG-dd-klm"/>
+                        <constraint firstItem="xBx-gC-zly" firstAttribute="leading" secondItem="uHH-NH-PFT" secondAttribute="leading" id="mGD-GF-Y5q"/>
+                        <constraint firstAttribute="height" constant="64" id="tgQ-Zu-z0n"/>
+                        <constraint firstAttribute="trailing" secondItem="xBx-gC-zly" secondAttribute="trailing" id="vTv-Fu-QCY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="IfJ-QT-cfs"/>
+            <color key="backgroundColor" red="0.96470588235294119" green="0.97254901960784312" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cSO-Yn-e5l" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GxV-cx-h9I"/>
+                <constraint firstItem="RAL-R7-zzs" firstAttribute="top" secondItem="uHH-NH-PFT" secondAttribute="top" constant="32" id="PMQ-7a-4hM"/>
+                <constraint firstItem="RAL-R7-zzs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RaQ-qH-YVh"/>
+                <constraint firstAttribute="bottom" secondItem="RAL-R7-zzs" secondAttribute="bottom" id="cph-Lm-kb0"/>
+                <constraint firstItem="RAL-R7-zzs" firstAttribute="top" secondItem="IfJ-QT-cfs" secondAttribute="top" constant="168" id="gpG-uP-H3n"/>
+                <constraint firstItem="RAL-R7-zzs" firstAttribute="top" secondItem="cSO-Yn-e5l" secondAttribute="top" constant="150" id="iEM-Qr-enu"/>
+                <constraint firstAttribute="trailing" secondItem="RAL-R7-zzs" secondAttribute="trailing" id="p61-pO-17T"/>
+                <constraint firstItem="uHH-NH-PFT" firstAttribute="centerX" secondItem="RAL-R7-zzs" secondAttribute="centerX" id="vF8-2Y-GMO"/>
+                <constraint firstItem="IfJ-QT-cfs" firstAttribute="bottom" secondItem="LVG-kH-0dT" secondAttribute="bottom" constant="16" id="w7K-Uw-7Au"/>
+            </constraints>
+            <point key="canvasLocation" x="33.333333333333336" y="54.241071428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="IcnSanKeyLock" width="40" height="40"/>
+        <image name="imgSanKeyTutorial" width="150" height="289"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

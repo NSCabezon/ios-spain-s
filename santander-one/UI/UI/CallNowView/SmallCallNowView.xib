@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SmallCallNowView">
+            <connections>
+                <outlet property="iconPhoneImage" destination="lD3-Vi-7dv" id="6Rc-mK-6Tb"/>
+                <outlet property="numberLabel" destination="Bjx-eU-AbP" id="FPU-fL-egb"/>
+                <outlet property="titleLabel" destination="ghW-Mb-Mwm" id="4te-2b-VpB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="152" height="128"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icnPhoneWhite" translatesAutoresizingMaskIntoConstraints="NO" id="lD3-Vi-7dv">
+                    <rect key="frame" x="58" y="17" width="36" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="CXL-bs-6Gm"/>
+                        <constraint firstAttribute="width" constant="36" id="tmH-B8-0hk"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="llamar ahora" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ghW-Mb-Mwm">
+                    <rect key="frame" x="16" y="60" width="120" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="900311511" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bjx-eU-AbP">
+                    <rect key="frame" x="23" y="82.5" width="106" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="4rd-3K-aEa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Bjx-eU-AbP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="23" id="7Rm-B4-Bmu"/>
+                <constraint firstItem="lD3-Vi-7dv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="17" id="8bp-w2-FWW"/>
+                <constraint firstItem="ghW-Mb-Mwm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="HxJ-tF-wnh"/>
+                <constraint firstItem="Bjx-eU-AbP" firstAttribute="top" secondItem="ghW-Mb-Mwm" secondAttribute="bottom" constant="2" id="NFy-8D-a7t"/>
+                <constraint firstItem="lD3-Vi-7dv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="YX0-Wg-ro9"/>
+                <constraint firstAttribute="trailing" secondItem="ghW-Mb-Mwm" secondAttribute="trailing" constant="16" id="aF1-We-9NF"/>
+                <constraint firstAttribute="trailing" secondItem="Bjx-eU-AbP" secondAttribute="trailing" constant="23" id="baI-pv-IiZ"/>
+                <constraint firstItem="ghW-Mb-Mwm" firstAttribute="top" secondItem="lD3-Vi-7dv" secondAttribute="bottom" constant="7" id="j0t-yQ-5Le"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="133.92857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icnPhoneWhite" width="36" height="36"/>
+    </resources>
+</document>

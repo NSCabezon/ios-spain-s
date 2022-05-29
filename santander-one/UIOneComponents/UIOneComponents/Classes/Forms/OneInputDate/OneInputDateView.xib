@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OneInputDateView" customModule="UIOneComponents" customModuleProvider="target">
+            <connections>
+                <outlet property="borderContentView" destination="OSA-JF-wlD" id="Ndi-mv-ubn"/>
+                <outlet property="calendarImage" destination="hAx-0U-E6Q" id="oW2-DL-Zmb"/>
+                <outlet property="dateTextField" destination="7L3-wm-d8B" id="GAQ-1e-ozg"/>
+                <outlet property="selectDateButton" destination="13F-Uh-Sc2" id="vXU-Kp-faW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="48"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSA-JF-wlD" userLabel="BorderContentView">
+                    <rect key="frame" x="0.0" y="0.0" width="343" height="48"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5xK-3b-SId">
+                            <rect key="frame" x="12" y="12" width="319" height="24"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7L3-wm-d8B" userLabel="DateTextField" customClass="ConfigurableActionsTextField" customModule="UI">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <view contentMode="scaleToFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Gt-hO-47z">
+                                    <rect key="frame" x="295" y="0.0" width="24" height="24"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAx-0U-E6Q" userLabel="CalendarImage">
+                                            <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="24" id="KLl-YV-iZ4"/>
+                                                <constraint firstAttribute="height" constant="24" id="TmT-6i-LWo"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hAx-0U-E6Q" firstAttribute="centerY" secondItem="4Gt-hO-47z" secondAttribute="centerY" id="DCd-hH-F3K"/>
+                                        <constraint firstAttribute="trailing" secondItem="hAx-0U-E6Q" secondAttribute="trailing" id="bCa-8w-Beo"/>
+                                        <constraint firstItem="hAx-0U-E6Q" firstAttribute="leading" secondItem="4Gt-hO-47z" secondAttribute="leading" id="p4I-2a-n2d"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13F-Uh-Sc2">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="48"/>
+                            <connections>
+                                <action selector="didTapOnOneDatePicker:" destination="-1" eventType="touchUpInside" id="RBz-0z-qGF"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="5xK-3b-SId" secondAttribute="trailing" constant="12" id="6s8-DN-mHd"/>
+                        <constraint firstItem="13F-Uh-Sc2" firstAttribute="top" secondItem="OSA-JF-wlD" secondAttribute="top" id="9gu-iv-0Ca"/>
+                        <constraint firstItem="13F-Uh-Sc2" firstAttribute="leading" secondItem="OSA-JF-wlD" secondAttribute="leading" id="JS0-Gb-rqJ"/>
+                        <constraint firstAttribute="bottom" secondItem="5xK-3b-SId" secondAttribute="bottom" constant="12" id="Q3I-AZ-ihI"/>
+                        <constraint firstAttribute="trailing" secondItem="13F-Uh-Sc2" secondAttribute="trailing" id="TJa-Fd-Qb7"/>
+                        <constraint firstItem="5xK-3b-SId" firstAttribute="top" secondItem="OSA-JF-wlD" secondAttribute="top" constant="12" id="bpX-6v-75W"/>
+                        <constraint firstItem="5xK-3b-SId" firstAttribute="leading" secondItem="OSA-JF-wlD" secondAttribute="leading" constant="12" id="btz-0C-ffb"/>
+                        <constraint firstAttribute="bottom" secondItem="13F-Uh-Sc2" secondAttribute="bottom" id="vSb-DL-fBO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="OSA-JF-wlD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3sZ-da-px3"/>
+                <constraint firstAttribute="trailing" secondItem="OSA-JF-wlD" secondAttribute="trailing" id="9i3-AK-6G8"/>
+                <constraint firstAttribute="bottom" secondItem="OSA-JF-wlD" secondAttribute="bottom" id="GV9-Hz-nsi"/>
+                <constraint firstItem="OSA-JF-wlD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WGR-pP-YqX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-4" y="93"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

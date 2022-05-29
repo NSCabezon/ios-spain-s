@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LastMovementsView" customModule="Cards" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="fl9-N1-uJ4"/>
+                <outlet property="movementsStackView" destination="PwS-eD-asK" id="ws5-Zu-n3f"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="19"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44g-Nl-82G">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="19"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PwS-eD-asK">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="19"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="250" constant="1" id="2CP-Ra-xz2"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="PwS-eD-asK" firstAttribute="leading" secondItem="44g-Nl-82G" secondAttribute="leading" id="0bE-dc-H1J"/>
+                        <constraint firstItem="PwS-eD-asK" firstAttribute="height" secondItem="44g-Nl-82G" secondAttribute="height" id="DeB-Qj-Des"/>
+                        <constraint firstAttribute="bottom" secondItem="PwS-eD-asK" secondAttribute="bottom" id="QMC-01-MkL"/>
+                        <constraint firstItem="PwS-eD-asK" firstAttribute="top" secondItem="44g-Nl-82G" secondAttribute="top" id="bFW-rz-pEI"/>
+                        <constraint firstAttribute="trailing" secondItem="PwS-eD-asK" secondAttribute="trailing" id="sIc-I4-eBl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="44g-Nl-82G" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ekH-Tx-iTc"/>
+                <constraint firstAttribute="bottom" secondItem="44g-Nl-82G" secondAttribute="bottom" id="gXb-Eg-2H7"/>
+                <constraint firstItem="44g-Nl-82G" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gmI-YM-a0Y"/>
+                <constraint firstAttribute="trailing" secondItem="44g-Nl-82G" secondAttribute="trailing" id="pgX-A1-hXH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="98.102678571428569"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderMicroText-Regular.ttf">
+            <string>SantanderMicroText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FundMovementDetailView" customModule="Funds" customModuleProvider="target">
+            <connections>
+                <outlet property="detailStackView" destination="bgn-8b-HhY" id="ofo-0g-7aT"/>
+                <outlet property="detailStackViewHeightConstraint" destination="qJs-jz-spz" id="dce-mf-YG1"/>
+                <outlet property="shareButton" destination="zX8-cP-hZB" id="sp2-4V-qQk"/>
+                <outlet property="shareContainerView" destination="GyG-vU-LmS" id="McG-RY-wTq"/>
+                <outlet property="shareImageView" destination="bX7-o6-gCz" id="Wlg-4a-7DL"/>
+                <outlet property="shareLabel" destination="I2Z-of-PPu" id="zGs-eD-evS"/>
+                <outlet property="shareStackView" destination="rtk-Sz-f9B" id="wk2-q0-KCs"/>
+                <outlet property="shareView" destination="fy9-Ij-U9O" id="SVn-0D-evQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="285"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="156" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bgn-8b-HhY" userLabel="Detail Stack View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="156"/>
+                    <color key="backgroundColor" red="0.95686274509803915" green="0.96470588235294119" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="156" id="qJs-jz-spz"/>
+                    </constraints>
+                    <directionalEdgeInsets key="directionalLayoutMargins" top="23" leading="0.0" bottom="5" trailing="0.0"/>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GyG-vU-LmS" userLabel="Share Container View">
+                    <rect key="frame" x="0.0" y="156" width="375" height="112"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fy9-Ij-U9O" userLabel="Share View">
+                            <rect key="frame" x="15" y="34" width="345" height="44"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="rtk-Sz-f9B" userLabel="Share Stack View">
+                                    <rect key="frame" x="140.5" y="12" width="64" height="20"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bX7-o6-gCz" userLabel="Share Image View">
+                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="8Fg-Nb-Jcb"/>
+                                                <constraint firstAttribute="height" constant="20" id="d3T-J0-yCH"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2Z-of-PPu" userLabel="Share Label">
+                                            <rect key="frame" x="27" y="0.0" width="37" height="20"/>
+                                            <accessibility key="accessibilityConfiguration">
+                                                <accessibilityTraits key="traits" none="YES"/>
+                                                <bool key="isElement" value="NO"/>
+                                            </accessibility>
+                                            <fontDescription key="fontDescription" name="SantanderMicroText-Regular" family="Santander Micro Text" pointSize="12"/>
+                                            <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="I2Z-of-PPu" firstAttribute="leading" secondItem="bX7-o6-gCz" secondAttribute="trailing" constant="7" id="ZIB-gg-QLb"/>
+                                    </constraints>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zX8-cP-hZB" userLabel="Share Button">
+                                    <rect key="frame" x="0.0" y="0.0" width="345" height="44"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <connections>
+                                        <action selector="didSelectShare:" destination="-1" eventType="touchUpInside" id="KXA-ZZ-ORe"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="zX8-cP-hZB" secondAttribute="bottom" id="7rR-zC-EEN"/>
+                                <constraint firstItem="zX8-cP-hZB" firstAttribute="top" secondItem="fy9-Ij-U9O" secondAttribute="top" id="NzI-Xl-WMG"/>
+                                <constraint firstItem="rtk-Sz-f9B" firstAttribute="centerY" secondItem="fy9-Ij-U9O" secondAttribute="centerY" id="Wz0-gf-WIb"/>
+                                <constraint firstAttribute="trailing" secondItem="zX8-cP-hZB" secondAttribute="trailing" id="s3h-dq-gqk"/>
+                                <constraint firstAttribute="height" constant="44" id="tkc-0f-Wfk"/>
+                                <constraint firstItem="rtk-Sz-f9B" firstAttribute="centerX" secondItem="fy9-Ij-U9O" secondAttribute="centerX" id="v6m-Z4-dKx"/>
+                                <constraint firstItem="zX8-cP-hZB" firstAttribute="leading" secondItem="fy9-Ij-U9O" secondAttribute="leading" id="ye9-Km-FRb"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.95686274510000002" green="0.96470588239999999" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="112" id="UkP-O6-cTE"/>
+                        <constraint firstAttribute="trailing" secondItem="fy9-Ij-U9O" secondAttribute="trailing" constant="15" id="Wgb-R5-ChD"/>
+                        <constraint firstItem="fy9-Ij-U9O" firstAttribute="centerY" secondItem="GyG-vU-LmS" secondAttribute="centerY" id="siE-Dd-DDq"/>
+                        <constraint firstItem="fy9-Ij-U9O" firstAttribute="leading" secondItem="GyG-vU-LmS" secondAttribute="leading" constant="15" id="vqR-7B-ONp"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="GyG-vU-LmS" secondAttribute="trailing" id="5Lx-ns-gNT"/>
+                <constraint firstItem="GyG-vU-LmS" firstAttribute="top" secondItem="bgn-8b-HhY" secondAttribute="bottom" id="CMo-ez-nkd"/>
+                <constraint firstItem="bgn-8b-HhY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="W36-zZ-Byl"/>
+                <constraint firstItem="bgn-8b-HhY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fK3-TR-dKK"/>
+                <constraint firstItem="GyG-vU-LmS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nl0-lR-7tO"/>
+                <constraint firstAttribute="trailing" secondItem="bgn-8b-HhY" secondAttribute="trailing" id="r5O-49-CHi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139.85507246376812" y="124.88839285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

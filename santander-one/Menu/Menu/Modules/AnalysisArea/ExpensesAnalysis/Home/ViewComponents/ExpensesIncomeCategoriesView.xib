@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExpensesIncomeCategoriesView" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="chartContainer" destination="3kW-Nf-Vaa" id="rPM-Ig-iuf"/>
+                <outlet property="headerTitle" destination="Fnu-YM-inN" id="0eu-qn-rZu"/>
+                <outlet property="listContainer" destination="Wyq-6W-Fwd" id="Dp2-cl-lX5"/>
+                <outlet property="segmentedControl" destination="V0r-Ow-oj8" id="a5L-bC-sUF"/>
+                <outlet property="segmentedControlContainer" destination="ubR-xh-16x" id="zwc-j3-ZDR"/>
+                <outlet property="stackView" destination="1q7-PD-sor" id="Iiv-AG-JRh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="666"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnu-YM-inN">
+                    <rect key="frame" x="0.0" y="19" width="414" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="6mO-rR-dNx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubR-xh-16x">
+                    <rect key="frame" x="16" y="64" width="382" height="40"/>
+                    <subviews>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="V0r-Ow-oj8" customClass="LisboaSegmentedControl" customModule="UI">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="41"/>
+                            <segments>
+                                <segment title="First"/>
+                                <segment title="Second"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentedDidChange:" destination="-1" eventType="valueChanged" id="XAK-GG-28m"/>
+                            </connections>
+                        </segmentedControl>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="V0r-Ow-oj8" secondAttribute="trailing" id="BDO-D7-Pcm"/>
+                        <constraint firstAttribute="bottom" secondItem="V0r-Ow-oj8" secondAttribute="bottom" id="TGT-Ix-4kg"/>
+                        <constraint firstAttribute="height" constant="40" id="UFT-bc-zCb"/>
+                        <constraint firstItem="V0r-Ow-oj8" firstAttribute="top" secondItem="ubR-xh-16x" secondAttribute="top" id="biZ-tu-Yne"/>
+                        <constraint firstItem="V0r-Ow-oj8" firstAttribute="leading" secondItem="ubR-xh-16x" secondAttribute="leading" id="t8W-hM-NtR"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1q7-PD-sor">
+                    <rect key="frame" x="16" y="120" width="382" height="530"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3kW-Nf-Vaa" customClass="ExpensesIncomeCategoriesCharts" customModule="Menu" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="330"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="Wyq-6W-Fwd" customClass="ExpensesIncomeListView" customModule="Menu" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="330" width="382" height="200"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Fnu-YM-inN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3tu-rL-fo9"/>
+                <constraint firstItem="1q7-PD-sor" firstAttribute="top" secondItem="ubR-xh-16x" secondAttribute="bottom" constant="16" id="9Pw-ve-VgG"/>
+                <constraint firstItem="Fnu-YM-inN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="19" id="Dm7-Bf-8P7"/>
+                <constraint firstItem="ubR-xh-16x" firstAttribute="top" secondItem="Fnu-YM-inN" secondAttribute="bottom" constant="13" id="NKT-fd-0aD"/>
+                <constraint firstAttribute="trailing" secondItem="1q7-PD-sor" secondAttribute="trailing" constant="16" id="RJI-bZ-u5d"/>
+                <constraint firstAttribute="trailing" secondItem="Fnu-YM-inN" secondAttribute="trailing" id="VOj-XT-p0P"/>
+                <constraint firstAttribute="trailing" secondItem="ubR-xh-16x" secondAttribute="trailing" constant="16" id="Vm4-Dh-AXp"/>
+                <constraint firstAttribute="bottom" secondItem="1q7-PD-sor" secondAttribute="bottom" constant="16" id="aYy-yE-D01"/>
+                <constraint firstItem="1q7-PD-sor" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="eiB-Kt-Par"/>
+                <constraint firstItem="ubR-xh-16x" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="geL-kP-aLu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-66.294642857142861"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="V0r-Ow-oj8">
+            <size key="intrinsicContentSize" width="131" height="31"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

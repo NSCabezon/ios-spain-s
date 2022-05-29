@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OneFilterLargeWithIconView" customModule="UIOneComponents" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="zaZ-Fw-opk" id="k1V-we-x06"/>
+                <outlet property="oneFilter" destination="eWR-IH-FBS" id="1gG-pv-JsO"/>
+                <outlet property="stackView" destination="JhV-Io-9NS" id="GjN-UW-gCG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zaZ-Fw-opk">
+                    <rect key="frame" x="0.0" y="0.0" width="327" height="80"/>
+                    <subviews>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eWR-IH-FBS" customClass="OneFilterView" customModule="UIOneComponents" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="327" height="81"/>
+                            <segments>
+                                <segment title="First"/>
+                                <segment title="Second"/>
+                            </segments>
+                        </segmentedControl>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JhV-Io-9NS">
+                            <rect key="frame" x="4" y="4" width="319" height="72"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="eWR-IH-FBS" firstAttribute="top" secondItem="zaZ-Fw-opk" secondAttribute="top" id="6CW-0O-aWx"/>
+                        <constraint firstItem="eWR-IH-FBS" firstAttribute="leading" secondItem="zaZ-Fw-opk" secondAttribute="leading" id="Fn0-AS-Uig"/>
+                        <constraint firstAttribute="trailing" secondItem="JhV-Io-9NS" secondAttribute="trailing" constant="4" id="MTM-QY-aUh"/>
+                        <constraint firstItem="JhV-Io-9NS" firstAttribute="leading" secondItem="zaZ-Fw-opk" secondAttribute="leading" constant="4" id="Nww-jg-8AQ"/>
+                        <constraint firstAttribute="height" constant="80" id="TUZ-RE-gEd"/>
+                        <constraint firstItem="JhV-Io-9NS" firstAttribute="top" secondItem="zaZ-Fw-opk" secondAttribute="top" constant="4" id="Uri-5Y-YQ0"/>
+                        <constraint firstAttribute="bottom" secondItem="eWR-IH-FBS" secondAttribute="bottom" id="bts-g2-gLO"/>
+                        <constraint firstAttribute="width" constant="327" id="fDJ-8m-8hz"/>
+                        <constraint firstAttribute="bottom" secondItem="JhV-Io-9NS" secondAttribute="bottom" constant="4" id="hG7-RH-pQc"/>
+                        <constraint firstAttribute="trailing" secondItem="eWR-IH-FBS" secondAttribute="trailing" id="qCT-yt-BdS"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="zaZ-Fw-opk" secondAttribute="trailing" id="5v7-hd-3HT"/>
+                <constraint firstAttribute="bottom" secondItem="zaZ-Fw-opk" secondAttribute="bottom" id="gEf-Pj-fT4"/>
+                <constraint firstItem="zaZ-Fw-opk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jgU-GE-i1o"/>
+                <constraint firstItem="zaZ-Fw-opk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="snX-rN-bpc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-160.1449275362319" y="-153.34821428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

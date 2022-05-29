@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TLChartView" customModule="FinantialTimeline" customModuleProvider="target">
+            <connections>
+                <outlet property="chartViewTLDetail" destination="YvN-Oz-5jN" id="B4n-OF-OL6"/>
+                <outlet property="container" destination="iN0-l3-epB" id="3DT-qe-gpt"/>
+                <outlet property="disclaimerLabel" destination="IPb-dG-cfn" id="rgU-Cd-iPD"/>
+                <outlet property="disclaimerView" destination="ZYh-fC-ixr" id="ECR-cK-EiS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="534" height="396"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hs4-Xf-p8k">
+                    <rect key="frame" x="0.0" y="44" width="534" height="318"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YvN-Oz-5jN" customClass="LineChartView" customModule="Charts">
+                            <rect key="frame" x="0.0" y="0.0" width="534" height="268"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYh-fC-ixr">
+                            <rect key="frame" x="0.0" y="268" width="534" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPb-dG-cfn">
+                                    <rect key="frame" x="16" y="8" width="510" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="IPb-dG-cfn" secondAttribute="bottom" constant="8" id="ITn-La-qtD"/>
+                                <constraint firstItem="IPb-dG-cfn" firstAttribute="leading" secondItem="ZYh-fC-ixr" secondAttribute="leading" constant="16" id="W7X-dp-gO5"/>
+                                <constraint firstItem="IPb-dG-cfn" firstAttribute="top" secondItem="ZYh-fC-ixr" secondAttribute="top" constant="8" id="YoL-yR-kz3"/>
+                                <constraint firstAttribute="trailing" secondItem="IPb-dG-cfn" secondAttribute="trailing" constant="8" id="upU-1n-vM5"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hs4-Xf-p8k" secondAttribute="bottom" id="1vX-4A-6UN"/>
+                <constraint firstItem="hs4-Xf-p8k" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9PP-n8-sdh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hs4-Xf-p8k" secondAttribute="trailing" id="F2R-e5-ter"/>
+                <constraint firstItem="hs4-Xf-p8k" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="JyR-U5-Vun"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="236.23188405797103" y="-135.26785714285714"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectAmortizationStepViewController" customModule="Loans" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomSeparatorView" destination="fD2-Xl-f2N" id="CM7-03-eDd"/>
+                <outlet property="containerStackView" destination="fIy-Vq-0iP" id="11H-5I-Ko6"/>
+                <outlet property="continueButton" destination="LFW-cE-4k7" id="pBx-uM-vw9"/>
+                <outlet property="view" destination="iN0-l3-epB" id="qld-G3-nWh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LG0-Di-JuQ" userLabel="View button">
+                    <rect key="frame" x="0.0" y="595" width="375" height="72"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFW-cE-4k7" customClass="WhiteLisboaButton" customModule="UI">
+                            <rect key="frame" x="16" y="16" width="343" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="kGA-oj-B1H"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="LFW-cE-4k7" secondAttribute="bottom" constant="16" id="1xz-ri-geF"/>
+                        <constraint firstItem="LFW-cE-4k7" firstAttribute="leading" secondItem="LG0-Di-JuQ" secondAttribute="leading" constant="16" id="IsA-Hl-izV"/>
+                        <constraint firstAttribute="trailing" secondItem="LFW-cE-4k7" secondAttribute="trailing" constant="16" id="Z9B-lg-fkW"/>
+                        <constraint firstItem="LFW-cE-4k7" firstAttribute="top" secondItem="LG0-Di-JuQ" secondAttribute="top" constant="16" id="tQF-Gd-dkY"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fD2-Xl-f2N" userLabel="Separator">
+                    <rect key="frame" x="0.0" y="594" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="TYX-9c-dcF"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fIy-Vq-0iP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="594"/>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fD2-Xl-f2N" firstAttribute="top" secondItem="fIy-Vq-0iP" secondAttribute="bottom" id="2hO-eQ-ZyZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="LG0-Di-JuQ" secondAttribute="bottom" id="5OW-du-UiK"/>
+                <constraint firstItem="fIy-Vq-0iP" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="8uG-8c-nfP"/>
+                <constraint firstItem="LG0-Di-JuQ" firstAttribute="top" secondItem="fD2-Xl-f2N" secondAttribute="bottom" id="IJZ-MB-NWc"/>
+                <constraint firstItem="fD2-Xl-f2N" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="K7N-0i-L2Y"/>
+                <constraint firstItem="fIy-Vq-0iP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Orn-kD-sle"/>
+                <constraint firstItem="fIy-Vq-0iP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Qpo-Vm-dPY"/>
+                <constraint firstItem="LG0-Di-JuQ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Tna-2d-vhR"/>
+                <constraint firstAttribute="trailing" secondItem="fD2-Xl-f2N" secondAttribute="trailing" id="eBK-Dn-9ne"/>
+                <constraint firstItem="LG0-Di-JuQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kdv-c8-hxQ"/>
+            </constraints>
+            <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="LFW-cE-4k7">
+            <size key="intrinsicContentSize" width="46" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

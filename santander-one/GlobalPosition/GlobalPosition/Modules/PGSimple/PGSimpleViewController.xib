@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PGSimpleViewController" customModule="GlobalPosition" customModuleProvider="target">
+            <connections>
+                <outlet property="bubbleWhatsNew" destination="kvx-lD-9MD" id="kHz-fE-bd2"/>
+                <outlet property="bubbleWhatsNewHeight" destination="OfY-gF-QYo" id="iZC-Ee-JIU"/>
+                <outlet property="bubbleWhatsNewTop" destination="zsX-Ig-8ro" id="pgD-t0-vRf"/>
+                <outlet property="bubbleWhatsNewTrailing" destination="NDI-eW-UHP" id="9Yj-Oo-gKR"/>
+                <outlet property="bubbleWhatsNewWidth" destination="lK0-Jl-lis" id="Xda-cl-j5B"/>
+                <outlet property="header" destination="jIX-2u-ejT" id="0Rj-SX-4gv"/>
+                <outlet property="headerHeight" destination="wY0-wL-aFr" id="AF5-n6-7oT"/>
+                <outlet property="tableView" destination="OEP-bb-Cqs" id="Q5P-Tt-Ami"/>
+                <outlet property="tableViewBottomConstraint" destination="yOQ-fp-lyg" id="sSM-Vp-eLp"/>
+                <outlet property="view" destination="ge0-dp-JKF" id="e2W-Da-VVy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ge0-dp-JKF">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIX-2u-ejT" customClass="SimplePGHeaderView" customModule="GlobalPosition" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="240"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="wY0-wL-aFr"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OEP-bb-Cqs">
+                    <rect key="frame" x="0.0" y="260" width="414" height="636"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kvx-lD-9MD" customClass="BubbleWhatsNew" customModule="GlobalPosition" customModuleProvider="target">
+                    <rect key="frame" x="192" y="-41" width="250" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="width" priority="750" constant="250" id="1BS-X1-ls2"/>
+                        <constraint firstAttribute="height" priority="750" constant="250" id="OTN-Pz-rhs"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="OfY-gF-QYo"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="lK0-Jl-lis"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="bIb-Fg-oak"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kvx-lD-9MD" firstAttribute="trailing" secondItem="ge0-dp-JKF" secondAttribute="trailing" priority="750" constant="28" id="1OB-OR-fdL"/>
+                <constraint firstItem="jIX-2u-ejT" firstAttribute="leading" secondItem="bIb-Fg-oak" secondAttribute="leading" id="5hn-5H-eb4"/>
+                <constraint firstItem="bIb-Fg-oak" firstAttribute="trailing" secondItem="OEP-bb-Cqs" secondAttribute="trailing" id="6fF-1p-UL2"/>
+                <constraint firstItem="jIX-2u-ejT" firstAttribute="top" secondItem="bIb-Fg-oak" secondAttribute="top" id="BGS-tL-D8Z"/>
+                <constraint firstItem="OEP-bb-Cqs" firstAttribute="top" secondItem="jIX-2u-ejT" secondAttribute="bottom" constant="-24" id="Itb-OD-Rfg"/>
+                <constraint firstItem="OEP-bb-Cqs" firstAttribute="leading" secondItem="bIb-Fg-oak" secondAttribute="leading" id="KI5-4S-c7w"/>
+                <constraint firstItem="kvx-lD-9MD" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ge0-dp-JKF" secondAttribute="trailing" constant="28" id="NDI-eW-UHP"/>
+                <constraint firstItem="bIb-Fg-oak" firstAttribute="trailing" secondItem="jIX-2u-ejT" secondAttribute="trailing" id="irV-Ss-hZK"/>
+                <constraint firstAttribute="bottom" secondItem="OEP-bb-Cqs" secondAttribute="bottom" id="yOQ-fp-lyg"/>
+                <constraint firstItem="jIX-2u-ejT" firstAttribute="top" secondItem="kvx-lD-9MD" secondAttribute="top" constant="85" id="zsX-Ig-8ro"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="141.96428571428569"/>
+        </view>
+    </objects>
+</document>

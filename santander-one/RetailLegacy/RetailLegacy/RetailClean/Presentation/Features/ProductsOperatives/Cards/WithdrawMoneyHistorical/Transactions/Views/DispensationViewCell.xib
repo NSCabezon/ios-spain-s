@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+        <array key="Lato-Semibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="78" id="u8I-wI-bxJ" customClass="DispensationViewCell" customModule="DEBUG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u8I-wI-bxJ" id="M8d-Z2-cGq">
+                <rect key="frame" x="0.0" y="0.0" width="286" height="72.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZe-bC-YlI" userLabel="dayLabel">
+                        <rect key="frame" x="17" y="13" width="21" height="22"/>
+                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
+                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3R-dg-f7s" userLabel="monthLabel">
+                        <rect key="frame" x="14" y="35" width="27" height="14"/>
+                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
+                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zs6-RZ-kgb" userLabel="titleLabel">
+                        <rect key="frame" x="58" y="13" width="38" height="19.5"/>
+                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="c1u-19-nAi" userLabel="amountLabel">
+                        <rect key="frame" x="58" y="32.5" width="119" height="23"/>
+                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="23"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mwd-aS-3Qe">
+                        <rect key="frame" x="183" y="27" width="90" height="20"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EJECUTADA" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LMi-8r-Wma">
+                                <rect key="frame" x="8.5" y="2" width="73" height="16"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="LMi-8r-Wma" firstAttribute="top" secondItem="mwd-aS-3Qe" secondAttribute="top" constant="2" id="IBM-Y7-b3z"/>
+                            <constraint firstAttribute="bottom" secondItem="LMi-8r-Wma" secondAttribute="bottom" constant="2" id="J3q-vM-488"/>
+                            <constraint firstItem="LMi-8r-Wma" firstAttribute="centerX" secondItem="mwd-aS-3Qe" secondAttribute="centerX" id="eeZ-qz-RW8"/>
+                            <constraint firstAttribute="width" constant="90" id="p1t-fD-IpS"/>
+                            <constraint firstItem="LMi-8r-Wma" firstAttribute="width" relation="lessThanOrEqual" secondItem="mwd-aS-3Qe" secondAttribute="width" multiplier="0.95" id="ySI-0v-zB8"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EjE-ge-aji" userLabel="Separator">
+                        <rect key="frame" x="12" y="0.0" width="262" height="1"/>
+                        <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="YrY-u8-UPx"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="L3R-dg-f7s" firstAttribute="centerX" secondItem="FZe-bC-YlI" secondAttribute="centerX" id="6o4-il-8fW"/>
+                    <constraint firstItem="Zs6-RZ-kgb" firstAttribute="top" secondItem="M8d-Z2-cGq" secondAttribute="top" constant="13" id="9FJ-H4-SVZ"/>
+                    <constraint firstItem="L3R-dg-f7s" firstAttribute="top" secondItem="FZe-bC-YlI" secondAttribute="bottom" id="9YV-pJ-0pr"/>
+                    <constraint firstItem="c1u-19-nAi" firstAttribute="leading" secondItem="Zs6-RZ-kgb" secondAttribute="leading" id="ABV-te-Ywq"/>
+                    <constraint firstAttribute="bottom" secondItem="c1u-19-nAi" secondAttribute="bottom" constant="17" id="JQ7-oF-pHp"/>
+                    <constraint firstItem="mwd-aS-3Qe" firstAttribute="leading" secondItem="c1u-19-nAi" secondAttribute="trailing" constant="6" id="Jel-3g-tnG"/>
+                    <constraint firstItem="EjE-ge-aji" firstAttribute="leading" secondItem="M8d-Z2-cGq" secondAttribute="leading" constant="12" id="POz-eb-gT3"/>
+                    <constraint firstAttribute="trailing" secondItem="mwd-aS-3Qe" secondAttribute="trailing" constant="13" id="RbV-P3-a1K"/>
+                    <constraint firstItem="Zs6-RZ-kgb" firstAttribute="leading" secondItem="FZe-bC-YlI" secondAttribute="trailing" constant="20" id="RxV-jg-7DA"/>
+                    <constraint firstItem="c1u-19-nAi" firstAttribute="top" secondItem="Zs6-RZ-kgb" secondAttribute="bottom" id="T6D-ym-KKa"/>
+                    <constraint firstItem="FZe-bC-YlI" firstAttribute="leading" secondItem="M8d-Z2-cGq" secondAttribute="leading" constant="17" id="UcN-ua-pVN"/>
+                    <constraint firstItem="FZe-bC-YlI" firstAttribute="top" secondItem="Zs6-RZ-kgb" secondAttribute="top" id="Vs4-Ng-zKB"/>
+                    <constraint firstAttribute="trailing" secondItem="EjE-ge-aji" secondAttribute="trailing" constant="12" id="W9T-fq-PTQ"/>
+                    <constraint firstItem="mwd-aS-3Qe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Zs6-RZ-kgb" secondAttribute="trailing" constant="6" id="gtr-Sx-urY"/>
+                    <constraint firstItem="mwd-aS-3Qe" firstAttribute="centerY" secondItem="M8d-Z2-cGq" secondAttribute="centerY" id="heq-vh-tNj"/>
+                    <constraint firstItem="EjE-ge-aji" firstAttribute="top" secondItem="M8d-Z2-cGq" secondAttribute="top" id="qwf-8l-8bu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="Bap-j9-Ndc"/>
+            <connections>
+                <outlet property="amountLabel" destination="c1u-19-nAi" id="aNJ-8W-SKx"/>
+                <outlet property="dayLabel" destination="FZe-bC-YlI" id="GxY-wW-bp3"/>
+                <outlet property="monthLabel" destination="L3R-dg-f7s" id="EAa-dK-vhu"/>
+                <outlet property="rightSpaceSeparatorConstraint" destination="POz-eb-gT3" id="bo8-bW-tlQ"/>
+                <outlet property="separator" destination="EjE-ge-aji" id="Yy7-Kn-m86"/>
+                <outlet property="statusLabel" destination="LMi-8r-Wma" id="1JT-mS-Ngh"/>
+                <outlet property="statusView" destination="mwd-aS-3Qe" id="9Do-EQ-yMH"/>
+                <outlet property="titleLabel" destination="Zs6-RZ-kgb" id="gdu-u5-XHq"/>
+            </connections>
+            <point key="canvasLocation" x="32" y="143.5"/>
+        </tableViewCell>
+    </objects>
+</document>

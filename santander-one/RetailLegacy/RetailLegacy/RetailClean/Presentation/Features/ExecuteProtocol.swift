@@ -1,0 +1,3 @@
+protocol Executable {
+    func execute()
+}

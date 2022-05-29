@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YourMoneyBoxView" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="availableMoneyBox" destination="g2a-Xd-ODX" id="jk5-e4-ZOr"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Y86-ee-SfS"/>
+                <outlet property="defaultMoneyBox" destination="CXO-KN-kCJ" id="ROl-Zc-gNg"/>
+                <outlet property="stackView" destination="vui-a8-Jad" id="Y83-e9-cCU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="264"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="vui-a8-Jad">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="264"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CXO-KN-kCJ" customClass="OfferBannerView" customModule="UI">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="162"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2a-Xd-ODX" customClass="AvailableMoneyBox" customModule="Menu" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="162" width="414" height="102"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vui-a8-Jad" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="06i-MB-Lrb"/>
+                <constraint firstItem="vui-a8-Jad" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9DI-NR-Az0"/>
+                <constraint firstItem="vui-a8-Jad" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="bVq-AJ-YcP"/>
+                <constraint firstItem="vui-a8-Jad" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="dwD-w8-0zN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+        </view>
+    </objects>
+</document>

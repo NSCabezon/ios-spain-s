@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NextSettlementMovementsViewController" customModule="Cards" customModuleProvider="target">
+            <connections>
+                <outlet property="cardSelector" destination="9sk-Js-75h" id="qr1-zb-qky"/>
+                <outlet property="contentSegmentedView" destination="sZJ-M8-ark" id="Jn7-lh-1vS"/>
+                <outlet property="contentSeparatorView" destination="kpo-Im-QUc" id="FRn-hg-yZA"/>
+                <outlet property="emptyView" destination="Yob-X9-5nH" id="hWS-5P-E2g"/>
+                <outlet property="headerView" destination="ki5-ey-IZG" id="O8i-uz-1Nh"/>
+                <outlet property="movementsTableView" destination="wZs-Kv-wES" id="oNy-N4-hgM"/>
+                <outlet property="segmentedTopConstraint" destination="V64-Pn-Oni" id="6UA-FI-gks"/>
+                <outlet property="segmentedView" destination="l72-8w-CA9" id="MCz-Vh-0x5"/>
+                <outlet property="separatorView" destination="2nK-mU-3PV" id="bIV-04-fHq"/>
+                <outlet property="topConstraint" destination="oen-T2-m0J" id="E6b-gz-rOk"/>
+                <outlet property="totalExpensesView" destination="aTP-Bn-LN9" id="H3Y-qi-J2z"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sZJ-M8-ark">
+                    <rect key="frame" x="0.0" y="389" width="414" height="1"/>
+                    <subviews>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l72-8w-CA9" customClass="LisboaSegmentedWithImageAndTitle" customModule="UI">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="84" id="lbX-A6-uLN"/>
+                            </constraints>
+                        </view>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sk-Js-75h" customClass="CardSelectorWithImageAndTitle" customModule="UI">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="84" id="hFK-ZP-kyM"/>
+                            </constraints>
+                        </view>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTP-Bn-LN9" customClass="SettlementMovementTotalCell" customModule="Cards" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpo-Im-QUc">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                            <subviews>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2nK-mU-3PV">
+                                    <rect key="frame" x="19" y="0.0" width="377" height="1"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="UCL-hQ-ObG"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="2nK-mU-3PV" firstAttribute="top" secondItem="kpo-Im-QUc" secondAttribute="top" id="AvL-5O-IWc"/>
+                                <constraint firstAttribute="bottom" secondItem="2nK-mU-3PV" secondAttribute="bottom" id="hLi-om-1LY"/>
+                                <constraint firstAttribute="trailing" secondItem="2nK-mU-3PV" secondAttribute="trailing" constant="18" id="vjc-g1-ILH"/>
+                                <constraint firstItem="2nK-mU-3PV" firstAttribute="leading" secondItem="kpo-Im-QUc" secondAttribute="leading" constant="19" id="wyk-nc-TpS"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bouncesZoom="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wZs-Kv-wES">
+                    <rect key="frame" x="0.0" y="390" width="414" height="506"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ki5-ey-IZG" customClass="SettlementMovementsHeaderView" customModule="Cards" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="345"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="999" constant="345" id="YsS-AL-kqj"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yob-X9-5nH" customClass="SingleEmptyView" customModule="UI">
+                    <rect key="frame" x="0.0" y="388" width="414" height="508"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wZs-Kv-wES" secondAttribute="trailing" id="0Cb-Tj-9JN"/>
+                <constraint firstItem="Yob-X9-5nH" firstAttribute="trailing" secondItem="wZs-Kv-wES" secondAttribute="trailing" id="Gl1-US-Txb"/>
+                <constraint firstItem="Yob-X9-5nH" firstAttribute="bottom" secondItem="wZs-Kv-wES" secondAttribute="bottom" id="IMJ-t4-mAR"/>
+                <constraint firstItem="wZs-Kv-wES" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Int-Rb-ocm"/>
+                <constraint firstItem="ki5-ey-IZG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JYh-QF-F2e"/>
+                <constraint firstItem="ki5-ey-IZG" firstAttribute="bottom" secondItem="sZJ-M8-ark" secondAttribute="top" id="V64-Pn-Oni"/>
+                <constraint firstItem="wZs-Kv-wES" firstAttribute="top" secondItem="Yob-X9-5nH" secondAttribute="top" constant="2" id="Ywc-cl-QU0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ki5-ey-IZG" secondAttribute="trailing" id="aLn-Qi-yyp"/>
+                <constraint firstItem="Yob-X9-5nH" firstAttribute="leading" secondItem="wZs-Kv-wES" secondAttribute="leading" id="fsv-d1-wz7"/>
+                <constraint firstItem="wZs-Kv-wES" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="kWO-QK-7Zl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="ki5-ey-IZG" secondAttribute="top" id="oen-T2-m0J"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sZJ-M8-ark" secondAttribute="trailing" id="wGt-ST-QNT"/>
+                <constraint firstItem="sZJ-M8-ark" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="x8w-4G-rsG"/>
+                <constraint firstItem="wZs-Kv-wES" firstAttribute="top" secondItem="sZJ-M8-ark" secondAttribute="bottom" id="xnl-un-ORA"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="196"/>
+        </view>
+    </objects>
+</document>

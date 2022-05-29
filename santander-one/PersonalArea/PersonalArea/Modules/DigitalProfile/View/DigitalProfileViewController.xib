@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DigitalProfileViewController" customModule="PersonalArea" customModuleProvider="target">
+            <connections>
+                <outlet property="header" destination="CFK-Yf-wVb" id="W8J-Gn-9yN"/>
+                <outlet property="tableView" destination="lNc-kt-4zg" id="s5p-cX-WWe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KBT-n6-ON0">
+                    <rect key="frame" x="0.0" y="44" width="414" height="0.0"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="Uhi-dQ-tQj"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFK-Yf-wVb" customClass="DigitalProfileHeader" customModule="PersonalArea" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="164"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lNc-kt-4zg">
+                    <rect key="frame" x="0.0" y="164" width="414" height="732"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="CFK-Yf-wVb" firstAttribute="bottom" secondItem="KBT-n6-ON0" secondAttribute="top" constant="120" id="8uD-vg-PPs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CFK-Yf-wVb" secondAttribute="trailing" id="9C6-8o-IrY"/>
+                <constraint firstItem="KBT-n6-ON0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BEh-fY-RrV"/>
+                <constraint firstItem="CFK-Yf-wVb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Csn-Dh-V6O"/>
+                <constraint firstAttribute="trailing" secondItem="KBT-n6-ON0" secondAttribute="trailing" id="F4D-g0-xXp"/>
+                <constraint firstItem="KBT-n6-ON0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ZR5-3C-qVF"/>
+                <constraint firstAttribute="bottom" secondItem="lNc-kt-4zg" secondAttribute="bottom" id="jYS-Hq-VhK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lNc-kt-4zg" secondAttribute="trailing" id="kTX-Nv-obd"/>
+                <constraint firstItem="lNc-kt-4zg" firstAttribute="top" secondItem="CFK-Yf-wVb" secondAttribute="bottom" id="kz5-Kp-Q1z"/>
+                <constraint firstItem="CFK-Yf-wVb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="l4P-tL-R3Y"/>
+                <constraint firstItem="lNc-kt-4zg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="utt-xg-SZb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="153"/>
+        </view>
+    </objects>
+</document>

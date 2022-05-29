@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WidgetTitleRowView" customModule="Widget" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgh-NY-8eB">
+                    <rect key="frame" x="17" y="8" width="42" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4su-Nv-N6P">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="pAK-cd-O74"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="4su-Nv-N6P" secondAttribute="bottom" constant="29" id="8I7-ed-7x1"/>
+                <constraint firstItem="Zgh-NY-8eB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="17" id="BH4-ZO-BcX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Zgh-NY-8eB" secondAttribute="bottom" constant="2" id="Ifm-UE-ZFi"/>
+                <constraint firstItem="4su-Nv-N6P" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="J6i-0X-4af"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4su-Nv-N6P" secondAttribute="trailing" id="RqQ-3r-hgO"/>
+                <constraint firstItem="4su-Nv-N6P" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="XmX-e7-ES7"/>
+                <constraint firstItem="Zgh-NY-8eB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Yh6-66-Shz"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Zgh-NY-8eB" secondAttribute="trailing" constant="8" id="qlh-gL-s4g"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="separatorView" destination="4su-Nv-N6P" id="WFB-4W-Aj4"/>
+                <outlet property="titleLabel" destination="Zgh-NY-8eB" id="S0L-I9-nNs"/>
+            </connections>
+            <point key="canvasLocation" x="138.40000000000001" y="-116.49175412293854"/>
+        </view>
+    </objects>
+</document>

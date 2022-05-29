@@ -1,0 +1,43 @@
+platform :ios, '10.3'
+
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+def libraries
+  pod 'CoreFoundationLib', :path => '../../../santander-one/Modules/Libraries/CoreFoundationLib'
+  pod 'SANLibraryV3', :path => '../../../Modules/Libraries/SANLibraryV3'
+  pod 'SQLite.swift/SQLCipher', :path => '../../../santander-one/Modules/Libraries/SQLite.swift'
+  pod 'SQLCipher', '4.4.2'
+  pod 'Kingfisher', '5.15.8'
+  pod 'SANLegacyLibrary', :path => '../../../santander-one/Modules/Libraries/SANLegacyLibrary'
+  pod 'Locker', :path => '../../../santander-one/Modules/Libraries/Locker'
+  pod 'SANServicesLibrary', :path => '../../../santander-one/Modules/Libraries/SANServicesLibrary'
+  pod 'SANSpainLibrary', :path => '../../Libraries/SANSpainLibrary'
+  pod 'CoreDomain', :path => '../../../santander-one/Modules/Libraries/CoreDomain'
+end
+
+def testingPods
+  pod 'Account/ExampleApp', :path => '../../../santander-one/Accounts'
+end
+
+def pods
+  pod 'QuickSetupES', :path => '../../Libraries/QuickSetupES'
+  pod 'QuickSetup', :path => '../../../santander-one/QuickSetup'
+  pod 'CoreTestData', :path => '../../../santander-one/Modules/Libraries/CoreTestData'
+  pod 'UI', :path => '../../../santander-one/UI'
+  pod 'Localization', :path => '../../../santander-one/Localization'
+  pod 'Operative', :path => '../../../santander-one/Operative'
+  pod 'OfferCarousel', :path => '../../../santander-one/OfferCarousel'
+  pod 'CorePushNotificationsService', :path => '../../../santander-one/CorePushNotificationsService'
+  libraries
+  testingPods
+end
+
+target 'SpainExampleApp_Example' do
+  pods
+end
+
+target 'SpainExampleApp_ExampleTests' do
+  pods
+end

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderText-Bold.otf">
+            <string>SantanderText-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FutureBillContainer" customModule="GlobalPosition" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="1Gg-ZT-stt" id="T38-sa-2HU"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="rt2-HG-XQD"/>
+                <outlet property="titleLabel" destination="S0k-24-svD" id="Ozb-82-0z5"/>
+                <outlet property="topLineView" destination="mT2-7B-F0f" id="2FZ-Ud-6FP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="410" height="195"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mT2-7B-F0f">
+                    <rect key="frame" x="0.0" y="0.0" width="410" height="1"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="tgl-CL-thy"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0k-24-svD">
+                    <rect key="frame" x="16" y="18" width="378" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Q30-C9-6Er"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SantanderText-Bold" family="Santander Text" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1Gg-ZT-stt" customClass="FutureBillCollectionView" customModule="GlobalPosition" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="45" width="410" height="140"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="140" id="LFF-5r-DsE"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3jy-cw-C3s">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="S0k-24-svD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="BXh-3o-1M1"/>
+                <constraint firstItem="1Gg-ZT-stt" firstAttribute="top" secondItem="S0k-24-svD" secondAttribute="bottom" constant="7" id="Ek5-Ex-NiZ"/>
+                <constraint firstItem="mT2-7B-F0f" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="FQn-Co-Axh"/>
+                <constraint firstItem="mT2-7B-F0f" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="K20-uj-Kv6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1Gg-ZT-stt" secondAttribute="bottom" constant="10" id="Oxk-TH-adc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1Gg-ZT-stt" secondAttribute="trailing" id="Pla-aT-Ajg"/>
+                <constraint firstItem="mT2-7B-F0f" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Uau-ca-M4N"/>
+                <constraint firstItem="S0k-24-svD" firstAttribute="top" secondItem="mT2-7B-F0f" secondAttribute="bottom" constant="17" id="hgN-Fi-YKW"/>
+                <constraint firstItem="1Gg-ZT-stt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yow-dV-AeL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="S0k-24-svD" secondAttribute="trailing" constant="16" id="z8C-GL-wvC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="127.5" y="374.375"/>
+        </view>
+    </objects>
+</document>

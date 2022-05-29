@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datos>
+    <id12345678z>
+        <respuesta0>
+            <soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <soap-env:Header>
+                    <wsse:Security soap-env:actor="http://www.isban.es/soap/actor/wssecurity" soap-env:mustUnderstand="1" S12:role="wsssecurity" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:S12="http://www.w3.org/2003/05/soap-envelope">
+                        <wsse:BinarySecurityToken wsu:Id="SSOToken" ValueType="esquema" EncodingType="wsse:Base64Binary" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">B4C00830F0D62801B0CCA6E6#180.192.8.48#1527677771680#PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iSVNPLTg4NTktMSI/Pjx0b2tlbkRlZmluaXRpb24+PHRpcG9QZXJzb25hPkY8L3RpcG9QZXJzb25hPjxuYW1lPkVOUklRVUVHT05aQUxFWi1HQUxMQVIgTE9QRVogREUgVFVSSVNPPC9uYW1lPjxjb2RpZ29QZXJzb25hPjU3MDM2NTwvY29kaWdvUGVyc29uYT48dXNlcklEPjAwNzkwMjYyPC91c2VySUQ+PC90b2tlbkRlZmluaXRpb24+#DESede/CBC/PKCS5Padding#v1#canalesSANPRE#NOT USED#SHA1withRSA#n/jbUvw1T21bknL3UQHOUsHhwi08z8G/B/uLf2o8x0/SGhEO/Hp7K2pjl4w3ONYLvJ8ukLMXL85ZD5L1k7teSC4vEXDw4Rwiq8+7FToTIynXQwQe3xMAQnHLm72woASP2+EvKB7VyJS851ow91eHPF5P/tZu8D+1UonGqfdXcV0=</wsse:BinarySecurityToken>
+                    </wsse:Security>
+                </soap-env:Header>
+                <soap-env:Body>
+                    <prefixRigel0:entidadAdherida_LAResponse xmlns:prefixRigel0="http://www.isban.es/webservices/TRASAN/Inmediatas_la/F_trasan_inmediatas_la/ACTRASANINT/v1">
+                        <methodResult>
+                            <codBan>0049</codBan>
+                            <datosInfo>
+                                <errorCode>0</errorCode>
+                            </datosInfo>
+                        </methodResult>
+                    </prefixRigel0:entidadAdherida_LAResponse>
+                </soap-env:Body>
+            </soap-env:Envelope>
+        </respuesta0>
+        
+        <respuesta1>
+            Response KO – BIC no adherido
+            <soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <soap-env:Header>
+                    <wsse:Security soap-env:actor="http://www.isban.es/soap/actor/wssecurity" soap-env:mustUnderstand="1" S12:role="wsssecurity" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:S12="http://www.w3.org/2003/05/soap-envelope">
+                        <wsse:BinarySecurityToken wsu:Id="SSOToken" ValueType="esquema" EncodingType="wsse:Base64Binary" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">B4C00616B1EF1501B052DED9#180.192.6.22#1527681410399#PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iSVNPLTg4NTktMSI/Pjx0b2tlbkRlZmluaXRpb24+PHRpcG9QZXJzb25hPkY8L3RpcG9QZXJzb25hPjxuYW1lPkVOUklRVUVHT05aQUxFWi1HQUxMQVIgTE9QRVogREUgVFVSSVNPPC9uYW1lPjxjb2RpZ29QZXJzb25hPjU3MDM2NTwvY29kaWdvUGVyc29uYT48dXNlcklEPjAwNzkwMjYyPC91c2VySUQ+PC90b2tlbkRlZmluaXRpb24+#DESede/CBC/PKCS5Padding#v1#canalesSANPRE#NOT USED#SHA1withRSA#FHYy7sjfMOnw3Y02Zn8QLeRe14iIeVFipbPx6JPcZY1A8MH6AAd3PqU4sdBdgorDNmmyZUirWn+uRNRrEXO9PquT/9IUC2mImAJY4tvroZ51E6alZOm+ffJhD3SPx0IfbajIkopo2LZ2cUzMH574l7k7BtjQdFHadUHU29ZN/7g=</wsse:BinarySecurityToken>
+                    </wsse:Security>
+                </soap-env:Header>
+                <soap-env:Body>
+                    <soap-env:Fault>
+                        <faultcode>soap-env:Server</faultcode>
+                        <faultstring>Exception Code: TRASAN_00001. Executing Facade: ACTRASANINT, Method: entidadAdherida_LA</faultstring>
+                        <faultactor>http://www.isban.es/soap/banksphere</faultactor>
+                        <detail>
+                            <prefixRigel0:com.isb.trasan.inmediatas.la.f.exc.General_TransInmediatas_LA xmlns:prefixRigel0="http://www.isban.es/webservices/TRASAN/Inmediatas_la/F_trasan_inmediatas_la/functionalFaults/v1">
+                                <error>
+                                    <codError>SI_1016</codError>
+                                    <descError>BIC NO ADHERIDO AL MEDIO</descError>
+                                    <errorCode>1</errorCode>
+                                </error>
+                            </prefixRigel0:com.isb.trasan.inmediatas.la.f.exc.General_TransInmediatas_LA>
+                        </detail>
+                    </soap-env:Fault>
+                </soap-env:Body>
+            </soap-env:Envelope>
+        </respuesta1>
+    </id12345678z>
+</datos>

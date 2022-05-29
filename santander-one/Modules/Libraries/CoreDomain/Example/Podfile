@@ -1,0 +1,17 @@
+platform :ios, '10.3'
+
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+def libraries
+  pod 'SANLegacyLibrary', :path => '../../Modules/Libraries/SANLegacyLibrary'
+  pod 'CoreDomain', :path => '../../Modules/Libraries/CoreDomain'
+  pod 'CoreFoundationLib', :path => '../../Modules/Libraries/CoreFoundationLib'
+  pod 'RxCombine', :path => '../../Modules/Libraries/RxCombine'
+end
+
+target 'CoreDomain_Tests' do
+  pod 'CoreDomain', :path => '../'
+  libraries
+end

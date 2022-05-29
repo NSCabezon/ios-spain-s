@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderMicroText-Regular.ttf">
+            <string>SantanderMicroText-Regular</string>
+        </array>
+        <array key="SantanderText-Regular.ttf">
+            <string>SantanderText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FundMovementDetailInfoView" customModule="Funds" customModuleProvider="target">
+            <connections>
+                <outlet property="titleLabel" destination="qlm-QH-kFS" id="FIo-0x-78J"/>
+                <outlet property="valueLabel" destination="wIE-Ou-0dx" id="1l3-KK-0BY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Detail title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlm-QH-kFS" userLabel="Title Label">
+                    <rect key="frame" x="16" y="0.5" width="62.5" height="19"/>
+                    <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="13"/>
+                    <color key="textColor" red="0.43529411764705883" green="0.46666666666666667" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="*Detail value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIE-Ou-0dx" userLabel="Value Label">
+                    <rect key="frame" x="274" y="0.5" width="83" height="19.5"/>
+                    <fontDescription key="fontDescription" name="SantanderMicroText-Regular" family="Santander Micro Text" pointSize="14"/>
+                    <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="wIE-Ou-0dx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qlm-QH-kFS" secondAttribute="trailing" constant="30" id="GtP-Qn-g8D"/>
+                <constraint firstItem="qlm-QH-kFS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Iqa-mN-K8T"/>
+                <constraint firstAttribute="trailing" secondItem="wIE-Ou-0dx" secondAttribute="trailing" constant="18" id="Jjz-mc-IWs"/>
+                <constraint firstItem="qlm-QH-kFS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="UCw-SJ-0va"/>
+                <constraint firstItem="wIE-Ou-0dx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="jSN-2h-HLF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="138.40579710144928" y="124.55357142857142"/>
+        </view>
+    </objects>
+</document>

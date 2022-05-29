@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LisboaSegmentedWithImageAndTitle" customModule="UI" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="P7T-ml-FIH"/>
+                <outlet property="leftItem" destination="K8e-go-LdG" id="DVu-bQ-RwP"/>
+                <outlet property="rightItem" destination="PXF-EE-EPw" id="whH-th-AV0"/>
+                <outlet property="segmentedControl" destination="gis-Da-wsJ" id="OCF-dq-41B"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gis-Da-wsJ" customClass="LisboaSegmentedControl" customModule="UI" customModuleProvider="target">
+                    <rect key="frame" x="12" y="14" width="390" height="57"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="dId-6U-L0W"/>
+                    </constraints>
+                    <segments>
+                        <segment title=""/>
+                        <segment title=""/>
+                    </segments>
+                    <connections>
+                        <action selector="didTapOnSegmented:" destination="-1" eventType="valueChanged" id="Xds-2m-A7J"/>
+                    </connections>
+                </segmentedControl>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="99G-YE-PVv">
+                    <rect key="frame" x="12" y="14" width="390" height="56"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8e-go-LdG" customClass="SegmentedItemWithImageAndText" customModule="UI" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="195" height="56"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXF-EE-EPw" customClass="SegmentedItemWithImageAndText" customModule="UI" customModuleProvider="target">
+                            <rect key="frame" x="195" y="0.0" width="195" height="56"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="99G-YE-PVv" firstAttribute="top" secondItem="gis-Da-wsJ" secondAttribute="top" id="8r6-sa-21F"/>
+                <constraint firstItem="99G-YE-PVv" firstAttribute="leading" secondItem="gis-Da-wsJ" secondAttribute="leading" id="9cU-dK-f7q"/>
+                <constraint firstItem="99G-YE-PVv" firstAttribute="bottom" secondItem="gis-Da-wsJ" secondAttribute="bottom" id="EyZ-DX-m6a"/>
+                <constraint firstAttribute="trailing" secondItem="gis-Da-wsJ" secondAttribute="trailing" constant="12" id="FVt-Bb-O0p"/>
+                <constraint firstItem="gis-Da-wsJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="H1d-dR-fmW"/>
+                <constraint firstItem="gis-Da-wsJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="14" id="KMN-hL-mJC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gis-Da-wsJ" secondAttribute="bottom" constant="14" id="YUe-cl-RgF"/>
+                <constraint firstItem="99G-YE-PVv" firstAttribute="trailing" secondItem="gis-Da-wsJ" secondAttribute="trailing" id="jyq-VM-Q32"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="119"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderText-Regular.otf">
+            <string>SantanderText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransferEmittedLoadingView" customModule="Transfer" customModuleProvider="target">
+            <connections>
+                <outlet property="loadingImageView" destination="VxR-YX-Tjw" id="K3D-z1-cRd"/>
+                <outlet property="loadingLabel" destination="zhb-1O-tH6" id="upM-Tv-ate"/>
+                <outlet property="subtitleLabel" destination="Kmx-o8-Dsv" id="PBN-Gk-00H"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="133"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmx-Se-NHu">
+                    <rect key="frame" x="-4" y="52" width="422" height="73"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VxR-YX-Tjw">
+                            <rect key="frame" x="183" y="0.0" width="56" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="56" id="4R5-Qq-a1n"/>
+                                <constraint firstAttribute="height" constant="15" id="b5h-lQ-mAX"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargando contenido" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhb-1O-tH6">
+                            <rect key="frame" x="0.0" y="24" width="422" height="29"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="29" id="z8D-7a-NAf"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="20"/>
+                            <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kmx-o8-Dsv">
+                            <rect key="frame" x="0.0" y="53" width="422" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="78u-pV-H7e"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="VxR-YX-Tjw" firstAttribute="centerX" secondItem="zhb-1O-tH6" secondAttribute="centerX" id="1g3-Nl-joC"/>
+                        <constraint firstItem="zhb-1O-tH6" firstAttribute="top" secondItem="VxR-YX-Tjw" secondAttribute="bottom" constant="9" id="BDM-ny-LhN"/>
+                        <constraint firstAttribute="trailing" secondItem="zhb-1O-tH6" secondAttribute="trailing" id="Bzt-38-X8X"/>
+                        <constraint firstItem="zhb-1O-tH6" firstAttribute="leading" secondItem="zmx-Se-NHu" secondAttribute="leading" id="EAK-R3-2XS"/>
+                        <constraint firstItem="VxR-YX-Tjw" firstAttribute="top" secondItem="zmx-Se-NHu" secondAttribute="top" id="HXr-iu-3T7"/>
+                        <constraint firstItem="zhb-1O-tH6" firstAttribute="bottom" secondItem="Kmx-o8-Dsv" secondAttribute="top" id="KB0-eV-fbM"/>
+                        <constraint firstAttribute="trailing" secondItem="Kmx-o8-Dsv" secondAttribute="trailing" id="OVE-Yj-ENz"/>
+                        <constraint firstAttribute="bottom" secondItem="Kmx-o8-Dsv" secondAttribute="bottom" id="cwy-gs-VcC"/>
+                        <constraint firstItem="Kmx-o8-Dsv" firstAttribute="leading" secondItem="zmx-Se-NHu" secondAttribute="leading" id="p2C-8v-2fS"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zmx-Se-NHu" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="FXM-lD-9V7"/>
+                <constraint firstItem="zmx-Se-NHu" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="4" id="QAt-pR-W0w"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="leading" secondItem="zmx-Se-NHu" secondAttribute="leading" constant="4" id="fcH-M6-sHv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="104.79910714285714"/>
+        </view>
+    </objects>
+</document>

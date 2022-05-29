@@ -1,0 +1,16 @@
+# test:
+#   before_script:
+#     - export FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT=60
+#   script:
+#     - cd Project
+#     - fastlane ios test suppress_xcode_output:true
+#   only:
+#     - merge_requests
+# lint:
+#   before_script:
+#     - cd Project
+#     - fastlane ios update_pods
+#   script:
+#     - fastlane ios swift_lint
+#   only:
+#     - merge_requests

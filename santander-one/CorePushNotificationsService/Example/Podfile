@@ -1,0 +1,36 @@
+platform :ios, '10.3'
+
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+def legacy_libraries
+  pod 'Locker', :path => '../../Modules/Libraries/Locker'
+  pod 'Logger', :path => '../../Modules/Libraries/Logger'
+end
+
+def libraries
+  pod 'CoreFoundationLib', :path => '../../Modules/Libraries/CoreFoundationLib'
+  pod 'CoreDomain', :path => '../../Modules/Libraries/CoreDomain'
+  pod 'SANLegacyLibrary', :path => '../../Modules/Libraries/SANLegacyLibrary'
+  pod 'Localization', :path => '../../Localization'
+  pod 'RxCombine', :path => '../../Modules/Libraries/RxCombine'
+end
+
+def corePushNotificationsService_example_pods
+  pod 'CorePushNotificationsService', :path => '../'
+  pod 'QuickSetup', :path => '../../QuickSetup'
+  pod 'Operative', :path => '../../Operative'
+  pod 'CoreTestData', :path => '../../Modules/Libraries/CoreTestData'
+  pod 'UI', :path => '../../UI'
+  legacy_libraries
+  libraries
+end
+
+target 'CorePushNotificationsService_Example' do
+  corePushNotificationsService_example_pods
+
+target 'CorePushNotificationsService_Tests' do
+    inherit! :search_paths
+  end
+end

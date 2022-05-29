@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MonthSelectorView" customModule="Cards" customModuleProvider="target">
+            <connections>
+                <outlet property="cardSelectorTextField" destination="pYx-dT-VVm" id="VIZ-3R-21Y"/>
+                <outlet property="containerView" destination="UOs-2N-jk5" id="Y96-Rm-NjS"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="h37-VK-pSj"/>
+                <outlet property="monthView" destination="6NA-8d-QDE" id="CX6-1a-M5n"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="B97-gL-zTq">
+                    <rect key="frame" x="0.0" y="44" width="414" height="356"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1I7-WF-Rfp">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOs-2N-jk5">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pYx-dT-VVm" customClass="SmallLisboaTextField" customModule="UI">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="uUg-Gu-WwM"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="pYx-dT-VVm" secondAttribute="bottom" id="CQk-Ea-qyx"/>
+                                        <constraint firstAttribute="trailing" secondItem="pYx-dT-VVm" secondAttribute="trailing" id="Hs2-G1-d2a"/>
+                                        <constraint firstItem="pYx-dT-VVm" firstAttribute="top" secondItem="UOs-2N-jk5" secondAttribute="top" id="KXO-Rw-MaW"/>
+                                        <constraint firstItem="pYx-dT-VVm" firstAttribute="leading" secondItem="UOs-2N-jk5" secondAttribute="leading" id="WR2-Fx-D42"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="UOs-2N-jk5" secondAttribute="trailing" id="FP3-Vt-wsz"/>
+                                <constraint firstItem="UOs-2N-jk5" firstAttribute="top" secondItem="1I7-WF-Rfp" secondAttribute="top" id="jG4-k6-Tyj"/>
+                                <constraint firstItem="UOs-2N-jk5" firstAttribute="leading" secondItem="1I7-WF-Rfp" secondAttribute="leading" id="qth-sV-etz"/>
+                                <constraint firstAttribute="bottom" secondItem="UOs-2N-jk5" secondAttribute="bottom" id="sqT-Jm-deB"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6NA-8d-QDE" customClass="MonthView" customModule="UI">
+                            <rect key="frame" x="0.0" y="65" width="414" height="291"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="B97-gL-zTq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="A1o-L8-mbF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="B97-gL-zTq" secondAttribute="top" id="WyH-pI-WwL"/>
+                <constraint firstItem="B97-gL-zTq" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="dG3-AO-1st"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="B97-gL-zTq" secondAttribute="bottom" id="m89-Fp-5q6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="111"/>
+        </view>
+    </objects>
+</document>

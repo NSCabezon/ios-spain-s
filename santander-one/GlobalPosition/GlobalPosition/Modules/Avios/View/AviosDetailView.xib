@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AviosDetailViewController" customModule="GlobalPosition" customModuleProvider="target">
+            <connections>
+                <outlet property="scrollView" destination="T0K-3v-HnL" id="gkY-AE-rAA"/>
+                <outlet property="stackView" destination="eCQ-qK-87E" id="kNB-RD-Tu0"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Wj7-J8-rCt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0K-3v-HnL">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eCQ-qK-87E">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="250" id="gkL-hO-LEN"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="eCQ-qK-87E" secondAttribute="trailing" id="6ec-zo-ZIq"/>
+                        <constraint firstItem="eCQ-qK-87E" firstAttribute="width" secondItem="T0K-3v-HnL" secondAttribute="width" id="YbF-ez-sVK"/>
+                        <constraint firstItem="eCQ-qK-87E" firstAttribute="leading" secondItem="T0K-3v-HnL" secondAttribute="leading" id="dcO-qE-UAW"/>
+                        <constraint firstAttribute="bottom" secondItem="eCQ-qK-87E" secondAttribute="bottom" id="pFN-M0-7bW"/>
+                        <constraint firstItem="eCQ-qK-87E" firstAttribute="top" secondItem="T0K-3v-HnL" secondAttribute="top" id="rcF-G0-Oo4"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="T0K-3v-HnL" secondAttribute="trailing" id="95D-5G-Fk4"/>
+                <constraint firstItem="T0K-3v-HnL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="F94-J8-A04"/>
+                <constraint firstAttribute="bottom" secondItem="T0K-3v-HnL" secondAttribute="bottom" id="lmL-Kk-9ce"/>
+                <constraint firstItem="T0K-3v-HnL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="zGU-D9-awa"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="141" y="126"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BigCallButtonView" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="callImageView" destination="CgS-dt-fRD" id="wAC-TB-1Tv"/>
+                <outlet property="frameView" destination="xkz-95-ZaG" id="PKk-kq-VTv"/>
+                <outlet property="iconImageView" destination="W76-CN-mkM" id="fh3-wh-cHH"/>
+                <outlet property="titleLabel" destination="lEm-b3-ADI" id="Jvv-mV-drg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="152" height="128"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkz-95-ZaG" userLabel="Frame View">
+                    <rect key="frame" x="0.0" y="0.0" width="152" height="128"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W76-CN-mkM">
+                            <rect key="frame" x="11" y="11" width="36" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="IWY-vH-JTP"/>
+                                <constraint firstAttribute="width" constant="36" id="T96-tT-vLh"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEm-b3-ADI">
+                            <rect key="frame" x="9" y="94.5" width="128" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="W76-CN-mkM" firstAttribute="top" secondItem="xkz-95-ZaG" secondAttribute="top" constant="11" id="7gI-th-aj7"/>
+                        <constraint firstItem="W76-CN-mkM" firstAttribute="leading" secondItem="xkz-95-ZaG" secondAttribute="leading" constant="11" id="Mou-Tf-pS8"/>
+                        <constraint firstAttribute="bottom" secondItem="lEm-b3-ADI" secondAttribute="bottom" constant="13" id="SiG-CD-vdj"/>
+                        <constraint firstItem="lEm-b3-ADI" firstAttribute="top" relation="greaterThanOrEqual" secondItem="W76-CN-mkM" secondAttribute="bottom" constant="11" id="Tm6-f6-0ef"/>
+                        <constraint firstItem="lEm-b3-ADI" firstAttribute="leading" secondItem="xkz-95-ZaG" secondAttribute="leading" constant="9" id="oSH-La-sWH"/>
+                        <constraint firstAttribute="trailing" secondItem="lEm-b3-ADI" secondAttribute="trailing" constant="15" id="rUr-UD-Wqf"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CgS-dt-fRD">
+                    <rect key="frame" x="105" y="-2" width="49" height="54"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="S0X-iA-fU7"/>
+                        <constraint firstAttribute="width" constant="49" id="hKk-NB-d7r"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="CgS-dt-fRD" secondAttribute="trailing" constant="-2" id="BAy-Pk-4xe"/>
+                <constraint firstItem="xkz-95-ZaG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="M3a-Vy-O9b"/>
+                <constraint firstItem="xkz-95-ZaG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UU3-zB-AQ9"/>
+                <constraint firstAttribute="trailing" secondItem="xkz-95-ZaG" secondAttribute="trailing" id="cKE-Nc-E3T"/>
+                <constraint firstItem="CgS-dt-fRD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-2" id="fbe-Ln-amM"/>
+                <constraint firstAttribute="bottom" secondItem="xkz-95-ZaG" secondAttribute="bottom" id="nKm-HU-Rew"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="94"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

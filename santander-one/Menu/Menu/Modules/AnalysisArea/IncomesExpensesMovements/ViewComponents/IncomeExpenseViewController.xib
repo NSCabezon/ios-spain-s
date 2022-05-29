@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IncomeExpenseViewController" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="balanceSegmentedControl" destination="Khw-9b-GIs" id="pnS-eC-TFF"/>
+                <outlet property="tableView" destination="YZg-Dx-LoA" id="5yR-t0-wn5"/>
+                <outlet property="view" destination="iN0-l3-epB" id="389-b0-MOW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Khw-9b-GIs" customClass="LisboaSegmentedControl" customModule="UI">
+                    <rect key="frame" x="16" y="10" width="382" height="40"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="q3D-Ag-YRu"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YZg-Dx-LoA">
+                    <rect key="frame" x="0.0" y="69" width="414" height="827"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Khw-9b-GIs" secondAttribute="trailing" constant="16" id="3MX-Se-TGj"/>
+                <constraint firstItem="Khw-9b-GIs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="3ZW-NX-0ZT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YZg-Dx-LoA" secondAttribute="trailing" id="JCd-n6-KhX"/>
+                <constraint firstItem="Khw-9b-GIs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="JI6-f5-YlI"/>
+                <constraint firstItem="YZg-Dx-LoA" firstAttribute="top" secondItem="Khw-9b-GIs" secondAttribute="bottom" constant="19" id="UcL-f3-WvI"/>
+                <constraint firstItem="YZg-Dx-LoA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="WSY-oF-acg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="YZg-Dx-LoA" secondAttribute="bottom" id="dbd-kN-y8Y"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="87"/>
+        </view>
+    </objects>
+</document>

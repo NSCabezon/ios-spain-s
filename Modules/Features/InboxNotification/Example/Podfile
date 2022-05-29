@@ -1,0 +1,32 @@
+use_frameworks!
+
+platform :ios, '10.3'
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+def dep_libraries 
+  pod 'SANLegacyLibrary', :path => '../../../../santander-one/Modules/Libraries/SANLegacyLibrary'
+  pod 'SANLibraryV3', :path => '../../../../santander-one/Modules/Libraries/SANLibraryV3'
+  pod 'iOSPullOffers', :path => '../../../../santander-one/Modules/Libraries/iOSPullOffers'
+  pod 'Inbox', :path => '../../../../santander-one/Inbox'
+  pod 'Locker', :path => '../../../../santander-one/Modules/Libraries/Locker'
+  pod 'QuickSetup', :path => '../../../../santander-one/QuickSetup'
+  pod 'ESCommons', :path => '../../../../santander-one/Modules/Libraries/ESCommons'
+  pod 'SQLite.swift/SQLCipher', :path => '../../../../santander-one/Modules/Libraries/SQLite.swift'
+  pod 'SQLCipher', '4.4.2'
+end
+
+def pods
+  dep_libraries
+  pod 'InboxNotification', :path => '../'
+  pod 'UI', :path => '../../../../santander-one/UI'
+  pod 'CoreFoundationLib', :path => '../../../../santander-one/Modules/Libraries/CoreFoundationLib'
+end
+
+target 'InboxNotification_Example' do
+   pods
+   target 'InboxNotification_ExampleTests' do
+      inherit! :search_paths
+      pod 'UnitTestCommons', :path => '../../../../santander-one/UnitTestCommons'
+   end
+end

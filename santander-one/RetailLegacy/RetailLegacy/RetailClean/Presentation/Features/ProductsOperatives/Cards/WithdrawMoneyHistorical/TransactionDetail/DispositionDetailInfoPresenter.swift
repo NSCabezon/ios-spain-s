@@ -1,0 +1,1 @@
+class DispositionDetailInfoPresenter: ProductDetailInfoPresenter {}

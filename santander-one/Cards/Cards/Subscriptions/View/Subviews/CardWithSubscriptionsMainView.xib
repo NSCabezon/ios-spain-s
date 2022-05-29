@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardWithSubscriptionsMainView" customModule="Cards" customModuleProvider="target">
+            <connections>
+                <outlet property="containerStackView" destination="gZA-0A-od7" id="BRO-Nl-Cum"/>
+                <outlet property="stackView" destination="ql9-wj-w1I" id="9zr-yp-HnP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZA-0A-od7">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ql9-wj-w1I">
+                            <rect key="frame" x="16" y="16" width="382" height="704"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="ql9-wj-w1I" firstAttribute="top" secondItem="gZA-0A-od7" secondAttribute="top" constant="16" id="CN2-Bi-YGt"/>
+                        <constraint firstAttribute="bottom" secondItem="ql9-wj-w1I" secondAttribute="bottom" constant="16" id="VCC-2M-MS6"/>
+                        <constraint firstAttribute="trailing" secondItem="ql9-wj-w1I" secondAttribute="trailing" constant="16" id="fxP-Qf-8g9"/>
+                        <constraint firstItem="ql9-wj-w1I" firstAttribute="leading" secondItem="gZA-0A-od7" secondAttribute="leading" constant="16" id="uQW-Bi-ETL"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="gZA-0A-od7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Dqs-Ea-Lhd"/>
+                <constraint firstAttribute="bottom" secondItem="gZA-0A-od7" secondAttribute="bottom" id="Me2-Cm-jF4"/>
+                <constraint firstItem="gZA-0A-od7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="n6t-uq-iFw"/>
+                <constraint firstAttribute="trailing" secondItem="gZA-0A-od7" secondAttribute="trailing" id="tcS-BK-6Bv"/>
+            </constraints>
+            <point key="canvasLocation" x="56.521739130434788" y="87.228260869565219"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

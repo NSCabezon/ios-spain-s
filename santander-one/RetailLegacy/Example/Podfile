@@ -1,0 +1,101 @@
+platform :ios, '10.3'
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+inhibit_all_warnings!
+
+install! 'cocoapods',
+    :deterministic_uuids => false
+
+def features
+  pod 'Account', :path => '../../Accounts'
+  pod 'Bills', :path => '../../Bills'
+  pod 'BranchLocator', :path => '../../Modules/Features/BranchLocator'
+  pod 'Cards', :path => '../../Cards'
+  pod 'FinantialTimeline', :path => '../../Modules/Features/FinantialTimeline'
+  pod 'GlobalPosition', :path => '../../GlobalPosition'
+  pod 'GlobalSearch', :path => '../../GlobalSearch'
+  pod 'Inbox', :path => '../../Inbox'
+  pod 'Loans', :path => '../../Loans'
+  pod 'Localization', :path => '../../Localization'
+  pod 'Menu', :path => '../../Menu'
+  pod 'PersonalArea', :path => '../../PersonalArea'
+  pod 'PersonalManager', :path => '../../PersonalManager'
+  pod 'OfferCarousel', :path => '../../OfferCarousel'
+  pod 'Operative', :path => '../../Operative'
+  pod 'Transfer', :path => '../../Transfer'
+  pod 'TransferOperatives', :path => '../../Modules/Features/TransferOperatives'
+  pod 'UI', :path => '../../UI'
+  pod 'UIOneComponents', :path => '../../UIOneComponents'
+  pod 'OneAuthorizationProcessor', :path => '../../Modules/Features/OneAuthorizationProcessor'
+end
+
+def legacy_libraries
+  pod 'Locker', :path => '../../Modules/Libraries/Locker'
+  pod 'Logger', :path => '../../Modules/Libraries/Logger'
+  pod 'CorePushNotificationsService', :path => '../../CorePushNotificationsService'
+  pod 'LoginCommon', :path => '../../Modules/Features/LoginCommon'
+  pod 'PdfCommons', :path => '../../PdfCommons'
+  pod 'CoreDomain', :path => '../../Modules/Libraries/CoreDomain'
+  pod 'WebViews', :path => '../../Modules/Libraries/WebViews'
+end
+
+def libraries
+  pod 'CoreFoundationLib', :path => '../../Modules/Libraries/CoreFoundationLib'
+  pod 'SQLite.swift/SQLCipher', :path => '../../Modules/Libraries/SQLite.swift'
+  pod 'SQLCipher', '4.4.2'
+  pod 'CoreTestData', :path => '../../Modules/Libraries/CoreTestData'
+  pod 'RxCombine', :path => '../../Modules/Libraries/RxCombine'
+end
+
+def project_pods
+    pod 'IQKeyboardManagerSwift', '6.5.6'
+    pod 'SwiftyBeaver', '1.7.0'
+    pod 'SwiftLint', '0.43.1'
+    pod 'MarketingCloudSDK', '6.3.4'
+    pod 'TwinPushSDK', '3.10.0'
+    pod 'lottie-ios'
+    features
+    legacy_libraries
+    libraries
+end
+
+def widget_shared_pods
+    pod 'SANServicesLibrary', :path => '../../Modules/Libraries/SANServicesLibrary'
+    pod 'SANLegacyLibrary', :path => '../../Modules/Libraries/SANLegacyLibrary'
+    pod 'CoreDomain', :path => '../../Modules/Libraries/CoreDomain'
+    domain_common
+    pod 'SAMKeychain', '1.5.3'
+    pod 'Alamofire-Synchronous', '4.0'
+    pod 'TealiumIOS', '5.6.6'
+    common_app_extensions
+end
+
+def notifications_shared_pods
+  pod 'SanNotificationService', :path => 'Modules/AppExtensions/SanNotificationService'
+end
+
+def siri_shared_pods
+    widget_shared_pods
+end
+
+def domain_common
+    pod 'CoreFoundationLib', :path => '../../Modules/Libraries/CoreFoundationLib'
+end
+
+def common_app_extensions
+  pod 'CommonAppExtensions', :path => '../../Modules/AppExtensions/CommonAppExtensions'
+end
+
+target 'RetailLegacy_Example' do
+  use_frameworks!
+  project_pods
+  widget_shared_pods
+  pod 'AppCenter', '3.1.0'
+  pod 'RetailLegacy', :path => '../../RetailLegacy'
+  pod 'QuickSetup', :path => '../../QuickSetup'
+  target 'RetailLegacy_ExampleTests' do
+    inherit! :search_paths
+    pod 'UnitTestCommons', :path => '../../UnitTestCommons'
+  end
+end

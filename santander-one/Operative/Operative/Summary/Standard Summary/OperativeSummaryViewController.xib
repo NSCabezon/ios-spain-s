@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OperativeSummaryViewController" customModule="Operative" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="Kag-S5-BWp" id="ST3-ih-t7t"/>
+                <outlet property="footer" destination="XNu-oK-QV6" id="pmQ-81-aZO"/>
+                <outlet property="scrollView" destination="Ybg-rU-SCv" id="gdq-7J-cD5"/>
+                <outlet property="stackView" destination="7wL-tR-f3D" id="s2A-WD-TFy"/>
+                <outlet property="view" destination="9fT-5e-rkQ" id="vLN-wd-ZqL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="9fT-5e-rkQ">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ybg-rU-SCv" userLabel="ScrollView">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kag-S5-BWp" userLabel="ContentView">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="7wL-tR-f3D">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                </stackView>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XNu-oK-QV6" userLabel="FooterView">
+                                    <rect key="frame" x="0.0" y="792" width="414" height="60"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="XNu-oK-QV6" firstAttribute="leading" secondItem="Kag-S5-BWp" secondAttribute="leading" id="4fd-Dm-cpn"/>
+                                <constraint firstAttribute="trailing" secondItem="7wL-tR-f3D" secondAttribute="trailing" id="4p8-JN-Xhy"/>
+                                <constraint firstAttribute="bottom" secondItem="XNu-oK-QV6" secondAttribute="bottom" id="QIc-TF-1yQ"/>
+                                <constraint firstAttribute="trailing" secondItem="XNu-oK-QV6" secondAttribute="trailing" id="QzA-Of-rfm"/>
+                                <constraint firstItem="XNu-oK-QV6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7wL-tR-f3D" secondAttribute="bottom" constant="16" id="ncx-yF-8zA"/>
+                                <constraint firstItem="7wL-tR-f3D" firstAttribute="leading" secondItem="Kag-S5-BWp" secondAttribute="leading" id="x9e-oL-Wlj"/>
+                                <constraint firstItem="7wL-tR-f3D" firstAttribute="top" secondItem="Kag-S5-BWp" secondAttribute="top" id="zGS-c8-TPo"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Kag-S5-BWp" firstAttribute="leading" secondItem="Ybg-rU-SCv" secondAttribute="leading" id="5EN-Eo-Muo"/>
+                        <constraint firstItem="Kag-S5-BWp" firstAttribute="height" secondItem="Ybg-rU-SCv" secondAttribute="height" priority="250" id="9uw-9f-gER"/>
+                        <constraint firstItem="Kag-S5-BWp" firstAttribute="top" secondItem="Ybg-rU-SCv" secondAttribute="top" id="I3w-UC-Bmd"/>
+                        <constraint firstAttribute="trailing" secondItem="Kag-S5-BWp" secondAttribute="trailing" id="NY6-R1-ZbB"/>
+                        <constraint firstItem="Kag-S5-BWp" firstAttribute="width" secondItem="Ybg-rU-SCv" secondAttribute="width" id="mwp-qs-e1n"/>
+                        <constraint firstAttribute="bottom" secondItem="Kag-S5-BWp" secondAttribute="bottom" id="vPQ-gL-b0d"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="1sr-3L-gNL"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Ybg-rU-SCv" firstAttribute="top" secondItem="1sr-3L-gNL" secondAttribute="top" id="4bw-CL-jCF"/>
+                <constraint firstItem="1sr-3L-gNL" firstAttribute="trailing" secondItem="Ybg-rU-SCv" secondAttribute="trailing" id="9I0-cm-4gO"/>
+                <constraint firstAttribute="bottom" secondItem="Ybg-rU-SCv" secondAttribute="bottom" id="VsB-cL-BCV"/>
+                <constraint firstItem="Ybg-rU-SCv" firstAttribute="leading" secondItem="1sr-3L-gNL" secondAttribute="leading" id="auW-rD-Yax"/>
+            </constraints>
+            <point key="canvasLocation" x="-268" y="-538"/>
+        </view>
+    </objects>
+</document>

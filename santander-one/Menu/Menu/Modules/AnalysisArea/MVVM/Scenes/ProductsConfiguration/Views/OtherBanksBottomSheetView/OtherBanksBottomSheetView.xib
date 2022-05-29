@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OtherBanksBottomSheetView" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="deleteBankButton" destination="KFI-I9-0gS" id="jd6-nX-hmP"/>
+                <outlet property="updateBankButton" destination="Sao-Og-tNW" id="jdP-GT-s3v"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="921" height="353"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SgA-3l-6fX" userLabel="Container View">
+                    <rect key="frame" x="16" y="16" width="889" height="321"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="PPv-QI-qWL">
+                            <rect key="frame" x="0.0" y="0.0" width="889" height="321"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sao-Og-tNW" customClass="OneFloatingButton" customModule="UIOneComponents">
+                                    <rect key="frame" x="0.0" y="0.0" width="889" height="148"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="didTapUpdatePermissions:" destination="-1" eventType="touchUpInside" id="gBh-EX-96G"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFI-I9-0gS" customClass="OneFloatingButton" customModule="UIOneComponents">
+                                    <rect key="frame" x="0.0" y="173" width="889" height="148"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="didTapDeleteBank:" destination="-1" eventType="touchUpInside" id="5vr-6v-1xJ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="PPv-QI-qWL" firstAttribute="leading" secondItem="SgA-3l-6fX" secondAttribute="leading" id="53z-td-82g"/>
+                        <constraint firstAttribute="trailing" secondItem="PPv-QI-qWL" secondAttribute="trailing" id="k5b-dt-2zg"/>
+                        <constraint firstAttribute="bottom" secondItem="PPv-QI-qWL" secondAttribute="bottom" id="pyT-x2-TTk"/>
+                        <constraint firstItem="PPv-QI-qWL" firstAttribute="top" secondItem="SgA-3l-6fX" secondAttribute="top" id="wJw-Rr-etP"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="SgA-3l-6fX" secondAttribute="trailing" constant="16" id="3B5-JC-P6K"/>
+                <constraint firstAttribute="bottom" secondItem="SgA-3l-6fX" secondAttribute="bottom" constant="16" id="5tq-ff-wSo"/>
+                <constraint firstItem="SgA-3l-6fX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="EDk-xT-1vR"/>
+                <constraint firstItem="SgA-3l-6fX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="jmH-QR-teh"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-235.50724637681162" y="-217.29910714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

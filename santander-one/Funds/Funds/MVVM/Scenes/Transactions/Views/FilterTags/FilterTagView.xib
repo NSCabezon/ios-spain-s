@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderMicroText-Bold.ttf">
+            <string>SantanderMicroText-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterTagView" customModule="Funds" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="VW8-Vp-v0N" id="3hQ-fQ-drE"/>
+                <outlet property="closeImageView" destination="ypZ-T8-fxr" id="KRi-3B-PDh"/>
+                <outlet property="filterTagLabel" destination="Hmh-ID-Zyb" id="J9c-YO-u4Y"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="27"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*22/10/2021 - 22/12/2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmh-ID-Zyb" userLabel="Filter Tag Label">
+                    <rect key="frame" x="8" y="4.5" width="382" height="18"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" none="YES"/>
+                        <bool key="isElement" value="NO"/>
+                    </accessibility>
+                    <fontDescription key="fontDescription" name="SantanderMicroText-Bold" family="Santander Micro Text" pointSize="13"/>
+                    <color key="textColor" red="0.074509803921568626" green="0.49411764705882355" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ypZ-T8-fxr" userLabel="Close Image View">
+                    <rect key="frame" x="391" y="2.5" width="22" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="VEM-5z-Wnq"/>
+                        <constraint firstAttribute="width" constant="22" id="wUQ-bX-M2P"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VW8-Vp-v0N" userLabel="Close Button">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="27"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <connections>
+                        <action selector="closeButtonDidPressed:" destination="-1" eventType="touchUpInside" id="AL4-G5-LrC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ypZ-T8-fxr" secondAttribute="trailing" constant="1" id="0OM-yi-Bg6"/>
+                <constraint firstItem="VW8-Vp-v0N" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2T2-ce-bx0"/>
+                <constraint firstItem="Hmh-ID-Zyb" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="5MT-3I-mNI"/>
+                <constraint firstAttribute="bottom" secondItem="VW8-Vp-v0N" secondAttribute="bottom" id="8v2-DB-N1c"/>
+                <constraint firstAttribute="trailing" secondItem="VW8-Vp-v0N" secondAttribute="trailing" id="NXo-Qs-s1X"/>
+                <constraint firstItem="ypZ-T8-fxr" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="VUW-TK-nmt"/>
+                <constraint firstItem="VW8-Vp-v0N" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aMy-J2-4OM"/>
+                <constraint firstItem="ypZ-T8-fxr" firstAttribute="leading" secondItem="Hmh-ID-Zyb" secondAttribute="trailing" constant="1" id="wIS-YF-8dh"/>
+                <constraint firstItem="Hmh-ID-Zyb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="x9G-8T-Jz1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-146.31696428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

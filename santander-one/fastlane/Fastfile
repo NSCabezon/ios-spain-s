@@ -1,0 +1,61 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+TEST_EXAMPLE_APPS_CONFIGURATION = {
+  "Accounts" => { scheme: "Accounts-Example", path: "Accounts/Example", workspace: "Accounts.xcworkspace" },
+  #"Cards" => { scheme: "Cards-Example", path: "Cards/Example", workspace: "Cards.xcworkspace" },
+  "UI" => { scheme: "UI_Example", path: "UI/Example", workspace: "UI.xcworkspace" },
+  "GlobalPosition" => { scheme: "ExampleApp", path: "GlobalPosition/ExampleApp", workspace: "ExampleApp.xcworkspace" },
+  "Bills" => { scheme: "Bills-Example", path: "Bills/Example", workspace: "Bills.xcworkspace" },
+  "GlobalSearch" => { scheme: "GlobalSearch-Example", path: "GlobalSearch/Example", workspace: "GlobalSearch.xcworkspace" },
+  "PersonalArea" => { scheme: "PersonalArea-Example", path: "PersonalArea/Example", workspace: "PersonalArea.xcworkspace" }
+}
+
+
+platform :ios do
+
+  desc 'Updating pods and Provisions'
+  lane :update_pods do
+    sh "pod update"
+  end
+
+  desc 'Pass swiftlint'
+  lane :swift_lint do
+    swiftlint(
+      mode: :lint,
+      executable: "./Pods/SwiftLint/swiftlint",
+      config_file: ".swiftlint.yml",
+      quiet: true
+  )
+  end
+
+  desc "Test all example apps"
+  lane :test do |options|
+    TEST_EXAMPLE_APPS_CONFIGURATION.each do |app, configuration|
+      UI.message "Passing #{app} tests"
+      path = "#{configuration[:path]}"
+      cocoapods(podfile: "#{path}/Podfile")
+      run_tests(
+        workspace: "#{path}/#{configuration[:workspace]}",
+        scheme: configuration[:scheme],
+        build_for_testing: false,
+        output_directory: ".scan_result",
+        suppress_xcode_output: options[:suppress_xcode_output]
+    )
+    end
+  end
+end

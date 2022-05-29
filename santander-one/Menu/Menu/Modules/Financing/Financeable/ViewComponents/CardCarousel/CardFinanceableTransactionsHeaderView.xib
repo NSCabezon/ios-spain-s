@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardFinanceableTransactionsHeaderView" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="cardsLabel" destination="USO-BR-MWU" id="UXw-kB-5kB"/>
+                <outlet property="seeAllButton" destination="Cez-YI-lN7" id="kJ6-qe-XYZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLV-pl-z8D">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USO-BR-MWU">
+                            <rect key="frame" x="16" y="17" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cez-YI-lN7">
+                            <rect key="frame" x="352" y="12.5" width="46" height="30"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="seeAllButtonPressed:" destination="-1" eventType="touchUpInside" id="gL3-J7-nRf"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="1jH-gZ-4my"/>
+                        <constraint firstAttribute="bottom" secondItem="USO-BR-MWU" secondAttribute="bottom" constant="6" id="CyW-hf-vmd"/>
+                        <constraint firstItem="Cez-YI-lN7" firstAttribute="centerY" secondItem="USO-BR-MWU" secondAttribute="centerY" id="EXz-4w-ebD"/>
+                        <constraint firstAttribute="trailing" secondItem="Cez-YI-lN7" secondAttribute="trailing" constant="16" id="HxJ-fw-H5x"/>
+                        <constraint firstItem="USO-BR-MWU" firstAttribute="leading" secondItem="JLV-pl-z8D" secondAttribute="leading" constant="16" id="dl1-O2-5bY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="JLV-pl-z8D" secondAttribute="trailing" id="BFF-40-aox"/>
+                <constraint firstAttribute="bottom" secondItem="JLV-pl-z8D" secondAttribute="bottom" id="JSr-7P-r8x"/>
+                <constraint firstItem="JLV-pl-z8D" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cf6-RB-i66"/>
+                <constraint firstItem="JLV-pl-z8D" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dyE-Da-iYf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-132.25446428571428"/>
+        </view>
+    </objects>
+</document>

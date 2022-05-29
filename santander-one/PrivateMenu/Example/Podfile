@@ -1,0 +1,23 @@
+use_frameworks!
+platform :ios, '10.3'
+source 'https://github.com/CocoaPods/Specs.git'
+
+def pods
+  pod 'PrivateMenu', :path => '../'
+  pod 'UI', :path => '../../UI'
+  pod 'Locker', :path => '../../Modules/Libraries/Locker'
+  pod 'SANLegacyLibrary', :path => '../../Modules/Libraries/SANLegacyLibrary'
+  pod 'CoreDomain', :path => '../../Modules/Libraries/CoreDomain'
+  pod 'CoreFoundationLib', :path => '../../Modules/Libraries/CoreFoundationLib'
+  pod 'RxCombine', :path => '../../Modules/Libraries/RxCombine'
+end
+
+target 'PrivateMenu_Example' do
+  pods
+  target 'PrivateMenu_Tests' do
+    inherit! :search_paths
+    pod "PrivateMenu", :path => "../", :testspecs => ['Tests']
+    pod 'CoreTestData', :path => '../../Modules/Libraries/CoreTestData'
+    pod "UnitTestCommons/standard", :path => '../../UnitTestCommons'
+  end
+end

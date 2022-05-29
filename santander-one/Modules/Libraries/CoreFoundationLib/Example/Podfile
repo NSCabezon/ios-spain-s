@@ -1,0 +1,67 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+use_frameworks!
+
+inhibit_all_warnings!
+
+install! 'cocoapods', :deterministic_uuids => false
+
+def features
+  pod 'Account', :path => '../../../../Accounts'
+  pod 'Bills', :path => '../../../../Bills'
+  pod 'BranchLocator', :path => '../../../../Modules/Features/BranchLocator'
+  pod 'Cards', :path => '../../../../Cards'
+  pod 'FinantialTimeline', :path => '../../../../Modules/Features/FinantialTimeline'
+  pod 'GlobalPosition', :path => '../../../../GlobalPosition'
+  pod 'GlobalSearch', :path => '../../../../GlobalSearch'
+  pod 'Inbox', :path => '../../../../Inbox'
+  pod 'Loans', :path => '../../../../Loans'
+  pod 'Localization', :path => '../../../../Localization'
+  pod 'Menu', :path => '../../../../Menu'
+  pod 'PersonalArea', :path => '../../../../PersonalArea'
+  pod 'PersonalManager', :path => '../../../../PersonalManager'
+  pod 'OfferCarousel', :path => '../../../../OfferCarousel'
+  pod 'Operative', :path => '../../../../Operative'
+  pod 'Transfer', :path => '../../../../Transfer'
+  pod 'TransferOperatives', :path => '../../../../Modules/Features/TransferOperatives'
+  pod 'UI', :path => '../../../../UI'
+  pod 'UIOneComponents', :path => '../../../../UIOneComponents'
+  pod 'OneAuthorizationProcessor', :path => '../../../../Modules/Features/OneAuthorizationProcessor'
+end
+
+def legacy_libraries
+  pod 'SANServicesLibrary', :path => '../../../../Modules/Libraries/SANServicesLibrary'
+  pod 'SANLegacyLibrary', :path => '../../../../Modules/Libraries/SANLegacyLibrary'
+  pod 'Locker', :path => '../../../../Modules/Libraries/Locker'
+  pod 'Logger', :path => '../../../../Modules/Libraries/Logger'
+  pod 'CorePushNotificationsService', :path => '../../../../CorePushNotificationsService'
+  pod 'LoginCommon', :path => '../../../../Modules/Features/LoginCommon'
+  pod 'PdfCommons', :path => '../../../../PdfCommons'
+  pod 'WebViews', :path => '../../../../Modules/Libraries/WebViews'
+end
+
+def libraries
+  pod 'SQLCipher', '4.4.2'
+  pod 'CoreTestData', :path => '../../../../Modules/Libraries/CoreTestData'
+end
+
+def project_pods
+    pod 'IQKeyboardManagerSwift', '6.5.6'
+    pod 'lottie-ios'
+    features
+    legacy_libraries
+    libraries
+    pod 'CommonAppExtensions', :path => '../../../../Modules/AppExtensions/CommonAppExtensions'
+    pod 'SanNotificationService', :path => '../../../../Modules/AppExtensions/SanNotificationService'
+    pod 'RetailLegacy', :path => '../../../../RetailLegacy'
+end
+
+target 'Example' do
+  pod 'CoreDomain', :path => '../../../../Modules/Libraries/CoreDomain'
+  pod 'SQLite.swift/SQLCipher', :path => '../../../../Modules/Libraries/SQLite.swift'
+  project_pods
+  pod 'CoreFoundationLib', :path => '../', :testspecs => ['Tests']
+  pod 'UnitTestCommons', :path => '../../../../UnitTestCommons'
+  pod 'RxCombine', :path => '../../../../Modules/Libraries/RxCombine'
+  pod 'SwiftLint'
+end

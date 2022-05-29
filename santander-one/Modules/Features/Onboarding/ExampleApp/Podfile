@@ -1,0 +1,49 @@
+platform :ios, '10.3'
+
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+def legacy_libraries
+  pod 'Locker', :path => '../../../Libraries/Locker'
+  pod 'Logger', :path => '../../../Libraries/Logger'
+end
+
+def libraries
+  pod 'CoreFoundationLib', :path => '../../../Libraries/CoreFoundationLib'
+  pod 'CoreTestData', :path => '../../../Libraries/CoreTestData'
+  pod 'CoreDomain', :path => '../../../Libraries/CoreDomain'
+  pod 'SQLite.swift/SQLCipher', :path => '../../../Libraries/SQLite.swift'
+  pod 'SANLegacyLibrary', :path => '../../../Libraries/SANLegacyLibrary'
+  pod 'SANServicesLibrary', :path => '../../../Libraries/SANServicesLibrary'
+  pod 'SQLCipher', '4.4.2'
+  pod 'OpenCombine', '~> 0.12.0'
+  pod 'OpenCombineDispatch', '~> 0.12.0'
+  pod 'OpenCombineFoundation', '~> 0.12.0'
+  pod 'RxCombine', :path => '../../../Libraries/RxCombine'
+end
+
+def thirdparty_dependencies
+  pod 'SwiftLint'
+end
+
+def pods
+  pod 'Operative', :path => '../../../../Operative'
+  pod 'PersonalArea', :path => '../../../../PersonalArea'
+  pod 'CorePushNotificationsService', :path => '../../../../CorePushNotificationsService'
+  pod 'QuickSetup', :path => '../../../../QuickSetup'
+  pod 'Localization', :path => '../../../../Localization'
+  pod 'UI', :path => '../../../../UI'
+  pod 'Onboarding/ExampleApp', :path => '../'
+  legacy_libraries
+  libraries
+  thirdparty_dependencies
+end
+
+target 'ExampleApp' do
+  pods
+  target 'ExampleAppTests' do
+    inherit! :search_paths
+    pod "UnitTestCommons/standard", :path => '../../../../UnitTestCommons'
+  end
+end

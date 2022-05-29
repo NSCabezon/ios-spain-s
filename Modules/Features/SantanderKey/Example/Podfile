@@ -1,0 +1,41 @@
+# Uncomment the next line to define a global platform for your project
+use_frameworks!
+platform :ios, '10.3'
+
+def legacy_libraries
+  pod 'Locker', :path => '../../../../santander-one/Modules/Libraries/Locker'
+end
+
+def libraries
+  pod 'CoreTestData', :path => '../../../../santander-one/Modules/Libraries/CoreTestData'
+  pod 'CoreFoundationLib', :path => '../../../../santander-one/Modules/Libraries/CoreFoundationLib'
+  pod 'SANLegacyLibrary', :path => '../../../../santander-one/Modules/Libraries/SANLegacyLibrary'
+  pod 'SANLibraryV3', :path => '../../../Libraries/SANLibraryV3'
+  pod 'SANServicesLibrary', :path => '../../../../santander-one/Modules/Libraries/SANServicesLibrary'
+  pod 'SANSpainLibrary', :path => '../../../Libraries/SANSpainLibrary'
+end
+
+def pods
+  pod 'SantanderKey', :path => '../'
+  pod 'QuickSetup', :path => '../../../../santander-one/QuickSetup'
+  pod 'Localization', :path => '../../../../santander-one/Localization'
+  pod 'UI', :path => '../../../../santander-one/UI'
+  pod 'ESUI', :path => '../../../Libraries/ESUI'
+  pod 'ESCommons', :path => '../../../Libraries/ESCommons'
+  pod 'CoreDomain', :path => '../../../../santander-one/Modules/Libraries/CoreDomain'
+  pod 'Operative', :path => '../../../../santander-one/Operative'
+  pod 'CorePushNotificationsService', :path => '../../../../santander-one/CorePushNotificationsService'
+  pod 'RxCombine', :path => '../../../../santander-one/Modules/Libraries/RxCombine'
+  pod 'UIOneComponents', :path => '../../../../santander-one/UIOneComponents'
+  pod 'PersonalArea', :path => '../../../../santander-one/PersonalArea'
+  libraries
+  legacy_libraries
+end
+
+target 'ExampleApp' do
+  pods
+  target 'ExampleAppTests' do
+    inherit! :search_paths
+    pod 'UnitTestCommons/standard', :path => '../../../../santander-one/UnitTestCommons'
+  end
+end

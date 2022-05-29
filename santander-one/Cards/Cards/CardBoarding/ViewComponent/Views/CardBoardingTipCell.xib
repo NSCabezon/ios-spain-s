@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardBoardingTipCell" id="aQu-uD-7Um" customClass="CardBoardingTipCell" customModule="Cards" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="192" height="152"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="f4L-NO-ir0">
+                <rect key="frame" x="0.0" y="0.0" width="192" height="152"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IK3-ms-m2o">
+                        <rect key="frame" x="0.0" y="0.0" width="192" height="152"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kkF-8O-ftr">
+                                <rect key="frame" x="0.0" y="0.0" width="192" height="152"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="152" id="AZH-R8-Z4E"/>
+                            <constraint firstAttribute="width" constant="192" id="cVo-14-PDH"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="IK3-ms-m2o" secondAttribute="bottom" id="AAx-8g-q1T"/>
+                    <constraint firstAttribute="trailing" secondItem="IK3-ms-m2o" secondAttribute="trailing" id="HlE-ZN-xRe"/>
+                    <constraint firstAttribute="bottom" secondItem="kkF-8O-ftr" secondAttribute="bottom" id="Qdq-np-rzK"/>
+                    <constraint firstItem="IK3-ms-m2o" firstAttribute="leading" secondItem="f4L-NO-ir0" secondAttribute="leading" id="Row-oR-nB9"/>
+                    <constraint firstItem="kkF-8O-ftr" firstAttribute="leading" secondItem="f4L-NO-ir0" secondAttribute="leading" id="SeC-4X-BB8"/>
+                    <constraint firstAttribute="trailing" secondItem="kkF-8O-ftr" secondAttribute="trailing" id="Wpe-IQ-nbv"/>
+                    <constraint firstItem="kkF-8O-ftr" firstAttribute="top" secondItem="f4L-NO-ir0" secondAttribute="top" id="bEd-oh-Vol"/>
+                    <constraint firstItem="IK3-ms-m2o" firstAttribute="top" secondItem="f4L-NO-ir0" secondAttribute="top" id="ytv-OP-tSU"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="182" height="130"/>
+            <connections>
+                <outlet property="offerImageView" destination="kkF-8O-ftr" id="Bja-oS-HZh"/>
+                <outlet property="viewContainer" destination="IK3-ms-m2o" id="vzh-1h-ucY"/>
+            </connections>
+            <point key="canvasLocation" x="-134.78260869565219" y="20.758928571428569"/>
+        </collectionViewCell>
+    </objects>
+</document>

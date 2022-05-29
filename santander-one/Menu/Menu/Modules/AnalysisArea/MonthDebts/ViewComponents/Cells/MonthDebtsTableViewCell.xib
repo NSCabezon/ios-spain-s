@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="84" id="dG2-6d-gDl" customClass="MonthDebtsTableViewCell" customModule="Menu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dG2-6d-gDl" id="mMc-8d-YIA">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0C-5D-GpM">
+                        <rect key="frame" x="23" y="2" width="371" height="70"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntL-Q4-dLS">
+                                <rect key="frame" x="0.0" y="3" width="0.0" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="kjw-ne-tcS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CUOTA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5X-It-c06" userLabel="Cuota">
+                                <rect key="frame" x="336" y="3" width="35" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTY-2C-ykJ" userLabel="Amount">
+                                <rect key="frame" x="371" y="15" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTh-d5-fka">
+                                <rect key="frame" x="0.0" y="3" width="0.0" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="wAZ-tJ-epn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tTh-d5-fka" firstAttribute="leading" secondItem="ntL-Q4-dLS" secondAttribute="leading" id="8en-fX-UWl"/>
+                            <constraint firstItem="ntL-Q4-dLS" firstAttribute="leading" secondItem="L0C-5D-GpM" secondAttribute="leading" id="OqH-Zy-MR3"/>
+                            <constraint firstItem="k5X-It-c06" firstAttribute="top" secondItem="ntL-Q4-dLS" secondAttribute="top" id="Qf6-9A-dYk"/>
+                            <constraint firstItem="ntL-Q4-dLS" firstAttribute="top" secondItem="L0C-5D-GpM" secondAttribute="top" constant="3" id="cVe-so-huC"/>
+                            <constraint firstItem="gTY-2C-ykJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ntL-Q4-dLS" secondAttribute="trailing" constant="20" id="iXK-ky-Y3c"/>
+                            <constraint firstItem="tTh-d5-fka" firstAttribute="top" secondItem="ntL-Q4-dLS" secondAttribute="bottom" id="jNk-Z8-Uys"/>
+                            <constraint firstItem="gTY-2C-ykJ" firstAttribute="top" secondItem="k5X-It-c06" secondAttribute="bottom" id="ogQ-B5-c6a"/>
+                            <constraint firstAttribute="trailing" secondItem="gTY-2C-ykJ" secondAttribute="trailing" id="q0p-hG-QiJ"/>
+                            <constraint firstAttribute="trailing" secondItem="k5X-It-c06" secondAttribute="trailing" id="qgV-ew-ouE"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZG2-yv-ial" customClass="DottedLineView" customModule="UI">
+                        <rect key="frame" x="23" y="73" width="391" height="1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="dXI-WJ-8kI"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DqI-2h-Oyk">
+                        <rect key="frame" x="0.0" y="73" width="414" height="1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Y0b-RP-qLo"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="L0C-5D-GpM" secondAttribute="trailing" constant="20" id="3Q7-ZU-gXL"/>
+                    <constraint firstAttribute="trailing" secondItem="ZG2-yv-ial" secondAttribute="trailing" id="5kL-ho-3oF"/>
+                    <constraint firstAttribute="bottom" secondItem="DqI-2h-Oyk" secondAttribute="bottom" id="6dI-Sb-NBO"/>
+                    <constraint firstAttribute="bottom" secondItem="ZG2-yv-ial" secondAttribute="bottom" id="Bsh-XX-veS"/>
+                    <constraint firstItem="L0C-5D-GpM" firstAttribute="leading" secondItem="mMc-8d-YIA" secondAttribute="leading" constant="23" id="EFL-tV-OmP"/>
+                    <constraint firstItem="DqI-2h-Oyk" firstAttribute="leading" secondItem="mMc-8d-YIA" secondAttribute="leading" id="Op2-xb-YHu"/>
+                    <constraint firstAttribute="bottom" secondItem="L0C-5D-GpM" secondAttribute="bottom" constant="2" id="enZ-Xm-s4f"/>
+                    <constraint firstItem="ZG2-yv-ial" firstAttribute="leading" secondItem="ntL-Q4-dLS" secondAttribute="leading" id="j5b-Ux-xcW"/>
+                    <constraint firstItem="L0C-5D-GpM" firstAttribute="top" secondItem="mMc-8d-YIA" secondAttribute="top" constant="2" id="rfs-ve-i41"/>
+                    <constraint firstAttribute="trailing" secondItem="DqI-2h-Oyk" secondAttribute="trailing" id="x00-4B-czt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="Dxe-mK-fRb"/>
+            <connections>
+                <outlet property="amountLabel" destination="gTY-2C-ykJ" id="CBR-RQ-XDq"/>
+                <outlet property="completeLineView" destination="DqI-2h-Oyk" id="XcM-vx-w3E"/>
+                <outlet property="descriptionLabel" destination="ntL-Q4-dLS" id="zNE-gc-Ngk"/>
+                <outlet property="dottedLineView" destination="ZG2-yv-ial" id="TVR-sT-Tmu"/>
+                <outlet property="feeLabel" destination="k5X-It-c06" id="a20-WA-JT8"/>
+                <outlet property="ibanLabel" destination="tTh-d5-fka" id="zm9-Mb-JRE"/>
+            </connections>
+            <point key="canvasLocation" x="805.79710144927537" y="152.67857142857142"/>
+        </tableViewCell>
+    </objects>
+</document>

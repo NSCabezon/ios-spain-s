@@ -1,0 +1,45 @@
+platform :ios, '10.3'
+
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+def legacy_libraries
+  pod 'Locker', :path => '../../Modules/Libraries/Locker'
+  pod 'Logger', :path => '../../Modules/Libraries/Logger'
+end
+
+def libraries
+  pod 'SANServicesLibrary', :path => '../../Modules/Libraries/SANServicesLibrary'
+  pod 'CoreFoundationLib', :path => '../../Modules/Libraries/CoreFoundationLib'
+  pod 'CoreDomain', :path => '../../Modules/Libraries/CoreDomain'	
+  pod 'CorePushNotificationsService', :path => '../../CorePushNotificationsService'
+  pod 'SQLite.swift/SQLCipher', :path => '../../Modules/Libraries/SQLite.swift'
+  pod 'SQLCipher', '4.4.2'
+  pod 'SANLegacyLibrary', :path => '../../Modules/Libraries/SANLegacyLibrary'
+  pod 'CoreTestData', :path => '../../Modules/Libraries/CoreTestData'
+  pod 'RxCombine', :path => '../../Modules/Libraries/RxCombine'
+end
+
+def pods
+  pod 'QuickSetup', :path => '../../QuickSetup'
+  pod 'Cards', :path => '../../Cards'
+  pod 'UI', :path => '../../UI'
+  pod 'UIOneComponents', :path => '../../UIOneComponents'
+  pod 'GlobalPosition', :path => '../'
+  pod 'Localization', :path => '../../Localization'
+  pod 'Operative', :path => '../../Operative'
+  pod 'Alamofire-Synchronous', '4.0'
+  pod 'OfferCarousel', :path => '../../OfferCarousel'
+  pod 'UIOneComponents', :path => '../../UIOneComponents'
+  legacy_libraries
+  libraries
+end
+
+target 'ExampleApp' do
+  pods
+  target 'ExampleAppTests' do
+    inherit! :search_paths
+    pod 'UnitTestCommons', :path => '../../UnitTestCommons'
+  end
+end

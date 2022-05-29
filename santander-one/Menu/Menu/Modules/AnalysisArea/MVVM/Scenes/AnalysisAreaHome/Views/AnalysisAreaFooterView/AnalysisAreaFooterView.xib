@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnalysisAreaFooterView" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="addBankLabel" destination="8Zp-N5-PE0" id="Fco-69-g2g"/>
+                <outlet property="addBankView" destination="hgQ-Ru-Ca5" id="zmr-cK-iuB"/>
+                <outlet property="addNewBankImage" destination="e7G-d9-OyD" id="Zsl-jF-x2D"/>
+                <outlet property="configurationImage" destination="Dzl-tF-Ufn" id="DSK-MV-Xfe"/>
+                <outlet property="configurationLabel" destination="yfR-C8-OSK" id="bNp-5J-TXq"/>
+                <outlet property="configurationView" destination="9oZ-rF-Xo3" id="j4i-8Z-Wbg"/>
+                <outlet property="contentView" destination="NOu-V8-hN4" id="032-Cq-5Fs"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="97"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NOu-V8-hN4" userLabel="containerView" customClass="OneGradientView" customModule="UIOneComponents">
+                    <rect key="frame" x="0.0" y="0.0" width="376" height="97"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Kr2-oz-YbY">
+                            <rect key="frame" x="16" y="16" width="344" height="65"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9oZ-rF-Xo3" userLabel="configurationView">
+                                    <rect key="frame" x="0.0" y="0.0" width="344" height="24"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oneIcnSettings" translatesAutoresizingMaskIntoConstraints="NO" id="Dzl-tF-Ufn">
+                                            <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfR-C8-OSK">
+                                            <rect key="frame" x="32" y="0.0" width="312" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <gestureRecognizers/>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="wDI-Ld-id2" appends="YES" id="sTr-ON-Z7U"/>
+                                    </connections>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hgQ-Ru-Ca5" userLabel="addBankView">
+                                    <rect key="frame" x="0.0" y="41" width="344" height="24"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oneIcnAddCurrency" translatesAutoresizingMaskIntoConstraints="NO" id="e7G-d9-OyD">
+                                            <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zp-N5-PE0">
+                                            <rect key="frame" x="32" y="0.0" width="312" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <gestureRecognizers/>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="QCE-31-WCZ" appends="YES" id="S58-aG-Q36"/>
+                                    </connections>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Kr2-oz-YbY" firstAttribute="leading" secondItem="NOu-V8-hN4" secondAttribute="leading" constant="16" id="7hU-Eh-cgu"/>
+                        <constraint firstAttribute="bottom" secondItem="Kr2-oz-YbY" secondAttribute="bottom" constant="16" id="fsn-Tk-rC2"/>
+                        <constraint firstAttribute="trailing" secondItem="Kr2-oz-YbY" secondAttribute="trailing" constant="16" id="jjK-3Z-fzh"/>
+                        <constraint firstItem="Kr2-oz-YbY" firstAttribute="top" secondItem="NOu-V8-hN4" secondAttribute="top" constant="16" id="uE0-bh-PSF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="NOu-V8-hN4" secondAttribute="bottom" id="Jb8-aF-fN3"/>
+                <constraint firstItem="NOu-V8-hN4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="OYE-yZ-kjW"/>
+                <constraint firstItem="NOu-V8-hN4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ugb-HZ-ql4"/>
+                <constraint firstAttribute="trailing" secondItem="NOu-V8-hN4" secondAttribute="trailing" id="rjD-AV-w2q"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="39.130434782608695" y="-151.67410714285714"/>
+        </view>
+        <tapGestureRecognizer id="wDI-Ld-id2">
+            <connections>
+                <action selector="didTapConfiguration:" destination="-1" id="PXo-j0-Lqo"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="QCE-31-WCZ">
+            <connections>
+                <action selector="didTapAddBank:" destination="-1" id="ZZ9-wi-5uk"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="oneIcnAddCurrency" width="24" height="24"/>
+        <image name="oneIcnSettings" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

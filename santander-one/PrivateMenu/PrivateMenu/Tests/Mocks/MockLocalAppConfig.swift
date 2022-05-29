@@ -1,0 +1,65 @@
+import CoreFoundationLib
+import CoreDomain
+
+struct MockLocalAppConfig: LocalAppConfig {
+    let digitalProfile = false
+    let language: LanguageType = .english
+    let endMorning: Int = 0
+    let endAfternoon: Int = 0
+    let endNight: Int = 0
+    let enableBiometric: Bool = false
+    let isEnabledPfm: Bool = false
+    let privateMenu: Bool = true
+    let isPortugal: Bool = false
+    let isEnabledPlusButtonPG: Bool = false
+    let isEnabledConfigureWhatYouSee: Bool = false
+    let isEnabledMagnifyingGlass: Bool = false
+    let isEnabledMailbox: Bool = false
+    let isEnabledTimeline: Bool = false
+    let isEnabledPregranted: Bool = false
+    let languageList: [LanguageType] = []
+    let isEnabledDepositWebView: Bool = false
+    let isEnabledfundWebView: Bool = false
+    let clickableLoan: Bool = false
+    let isEnabledGoToManager: Bool = false
+    let isEnabledGoToPersonalArea: Bool = false
+    let showATMIntermediateScreen: Bool = false
+    let isEnabledGoToHelpCenter: Bool = false
+    let isEnabledDigitalProfileView: Bool = false
+    let isEnabledWorld123: Bool = false
+    let isEnabledSendMoney: Bool = false
+    let isEnabledBills: Bool = false
+    let isEnabledBillsAndTaxesInMenu = false
+    let isEnabledExploreProductsInMenu: Bool = false
+    let isEnabledPersonalAreaInMenu: Bool = false
+    let isEnabledConfigureAlertsInMenu: Bool = false
+    let isEnabledNotificationsInMenu: Bool = false
+    let isEnabledPersonalData: Bool = false
+    let isEnabledHelpUsInMenu: Bool = false
+    let isEnabledATMsInMenu: Bool = false
+    let enablePortfoliosHome: Bool = false
+    let enablePensionsHome: Bool = false
+    let enableInsuranceSavingHome: Bool = false
+    let enabledChangeAliasProducts: [ProductTypeEntity] = []
+    let isEnabledSecurityArea: Bool = false
+    let isEnabledAnalysisArea: Bool = false
+    let isEnabledWithholdings: Bool = false
+    let isEnabledCardDetail: Bool = false
+    let enableSplitExpenseBizum: Bool = false
+    let isEnabledHistorical: Bool = false
+    let isEnabledChangeDestinationCountry: Bool = false
+    let isEnabledChangeCurrency: Bool = false
+    let maxLengthInternalTransferConcept: Int = 0
+    let analysisAreaHasTimelineSection: Bool = false
+    let analysisAreaIsIncomeSelectable: Bool = false
+    let analysisAreaIsExpensesSelectable: Bool = false
+    let isAnalysisAreaHomeEnabled: Bool = false
+    let countryCode: String = "uk"
+    let isTransferDetailPDFButtonEnabled: Bool = false
+    let isTransferDetailReuseButtonEnabled: Bool = false
+    let isScheduledTransferDetailDeleteButtonEnabled: Bool = false
+    let isScheduledTransferDetailEditButtonEnabled: Bool = false
+    let isEnabledTopUpsPrivateMenu: Bool = false
+    let isEnabledOnboardingLocationDialog: Bool = false
+    let isEnabledSavings: Bool = false
+}

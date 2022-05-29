@@ -1,0 +1,43 @@
+platform :ios, '10.3'
+
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+def legacy_libraries
+  pod 'Locker', :path => '../../Modules/Libraries/Locker'
+  pod 'Logger', :path => '../../Modules/Libraries/Logger'
+end
+
+def libraries
+  pod 'CoreFoundationLib', :path => '../../Modules/Libraries/CoreFoundationLib'
+  pod 'SANLegacyLibrary', :path => '../../Modules/Libraries/SANLegacyLibrary'
+  pod 'CoreDomain', :path => '../../Modules/Libraries/CoreDomain'
+  pod 'SQLite.swift/SQLCipher', :path => '../../Modules/Libraries/SQLite.swift'
+  pod 'CoreTestData', :path => '../../Modules/Libraries/CoreTestData'
+  pod 'SANServicesLibrary', :path => '../../Modules/Libraries/SANServicesLibrary'
+  pod 'SQLCipher', '4.4.2'
+  pod 'SwiftLint', '0.43.1'
+  pod 'RxCombine', :path => '../../Modules/Libraries/RxCombine'
+end
+
+def pods
+  pod 'Menu/Example', :path => '../'
+  pod 'QuickSetup', :path => '../../QuickSetup'
+  pod 'CoreTestData', :path => '../../Modules/Libraries/CoreTestData'
+  pod 'UI', :path => '../../UI'
+  pod 'Menu', :path => '../'
+  pod 'Localization', :path => '../../Localization'
+  pod 'UIOneComponents', :path => '../../UIOneComponents'
+
+  legacy_libraries
+  libraries
+end
+
+target 'Menu_Example' do
+  pods
+  target 'Menu_ExampleTests' do
+    inherit! :search_paths
+    pod 'UnitTestCommons/standard', :path => '../../UnitTestCommons'
+  end
+end

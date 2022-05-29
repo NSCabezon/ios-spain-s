@@ -1,0 +1,57 @@
+platform :ios, '10.3'
+
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+def legacy_libraries
+  pod 'Locker', :path => '../../Modules/Libraries/Locker'
+  pod 'Logger', :path => '../../Modules/Libraries/Logger'
+end
+
+def libraries
+  pod 'CoreDomain', :path => '../../Modules/Libraries/CoreDomain'
+  pod 'SANLegacyLibrary', :path => '../../Modules/Libraries/SANLegacyLibrary'
+  pod 'CoreFoundationLib', :path => '../../Modules/Libraries/CoreFoundationLib'
+  pod 'CorePushNotificationsService', :path => '../../CorePushNotificationsService'
+  pod 'SQLite.swift/SQLCipher', :path => '../../Modules/Libraries/SQLite.swift', :inhibit_warnings => true
+  pod 'SQLCipher', '4.4.2', :inhibit_warnings => true
+  pod 'RxCombine', :path => '../../Modules/Libraries/RxCombine'
+end
+
+def cards_example_pods
+  pod 'Cards/ExampleApp', :path => '../'
+  pod 'Cards', :path => '../', :testspecs => ['Tests']
+  pod 'QuickSetup', :path => '../../QuickSetup'
+  pod 'Operative', :path => '../../Operative'
+  pod 'UI', :path => '../../UI'
+  pod 'Localization', :path => '../../Localization'
+  pod 'CoreDomain', :path => '../../Modules/Libraries/CoreDomain'
+  pod 'CoreFoundationLib', :path => '../../Modules/Libraries/CoreFoundationLib'
+  pod 'UIOneComponents', :path => '../../UIOneComponents'
+  pod 'CoreTestData', :path => '../../Modules/Libraries/CoreTestData'
+
+  legacy_libraries
+  libraries
+
+end
+
+target 'Cards_Example' do
+  cards_example_pods
+
+target 'Cards_ExampleTests' do
+  inherit! :search_paths
+  pod 'Cards', :path => '../', :testspecs => ['Tests']
+  pod 'CoreTestData', :path => '../../Modules/Libraries/CoreTestData'
+  pod "UnitTestCommons/standard", :path => '../../UnitTestCommons'
+  end
+
+post_install do |installer|
+ installer.pods_project.targets.each do |target|
+  target.build_configurations.each do |config|
+   config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '10.3'
+   config.build_settings['ENABLE_TESTABILITY'] = 'YES'
+  end
+ end
+end
+end

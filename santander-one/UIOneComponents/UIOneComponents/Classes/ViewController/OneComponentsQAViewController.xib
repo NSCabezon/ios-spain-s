@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OneComponentsQAViewController" customModule="UIOneComponents" customModuleProvider="target">
+            <connections>
+                <outlet property="faqFooterView" destination="ka0-VV-QEG" id="7ca-C9-njT"/>
+                <outlet property="floatingButton" destination="tFr-Al-awL" id="C8j-jp-F5X"/>
+                <outlet property="highlightBackgrounViewTest" destination="NqC-fS-7AX" id="S8C-l6-CJj"/>
+                <outlet property="highlightTestTitleLabel" destination="yaV-83-ZdQ" id="2g6-dS-iZj"/>
+                <outlet property="labelHighlightedTestView" destination="5E1-YA-H8k" id="Ga2-YR-Zpe"/>
+                <outlet property="oneAppButton" destination="n3u-iy-j5A" id="JnB-7L-qBt"/>
+                <outlet property="oneAppPickerView" destination="h5g-2u-6oG" id="usm-gF-dmK"/>
+                <outlet property="oneInputDateLeft" destination="peT-7o-rOh" id="nZD-SM-VaN"/>
+                <outlet property="oneInputDateRight" destination="f78-Kx-e71" id="fSU-2G-B20"/>
+                <outlet property="oneOvalButton" destination="D14-y0-Z10" id="c2A-MK-Au3"/>
+                <outlet property="oneOvalButtonPicker" destination="Yjm-gs-8uZ" id="GnB-4g-uaP"/>
+                <outlet property="pickerView" destination="UvZ-bt-bay" id="kqX-lN-jTO"/>
+                <outlet property="scrollView" destination="9hF-yV-3VC" id="RRD-Fx-lwq"/>
+                <outlet property="testStackView" destination="WQL-vS-8ls" id="Zbw-Cl-7q7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="regularViews" destination="zUF-EJ-jjY" collectionClass="NSMutableArray" id="6V3-0z-ZD8"/>
+                <outletCollection property="regularViews" destination="qf2-Aq-IGe" collectionClass="NSMutableArray" id="l5W-SL-ulY"/>
+                <outletCollection property="regularViews" destination="7sN-5J-CaG" collectionClass="NSMutableArray" id="gXW-YC-biT"/>
+                <outletCollection property="regularViews" destination="4Pt-4w-MmD" collectionClass="NSMutableArray" id="5t4-HI-ugp"/>
+                <outletCollection property="regularViews" destination="o45-5b-XZY" collectionClass="NSMutableArray" id="wVu-31-ecg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hF-yV-3VC">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5E1-YA-H8k" userLabel="highlightTest">
+                            <rect key="frame" x="16" y="16" width="382" height="48"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highlight view example" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaV-83-ZdQ">
+                                    <rect key="frame" x="0.0" y="8" width="175.5" height="32"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NqC-fS-7AX" customClass="OneLabelHighlightedView" customModule="UIOneComponents">
+                                    <rect key="frame" x="153" y="0.0" width="229" height="48"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="NqC-fS-7AX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yaV-83-ZdQ" secondAttribute="trailing" constant="12" id="1Yh-Od-Kxf"/>
+                                <constraint firstAttribute="height" constant="48" id="4kl-Y4-S3S"/>
+                                <constraint firstAttribute="bottom" secondItem="yaV-83-ZdQ" secondAttribute="bottom" constant="8" id="Gen-jd-FNe"/>
+                                <constraint firstItem="NqC-fS-7AX" firstAttribute="top" secondItem="5E1-YA-H8k" secondAttribute="top" id="LSW-za-cYy"/>
+                                <constraint firstItem="yaV-83-ZdQ" firstAttribute="top" secondItem="5E1-YA-H8k" secondAttribute="top" constant="8" id="WY2-sG-OoH"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="eGC-1J-8sv"/>
+                                <constraint firstAttribute="trailing" secondItem="NqC-fS-7AX" secondAttribute="trailing" id="eNz-vN-NYG"/>
+                                <constraint firstAttribute="bottom" secondItem="NqC-fS-7AX" secondAttribute="bottom" id="lTT-Jh-3o7"/>
+                                <constraint firstItem="yaV-83-ZdQ" firstAttribute="leading" secondItem="5E1-YA-H8k" secondAttribute="leading" id="zQ4-3X-ACd"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="WQL-vS-8ls" userLabel="test Stack View">
+                            <rect key="frame" x="0.0" y="80" width="414" height="1072"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zUF-EJ-jjY" customClass="OneInputRegularView" customModule="UIOneComponents">
+                                    <rect key="frame" x="16" y="8" width="382" height="48"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="nvp-np-kte"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qf2-Aq-IGe" customClass="OneInputRegularView" customModule="UIOneComponents">
+                                    <rect key="frame" x="16" y="72" width="382" height="48"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="Q5o-wQ-efQ"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7sN-5J-CaG" customClass="OneInputRegularView" customModule="UIOneComponents">
+                                    <rect key="frame" x="16" y="136" width="382" height="48"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="0sP-hd-bW7"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Pt-4w-MmD" customClass="OneInputRegularView" customModule="UIOneComponents">
+                                    <rect key="frame" x="16" y="200" width="382" height="48"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="Adf-ad-XNZ"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o45-5b-XZY" customClass="OneInputRegularView" customModule="UIOneComponents">
+                                    <rect key="frame" x="16" y="264" width="382" height="48"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="2cy-91-1eZ"/>
+                                    </constraints>
+                                </view>
+                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UvZ-bt-bay">
+                                    <rect key="frame" x="16" y="328" width="382" height="216"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="216" id="5Z3-ju-q6r"/>
+                                    </constraints>
+                                </pickerView>
+                                <view contentMode="scaleToFill" horizontalHuggingPriority="251" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="tFr-Al-awL" customClass="OneFloatingButton" customModule="UIOneComponents">
+                                    <rect key="frame" x="16" y="560" width="382" height="64"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yjm-gs-8uZ">
+                                    <rect key="frame" x="16" y="640" width="382" height="216"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="216" id="FMP-p9-CtR"/>
+                                    </constraints>
+                                </pickerView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D14-y0-Z10" customClass="OneOvalButton" customModule="UIOneComponents">
+                                    <rect key="frame" x="16" y="872" width="382" height="128"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="382" id="C2a-xT-w6P"/>
+                                        <constraint firstAttribute="height" constant="128" id="g6x-ES-4N7"/>
+                                    </constraints>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="sbx-5y-omQ">
+                                    <rect key="frame" x="16" y="1016" width="382" height="48"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="peT-7o-rOh" userLabel="One Input Date Left" customClass="OneInputDateView" customModule="UIOneComponents" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="188" height="48"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="Nml-qd-n3a"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f78-Kx-e71" userLabel="One Input Date Right" customClass="OneInputDateView" customModule="UIOneComponents" customModuleProvider="target">
+                                            <rect key="frame" x="194" y="0.0" width="188" height="48"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="pMs-Ul-qxW"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="16"/>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="yQE-rV-5ir">
+                            <rect key="frame" x="0.0" y="1152" width="414" height="298"/>
+                            <subviews>
+                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5g-2u-6oG">
+                                    <rect key="frame" x="16" y="8" width="382" height="216"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="216" id="7cN-Cj-QPV"/>
+                                    </constraints>
+                                </pickerView>
+                                <view contentMode="scaleAspectFit" horizontalHuggingPriority="251" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="n3u-iy-j5A" customClass="OneAppLink" customModule="UIOneComponents">
+                                    <rect key="frame" x="16" y="226" width="382" height="64"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="16"/>
+                        </stackView>
+                        <view contentMode="scaleToFill" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="128" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ka0-VV-QEG" customClass="OneFooterHelpView" customModule="UIOneComponents" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="1450" width="414" height="128"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="5E1-YA-H8k" secondAttribute="trailing" constant="16" id="43Q-W7-7YR"/>
+                        <constraint firstAttribute="trailing" secondItem="yQE-rV-5ir" secondAttribute="trailing" id="E1E-gv-xrb"/>
+                        <constraint firstItem="ka0-VV-QEG" firstAttribute="leading" secondItem="9hF-yV-3VC" secondAttribute="leading" id="Fbj-wj-haI"/>
+                        <constraint firstItem="ka0-VV-QEG" firstAttribute="top" secondItem="yQE-rV-5ir" secondAttribute="bottom" id="GWZ-fE-H4K"/>
+                        <constraint firstItem="5E1-YA-H8k" firstAttribute="leading" secondItem="9hF-yV-3VC" secondAttribute="leading" constant="16" id="Nlj-Jg-HxR"/>
+                        <constraint firstAttribute="bottom" secondItem="ka0-VV-QEG" secondAttribute="bottom" id="Raf-UD-NNN"/>
+                        <constraint firstItem="WQL-vS-8ls" firstAttribute="width" secondItem="9hF-yV-3VC" secondAttribute="width" id="Rtg-dz-VIY"/>
+                        <constraint firstItem="WQL-vS-8ls" firstAttribute="leading" secondItem="9hF-yV-3VC" secondAttribute="leading" id="VzG-Nz-702"/>
+                        <constraint firstItem="5E1-YA-H8k" firstAttribute="top" secondItem="9hF-yV-3VC" secondAttribute="top" constant="16" id="WeD-mj-bXW"/>
+                        <constraint firstAttribute="trailing" secondItem="WQL-vS-8ls" secondAttribute="trailing" id="gMA-8U-4HW"/>
+                        <constraint firstAttribute="trailing" secondItem="ka0-VV-QEG" secondAttribute="trailing" id="hSQ-bk-ShO"/>
+                        <constraint firstItem="yQE-rV-5ir" firstAttribute="top" secondItem="WQL-vS-8ls" secondAttribute="bottom" id="k1n-Oc-kGd"/>
+                        <constraint firstItem="yQE-rV-5ir" firstAttribute="leading" secondItem="9hF-yV-3VC" secondAttribute="leading" id="lX1-F5-Fwt"/>
+                        <constraint firstItem="WQL-vS-8ls" firstAttribute="top" secondItem="5E1-YA-H8k" secondAttribute="bottom" constant="16" id="oIF-a0-8fd"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="9hF-yV-3VC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1Aj-To-qYD"/>
+                <constraint firstAttribute="trailing" secondItem="9hF-yV-3VC" secondAttribute="trailing" id="6OP-pP-Ioq"/>
+                <constraint firstAttribute="bottom" secondItem="9hF-yV-3VC" secondAttribute="bottom" id="cAi-h3-nju"/>
+                <constraint firstItem="9hF-yV-3VC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gQ4-Cr-lQ6"/>
+            </constraints>
+            <point key="canvasLocation" x="128.98550724637681" y="97.767857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

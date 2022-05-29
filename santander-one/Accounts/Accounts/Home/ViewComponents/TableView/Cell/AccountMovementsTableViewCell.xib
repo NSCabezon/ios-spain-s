@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderText-Light.ttf">
+            <string>SantanderText-Light</string>
+        </array>
+        <array key="SantanderText-Regular.ttf">
+            <string>SantanderText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AccountMovementsTableViewCell" rowHeight="122" id="1Ya-sW-e3C" customClass="AccountMovementsTableViewCell" customModule="Account">
+            <rect key="frame" x="0.0" y="0.0" width="332" height="102"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="1Ya-sW-e3C" id="zxI-Zg-gXz">
+                <rect key="frame" x="0.0" y="0.0" width="332" height="102"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Crc-QA-lCw">
+                        <rect key="frame" x="15" y="0.0" width="302" height="63"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.500,0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T88-Uo-R5b">
+                        <rect key="frame" x="264" y="39" width="53" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="tvn-NO-cZX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SantanderText-Light" family="Santander Text" pointSize="14"/>
+                        <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="245" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Seguro Mapfre Salud póliza 12394849" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Smd-yq-8BA">
+                        <rect key="frame" x="15" y="8" width="162.5" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="52" id="Cws-Rx-vs8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SantanderText-Regular" family="Santander Text" pointSize="18"/>
+                        <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SXk-EC-WcR" customClass="OneLabelHighlightedView" customModule="UIOneComponents">
+                        <rect key="frame" x="190" y="8" width="127" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="33" id="6za-Ii-osH"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lch-ib-6k2">
+                        <rect key="frame" x="15" y="93" width="317" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="yT8-4X-VFo"/>
+                        </constraints>
+                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mdt-gB-fqh">
+                        <rect key="frame" x="14" y="60" width="304" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" placeholder="YES" id="OHF-xJ-fGB"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="T88-Uo-R5b" firstAttribute="top" secondItem="SXk-EC-WcR" secondAttribute="bottom" constant="-2" id="4KD-eD-QgK"/>
+                    <constraint firstItem="SXk-EC-WcR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Smd-yq-8BA" secondAttribute="trailing" constant="12.5" id="4xp-9a-lmX"/>
+                    <constraint firstItem="Crc-QA-lCw" firstAttribute="bottom" secondItem="T88-Uo-R5b" secondAttribute="bottom" constant="4" id="7iz-FY-lnS"/>
+                    <constraint firstItem="SXk-EC-WcR" firstAttribute="top" secondItem="Smd-yq-8BA" secondAttribute="top" id="9XS-5Q-tD9"/>
+                    <constraint firstAttribute="trailing" secondItem="SXk-EC-WcR" secondAttribute="trailing" constant="15" id="Bvm-1n-EsN"/>
+                    <constraint firstItem="Mdt-gB-fqh" firstAttribute="top" secondItem="Smd-yq-8BA" secondAttribute="bottom" id="Kaw-PO-aZ9"/>
+                    <constraint firstItem="Smd-yq-8BA" firstAttribute="top" secondItem="zxI-Zg-gXz" secondAttribute="top" constant="8" id="MbO-5K-bfD"/>
+                    <constraint firstAttribute="trailing" secondItem="Mdt-gB-fqh" secondAttribute="trailing" constant="14" id="NXu-jJ-8my"/>
+                    <constraint firstItem="Crc-QA-lCw" firstAttribute="top" secondItem="zxI-Zg-gXz" secondAttribute="top" id="PlM-eT-YS4"/>
+                    <constraint firstItem="T88-Uo-R5b" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Smd-yq-8BA" secondAttribute="trailing" constant="16" id="Y5q-fY-T1O"/>
+                    <constraint firstAttribute="trailing" secondItem="Crc-QA-lCw" secondAttribute="trailing" constant="15" id="dLN-WN-a2Q"/>
+                    <constraint firstAttribute="bottom" secondItem="Lch-ib-6k2" secondAttribute="bottom" constant="4" id="enO-O4-He7"/>
+                    <constraint firstItem="Crc-QA-lCw" firstAttribute="leading" secondItem="zxI-Zg-gXz" secondAttribute="leading" constant="15" id="ip1-oD-JtL"/>
+                    <constraint firstItem="Smd-yq-8BA" firstAttribute="leading" secondItem="Crc-QA-lCw" secondAttribute="leading" id="ldQ-Jw-iHO"/>
+                    <constraint firstItem="Lch-ib-6k2" firstAttribute="top" secondItem="Mdt-gB-fqh" secondAttribute="bottom" constant="13" id="lfG-qE-kbC"/>
+                    <constraint firstItem="T88-Uo-R5b" firstAttribute="trailing" secondItem="SXk-EC-WcR" secondAttribute="trailing" id="pfz-We-WnK"/>
+                    <constraint firstAttribute="trailing" secondItem="Lch-ib-6k2" secondAttribute="trailing" id="tTN-ZT-KUG"/>
+                    <constraint firstItem="Mdt-gB-fqh" firstAttribute="leading" secondItem="zxI-Zg-gXz" secondAttribute="leading" constant="14" id="xZg-r1-cvN"/>
+                    <constraint firstItem="Lch-ib-6k2" firstAttribute="leading" secondItem="Smd-yq-8BA" secondAttribute="leading" id="zHT-4C-VcM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="amountLabelView" destination="SXk-EC-WcR" id="q1K-aN-bSt"/>
+                <outlet property="balanceLabel" destination="T88-Uo-R5b" id="EJ9-Rk-gz7"/>
+                <outlet property="bottomStackView" destination="Mdt-gB-fqh" id="wUr-Mu-CfH"/>
+                <outlet property="descriptionLabel" destination="Smd-yq-8BA" id="f3z-2a-T7n"/>
+                <outlet property="discontinueLineView" destination="Lch-ib-6k2" id="nMx-QF-B7g"/>
+                <outlet property="highlightView" destination="Crc-QA-lCw" id="D3r-Zf-Wf7"/>
+                <outlet property="stackBottomTopConstraint" destination="Kaw-PO-aZ9" id="lZg-yt-Ebu"/>
+            </connections>
+            <point key="canvasLocation" x="95.652173913043484" y="70.3125"/>
+        </tableViewCell>
+    </objects>
+</document>

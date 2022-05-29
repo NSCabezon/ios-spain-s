@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FractionedPaymentsCardHeaderView" customModule="Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="cardImageView" destination="XJl-3w-6XA" id="Ry0-5L-2Pn"/>
+                <outlet property="stackView" destination="XaT-2G-PjT" id="8Lu-kU-mah"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XJl-3w-6XA">
+                    <rect key="frame" x="15" y="16" width="65" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="65" id="PyG-M2-3s6"/>
+                        <constraint firstAttribute="height" constant="40" id="Zm7-y4-oSy"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XaT-2G-PjT">
+                    <rect key="frame" x="90" y="16" width="268" height="40"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="XaT-2G-PjT" firstAttribute="leading" secondItem="XJl-3w-6XA" secondAttribute="trailing" constant="10" id="0gx-iS-84e"/>
+                <constraint firstItem="XJl-3w-6XA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="FzO-M4-ecf"/>
+                <constraint firstItem="XaT-2G-PjT" firstAttribute="bottom" secondItem="XJl-3w-6XA" secondAttribute="bottom" id="Jg1-Zy-GtF"/>
+                <constraint firstItem="XaT-2G-PjT" firstAttribute="top" secondItem="XJl-3w-6XA" secondAttribute="top" id="O2O-t0-HoK"/>
+                <constraint firstAttribute="bottom" secondItem="XJl-3w-6XA" secondAttribute="bottom" constant="14" id="UH3-Un-Ez9"/>
+                <constraint firstAttribute="trailing" secondItem="XaT-2G-PjT" secondAttribute="trailing" constant="17" id="cN2-aD-hkG"/>
+                <constraint firstItem="XJl-3w-6XA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="kd5-Du-2KV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="138.40000000000001" y="91.754122938530742"/>
+        </view>
+    </objects>
+</document>

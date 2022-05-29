@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardBoardingTabBar" customModule="Cards" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="GNv-Zl-qxz" id="IZp-dw-FIh"/>
+                <outlet property="nextButton" destination="4BE-xS-3aO" id="pPN-0P-WTD"/>
+                <outlet property="topDivider" destination="g3m-GA-WCJ" id="8iy-g5-aQP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="73"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNv-Zl-qxz">
+                    <rect key="frame" x="15" y="17" width="110" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="SyZ-Ra-fqR"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="hXl-25-uxN"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3m-GA-WCJ">
+                    <rect key="frame" x="0.0" y="0.0" width="374" height="1"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="PEO-Y7-M0f"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4BE-xS-3aO" customClass="WhiteLisboaButton" customModule="UI">
+                    <rect key="frame" x="198" y="17" width="160" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="XAi-XJ-8LF"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="ooT-sA-ira"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4BE-xS-3aO" firstAttribute="top" secondItem="g3m-GA-WCJ" secondAttribute="bottom" constant="16" id="6aM-LD-G2q"/>
+                <constraint firstItem="g3m-GA-WCJ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ZQp-b5-OwJ"/>
+                <constraint firstItem="GNv-Zl-qxz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="cRE-Q5-TbI"/>
+                <constraint firstItem="g3m-GA-WCJ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="hfa-hX-S8k"/>
+                <constraint firstItem="g3m-GA-WCJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ozu-yw-WTf"/>
+                <constraint firstItem="GNv-Zl-qxz" firstAttribute="top" secondItem="g3m-GA-WCJ" secondAttribute="bottom" constant="16" id="rgY-Y2-Lhh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4BE-xS-3aO" secondAttribute="trailing" constant="16" id="tbI-6G-8Wv"/>
+                <constraint firstItem="4BE-xS-3aO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GNv-Zl-qxz" secondAttribute="trailing" constant="5" id="zzv-ef-zg7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="180.80000000000001" y="434.93253373313348"/>
+        </view>
+    </objects>
+</document>

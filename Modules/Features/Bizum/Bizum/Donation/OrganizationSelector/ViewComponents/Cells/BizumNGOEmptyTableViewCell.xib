@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SantanderHeadline-Bold.otf">
+            <string>SantanderHeadline-Bold</string>
+        </array>
+        <array key="SantanderHeadline-Regular.ttf">
+            <string>SantanderHeadline-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="BizumNGOEmptyTableViewCell" customModule="Bizum" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Obx-Ks-5uA">
+                        <rect key="frame" x="70" y="111.5" width="235" height="27"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUx-YN-pGZ">
+                                <rect key="frame" x="117.5" y="0.0" width="0.0" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="xHZ-pX-GZ3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SantanderHeadline-Bold" family="Santander Headline" pointSize="20"/>
+                                <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBA-ps-fVc">
+                                <rect key="frame" x="117.5" y="27" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="SantanderHeadline-Regular" family="Santander Headline" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S0v-fq-NfG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="S0v-fq-NfG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Aet-FD-Tyn"/>
+                    <constraint firstItem="Obx-Ks-5uA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FTb-WI-8YY"/>
+                    <constraint firstAttribute="bottom" secondItem="S0v-fq-NfG" secondAttribute="bottom" id="Xb2-6l-a6D"/>
+                    <constraint firstAttribute="trailing" secondItem="S0v-fq-NfG" secondAttribute="trailing" id="d1x-at-wmK"/>
+                    <constraint firstAttribute="trailing" secondItem="Obx-Ks-5uA" secondAttribute="trailing" constant="70" id="lee-y7-3CM"/>
+                    <constraint firstItem="Obx-Ks-5uA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="70" id="tOK-lL-VXV"/>
+                    <constraint firstItem="S0v-fq-NfG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="xsd-dS-W9X"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="emptyImageView" destination="S0v-fq-NfG" id="2Mb-FR-QYE"/>
+                <outlet property="emptyMessageLabel" destination="fBA-ps-fVc" id="2LP-k3-gkf"/>
+                <outlet property="emptyTitleLabel" destination="VUx-YN-pGZ" id="qNV-yM-x0v"/>
+            </connections>
+            <point key="canvasLocation" x="131.15942028985509" y="153.34821428571428"/>
+        </tableViewCell>
+    </objects>
+</document>

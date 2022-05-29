@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuView" customModule="FinantialTimeline" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="UrI-Id-ZI0" id="jxJ-oQ-Lkp"/>
+                <outlet property="bottomMenuMargin" destination="eVt-7S-69i" id="zb3-v2-WQ5"/>
+                <outlet property="container" destination="iN0-l3-epB" id="PHu-sh-RDQ"/>
+                <outlet property="menuButton" destination="rGz-rd-Ndo" id="5Xc-Eo-qbf"/>
+                <outlet property="stackView" destination="5vo-n6-0zQ" id="Osu-NH-TtT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UrI-Id-ZI0">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5vo-n6-0zQ">
+                    <rect key="frame" x="0.0" y="816" width="414" height="46"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NtG-ws-kaJ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGz-rd-Ndo" customClass="GlobileButton" customModule="FinantialTimeline">
+                                    <rect key="frame" x="184" y="0.0" width="46" height="46"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="46" id="cSh-vK-GAf"/>
+                                        <constraint firstAttribute="width" constant="46" id="imM-uA-LEC"/>
+                                    </constraints>
+                                    <state key="normal" image="icOpenMenu"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="rGz-rd-Ndo" secondAttribute="bottom" id="2Qs-h0-fnY"/>
+                                <constraint firstItem="rGz-rd-Ndo" firstAttribute="centerY" secondItem="NtG-ws-kaJ" secondAttribute="centerY" id="3pR-48-EHy"/>
+                                <constraint firstItem="rGz-rd-Ndo" firstAttribute="centerX" secondItem="NtG-ws-kaJ" secondAttribute="centerX" id="bUE-48-Cu6"/>
+                                <constraint firstItem="rGz-rd-Ndo" firstAttribute="top" secondItem="NtG-ws-kaJ" secondAttribute="top" id="pk9-9j-u0b"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="5vo-n6-0zQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="EbQ-4w-jx9"/>
+                <constraint firstItem="UrI-Id-ZI0" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="PLr-8e-zVY"/>
+                <constraint firstItem="5vo-n6-0zQ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="ThU-NP-t7e"/>
+                <constraint firstItem="UrI-Id-ZI0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="VnR-YN-iBA"/>
+                <constraint firstItem="UrI-Id-ZI0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="WRM-Gw-Mdh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5vo-n6-0zQ" secondAttribute="bottom" id="eVt-7S-69i"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UrI-Id-ZI0" secondAttribute="trailing" id="f2o-bf-ngg"/>
+            </constraints>
+            <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icOpenMenu" width="24" height="24"/>
+    </resources>
+</document>

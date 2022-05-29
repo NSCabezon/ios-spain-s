@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SummaryPaymentLocationItem" customModule="Operative" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="dM2-ni-1kB" id="ARs-f5-Cek"/>
+                <outlet property="descriptionLabel" destination="rQG-nu-W5E" id="rcH-qc-2rs"/>
+                <outlet property="heightConstraint" destination="sdd-wG-9uf" id="EJk-PB-kPd"/>
+                <outlet property="imageView" destination="2ku-EI-YhZ" id="LTU-mv-1IE"/>
+                <outlet property="labelsStackView" destination="bFv-pu-c8c" id="raP-2Q-Rtw"/>
+                <outlet property="oneLogoImageView" destination="SY7-ad-CYa" id="3W3-c5-oOD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="462" height="84"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dM2-ni-1kB" userLabel="Content View">
+                    <rect key="frame" x="0.0" y="0.0" width="462" height="84"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2ku-EI-YhZ">
+                            <rect key="frame" x="10" y="8" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="Wpp-fS-rBg"/>
+                                <constraint firstAttribute="height" constant="40" id="ad5-4b-7AX"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bFv-pu-c8c">
+                            <rect key="frame" x="59" y="9" width="357" height="64"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transferencias a zona NO SEPA gratuitas con el Plan Santander One Pagos (3€/mes)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQG-nu-W5E">
+                                    <rect key="frame" x="0.0" y="0.0" width="357" height="64"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="bFv-pu-c8c" firstAttribute="leading" secondItem="2ku-EI-YhZ" secondAttribute="trailing" constant="9" id="K4M-DT-Tin"/>
+                        <constraint firstItem="2ku-EI-YhZ" firstAttribute="top" secondItem="dM2-ni-1kB" secondAttribute="top" constant="8" id="Mrw-Pf-pNo"/>
+                        <constraint firstItem="2ku-EI-YhZ" firstAttribute="leading" secondItem="dM2-ni-1kB" secondAttribute="leading" constant="10" id="cEt-n5-Lto"/>
+                        <constraint firstItem="bFv-pu-c8c" firstAttribute="top" secondItem="dM2-ni-1kB" secondAttribute="top" constant="9" id="rnO-cD-hp0"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" id="sdd-wG-9uf"/>
+                        <constraint firstAttribute="bottom" secondItem="bFv-pu-c8c" secondAttribute="bottom" constant="11" id="wcj-3e-VNh"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SY7-ad-CYa" userLabel="One Logo Image View">
+                    <rect key="frame" x="430" y="-10" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Eyi-WI-gph"/>
+                        <constraint firstAttribute="width" constant="44" id="stE-5b-dZr"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="SY7-ad-CYa" firstAttribute="leading" secondItem="bFv-pu-c8c" secondAttribute="trailing" constant="14" id="JHL-Rc-dcK"/>
+                <constraint firstItem="SY7-ad-CYa" firstAttribute="top" secondItem="dM2-ni-1kB" secondAttribute="top" constant="-10" id="PDM-UH-c5k"/>
+                <constraint firstItem="dM2-ni-1kB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Zbd-8g-MEv"/>
+                <constraint firstItem="dM2-ni-1kB" firstAttribute="trailing" secondItem="SY7-ad-CYa" secondAttribute="trailing" constant="-12" id="eEU-nr-ZDP"/>
+                <constraint firstAttribute="trailing" secondItem="dM2-ni-1kB" secondAttribute="trailing" id="kxo-1I-E2a"/>
+                <constraint firstItem="dM2-ni-1kB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qsU-aD-X34"/>
+                <constraint firstAttribute="bottom" secondItem="dM2-ni-1kB" secondAttribute="bottom" id="vSs-Zn-kvQ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="172.46376811594203" y="-158.03571428571428"/>
+        </view>
+    </objects>
+</document>
